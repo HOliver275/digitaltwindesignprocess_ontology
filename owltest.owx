@@ -1,0 +1,4575 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt">
+    <Prefix name="" IRI="http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Artefact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CAE_VirtualTesting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConceptDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DesignActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DesignOutput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DetailDesign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DevelopmentActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EngineeringDesign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FlowA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FlowB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FlowC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FlowD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FlowE"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FlowF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Focus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gateway"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Iteration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Loop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MechanicalTesting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Output"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PerformanceTesting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Procurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProductDevelopmentStage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProgressiveRelease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReleaseActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Span"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step_CAE_VirtualTestingToPerformanceTesting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step_DesignActivityToCAE_VirtualTesting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step_DesignActivityToProcurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step_ProcurementToMechanicalTesting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step_ProcurementToPerformanceTesting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemLevelDesign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporalPartition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TestingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TestingFocus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#closesStage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#comesAfter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#comesBefore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#endsWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#followsFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFocus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOutput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPrevious"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStep"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#leadsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#opensStage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#spansFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#spansTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#startsWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#stepFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#stepTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isOptional"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#toBeRepeated"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CAEActivity1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowBStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DesignOutput1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DesignSpan1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DesignSpan2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DesignSpan3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DesignSpan4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowBStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EngineeringDesignActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gateway1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gateway2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gateway3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gateway4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IterationGroup1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IterationGroup2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IterationGroup3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IterationGroup4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MechanicalTestingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PerformanceTestingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PerformanceTestingSpan3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ProgressiveReleaseDesign1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stage1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stage2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stage3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stage4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stage5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowBStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingFocus9"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Flow"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Flow"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#duringTemporalPartition"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#DevelopmentActivity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#endsWith"/>
+                <Class IRI="#Step"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#startsWith"/>
+                <Class IRI="#Step"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FlowA"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Flow"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#DesignActivity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_DesignActivityToCAE_VirtualTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#endsWith"/>
+                <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#startsWith"/>
+                <Class IRI="#Step_DesignActivityToCAE_VirtualTesting"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FlowB"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Flow"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#Procurement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#endsWith"/>
+                <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#startsWith"/>
+                <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FlowC"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Flow"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#MechanicalTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#PerformanceTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_CAE_VirtualTestingToPerformanceTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#endsWith"/>
+                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#startsWith"/>
+                <Class IRI="#Step_CAE_VirtualTestingToPerformanceTesting"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FlowD"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Flow"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#DesignActivity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#Procurement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_DesignActivityToProcurement"/>
+            </ObjectMinCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#endsWith"/>
+                <Class IRI="#Step_DesignActivityToProcurement"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#startsWith"/>
+                <Class IRI="#Step_DesignActivityToProcurement"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FlowE"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Flow"/>
+            <ObjectUnionOf>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#startsWith"/>
+                    <Class IRI="#Step_ProcurementToMechanicalTesting"/>
+                </ObjectExactCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#startsWith"/>
+                    <Class IRI="#Step_ProcurementToPerformanceTesting"/>
+                </ObjectExactCardinality>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#MechanicalTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#PerformanceTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#Procurement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_ProcurementToMechanicalTesting"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_ProcurementToPerformanceTesting"/>
+            </ObjectMinCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#endsWith"/>
+                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FlowF"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Flow"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#CAE_VirtualTesting"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#DesignActivity"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#CAE_VirtualTesting"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#MechanicalTesting"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#DesignActivity"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#PerformanceTesting"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                    <Class IRI="#CAE_VirtualTesting"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasStep"/>
+                    <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasStep"/>
+                    <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasStep"/>
+                    <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#endsWith"/>
+                    <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
+                </ObjectExactCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#endsWith"/>
+                    <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
+                </ObjectExactCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#endsWith"/>
+                    <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
+                </ObjectExactCardinality>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#startsWith"/>
+                    <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
+                </ObjectExactCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#startsWith"/>
+                    <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
+                </ObjectExactCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#startsWith"/>
+                    <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
+                </ObjectExactCardinality>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gateway"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#TemporalPartition"/>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#closesStage"/>
+                <Class IRI="#ProductDevelopmentStage"/>
+            </ObjectMaxCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#opensStage"/>
+                <Class IRI="#ProductDevelopmentStage"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Iteration"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Iteration"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#duringTemporalPartition"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#DevelopmentActivity"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Loop"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Loop"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step"/>
+            </ObjectMinCardinality>
+            <DataHasValue>
+                <DataProperty IRI="#toBeRepeated"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ProductDevelopmentStage"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#TemporalPartition"/>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#hasNext"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectMaxCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#hasPrevious"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ReleaseActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasOutput"/>
+                <Class IRI="#Output"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Span"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Span"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#duringTemporalPartition"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#DevelopmentActivity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#spansFrom"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectMaxCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#spansTo"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Step"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Step"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepFrom"/>
+                <Class IRI="#DevelopmentActivity"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepTo"/>
+                <Class IRI="#DevelopmentActivity"/>
+            </ObjectExactCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#hasNext"/>
+                <Class IRI="#Step"/>
+            </ObjectMaxCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#hasPrevious"/>
+                <Class IRI="#Step"/>
+            </ObjectMaxCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="#isOptional"/>
+                <Datatype abbreviatedIRI="xsd:boolean"/>
+            </DataMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Step"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepFrom"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepTo"/>
+                <Class IRI="#DesignActivity"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Step_CAE_VirtualTestingToPerformanceTesting"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Step"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepFrom"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepTo"/>
+                <Class IRI="#PerformanceTesting"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Step"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepFrom"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepTo"/>
+                <Class IRI="#Procurement"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Step_DesignActivityToCAE_VirtualTesting"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Step"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepFrom"/>
+                <Class IRI="#DesignActivity"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepTo"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Step_DesignActivityToProcurement"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Step"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepFrom"/>
+                <Class IRI="#DesignActivity"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepTo"/>
+                <Class IRI="#Procurement"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Step"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepFrom"/>
+                <Class IRI="#MechanicalTesting"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepTo"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Step"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepFrom"/>
+                <Class IRI="#PerformanceTesting"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepTo"/>
+                <Class IRI="#DesignActivity"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Step"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepFrom"/>
+                <Class IRI="#PerformanceTesting"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepTo"/>
+                <Class IRI="#MechanicalTesting"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Step_ProcurementToMechanicalTesting"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Step"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepFrom"/>
+                <Class IRI="#Procurement"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepTo"/>
+                <Class IRI="#MechanicalTesting"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Step_ProcurementToPerformanceTesting"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Step"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepFrom"/>
+                <Class IRI="#Procurement"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#stepTo"/>
+                <Class IRI="#PerformanceTesting"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#CAE_VirtualTesting"/>
+        <Class IRI="#TestingActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConceptDevelopment"/>
+        <Class IRI="#ProductDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DesignActivity"/>
+        <Class IRI="#DevelopmentActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DesignOutput"/>
+        <Class IRI="#Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DetailDesign"/>
+        <Class IRI="#ProductDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EngineeringDesign"/>
+        <Class IRI="#DesignActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlowA"/>
+        <Class IRI="#Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlowB"/>
+        <Class IRI="#Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlowC"/>
+        <Class IRI="#Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlowD"/>
+        <Class IRI="#Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlowE"/>
+        <Class IRI="#Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlowF"/>
+        <Class IRI="#Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gateway"/>
+        <Class IRI="#TemporalPartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Loop"/>
+        <Class IRI="#Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MechanicalTesting"/>
+        <Class IRI="#TestingActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Output"/>
+        <Class IRI="#Artefact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PerformanceTesting"/>
+        <Class IRI="#TestingActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Procurement"/>
+        <Class IRI="#DevelopmentActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProductDevelopmentStage"/>
+        <Class IRI="#TemporalPartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProgressiveRelease"/>
+        <Class IRI="#ReleaseActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReleaseActivity"/>
+        <Class IRI="#DevelopmentActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
+        <Class IRI="#Step"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Step_CAE_VirtualTestingToPerformanceTesting"/>
+        <Class IRI="#Step"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
+        <Class IRI="#Step"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Step_DesignActivityToCAE_VirtualTesting"/>
+        <Class IRI="#Step"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Step_DesignActivityToProcurement"/>
+        <Class IRI="#Step"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
+        <Class IRI="#Step"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
+        <Class IRI="#Step"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
+        <Class IRI="#Step"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Step_ProcurementToMechanicalTesting"/>
+        <Class IRI="#Step"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Step_ProcurementToPerformanceTesting"/>
+        <Class IRI="#Step"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemLevelDesign"/>
+        <Class IRI="#ProductDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestingActivity"/>
+        <Class IRI="#DevelopmentActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestingFocus"/>
+        <Class IRI="#Focus"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#DevelopmentActivity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#Flow"/>
+        <Class IRI="#Focus"/>
+        <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#Focus"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#Iteration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#Span"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#Step"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ConceptDevelopment"/>
+        <Class IRI="#DetailDesign"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ConceptDevelopment"/>
+        <Class IRI="#SystemLevelDesign"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DetailDesign"/>
+        <Class IRI="#SystemLevelDesign"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#Focus"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#Iteration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Focus"/>
+        <Class IRI="#Iteration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Focus"/>
+        <Class IRI="#Span"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Focus"/>
+        <Class IRI="#Step"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Focus"/>
+        <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Iteration"/>
+        <Class IRI="#Span"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Iteration"/>
+        <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ReleaseActivity"/>
+        <Class IRI="#TestingActivity"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#CAE_VirtualTesting"/>
+        <NamedIndividual IRI="#CAEActivity1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAE_VirtualTesting"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAE_VirtualTesting"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAE_VirtualTesting"/>
+        <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FlowB"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowBStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FlowA"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Loop"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DesignActivity"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DesignActivity"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DesignActivity"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DesignOutput"/>
+        <NamedIndividual IRI="#DesignOutput1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Span"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Span"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Span"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Span"/>
+        <NamedIndividual IRI="#DesignSpan4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DetailDesign"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#DetailDesign_FlowB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FlowB"/>
+        <NamedIndividual IRI="#DetailDesign_FlowB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowBStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#DetailDesign_FlowC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#DetailDesign_FlowD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#DetailDesign_FlowF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FlowA"/>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Loop"/>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EngineeringDesign"/>
+        <NamedIndividual IRI="#EngineeringDesignActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gateway"/>
+        <NamedIndividual IRI="#Gateway1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gateway"/>
+        <NamedIndividual IRI="#Gateway2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gateway"/>
+        <NamedIndividual IRI="#Gateway3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gateway"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#IterationGroup1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#IterationGroup2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#IterationGroup3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#IterationGroup4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MechanicalTesting"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MechanicalTesting"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MechanicalTesting"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MechanicalTesting"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Span"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Span"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Span"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PerformanceTesting"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PerformanceTesting"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PerformanceTesting"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PerformanceTesting"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Span"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Span"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Span"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Procurement"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Procurement"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Procurement"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProgressiveRelease"/>
+        <NamedIndividual IRI="#ProgressiveReleaseDesign1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProductDevelopmentStage"/>
+        <NamedIndividual IRI="#Stage1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConceptDevelopment"/>
+        <NamedIndividual IRI="#Stage2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SystemLevelDesign"/>
+        <NamedIndividual IRI="#Stage3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DetailDesign"/>
+        <NamedIndividual IRI="#Stage4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProductDevelopmentStage"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FlowB"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowBStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FlowA"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Loop"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingFocus"/>
+        <NamedIndividual IRI="#TestingFocus9"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+        <NamedIndividual IRI="#Stage2"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+        <NamedIndividual IRI="#Stage4"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Stage3"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </SameIndividual>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
+        <NamedIndividual IRI="#EngineeringDesignActivity"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#EngineeringDesignActivity"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#EngineeringDesignActivity"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#EngineeringDesignActivity"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Gateway1"/>
+        <NamedIndividual IRI="#Gateway2"/>
+        <NamedIndividual IRI="#Gateway3"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#IterationGroup1"/>
+        <NamedIndividual IRI="#IterationGroup2"/>
+        <NamedIndividual IRI="#IterationGroup3"/>
+        <NamedIndividual IRI="#IterationGroup4"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#MechanicalTestingActivity"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Stage1"/>
+        <NamedIndividual IRI="#Stage2"/>
+        <NamedIndividual IRI="#Stage3"/>
+        <NamedIndividual IRI="#Stage4"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#TestingFocus1"/>
+        <NamedIndividual IRI="#TestingFocus10"/>
+        <NamedIndividual IRI="#TestingFocus11"/>
+        <NamedIndividual IRI="#TestingFocus12"/>
+        <NamedIndividual IRI="#TestingFocus2"/>
+        <NamedIndividual IRI="#TestingFocus3"/>
+        <NamedIndividual IRI="#TestingFocus4"/>
+        <NamedIndividual IRI="#TestingFocus5"/>
+        <NamedIndividual IRI="#TestingFocus6"/>
+        <NamedIndividual IRI="#TestingFocus7"/>
+        <NamedIndividual IRI="#TestingFocus8"/>
+        <NamedIndividual IRI="#TestingFocus9"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#CAEActivity1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+        <NamedIndividual IRI="#CAEActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowB"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowB"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowBStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowB"/>
+        <NamedIndividual IRI="#CAEActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowB"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowB"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowBStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowB"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowBStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowBStep1"/>
+        <NamedIndividual IRI="#CAEActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowBStep1"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
+        <NamedIndividual IRI="#CAEActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep1"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep1"/>
+        <NamedIndividual IRI="#CAEActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep1"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep2"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep2"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowCStep2"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowD"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowD"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowD"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowD"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowD"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowD"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowD"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowD"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep1"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep1"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep1"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep2"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep2"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep2"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep2"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep3"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep3"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowDStep3"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowE"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep1"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep1"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep1"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep2"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep2"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep2"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep2"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep3"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep3"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep3"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep3"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep4"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep4"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep4"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep4"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep5"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep5"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep5"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep5"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep6"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep6"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep6"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep6"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep7"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep7"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep7"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep7"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep8"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep8"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowEStep8"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+        <NamedIndividual IRI="#CAEActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepA"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepA"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepA"/>
+        <NamedIndividual IRI="#CAEActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
+        <NamedIndividual IRI="#CAEActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#followsFrom"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#followsFrom"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#followsFrom"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
+        <NamedIndividual IRI="#Gateway1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
+        <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansFrom"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
+        <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansTo"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+        <NamedIndividual IRI="#Gateway2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#followsFrom"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansFrom"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+        <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansTo"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+        <NamedIndividual IRI="#Gateway3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#followsFrom"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+        <NamedIndividual IRI="#DesignSpan4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansFrom"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansTo"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan4"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan4"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignSpan4"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#followsFrom"/>
+        <NamedIndividual IRI="#DesignSpan4"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DesignSpan4"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansFrom"/>
+        <NamedIndividual IRI="#DesignSpan4"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DetailDesign_FlowB"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#DetailDesign_FlowB"/>
+        <NamedIndividual IRI="#DetailDesign_FlowBStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowB"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowB"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowB"/>
+        <NamedIndividual IRI="#DetailDesign_FlowBStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#DetailDesign_FlowB"/>
+        <NamedIndividual IRI="#DetailDesign_FlowBStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowBStep1"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowBStep1"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DetailDesign_FlowC"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#DetailDesign_FlowC"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowC"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowC"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowC"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowC"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowC"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#DetailDesign_FlowC"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep1"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep1"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep1"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep2"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep2"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowCStep2"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DetailDesign_FlowD"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#DetailDesign_FlowD"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowD"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowD"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowD"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowD"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowD"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#DetailDesign_FlowD"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep1"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep1"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep1"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep2"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep2"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep2"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep2"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep3"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep3"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowDStep3"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#DetailDesign_FlowE"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep1"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep1"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep1"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep2"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep2"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep2"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep2"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep3"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep3"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep3"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep3"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep4"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep4"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep4"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep4"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep5"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep5"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowEStep5"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DetailDesign_FlowF"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#DetailDesign_FlowF"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowF"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowF"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_FlowF"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowF"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowF"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_FlowF"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#DetailDesign_FlowF"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep2"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep2"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep2"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep2"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep3"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep3"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep3"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepA"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepA"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepA"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepB"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepB"/>
+        <NamedIndividual IRI="#CAEActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#DetailDesign_LoopAStepB"/>
+        <NamedIndividual IRI="#DesignActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comesAfter"/>
+        <NamedIndividual IRI="#Gateway1"/>
+        <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comesBefore"/>
+        <NamedIndividual IRI="#Gateway1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#opensStage"/>
+        <NamedIndividual IRI="#Gateway1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#closesStage"/>
+        <NamedIndividual IRI="#Gateway2"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#opensStage"/>
+        <NamedIndividual IRI="#Gateway2"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#closesStage"/>
+        <NamedIndividual IRI="#Gateway3"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#opensStage"/>
+        <NamedIndividual IRI="#Gateway3"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#closesStage"/>
+        <NamedIndividual IRI="#Gateway4"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#IterationGroup1"/>
+        <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup1"/>
+        <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup1"/>
+        <NamedIndividual IRI="#EngineeringDesignActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#IterationGroup2"/>
+        <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup2"/>
+        <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup2"/>
+        <NamedIndividual IRI="#EngineeringDesignActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup2"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#IterationGroup3"/>
+        <NamedIndividual IRI="#Stage2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#IterationGroup3"/>
+        <NamedIndividual IRI="#Stage3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#IterationGroup3"/>
+        <NamedIndividual IRI="#Stage4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup3"/>
+        <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup3"/>
+        <NamedIndividual IRI="#EngineeringDesignActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup3"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup3"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#IterationGroup4"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup4"/>
+        <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup4"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#IterationGroup4"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+        <NamedIndividual IRI="#Gateway2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+        <NamedIndividual IRI="#Gateway3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+        <NamedIndividual IRI="#Gateway2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+        <NamedIndividual IRI="#Gateway3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansFrom"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansTo"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+        <NamedIndividual IRI="#Gateway3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#followsFrom"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansFrom"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansTo"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#followsFrom"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansFrom"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+        <NamedIndividual IRI="#Gateway2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+        <NamedIndividual IRI="#Gateway3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+        <NamedIndividual IRI="#Gateway2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+        <NamedIndividual IRI="#Gateway3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansFrom"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansTo"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+        <NamedIndividual IRI="#Gateway3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#followsFrom"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansFrom"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansTo"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan3"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan3"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan3"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#followsFrom"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan3"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan3"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#spansFrom"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan3"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#ProcurementActivity1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#ProcurementActivity3"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#ProgressiveReleaseDesign1"/>
+        <NamedIndividual IRI="#DesignOutput1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage1"/>
+        <NamedIndividual IRI="#TestingFocus1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage1"/>
+        <NamedIndividual IRI="#TestingFocus2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#Stage1"/>
+        <NamedIndividual IRI="#Stage2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage2"/>
+        <NamedIndividual IRI="#TestingFocus3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage2"/>
+        <NamedIndividual IRI="#TestingFocus4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage2"/>
+        <NamedIndividual IRI="#TestingFocus5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage2"/>
+        <NamedIndividual IRI="#TestingFocus6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#Stage2"/>
+        <NamedIndividual IRI="#Stage3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#Stage2"/>
+        <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage3"/>
+        <NamedIndividual IRI="#TestingFocus7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage3"/>
+        <NamedIndividual IRI="#TestingFocus8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage3"/>
+        <NamedIndividual IRI="#TestingFocus9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#Stage3"/>
+        <NamedIndividual IRI="#Stage4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#Stage3"/>
+        <NamedIndividual IRI="#Stage2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage4"/>
+        <NamedIndividual IRI="#TestingFocus10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage4"/>
+        <NamedIndividual IRI="#TestingFocus11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFocus"/>
+        <NamedIndividual IRI="#Stage4"/>
+        <NamedIndividual IRI="#TestingFocus12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#Stage4"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#Stage4"/>
+        <NamedIndividual IRI="#Stage3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#Stage5"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#Stage5"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#Stage5"/>
+        <NamedIndividual IRI="#Stage4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowB"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowB"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowBStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowB"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowB"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowB"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowBStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowB"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowBStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowBStep1"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowBStep1"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep1"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep1"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep1"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep2"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep2"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowCStep2"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowD"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowD"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowD"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowD"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowD"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowD"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowD"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowD"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep1"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep1"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep1"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep2"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep2"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep2"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep2"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep3"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep3"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowDStep3"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowE"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep1"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep1"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep1"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep1"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep2"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep2"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep2"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep2"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep3"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep3"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep3"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep3"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep4"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep4"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep4"/>
+        <NamedIndividual IRI="#ProcurementActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep4"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep5"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep5"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowEStep5"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowF"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep1"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep1"/>
+        <NamedIndividual IRI="#PerformanceTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep1"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep2"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep2"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep2"/>
+        <NamedIndividual IRI="#MechanicalTestingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep2"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStep"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNext"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepA"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepA"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepA"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepFrom"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
+        <NamedIndividual IRI="#CAEActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stepTo"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
+        <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#toBeRepeated"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+        <Literal xml:lang="en">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isOptional"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
+        <Literal xml:lang="en">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isOptional"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep2"/>
+        <Literal xml:lang="en">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isOptional"/>
+        <NamedIndividual IRI="#DetailDesign_FlowFStep3"/>
+        <Literal xml:lang="en">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#toBeRepeated"/>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+        <Literal xml:lang="en">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isOptional"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep1"/>
+        <Literal xml:lang="en">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isOptional"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep2"/>
+        <Literal xml:lang="en">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isOptional"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
+        <Literal xml:lang="en">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#toBeRepeated"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
+        <Literal xml:lang="en">true</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#comesBefore"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNext"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#closesStage"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasNext"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasPrevious"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#opensStage"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#stepFrom"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#stepTo"/>
+    </FunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#comesAfter"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#comesBefore"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#closesStage"/>
+        <Class IRI="#Gateway"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNext"/>
+        <Class IRI="#TemporalPartition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <Class IRI="#TemporalPartition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#opensStage"/>
+        <Class IRI="#Gateway"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#spansFrom"/>
+        <Class IRI="#Span"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#spansTo"/>
+        <Class IRI="#Span"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#closesStage"/>
+        <Class IRI="#ProductDevelopmentStage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <Class IRI="#TemporalPartition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <Class IRI="#DevelopmentActivity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFocus"/>
+        <Class IRI="#Focus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNext"/>
+        <Class IRI="#TemporalPartition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOutput"/>
+        <Class IRI="#Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPrevious"/>
+        <Class IRI="#TemporalPartition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#opensStage"/>
+        <Class IRI="#ProductDevelopmentStage"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ConceptDevelopment_FlowD</IRI>
+        <Literal xml:lang="en">Design progressively released</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ConceptDevelopment_FlowE</IRI>
+        <Literal xml:lang="en">Parts progressively incorporated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MechanicalTestingSpan3</IRI>
+        <Literal xml:lang="en">Verified and validated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Stage1</IRI>
+        <Literal xml:lang="en">Requirement analysis and planning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Stage2</IRI>
+        <Literal xml:lang="en">Concept development and demonstration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Stage3</IRI>
+        <Literal xml:lang="en">System-level design and verification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Stage4</IRI>
+        <Literal xml:lang="en">Detail design and validation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Stage5</IRI>
+        <Literal xml:lang="en">Production release</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SystemLevelDesign_FlowD</IRI>
+        <Literal xml:lang="en">Design progressively released</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SystemLevelDesign_FlowE</IRI>
+        <Literal xml:lang="en">Parts progressively incorporated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus1</IRI>
+        <Literal xml:lang="en">Is technology viable?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus10</IRI>
+        <Literal xml:lang="en">Is production-tooled design reliable under use conditions?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus11</IRI>
+        <Literal xml:lang="en">Have any outstanding issues been worked out?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus12</IRI>
+        <Literal xml:lang="en">Physical tests for final validation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus2</IRI>
+        <Literal xml:lang="en">Emphasis on CAE analysis and virtual testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus3</IRI>
+        <Literal xml:lang="en">Is concept viable?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus4</IRI>
+        <Literal xml:lang="en">Are there problems of manufacturability, maintainability, etc?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus5</IRI>
+        <Literal xml:lang="en">Physical prototypes use many parts from existing designs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus6</IRI>
+        <Literal xml:lang="en">Test against customer requirements, including in customer machines</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus7</IRI>
+        <Literal xml:lang="en">Does design meet specification under conditions of use?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus8</IRI>
+        <Literal xml:lang="en">Are regulatory requirements met?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestingFocus9</IRI>
+        <Literal xml:lang="en">New parts are progressively installed in prototypes</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
