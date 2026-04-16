@@ -37,9 +37,6 @@
         <Class IRI="#Flow"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FlowE"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#FlowF"/>
     </Declaration>
     <Declaration>
@@ -53,6 +50,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Flow_DesignActivity_Procurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flow_Procurement_PhysicalTesting"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Focus"/>
@@ -611,50 +611,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#FlowE"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Flow"/>
-            <ObjectUnionOf>
-                <ObjectExactCardinality cardinality="1">
-                    <ObjectProperty IRI="#startsWith"/>
-                    <Class IRI="#Step_ProcurementToMechanicalTesting"/>
-                </ObjectExactCardinality>
-                <ObjectExactCardinality cardinality="1">
-                    <ObjectProperty IRI="#startsWith"/>
-                    <Class IRI="#Step_ProcurementToPerformanceTesting"/>
-                </ObjectExactCardinality>
-            </ObjectUnionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                <Class IRI="#MechanicalTesting"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                <Class IRI="#PerformanceTesting"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                <Class IRI="#Procurement"/>
-            </ObjectSomeValuesFrom>
-            <ObjectMinCardinality cardinality="1">
-                <ObjectProperty IRI="#hasStep"/>
-                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
-            </ObjectMinCardinality>
-            <ObjectMinCardinality cardinality="1">
-                <ObjectProperty IRI="#hasStep"/>
-                <Class IRI="#Step_ProcurementToMechanicalTesting"/>
-            </ObjectMinCardinality>
-            <ObjectMinCardinality cardinality="1">
-                <ObjectProperty IRI="#hasStep"/>
-                <Class IRI="#Step_ProcurementToPerformanceTesting"/>
-            </ObjectMinCardinality>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#endsWith"/>
-                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
-            </ObjectExactCardinality>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#FlowF"/>
         <ObjectIntersectionOf>
             <Class IRI="#Flow"/>
@@ -851,6 +807,50 @@
             <ObjectExactCardinality cardinality="1">
                 <ObjectProperty IRI="#startsWith"/>
                 <Class IRI="#Step_DesignActivityToProcurement"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Flow_Procurement_PhysicalTesting"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Flow"/>
+            <ObjectUnionOf>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#startsWith"/>
+                    <Class IRI="#Step_ProcurementToMechanicalTesting"/>
+                </ObjectExactCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#startsWith"/>
+                    <Class IRI="#Step_ProcurementToPerformanceTesting"/>
+                </ObjectExactCardinality>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#MechanicalTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#PerformanceTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#Procurement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_ProcurementToMechanicalTesting"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_ProcurementToPerformanceTesting"/>
+            </ObjectMinCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#endsWith"/>
+                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
             </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -1167,10 +1167,6 @@
         <Class IRI="#DesignActivity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FlowE"/>
-        <Class IRI="#Flow"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#FlowF"/>
         <Class IRI="#Flow"/>
     </SubClassOf>
@@ -1188,6 +1184,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Flow_DesignActivity_Procurement"/>
+        <Class IRI="#Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flow_Procurement_PhysicalTesting"/>
         <Class IRI="#Flow"/>
     </SubClassOf>
     <SubClassOf>
