@@ -6,6 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt">
+    <Prefix name="" IRI="http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -1405,6 +1406,10 @@
         <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Flow_CAE_VirtualTesting_PhysicalTesting"/>
+        <NamedIndividual IRI="#ConceptDevelopment_FlowC"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Step"/>
         <NamedIndividual IRI="#ConceptDevelopment_FlowCStep1"/>
     </ClassAssertion>
@@ -1530,6 +1535,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#DetailDesign_FlowC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow_CAE_VirtualTesting_PhysicalTesting"/>
         <NamedIndividual IRI="#DetailDesign_FlowC"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1750,6 +1759,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Flow"/>
+        <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flow_CAE_VirtualTesting_PhysicalTesting"/>
         <NamedIndividual IRI="#SystemLevelDesign_FlowC"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -4558,6 +4571,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Flow_DesignActivity_CAE_VirtualTesting</IRI>
         <Literal xml:lang="en">Design and analysis using CAE simulation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Flow_DesignActivity_Procurement</IRI>
+        <Literal xml:lang="en">This release process occurs progressively with a view to ensuring that suppliers of test prototypes are working with design information which is up-to-date but do not need to wait until the respective design activity is finalised.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Flow_DesignActivity_Procurement</IRI>
+        <Literal xml:lang="en">Design progressively released.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
