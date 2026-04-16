@@ -36,9 +36,6 @@
         <Class IRI="#Flow"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FlowC"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#FlowD"/>
     </Declaration>
     <Declaration>
@@ -46,6 +43,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#FlowF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flow_CAE_VirtualTesting_PhysicalTesting"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Flow_CAE_VirtualTesting_Procurement"/>
@@ -79,6 +79,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#PerformanceTesting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalTesting"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Procurement"/>
@@ -139,6 +142,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#TestingFocus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VirtualTesting"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#closesStage"/>
@@ -604,40 +610,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#FlowC"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Flow"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                <Class IRI="#CAE_VirtualTesting"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                <Class IRI="#MechanicalTesting"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                <Class IRI="#PerformanceTesting"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasStep"/>
-                <Class IRI="#Step_CAE_VirtualTestingToPerformanceTesting"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasStep"/>
-                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
-            </ObjectSomeValuesFrom>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#endsWith"/>
-                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
-            </ObjectExactCardinality>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#startsWith"/>
-                <Class IRI="#Step_CAE_VirtualTestingToPerformanceTesting"/>
-            </ObjectExactCardinality>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#FlowD"/>
         <ObjectIntersectionOf>
             <Class IRI="#Flow"/>
@@ -789,6 +761,40 @@
                     <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
                 </ObjectExactCardinality>
             </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Flow_CAE_VirtualTesting_PhysicalTesting"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Flow"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#MechanicalTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#PerformanceTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_CAE_VirtualTestingToPerformanceTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#endsWith"/>
+                <Class IRI="#Step_PerformanceTestingToMechanicalTesting"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#startsWith"/>
+                <Class IRI="#Step_CAE_VirtualTestingToPerformanceTesting"/>
+            </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1137,7 +1143,7 @@
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#CAE_VirtualTesting"/>
-        <Class IRI="#TestingActivity"/>
+        <Class IRI="#VirtualTesting"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConceptDevelopment"/>
@@ -1160,10 +1166,6 @@
         <Class IRI="#DesignActivity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FlowC"/>
-        <Class IRI="#Flow"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#FlowD"/>
         <Class IRI="#Flow"/>
     </SubClassOf>
@@ -1173,6 +1175,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FlowF"/>
+        <Class IRI="#Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flow_CAE_VirtualTesting_PhysicalTesting"/>
         <Class IRI="#Flow"/>
     </SubClassOf>
     <SubClassOf>
@@ -1197,7 +1203,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MechanicalTesting"/>
-        <Class IRI="#TestingActivity"/>
+        <Class IRI="#PhysicalTesting"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Output"/>
@@ -1205,6 +1211,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PerformanceTesting"/>
+        <Class IRI="#PhysicalTesting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalTesting"/>
         <Class IRI="#TestingActivity"/>
     </SubClassOf>
     <SubClassOf>
@@ -1275,6 +1285,10 @@
         <Class IRI="#TestingFocus"/>
         <Class IRI="#Focus"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VirtualTesting"/>
+        <Class IRI="#TestingActivity"/>
+    </SubClassOf>
     <DisjointClasses>
         <Class IRI="#ConceptDevelopment"/>
         <Class IRI="#DetailDesign"/>
@@ -1353,6 +1367,10 @@
     <DisjointClasses>
         <Class IRI="#Parameter"/>
         <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PhysicalTesting"/>
+        <Class IRI="#VirtualTesting"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#ReleaseActivity"/>
@@ -4520,6 +4538,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ConceptDevelopment_FlowE</IRI>
         <Literal xml:lang="en">Parts progressively incorporated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Flow_CAE_VirtualTesting_PhysicalTesting</IRI>
+        <Literal xml:lang="en">The CAE/Virtual testing may be conducted in parallel with the physical testing.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
