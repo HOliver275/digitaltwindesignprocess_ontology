@@ -6,15 +6,11 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt">
-    <Prefix name="" IRI="http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Declaration>
-        <Class IRI="#Artefact"/>
-    </Declaration>
     <Declaration>
         <Class IRI="#CAE_VirtualTesting"/>
     </Declaration>
@@ -64,6 +60,9 @@
         <Class IRI="#Gateway"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Input"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Iteration"/>
     </Declaration>
     <Declaration>
@@ -74,6 +73,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Output"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parameter"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PerformanceTesting"/>
@@ -1146,6 +1148,10 @@
         <Class IRI="#TemporalPartition"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Input"/>
+        <Class IRI="#Parameter"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Loop"/>
         <Class IRI="#Flow"/>
     </SubClassOf>
@@ -1155,7 +1161,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Output"/>
-        <Class IRI="#Artefact"/>
+        <Class IRI="#Parameter"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PerformanceTesting"/>
@@ -1230,47 +1236,23 @@
         <Class IRI="#Focus"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#Artefact"/>
-        <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#ConceptDevelopment"/>
+        <Class IRI="#DetailDesign"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Artefact"/>
+        <Class IRI="#ConceptDevelopment"/>
+        <Class IRI="#SystemLevelDesign"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DetailDesign"/>
+        <Class IRI="#SystemLevelDesign"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#DevelopmentActivity"/>
         <Class IRI="#Flow"/>
         <Class IRI="#Focus"/>
+        <Class IRI="#Parameter"/>
         <Class IRI="#TemporalPartition"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Artefact"/>
-        <Class IRI="#Focus"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Artefact"/>
-        <Class IRI="#Iteration"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Artefact"/>
-        <Class IRI="#Span"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Artefact"/>
-        <Class IRI="#Step"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Artefact"/>
-        <Class IRI="#TemporalPartition"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#ConceptDevelopment"/>
-        <Class IRI="#DetailDesign"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#ConceptDevelopment"/>
-        <Class IRI="#SystemLevelDesign"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#DetailDesign"/>
-        <Class IRI="#SystemLevelDesign"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DevelopmentActivity"/>
@@ -1282,11 +1264,19 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#Parameter"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DevelopmentActivity"/>
         <Class IRI="#TemporalPartition"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Focus"/>
         <Class IRI="#Iteration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Focus"/>
+        <Class IRI="#Parameter"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Focus"/>
@@ -1302,10 +1292,26 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Iteration"/>
+        <Class IRI="#Parameter"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Iteration"/>
         <Class IRI="#Span"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Iteration"/>
+        <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parameter"/>
+        <Class IRI="#Span"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parameter"/>
+        <Class IRI="#Step"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parameter"/>
         <Class IRI="#TemporalPartition"/>
     </DisjointClasses>
     <DisjointClasses>
