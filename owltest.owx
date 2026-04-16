@@ -36,9 +36,6 @@
         <Class IRI="#Flow"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FlowB"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#FlowC"/>
     </Declaration>
     <Declaration>
@@ -49,6 +46,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#FlowF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flow_CAE_VirtualTesting_Procurement"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Flow_DesignActivity_CAE_VirtualTesting"/>
@@ -604,32 +604,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#FlowB"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Flow"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                <Class IRI="#CAE_VirtualTesting"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                <Class IRI="#Procurement"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasStep"/>
-                <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
-            </ObjectSomeValuesFrom>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#endsWith"/>
-                <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
-            </ObjectExactCardinality>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#startsWith"/>
-                <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
-            </ObjectExactCardinality>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#FlowC"/>
         <ObjectIntersectionOf>
             <Class IRI="#Flow"/>
@@ -815,6 +789,32 @@
                     <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
                 </ObjectExactCardinality>
             </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Flow_CAE_VirtualTesting_Procurement"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Flow"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#Procurement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasStep"/>
+                <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#endsWith"/>
+                <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#startsWith"/>
+                <Class IRI="#Step_CAE_VirtualTestingToProcurement"/>
+            </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1160,10 +1160,6 @@
         <Class IRI="#DesignActivity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FlowB"/>
-        <Class IRI="#Flow"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#FlowC"/>
         <Class IRI="#Flow"/>
     </SubClassOf>
@@ -1177,6 +1173,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FlowF"/>
+        <Class IRI="#Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flow_CAE_VirtualTesting_Procurement"/>
         <Class IRI="#Flow"/>
     </SubClassOf>
     <SubClassOf>
@@ -1375,7 +1375,7 @@
         <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#FlowB"/>
+        <Class IRI="#Flow_CAE_VirtualTesting_Procurement"/>
         <NamedIndividual IRI="#ConceptDevelopment_FlowB"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1503,7 +1503,7 @@
         <NamedIndividual IRI="#DetailDesign_FlowB"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#FlowB"/>
+        <Class IRI="#Flow_CAE_VirtualTesting_Procurement"/>
         <NamedIndividual IRI="#DetailDesign_FlowB"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1723,7 +1723,7 @@
         <NamedIndividual IRI="#SystemLevelDesign_FlowB"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#FlowB"/>
+        <Class IRI="#Flow_CAE_VirtualTesting_Procurement"/>
         <NamedIndividual IRI="#SystemLevelDesign_FlowB"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -4520,6 +4520,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ConceptDevelopment_FlowE</IRI>
         <Literal xml:lang="en">Parts progressively incorporated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Flow_CAE_VirtualTesting_Procurement</IRI>
+        <Literal xml:lang="en">During this Flow, specifications may be sent to suppliers.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
