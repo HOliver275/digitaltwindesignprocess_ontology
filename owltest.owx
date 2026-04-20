@@ -88,10 +88,10 @@
         <Class IRI="#PerformanceTesting"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PhysicalTesting"/>
+        <Class IRI="#PhysicalAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PhysicalTwin"/>
+        <Class IRI="#PhysicalTesting"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Procurement"/>
@@ -1237,12 +1237,12 @@
         <Class IRI="#PhysicalTesting"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PhysicalTesting"/>
-        <Class IRI="#TestingActivity"/>
+        <Class IRI="#PhysicalAsset"/>
+        <Class IRI="#Twin"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PhysicalTwin"/>
-        <Class IRI="#Twin"/>
+        <Class IRI="#PhysicalTesting"/>
+        <Class IRI="#TestingActivity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Procurement"/>
@@ -1397,7 +1397,7 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DigitalTwin"/>
-        <Class IRI="#PhysicalTwin"/>
+        <Class IRI="#PhysicalAsset"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Flow"/>
