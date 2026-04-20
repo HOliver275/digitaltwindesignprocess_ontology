@@ -13,6 +13,9 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="#Artefact"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#CAE_VirtualTesting"/>
     </Declaration>
     <Declaration>
@@ -31,13 +34,13 @@
         <Class IRI="#DevelopmentActivity"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#DigitalTwin"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#EngineeringDesign"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Flow"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FlowF"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Flow_CAE_VirtualTesting_PhysicalTesting"/>
@@ -50,6 +53,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Flow_DesignActivity_Procurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flow_PhysicalTesting_VirtualTesting_DesignActivity"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Flow_Procurement_PhysicalTesting"/>
@@ -83,6 +89,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#PhysicalTesting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalTwin"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Procurement"/>
@@ -145,6 +154,9 @@
         <Class IRI="#TestingFocus"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Twin"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#VirtualTesting"/>
     </Declaration>
     <Declaration>
@@ -166,6 +178,9 @@
         <ObjectProperty IRI="#followsFrom"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasArtefact"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
     </Declaration>
     <Declaration>
@@ -185,6 +200,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#inputInto"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isArtefactOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#leadsTo"/>
@@ -611,90 +629,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#FlowF"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Flow"/>
-            <ObjectUnionOf>
-                <ObjectIntersectionOf>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                        <Class IRI="#CAE_VirtualTesting"/>
-                    </ObjectSomeValuesFrom>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                        <Class IRI="#DesignActivity"/>
-                    </ObjectSomeValuesFrom>
-                </ObjectIntersectionOf>
-                <ObjectIntersectionOf>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                        <Class IRI="#CAE_VirtualTesting"/>
-                    </ObjectSomeValuesFrom>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                        <Class IRI="#MechanicalTesting"/>
-                    </ObjectSomeValuesFrom>
-                </ObjectIntersectionOf>
-                <ObjectIntersectionOf>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                        <Class IRI="#DesignActivity"/>
-                    </ObjectSomeValuesFrom>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                        <Class IRI="#PerformanceTesting"/>
-                    </ObjectSomeValuesFrom>
-                </ObjectIntersectionOf>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="#hasDevelopmentActivity"/>
-                    <Class IRI="#CAE_VirtualTesting"/>
-                </ObjectSomeValuesFrom>
-            </ObjectUnionOf>
-            <ObjectUnionOf>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="#hasStep"/>
-                    <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
-                </ObjectSomeValuesFrom>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="#hasStep"/>
-                    <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
-                </ObjectSomeValuesFrom>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="#hasStep"/>
-                    <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
-                </ObjectSomeValuesFrom>
-            </ObjectUnionOf>
-            <ObjectUnionOf>
-                <ObjectExactCardinality cardinality="1">
-                    <ObjectProperty IRI="#endsWith"/>
-                    <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
-                </ObjectExactCardinality>
-                <ObjectExactCardinality cardinality="1">
-                    <ObjectProperty IRI="#endsWith"/>
-                    <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
-                </ObjectExactCardinality>
-                <ObjectExactCardinality cardinality="1">
-                    <ObjectProperty IRI="#endsWith"/>
-                    <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
-                </ObjectExactCardinality>
-            </ObjectUnionOf>
-            <ObjectUnionOf>
-                <ObjectExactCardinality cardinality="1">
-                    <ObjectProperty IRI="#startsWith"/>
-                    <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
-                </ObjectExactCardinality>
-                <ObjectExactCardinality cardinality="1">
-                    <ObjectProperty IRI="#startsWith"/>
-                    <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
-                </ObjectExactCardinality>
-                <ObjectExactCardinality cardinality="1">
-                    <ObjectProperty IRI="#startsWith"/>
-                    <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
-                </ObjectExactCardinality>
-            </ObjectUnionOf>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#Flow_CAE_VirtualTesting_PhysicalTesting"/>
         <ObjectIntersectionOf>
             <Class IRI="#Flow"/>
@@ -808,6 +742,90 @@
                 <ObjectProperty IRI="#startsWith"/>
                 <Class IRI="#Step_DesignActivityToProcurement"/>
             </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Flow_PhysicalTesting_VirtualTesting_DesignActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Flow"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#CAE_VirtualTesting"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#DesignActivity"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#CAE_VirtualTesting"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#MechanicalTesting"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#DesignActivity"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                        <Class IRI="#PerformanceTesting"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                    <Class IRI="#CAE_VirtualTesting"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasStep"/>
+                    <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasStep"/>
+                    <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasStep"/>
+                    <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#endsWith"/>
+                    <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
+                </ObjectExactCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#endsWith"/>
+                    <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
+                </ObjectExactCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#endsWith"/>
+                    <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
+                </ObjectExactCardinality>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#startsWith"/>
+                    <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
+                </ObjectExactCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#startsWith"/>
+                    <Class IRI="#Step_MechanicalTestingToCAE_VirtualTesting"/>
+                </ObjectExactCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#startsWith"/>
+                    <Class IRI="#Step_PerformanceTestingToDesignActivity"/>
+                </ObjectExactCardinality>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1163,12 +1181,12 @@
         <Class IRI="#ProductDevelopmentStage"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#EngineeringDesign"/>
-        <Class IRI="#DesignActivity"/>
+        <Class IRI="#DigitalTwin"/>
+        <Class IRI="#Twin"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FlowF"/>
-        <Class IRI="#Flow"/>
+        <Class IRI="#EngineeringDesign"/>
+        <Class IRI="#DesignActivity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Flow_CAE_VirtualTesting_PhysicalTesting"/>
@@ -1184,6 +1202,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Flow_DesignActivity_Procurement"/>
+        <Class IRI="#Flow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flow_PhysicalTesting_VirtualTesting_DesignActivity"/>
         <Class IRI="#Flow"/>
     </SubClassOf>
     <SubClassOf>
@@ -1217,6 +1239,10 @@
     <SubClassOf>
         <Class IRI="#PhysicalTesting"/>
         <Class IRI="#TestingActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalTwin"/>
+        <Class IRI="#Twin"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Procurement"/>
@@ -1287,9 +1313,41 @@
         <Class IRI="#Focus"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Twin"/>
+        <Class IRI="#Artefact"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#VirtualTesting"/>
         <Class IRI="#TestingActivity"/>
     </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#DevelopmentActivity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#Flow"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#Focus"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#Iteration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#Span"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#Step"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
+        <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#ConceptDevelopment"/>
         <Class IRI="#DetailDesign"/>
@@ -1297,6 +1355,10 @@
     <DisjointClasses>
         <Class IRI="#ConceptDevelopment"/>
         <Class IRI="#SystemLevelDesign"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DesignActivity"/>
+        <Class IRI="#Procurement"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DetailDesign"/>
@@ -1323,7 +1385,27 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#Span"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#Step"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DevelopmentActivity"/>
         <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DigitalTwin"/>
+        <Class IRI="#PhysicalTwin"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Flow"/>
+        <Class IRI="#Span"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Flow"/>
+        <Class IRI="#Step"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Focus"/>
@@ -1352,6 +1434,10 @@
     <DisjointClasses>
         <Class IRI="#Iteration"/>
         <Class IRI="#Span"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Iteration"/>
+        <Class IRI="#Step"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Iteration"/>
@@ -1376,6 +1462,14 @@
     <DisjointClasses>
         <Class IRI="#ReleaseActivity"/>
         <Class IRI="#TestingActivity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Span"/>
+        <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Step"/>
+        <Class IRI="#TemporalPartition"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#CAE_VirtualTesting"/>
@@ -4454,6 +4548,10 @@
         <ObjectProperty IRI="#hasNext"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <ObjectProperty IRI="#isArtefactOf"/>
+    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#closesStage"/>
     </FunctionalObjectProperty>
@@ -4483,16 +4581,16 @@
         <Class IRI="#Gateway"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasNext"/>
-        <Class IRI="#TemporalPartition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <Class IRI="#TemporalPartition"/>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <Class IRI="#DevelopmentActivity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#inputInto"/>
         <Class IRI="#Input"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <Class IRI="#Artefact"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#opensStage"/>
@@ -4519,6 +4617,10 @@
         <Class IRI="#TemporalPartition"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <Class IRI="#Artefact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <Class IRI="#DevelopmentActivity"/>
     </ObjectPropertyRange>
@@ -4527,16 +4629,12 @@
         <Class IRI="#Focus"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasNext"/>
-        <Class IRI="#TemporalPartition"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasOutput"/>
         <Class IRI="#Output"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <Class IRI="#TemporalPartition"/>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <Class IRI="#DevelopmentActivity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#opensStage"/>
@@ -4581,6 +4679,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Flow_DesignActivity_Procurement</IRI>
         <Literal xml:lang="en">Design progressively released.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Flow_PhysicalTesting_VirtualTesting_DesignActivity</IRI>
+        <Literal xml:lang="en">Each procured prototype can involve a mix of old and new parts depending on the project progress. Performance testing starts slightly before mechanical testing and runs almost in parallel. Any design issues identified through these physical tests are dealt with in the next stage of the process (Flow_PhysicalTesting_VirtualTesting_DesignActivity).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Flow_PhysicalTesting_VirtualTesting_DesignActivity</IRI>
+        <Literal xml:lang="en">Parts progressively incorporated.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
