@@ -22,6 +22,9 @@
         <Class IRI="#ConceptDevelopment"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Continuity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#DesignActivity"/>
     </Declaration>
     <Declaration>
@@ -169,6 +172,12 @@
         <ObjectProperty IRI="#comesBefore"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#continuityFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#continuityTo"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#duringTemporalPartition"/>
     </Declaration>
     <Declaration>
@@ -194,6 +203,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasPrevious"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSpan"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasStep"/>
@@ -322,6 +334,9 @@
         <NamedIndividual IRI="#DesignActivity3"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#DesignOutput1"/>
     </Declaration>
     <Declaration>
@@ -445,6 +460,9 @@
         <NamedIndividual IRI="#MechanicalTestingActivity3"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#MechanicalTestingSpan1"/>
     </Declaration>
     <Declaration>
@@ -464,6 +482,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PerformanceTestingSpan1"/>
@@ -606,6 +627,36 @@
     <Declaration>
         <NamedIndividual IRI="#TestingFocus9"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Continuity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Continuity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSpan"/>
+                <Class IRI="#Span"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#duringTemporalPartition"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectMinCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#continuityFrom"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#continuityTo"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#endsWith"/>
+                <Class IRI="#Span"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#startsWith"/>
+                <Class IRI="#Span"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Flow"/>
         <ObjectIntersectionOf>
@@ -1488,6 +1539,10 @@
         <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#ConceptDevelopment"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Flow_CAE_VirtualTesting_Procurement"/>
         <NamedIndividual IRI="#ConceptDevelopment_FlowB"/>
     </ClassAssertion>
@@ -1590,6 +1645,10 @@
     <ClassAssertion>
         <Class IRI="#DesignActivity"/>
         <NamedIndividual IRI="#DesignActivity3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Continuity"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DesignOutput"/>
@@ -1764,6 +1823,10 @@
         <NamedIndividual IRI="#MechanicalTestingActivity3"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Continuity"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Span"/>
         <NamedIndividual IRI="#MechanicalTestingSpan1"/>
     </ClassAssertion>
@@ -1790,6 +1853,10 @@
     <ClassAssertion>
         <Class IRI="#PerformanceTesting"/>
         <NamedIndividual IRI="#PerformanceTestingActivity3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Continuity"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Span"/>
@@ -1838,6 +1905,10 @@
     <ClassAssertion>
         <Class IRI="#ProductDevelopmentStage"/>
         <NamedIndividual IRI="#Stage5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SystemLevelDesign"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Flow"/>
@@ -2635,6 +2706,91 @@
         <ObjectProperty IRI="#followsFrom"/>
         <NamedIndividual IRI="#DesignActivity3"/>
         <NamedIndividual IRI="#DesignSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#continuityFrom"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#continuityTo"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#Gateway1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#Gateway2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#Gateway3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#DesignSpan4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpan"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpan"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#DesignSpan2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpan"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#DesignSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpan"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#DesignSpan4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#DesignContinuity1"/>
+        <NamedIndividual IRI="#DesignSpan1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
@@ -3507,6 +3663,76 @@
         <NamedIndividual IRI="#Stage5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#continuityFrom"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#continuityTo"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#Gateway2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#Gateway3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpan"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpan"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpan"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#MechanicalTestingContinuity1"/>
+        <NamedIndividual IRI="#MechanicalTestingSpan1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <NamedIndividual IRI="#MechanicalTestingSpan1"/>
         <NamedIndividual IRI="#ConceptDevelopmentStage"/>
@@ -3690,6 +3916,76 @@
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <NamedIndividual IRI="#PerformanceTestingActivity3"/>
         <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#continuityFrom"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#continuityTo"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#Gateway2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#Gateway3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#Gateway4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#SystemLevelDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#endsWith"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpan"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpan"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpan"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#startsWith"/>
+        <NamedIndividual IRI="#PerformanceTestingContinuity1"/>
+        <NamedIndividual IRI="#PerformanceTestingSpan1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
@@ -4544,10 +4840,6 @@
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasNext"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasArtefact"/>
         <ObjectProperty IRI="#isArtefactOf"/>
@@ -4577,8 +4869,12 @@
         <ObjectProperty IRI="#comesBefore"/>
     </TransitiveObjectProperty>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#closesStage"/>
-        <Class IRI="#Gateway"/>
+        <ObjectProperty IRI="#continuityFrom"/>
+        <Class IRI="#Continuity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#continuityTo"/>
+        <Class IRI="#Continuity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -4593,10 +4889,6 @@
         <Class IRI="#Artefact"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#opensStage"/>
-        <Class IRI="#Gateway"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#outputFrom"/>
         <Class IRI="#Output"/>
     </ObjectPropertyDomain>
@@ -4608,9 +4900,21 @@
         <ObjectProperty IRI="#spansTo"/>
         <Class IRI="#Span"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#stepFrom"/>
+        <Class IRI="#Step"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#stepTo"/>
+        <Class IRI="#Step"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#closesStage"/>
-        <Class IRI="#ProductDevelopmentStage"/>
+        <ObjectProperty IRI="#continuityFrom"/>
+        <Class IRI="#TemporalPartition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#continuityTo"/>
+        <Class IRI="#TemporalPartition"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#duringTemporalPartition"/>
@@ -4633,12 +4937,16 @@
         <Class IRI="#Output"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#isArtefactOf"/>
-        <Class IRI="#DevelopmentActivity"/>
+        <ObjectProperty IRI="#hasSpan"/>
+        <Class IRI="#Span"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#opensStage"/>
-        <Class IRI="#ProductDevelopmentStage"/>
+        <ObjectProperty IRI="#hasStep"/>
+        <Class IRI="#Step"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <Class IRI="#DevelopmentActivity"/>
     </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
