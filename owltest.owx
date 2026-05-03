@@ -1891,7 +1891,15 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Focus"/>
-        <Class IRI="#Iteration"/>
+        <Class IRI="#Input"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Focus"/>
+        <Class IRI="#Model"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Focus"/>
+        <Class IRI="#Output"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Focus"/>
@@ -1899,15 +1907,7 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Focus"/>
-        <Class IRI="#Span"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Focus"/>
-        <Class IRI="#Step"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Focus"/>
-        <Class IRI="#TemporalPartition"/>
+        <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Iteration"/>
@@ -5573,6 +5573,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Flow_PhysicalTesting_VirtualTesting_DesignActivity</IRI>
         <Literal xml:lang="en">Parts progressively incorporated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Focus</IRI>
+        <Literal xml:lang="en">What you focus on during an activity, or time period, or in relation to something.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
