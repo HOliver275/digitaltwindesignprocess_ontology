@@ -190,6 +190,9 @@
         <Class IRI="#TestingFocus"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#TestingOutput"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Twin"/>
     </Declaration>
     <Declaration>
@@ -1324,13 +1327,8 @@
                 <ObjectMinCardinality cardinality="1">
                     <ObjectProperty IRI="#outputFrom"/>
                     <ObjectUnionOf>
-                        <Class IRI="#Continuity"/>
                         <Class IRI="#DevelopmentActivity"/>
-                        <Class IRI="#Flow"/>
-                        <Class IRI="#Iteration"/>
-                        <Class IRI="#Span"/>
-                        <Class IRI="#Step"/>
-                        <Class IRI="#TemporalPartition"/>
+                        <Class IRI="#TemporalConstruct"/>
                     </ObjectUnionOf>
                 </ObjectMinCardinality>
             </ObjectIntersectionOf>
@@ -1777,6 +1775,10 @@
         <Class IRI="#Focus"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#TestingOutput"/>
+        <Class IRI="#Output"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Twin"/>
         <Class IRI="#Artefact"/>
     </SubClassOf>
@@ -1839,6 +1841,10 @@
     <DisjointClasses>
         <Class IRI="#DesignActivity"/>
         <Class IRI="#Procurement"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DesignOutput"/>
+        <Class IRI="#TestingOutput"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DetailDesign"/>
@@ -5533,6 +5539,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DesignOutput</IRI>
+        <Literal xml:lang="en">Output relating to some DesignActivity or part of the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DevelopmentActivity</IRI>
         <Literal xml:lang="en">A type of activity undertaken during the design process.</Literal>
     </AnnotationAssertion>
@@ -5593,7 +5604,7 @@
 
 For example, a Twin is an Artefact. Supposing we have a Twin as the Output from one DevelopmentActivity. In order to continue developing the Twin during the next DevelopmentActivity, it will have to be passed in as part of the Input to that DevelopmentActivity.
 
-An item of information, such as a Datapoint, may also form part of the Input. For example, we may need to track the weight in kg of a Component through the development process. This would be done using the same Datapoint included into the input into, a DevelopmentActivity, which then becomes part of the Output from that same activity.</Literal>
+An item of information, such as a Datapoint, may also form part of the Input. For example, we may need to track the weight in kg of a Component through the development process. This would be done using the same Datapoint included into the Input into a DevelopmentActivity, which then becomes part of the Output from that same activity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5606,6 +5617,15 @@ An item of information, such as a Datapoint, may also form part of the Input. Fo
         <Literal xml:lang="en">A Model is a representation of something that exists in reality. An architectural model can be a physical or digital representation of a building. An information model is a digital representation of some knowledge domain (this ontology is an information model).
 
 A Model can be an Artefect of the development process, a Component of some system, a Parameter that forms part of the Input into or Output from some DevelopmentActivity or TemporalConstruct, or it can be an entity in its own right that is involved in the development process in some other way.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Output</IRI>
+        <Literal xml:lang="en">&quot;An Output consists of the things that are produced or changed during a particular DevelopmentActivity or TemporalConstruct in the development process.
+
+For example, a Twin is an Artefact that is developed during some DevelopmentActivity. It is then part of the Output from that DevelopmentActivity, and will most likely form part of the Input to another DevelopmentActivity. 
+
+An item of information, such as a Datapoint, may also form part of an Output. For example, we may need to track the weight in kg of a Component through the development process. This would be done using the same Datapoint included into the Input into a DevelopmentActivity, which then becomes part of the Output from that same activity.&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5711,6 +5731,11 @@ A Model can be an Artefect of the development process, a Component of some syste
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TestingFocus9</IRI>
         <Literal xml:lang="en">New parts are progressively installed in prototypes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TestingOutput</IRI>
+        <Literal xml:lang="en">Output from some TestingActivity or testing-related part of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
