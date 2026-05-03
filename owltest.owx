@@ -19,10 +19,22 @@
         <Class IRI="#CAE_VirtualTesting"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Component"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ConceptDevelopment"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Continuity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Datapoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dataset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Deliverable"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DesignActivity"/>
@@ -38,6 +50,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#DigitalTwin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Document"/>
     </Declaration>
     <Declaration>
         <Class IRI="#EngineeringDesign"/>
@@ -82,6 +97,15 @@
         <Class IRI="#MechanicalTesting"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Modelling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModellingAndSimulation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Output"/>
     </Declaration>
     <Declaration>
@@ -100,6 +124,9 @@
         <Class IRI="#Procurement"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Product"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ProductDevelopmentStage"/>
     </Declaration>
     <Declaration>
@@ -107,6 +134,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ReleaseActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Simulation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Span"/>
@@ -146,6 +176,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#SystemLevelDesign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporalConstruct"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TemporalPartition"/>
@@ -190,16 +223,34 @@
         <ObjectProperty IRI="#hasArtefact"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasComponent"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDigitalTwin"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasFocus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModel"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasNext"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasOutput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParameter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPhysicalAsset"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasPrevious"/>
@@ -215,6 +266,18 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isArtefactOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDigitalTwinOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isParameterOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPhysicalAssetOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#leadsTo"/>
@@ -241,10 +304,37 @@
         <ObjectProperty IRI="#stepTo"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#createdOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasURI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#isOptional"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#maxTargetValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minTargetValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#prevValue"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#toBeRepeated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#updatedOn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Artefact1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CAEActivity1"/>
@@ -323,6 +413,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Datapoint1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DesignActivity1"/>
@@ -627,6 +720,19 @@
     <Declaration>
         <NamedIndividual IRI="#TestingFocus9"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WeightParameter"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Artefact"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Artefact"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasComponent"/>
+                <Class IRI="#Component"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Continuity"/>
         <ObjectIntersectionOf>
@@ -655,6 +761,200 @@
                 <ObjectProperty IRI="#startsWith"/>
                 <Class IRI="#Span"/>
             </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Datapoint"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Datapoint"/>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#createdOn"/>
+                <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+            </DataExactCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#hasUnit"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataExactCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="#hasValue"/>
+                <DataUnionOf>
+                    <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:langString"/>
+                    <Datatype abbreviatedIRI="rdfs:Literal"/>
+                    <Datatype abbreviatedIRI="xsd:NCName"/>
+                    <Datatype abbreviatedIRI="xsd:NMTOKEN"/>
+                    <Datatype abbreviatedIRI="xsd:Name"/>
+                    <Datatype abbreviatedIRI="xsd:anyURI"/>
+                    <Datatype abbreviatedIRI="xsd:base64Binary"/>
+                    <Datatype abbreviatedIRI="xsd:boolean"/>
+                    <Datatype abbreviatedIRI="xsd:byte"/>
+                    <Datatype abbreviatedIRI="xsd:dateTime"/>
+                    <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <Datatype abbreviatedIRI="xsd:hexBinary"/>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <Datatype abbreviatedIRI="xsd:language"/>
+                    <Datatype abbreviatedIRI="xsd:long"/>
+                    <Datatype abbreviatedIRI="xsd:negativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonPositiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:normalizedString"/>
+                    <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:short"/>
+                    <Datatype abbreviatedIRI="xsd:token"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+                    <Datatype abbreviatedIRI="owl:rational"/>
+                    <Datatype abbreviatedIRI="owl:real"/>
+                </DataUnionOf>
+            </DataMaxCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="#maxTargetValue"/>
+                <DataUnionOf>
+                    <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:langString"/>
+                    <Datatype abbreviatedIRI="rdfs:Literal"/>
+                    <Datatype abbreviatedIRI="xsd:NCName"/>
+                    <Datatype abbreviatedIRI="xsd:NMTOKEN"/>
+                    <Datatype abbreviatedIRI="xsd:Name"/>
+                    <Datatype abbreviatedIRI="xsd:anyURI"/>
+                    <Datatype abbreviatedIRI="xsd:base64Binary"/>
+                    <Datatype abbreviatedIRI="xsd:boolean"/>
+                    <Datatype abbreviatedIRI="xsd:byte"/>
+                    <Datatype abbreviatedIRI="xsd:dateTime"/>
+                    <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <Datatype abbreviatedIRI="xsd:hexBinary"/>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <Datatype abbreviatedIRI="xsd:language"/>
+                    <Datatype abbreviatedIRI="xsd:long"/>
+                    <Datatype abbreviatedIRI="xsd:negativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonPositiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:normalizedString"/>
+                    <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:short"/>
+                    <Datatype abbreviatedIRI="xsd:token"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+                    <Datatype abbreviatedIRI="owl:rational"/>
+                    <Datatype abbreviatedIRI="owl:real"/>
+                </DataUnionOf>
+            </DataMaxCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="#minTargetValue"/>
+                <DataUnionOf>
+                    <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:langString"/>
+                    <Datatype abbreviatedIRI="rdfs:Literal"/>
+                    <Datatype abbreviatedIRI="xsd:NCName"/>
+                    <Datatype abbreviatedIRI="xsd:NMTOKEN"/>
+                    <Datatype abbreviatedIRI="xsd:Name"/>
+                    <Datatype abbreviatedIRI="xsd:anyURI"/>
+                    <Datatype abbreviatedIRI="xsd:base64Binary"/>
+                    <Datatype abbreviatedIRI="xsd:boolean"/>
+                    <Datatype abbreviatedIRI="xsd:byte"/>
+                    <Datatype abbreviatedIRI="xsd:dateTime"/>
+                    <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <Datatype abbreviatedIRI="xsd:hexBinary"/>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <Datatype abbreviatedIRI="xsd:language"/>
+                    <Datatype abbreviatedIRI="xsd:long"/>
+                    <Datatype abbreviatedIRI="xsd:negativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonPositiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:normalizedString"/>
+                    <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:short"/>
+                    <Datatype abbreviatedIRI="xsd:token"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+                    <Datatype abbreviatedIRI="owl:rational"/>
+                    <Datatype abbreviatedIRI="owl:real"/>
+                </DataUnionOf>
+            </DataMaxCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="#prevValue"/>
+                <DataUnionOf>
+                    <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:langString"/>
+                    <Datatype abbreviatedIRI="rdfs:Literal"/>
+                    <Datatype abbreviatedIRI="xsd:NCName"/>
+                    <Datatype abbreviatedIRI="xsd:NMTOKEN"/>
+                    <Datatype abbreviatedIRI="xsd:Name"/>
+                    <Datatype abbreviatedIRI="xsd:anyURI"/>
+                    <Datatype abbreviatedIRI="xsd:base64Binary"/>
+                    <Datatype abbreviatedIRI="xsd:boolean"/>
+                    <Datatype abbreviatedIRI="xsd:byte"/>
+                    <Datatype abbreviatedIRI="xsd:dateTime"/>
+                    <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <Datatype abbreviatedIRI="xsd:hexBinary"/>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <Datatype abbreviatedIRI="xsd:language"/>
+                    <Datatype abbreviatedIRI="xsd:long"/>
+                    <Datatype abbreviatedIRI="xsd:negativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonPositiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:normalizedString"/>
+                    <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:short"/>
+                    <Datatype abbreviatedIRI="xsd:token"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+                    <Datatype abbreviatedIRI="owl:rational"/>
+                    <Datatype abbreviatedIRI="owl:real"/>
+                </DataUnionOf>
+            </DataMaxCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="#updatedOn"/>
+                <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+            </DataMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Dataset"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Dataset"/>
+            <DataMinCardinality cardinality="1">
+                <DataProperty IRI="#hasURI"/>
+                <Datatype abbreviatedIRI="xsd:anyURI"/>
+            </DataMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Document"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Document"/>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#hasURI"/>
+                <Datatype abbreviatedIRI="xsd:anyURI"/>
+            </DataExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -941,17 +1241,38 @@
         <Class IRI="#Input"/>
         <ObjectIntersectionOf>
             <Class IRI="#Input"/>
-            <ObjectMinCardinality cardinality="1">
-                <ObjectProperty IRI="#inputInto"/>
+            <ObjectIntersectionOf>
                 <ObjectUnionOf>
-                    <Class IRI="#DevelopmentActivity"/>
-                    <Class IRI="#Flow"/>
-                    <Class IRI="#Iteration"/>
-                    <Class IRI="#Span"/>
-                    <Class IRI="#Step"/>
-                    <Class IRI="#TemporalPartition"/>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#hasArtefact"/>
+                        <Class IRI="#Artefact"/>
+                    </ObjectMinCardinality>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#hasComponent"/>
+                        <Class IRI="#Component"/>
+                    </ObjectMinCardinality>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#hasModel"/>
+                        <Class IRI="#Model"/>
+                    </ObjectMinCardinality>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#hasParameter"/>
+                        <Class IRI="#Parameter"/>
+                    </ObjectMinCardinality>
                 </ObjectUnionOf>
-            </ObjectMinCardinality>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="#inputInto"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Continuity"/>
+                        <Class IRI="#DevelopmentActivity"/>
+                        <Class IRI="#Flow"/>
+                        <Class IRI="#Iteration"/>
+                        <Class IRI="#Span"/>
+                        <Class IRI="#Step"/>
+                        <Class IRI="#TemporalPartition"/>
+                    </ObjectUnionOf>
+                </ObjectMinCardinality>
+            </ObjectIntersectionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -986,17 +1307,66 @@
         <Class IRI="#Output"/>
         <ObjectIntersectionOf>
             <Class IRI="#Output"/>
-            <ObjectMinCardinality cardinality="1">
-                <ObjectProperty IRI="#outputFrom"/>
+            <ObjectIntersectionOf>
                 <ObjectUnionOf>
-                    <Class IRI="#DevelopmentActivity"/>
-                    <Class IRI="#Flow"/>
-                    <Class IRI="#Iteration"/>
-                    <Class IRI="#Span"/>
-                    <Class IRI="#Step"/>
-                    <Class IRI="#TemporalPartition"/>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#hasArtefact"/>
+                        <Class IRI="#Artefact"/>
+                    </ObjectMinCardinality>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#hasComponent"/>
+                        <Class IRI="#Component"/>
+                    </ObjectMinCardinality>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#hasModel"/>
+                        <Class IRI="#Model"/>
+                    </ObjectMinCardinality>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#hasParameter"/>
+                        <Class IRI="#Parameter"/>
+                    </ObjectMinCardinality>
                 </ObjectUnionOf>
-            </ObjectMinCardinality>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="#outputFrom"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Continuity"/>
+                        <Class IRI="#DevelopmentActivity"/>
+                        <Class IRI="#Flow"/>
+                        <Class IRI="#Iteration"/>
+                        <Class IRI="#Span"/>
+                        <Class IRI="#Step"/>
+                        <Class IRI="#TemporalPartition"/>
+                    </ObjectUnionOf>
+                </ObjectMinCardinality>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Parameter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Parameter"/>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#createdOn"/>
+                <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+            </DataExactCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="#updatedOn"/>
+                <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+            </DataMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Product"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Product"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDigitalTwin"/>
+                <Class IRI="#DigitalTwin"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasPhysicalAsset"/>
+                <Class IRI="#PhysicalAsset"/>
+            </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1220,6 +1590,22 @@
         <Class IRI="#ProductDevelopmentStage"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Continuity"/>
+        <Class IRI="#TemporalConstruct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Datapoint"/>
+        <Class IRI="#Parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dataset"/>
+        <Class IRI="#Parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Deliverable"/>
+        <Class IRI="#Artefact"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#DesignActivity"/>
         <Class IRI="#DevelopmentActivity"/>
     </SubClassOf>
@@ -1236,8 +1622,16 @@
         <Class IRI="#Twin"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Document"/>
+        <Class IRI="#Parameter"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#EngineeringDesign"/>
         <Class IRI="#DesignActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flow"/>
+        <Class IRI="#TemporalConstruct"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Flow_CAE_VirtualTesting_PhysicalTesting"/>
@@ -1268,8 +1662,8 @@
         <Class IRI="#TemporalPartition"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Input"/>
-        <Class IRI="#Parameter"/>
+        <Class IRI="#Iteration"/>
+        <Class IRI="#TemporalConstruct"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Loop"/>
@@ -1280,8 +1674,12 @@
         <Class IRI="#PhysicalTesting"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Output"/>
-        <Class IRI="#Parameter"/>
+        <Class IRI="#Modelling"/>
+        <Class IRI="#ModellingAndSimulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModellingAndSimulation"/>
+        <Class IRI="#DevelopmentActivity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PerformanceTesting"/>
@@ -1300,6 +1698,10 @@
         <Class IRI="#DevelopmentActivity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Product"/>
+        <Class IRI="#Artefact"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ProductDevelopmentStage"/>
         <Class IRI="#TemporalPartition"/>
     </SubClassOf>
@@ -1310,6 +1712,18 @@
     <SubClassOf>
         <Class IRI="#ReleaseActivity"/>
         <Class IRI="#DevelopmentActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Simulation"/>
+        <Class IRI="#ModellingAndSimulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Span"/>
+        <Class IRI="#TemporalConstruct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Step"/>
+        <Class IRI="#TemporalConstruct"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
@@ -1356,6 +1770,10 @@
         <Class IRI="#ProductDevelopmentStage"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#TemporalPartition"/>
+        <Class IRI="#TemporalConstruct"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#TestingActivity"/>
         <Class IRI="#DevelopmentActivity"/>
     </SubClassOf>
@@ -1389,6 +1807,10 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Artefact"/>
+        <Class IRI="#Parameter"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
         <Class IRI="#Span"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -1397,7 +1819,19 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Artefact"/>
-        <Class IRI="#TemporalPartition"/>
+        <Class IRI="#TemporalConstruct"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Component"/>
+        <Class IRI="#DevelopmentActivity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Component"/>
+        <Class IRI="#Focus"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Component"/>
+        <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#ConceptDevelopment"/>
@@ -1417,18 +1851,19 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DevelopmentActivity"/>
-        <Class IRI="#Flow"/>
-        <Class IRI="#Focus"/>
-        <Class IRI="#Parameter"/>
-        <Class IRI="#TemporalPartition"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#DevelopmentActivity"/>
         <Class IRI="#Focus"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DevelopmentActivity"/>
-        <Class IRI="#Iteration"/>
+        <Class IRI="#Input"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#Model"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#Output"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DevelopmentActivity"/>
@@ -1436,11 +1871,7 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DevelopmentActivity"/>
-        <Class IRI="#Span"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#DevelopmentActivity"/>
-        <Class IRI="#Step"/>
+        <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DevelopmentActivity"/>
@@ -1522,6 +1953,10 @@
         <Class IRI="#Step"/>
         <Class IRI="#TemporalPartition"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Artefact"/>
+        <NamedIndividual IRI="#Artefact1"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAE_VirtualTesting"/>
         <NamedIndividual IRI="#CAEActivity1"/>
@@ -1633,6 +2068,10 @@
     <ClassAssertion>
         <Class IRI="#Step"/>
         <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Datapoint"/>
+        <NamedIndividual IRI="#Datapoint1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DesignActivity"/>
@@ -2057,6 +2496,10 @@
     <ClassAssertion>
         <Class IRI="#TestingFocus"/>
         <NamedIndividual IRI="#TestingFocus9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Datapoint"/>
+        <NamedIndividual IRI="#WeightParameter"/>
     </ClassAssertion>
     <SameIndividual>
         <NamedIndividual IRI="#ConceptDevelopmentStage"/>
@@ -4793,6 +5236,11 @@
         <Literal xml:lang="en">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Datapoint1"/>
+        <Literal xml:lang="en">I&apos;m a datapoint!</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
         <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
         <Literal xml:lang="en">true</Literal>
@@ -4832,6 +5280,41 @@
         <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
         <Literal xml:lang="en">true</Literal>
     </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#createdOn"/>
+        <NamedIndividual IRI="#WeightParameter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-05-01T18:56:00Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#WeightParameter"/>
+        <Literal>kg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#WeightParameter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxTargetValue"/>
+        <NamedIndividual IRI="#WeightParameter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">41</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minTargetValue"/>
+        <NamedIndividual IRI="#WeightParameter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">37</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#prevValue"/>
+        <NamedIndividual IRI="#WeightParameter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">35</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#updatedOn"/>
+        <NamedIndividual IRI="#WeightParameter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-05-01T18:58:00Z</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#comesBefore"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -4843,6 +5326,26 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasArtefact"/>
         <ObjectProperty IRI="#isArtefactOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasComponent"/>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasInput"/>
+        <ObjectProperty IRI="#inputInto"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasOutput"/>
+        <ObjectProperty IRI="#outputFrom"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasParameter"/>
+        <ObjectProperty IRI="#isParameterOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isDigitalTwinOf"/>
+        <ObjectProperty IRI="#isDigitalTwinOf"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#closesStage"/>
@@ -4925,6 +5428,10 @@
         <Class IRI="#Artefact"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComponent"/>
+        <Class IRI="#Component"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <Class IRI="#DevelopmentActivity"/>
     </ObjectPropertyRange>
@@ -4933,8 +5440,24 @@
         <Class IRI="#Focus"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInput"/>
+        <Class IRI="#Input"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModel"/>
+        <Class IRI="#Model"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasOutput"/>
         <Class IRI="#Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParameter"/>
+        <Class IRI="#Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParameter"/>
+        <Class IRI="#Parameter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSpan"/>
@@ -4948,6 +5471,44 @@
         <ObjectProperty IRI="#isArtefactOf"/>
         <Class IRI="#DevelopmentActivity"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isParameterOf"/>
+        <Class IRI="#Input"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isParameterOf"/>
+        <Class IRI="#Output"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasUnit"/>
+        <Class IRI="#Datapoint"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#createdOn"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasURI"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#updatedOn"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Artefact</IRI>
+        <Literal xml:lang="en">A deliverable of some stage or activity of the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Component</IRI>
+        <Literal xml:lang="en">A part of some whole. Could be a code module of the software which itself is a component of the DigitalTwin; or could be a part of the PhysicalAsset.</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ConceptDevelopment_FlowD</IRI>
@@ -4957,6 +5518,21 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ConceptDevelopment_FlowE</IRI>
         <Literal xml:lang="en">Parts progressively incorporated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Deliverable</IRI>
+        <Literal xml:lang="en">A deliverable Artefact of some stage or activity of the development process, that isn&apos;t necessarily a Product or a Twin. A delivery could be a report, a prototype, a model, and so on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DevelopmentActivity</IRI>
+        <Literal xml:lang="en">A type of activity undertaken during the design process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DigitalTwin</IRI>
+        <Literal xml:lang="en">The digital part of the Twin that is being developed throughout the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5002,6 +5578,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MechanicalTestingSpan3</IRI>
         <Literal xml:lang="en">Verified and validated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PhysicalAsset</IRI>
+        <Literal xml:lang="en">The physical part of the product being developed throughout the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Product</IRI>
+        <Literal xml:lang="en">The thing that is produced - and may or may not be sold, depending on the context - as the culmination of the development process. The Product must have a DigitalTwin and a PhysicalTwin.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5097,6 +5683,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TestingFocus9</IRI>
         <Literal xml:lang="en">New parts are progressively installed in prototypes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Twin</IRI>
+        <Literal xml:lang="en">A Twin is that which is being developed at every stage, and during every activity, of the development process.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
