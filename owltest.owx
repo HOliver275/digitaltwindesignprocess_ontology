@@ -1263,13 +1263,8 @@
                 <ObjectMinCardinality cardinality="1">
                     <ObjectProperty IRI="#inputInto"/>
                     <ObjectUnionOf>
-                        <Class IRI="#Continuity"/>
                         <Class IRI="#DevelopmentActivity"/>
-                        <Class IRI="#Flow"/>
-                        <Class IRI="#Iteration"/>
-                        <Class IRI="#Span"/>
-                        <Class IRI="#Step"/>
-                        <Class IRI="#TemporalPartition"/>
+                        <Class IRI="#TemporalConstruct"/>
                     </ObjectUnionOf>
                 </ObjectMinCardinality>
             </ObjectIntersectionOf>
@@ -1910,6 +1905,14 @@
         <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Input"/>
+        <Class IRI="#Output"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Input"/>
+        <Class IRI="#TemporalConstruct"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Iteration"/>
         <Class IRI="#Parameter"/>
     </DisjointClasses>
@@ -1924,6 +1927,10 @@
     <DisjointClasses>
         <Class IRI="#Iteration"/>
         <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Model"/>
+        <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Parameter"/>
@@ -5580,9 +5587,25 @@
         <Literal xml:lang="en">What you focus on during an activity, or time period, or in relation to something.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Input</IRI>
+        <Literal xml:lang="en">An Input consists of the things that are necessary in order to begin a particular DevelopmentActivity or TemporalConstruct in the development process.
+
+For example, a Twin is an Artefact. Supposing we have a Twin as the Output from one DevelopmentActivity. In order to continue developing the Twin during the next DevelopmentActivity, it will have to be passed in as part of the Input to that DevelopmentActivity.
+
+An item of information, such as a Datapoint, may also form part of the Input. For example, we may need to track the weight in kg of a Component through the development process. This would be done using the same Datapoint included into the input into, a DevelopmentActivity, which then becomes part of the Output from that same activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MechanicalTestingSpan3</IRI>
         <Literal xml:lang="en">Verified and validated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Model</IRI>
+        <Literal xml:lang="en">A Model is a representation of something that exists in reality. An architectural model can be a physical or digital representation of a building. An information model is a digital representation of some knowledge domain (this ontology is an information model).
+
+A Model can be an Artefect of the development process, a Component of some system, a Parameter that forms part of the Input into or Output from some DevelopmentActivity or TemporalConstruct, or it can be an entity in its own right that is involved in the development process in some other way.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
