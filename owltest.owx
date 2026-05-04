@@ -998,6 +998,10 @@
                 <ObjectProperty IRI="#startsWith"/>
                 <Class IRI="#Step"/>
             </ObjectExactCardinality>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#toBeRepeated"/>
+                <Datatype abbreviatedIRI="xsd:boolean"/>
+            </DataSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
