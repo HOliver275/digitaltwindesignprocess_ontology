@@ -5902,6 +5902,15 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
         <Literal xml:lang="en">A DevelopmentActivity, or composition of DevelopmentActivities, that relates mainly to the release of some deliverable.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Span</IRI>
+        <Literal xml:lang="en">A Span that links two DevelopmentActivities across two or more TemporalPartitions.
+
+Spans can be sequentially linked to form a Continuity across TemporalPartitions of the development process.
+
+A Span differs from a Step in that a Span *must* begin and end in two different TemporalPartitions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Stage1</IRI>
         <Literal xml:lang="en">Requirement analysis and planning</Literal>
