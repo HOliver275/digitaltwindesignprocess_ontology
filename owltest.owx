@@ -307,6 +307,9 @@
         <ObjectProperty IRI="#isEndOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isFocusOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isFollowedBy"/>
     </Declaration>
     <Declaration>
@@ -389,6 +392,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Component1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ConceptDevelopmentStage"/>
@@ -556,6 +562,9 @@
         <NamedIndividual IRI="#DetailDesign_LoopAStepB"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DigitalTwin1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#EngineeringDesignActivity"/>
     </Declaration>
     <Declaration>
@@ -569,6 +578,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Gateway4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Input1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#IterationGroup1"/>
@@ -631,6 +643,9 @@
         <NamedIndividual IRI="#PerformanceTestingSpan3"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#PhysicalAsset1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ProcurementActivity1"/>
     </Declaration>
     <Declaration>
@@ -638,6 +653,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ProcurementActivity3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Product1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ProgressiveReleaseDesign1"/>
@@ -1487,20 +1505,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Product"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Product"/>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#hasDigitalTwin"/>
-                <Class IRI="#DigitalTwin"/>
-            </ObjectExactCardinality>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#hasPhysicalAsset"/>
-                <Class IRI="#PhysicalAsset"/>
-            </ObjectExactCardinality>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#ProductDevelopmentStage"/>
         <ObjectIntersectionOf>
             <Class IRI="#ProductDevelopmentStage"/>
@@ -2177,6 +2181,10 @@
         <NamedIndividual IRI="#CAE_VirtualTestingActivity"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Component"/>
+        <NamedIndividual IRI="#Component1"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#ConceptDevelopment"/>
         <NamedIndividual IRI="#ConceptDevelopmentStage"/>
     </ClassAssertion>
@@ -2413,6 +2421,10 @@
         <NamedIndividual IRI="#DetailDesign_LoopAStepA"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#DigitalTwin"/>
+        <NamedIndividual IRI="#DigitalTwin1"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#EngineeringDesign"/>
         <NamedIndividual IRI="#EngineeringDesignActivity"/>
     </ClassAssertion>
@@ -2431,6 +2443,10 @@
     <ClassAssertion>
         <Class IRI="#Gateway"/>
         <NamedIndividual IRI="#Gateway4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Input"/>
+        <NamedIndividual IRI="#Input1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign"/>
@@ -2525,6 +2541,10 @@
         <NamedIndividual IRI="#PerformanceTestingSpan3"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#PhysicalAsset"/>
+        <NamedIndividual IRI="#PhysicalAsset1"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Procurement"/>
         <NamedIndividual IRI="#ProcurementActivity1"/>
     </ClassAssertion>
@@ -2535,6 +2555,10 @@
     <ClassAssertion>
         <Class IRI="#Procurement"/>
         <NamedIndividual IRI="#ProcurementActivity3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Product"/>
+        <NamedIndividual IRI="#Product1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ProgressiveRelease"/>
@@ -4146,6 +4170,21 @@
         <NamedIndividual IRI="#DesignActivity3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPhysicalAsset"/>
+        <NamedIndividual IRI="#DigitalTwin1"/>
+        <NamedIndividual IRI="#PhysicalAsset1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#DigitalTwin1"/>
+        <NamedIndividual IRI="#Input1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDigitalTwinOf"/>
+        <NamedIndividual IRI="#DigitalTwin1"/>
+        <NamedIndividual IRI="#PhysicalAsset1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#comesAfter"/>
         <NamedIndividual IRI="#Gateway1"/>
         <NamedIndividual IRI="#Stage1"/>
@@ -4184,6 +4223,11 @@
         <ObjectProperty IRI="#closesStage"/>
         <NamedIndividual IRI="#Gateway4"/>
         <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComponent"/>
+        <NamedIndividual IRI="#Input1"/>
+        <NamedIndividual IRI="#Component1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
@@ -4776,6 +4820,11 @@
         <NamedIndividual IRI="#PerformanceTestingActivity3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#PhysicalAsset1"/>
+        <NamedIndividual IRI="#Input1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <NamedIndividual IRI="#ProcurementActivity1"/>
         <NamedIndividual IRI="#ConceptDevelopmentStage"/>
@@ -4789,6 +4838,16 @@
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <NamedIndividual IRI="#ProcurementActivity3"/>
         <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Product1"/>
+        <NamedIndividual IRI="#DigitalTwin1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Product1"/>
+        <NamedIndividual IRI="#PhysicalAsset1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOutput"/>
@@ -5548,6 +5607,14 @@
         <ObjectProperty IRI="#isDevelopmentActivityOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDigitalTwin"/>
+        <ObjectProperty IRI="#isDigitalTwinOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasFocus"/>
+        <ObjectProperty IRI="#isFocusOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasInput"/>
         <ObjectProperty IRI="#inputInto"/>
     </InverseObjectProperties>
@@ -5562,10 +5629,6 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasPhysicalAsset"/>
         <ObjectProperty IRI="#isPhysicalAssetOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#isDigitalTwinOf"/>
-        <ObjectProperty IRI="#isDigitalTwinOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isLedToBy"/>
@@ -5648,6 +5711,13 @@
         <Class IRI="#PhysicalAsset"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFocus"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPhysicalAsset"/>
         <Class IRI="#DigitalTwin"/>
     </ObjectPropertyDomain>
@@ -5677,6 +5747,10 @@
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFocusOf"/>
+        <Class IRI="#Focus"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isFollowedBy"/>
@@ -5853,6 +5927,13 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isEndOf"/>
         <Class IRI="#TimeStructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isFocusOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isFollowedBy"/>
@@ -6199,7 +6280,7 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Product</IRI>
-        <Literal xml:lang="en">The thing that is produced - and may or may not be sold, depending on the context - as the culmination of the development process. The Product must have a DigitalTwin and a PhysicalTwin.</Literal>
+        <Literal xml:lang="en">The thing that is produced - and may or may not be sold, depending on the context - as the culmination of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
