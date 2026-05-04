@@ -1983,6 +1983,10 @@
         <Class IRI="#ReleaseActivity"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Procurement"/>
+        <Class IRI="#TestingActivity"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Span"/>
         <Class IRI="#TemporalPartition"/>
     </DisjointClasses>
@@ -5754,6 +5758,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TemporalConstruct</IRI>
         <Literal xml:lang="en">A TemporalConstruct is a way of representing time in the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TestingActivity</IRI>
+        <Literal xml:lang="en">A DevelopmentActivity, or a composition of DevelopmentActivities, that relates primarily to testing.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
