@@ -2035,10 +2035,6 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Artefact"/>
-        <Class IRI="#Span"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Artefact"/>
         <Class IRI="#Step"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -2220,6 +2216,10 @@
     <DisjointClasses>
         <Class IRI="#Procurement"/>
         <Class IRI="#TestingActivity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Span"/>
+        <Class IRI="#Step"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Span"/>
