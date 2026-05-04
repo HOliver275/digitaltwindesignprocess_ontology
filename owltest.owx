@@ -4230,6 +4230,11 @@
         <NamedIndividual IRI="#Component1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input1"/>
+        <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <NamedIndividual IRI="#IterationGroup1"/>
         <NamedIndividual IRI="#Stage1"/>
@@ -5713,6 +5718,15 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasFocus"/>
         <ObjectUnionOf>
+            <Class IRI="#Artefact"/>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Model"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInput"/>
+        <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
@@ -5903,6 +5917,13 @@
         <Class IRI="#Step"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#inputInto"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isArtefactOf"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
@@ -5931,7 +5952,9 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isFocusOf"/>
         <ObjectUnionOf>
+            <Class IRI="#Artefact"/>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Model"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
@@ -6577,6 +6600,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasFocus</IRI>
+        <Literal>The focus of some aspect of the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasPhysicalAsset</IRI>
         <Literal xml:lang="en">A DigitalTwin is twinned with a PhysicalAsset. To associate the PhysicalAsset with some other entity, use hasArtefact.</Literal>
     </AnnotationAssertion>
@@ -6604,6 +6632,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isEndOf</IRI>
         <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the end of a TimeStructure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isFocusOf</IRI>
+        <Literal xml:lang="en">The focus of some aspect of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
