@@ -40,6 +40,9 @@
         <Class IRI="#DesignActivity"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#DesignInput"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#DesignOutput"/>
     </Declaration>
     <Declaration>
@@ -1601,6 +1604,10 @@
     <SubClassOf>
         <Class IRI="#DesignActivity"/>
         <Class IRI="#DevelopmentActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DesignInput"/>
+        <Class IRI="#Input"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DesignOutput"/>
@@ -5589,6 +5596,11 @@ A Dataset may include one or more Documents.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DesignActivity</IRI>
         <Literal xml:lang="en">A DevelopmentActivity, or composition of DevelopmentActivities, that is primarily focussed on design.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DesignInput</IRI>
+        <Literal xml:lang="en">Input into some DesignActivity, or primarily design-related input into some part of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
