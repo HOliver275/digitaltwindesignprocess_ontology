@@ -1963,6 +1963,10 @@
         <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#ModellingAndSimulation"/>
+        <Class IRI="#Procurement"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Output"/>
         <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
@@ -1973,6 +1977,10 @@
     <DisjointClasses>
         <Class IRI="#PhysicalTesting"/>
         <Class IRI="#VirtualTesting"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Procurement"/>
+        <Class IRI="#ReleaseActivity"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#ReleaseActivity"/>
@@ -5579,13 +5587,20 @@ A Dataset may include one or more Documents.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DesignActivity</IRI>
+        <Literal xml:lang="en">A DevelopmentActivity, or composition of DevelopmentActivities, that is primarily focussed on design.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DesignOutput</IRI>
         <Literal xml:lang="en">Output relating to some DesignActivity or part of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DevelopmentActivity</IRI>
-        <Literal xml:lang="en">A type of activity undertaken during the design process.</Literal>
+        <Literal xml:lang="en">A type of activity undertaken during the design process. 
+
+A DevelopmentActivity can be composed of multiple smaller DevelopmentActivities. Thus it is possible to instantiate a DesignActivity that consists of multiple smaller DesignActivities, but also some TestingActivities, Procurement, and so on.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5667,6 +5682,11 @@ A Model can be an Artefect of the development process, a Component of some syste
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ModellingAndSimulation</IRI>
+        <Literal xml:lang="en">A DevelopmentActivity that consists of modelling and/or simulation, or a composition of DevelopmentActivities, that is primarily focussed on modelling and/or simulation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Output</IRI>
         <Literal xml:lang="en">&quot;An Output consists of the things that are produced or changed during a particular DevelopmentActivity or TemporalConstruct in the development process.
 
@@ -5683,6 +5703,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#PhysicalAsset</IRI>
         <Literal xml:lang="en">The physical part of the product being developed throughout the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Procurement</IRI>
+        <Literal xml:lang="en">A DevelopmentActivity, or composition of DevelopmentActivities, that primarily involves procurement.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
