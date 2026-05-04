@@ -1459,6 +1459,45 @@
                 <ObjectProperty IRI="#hasStep"/>
                 <Class IRI="#Step"/>
             </ObjectMinCardinality>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasStopCondition"/>
+                <DataUnionOf>
+                    <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:langString"/>
+                    <Datatype abbreviatedIRI="rdfs:Literal"/>
+                    <Datatype abbreviatedIRI="xsd:NCName"/>
+                    <Datatype abbreviatedIRI="xsd:NMTOKEN"/>
+                    <Datatype abbreviatedIRI="xsd:Name"/>
+                    <Datatype abbreviatedIRI="xsd:anyURI"/>
+                    <Datatype abbreviatedIRI="xsd:base64Binary"/>
+                    <Datatype abbreviatedIRI="xsd:boolean"/>
+                    <Datatype abbreviatedIRI="xsd:byte"/>
+                    <Datatype abbreviatedIRI="xsd:dateTime"/>
+                    <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <Datatype abbreviatedIRI="xsd:hexBinary"/>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <Datatype abbreviatedIRI="xsd:language"/>
+                    <Datatype abbreviatedIRI="xsd:long"/>
+                    <Datatype abbreviatedIRI="xsd:negativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonPositiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:normalizedString"/>
+                    <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:short"/>
+                    <Datatype abbreviatedIRI="xsd:token"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+                    <Datatype abbreviatedIRI="owl:rational"/>
+                    <Datatype abbreviatedIRI="owl:real"/>
+                </DataUnionOf>
+            </DataSomeValuesFrom>
             <DataHasValue>
                 <DataProperty IRI="#toBeRepeated"/>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
@@ -5767,7 +5806,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Continuity</IRI>
-        <Literal xml:lang="en">A Span, or composition of Spans, that link two or more DevelopmentActivities across two or more TemporalPartitions.</Literal>
+        <Literal xml:lang="en">A Continuity is a Span, or a composition of Spans, that link two or more DevelopmentActivities across two or more TemporalPartitions.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5831,7 +5870,9 @@ A Document can be part of a Dataset.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Flow</IRI>
-        <Literal xml:lang="en">A sequence of one or more Steps from one DevelopmentActivity to another, during some TemporalPartition of the development process. Flows that occur more than once during the development process can be defined as subclasses.</Literal>
+        <Literal xml:lang="en">A Flow is an ordered list of one or more Steps from one DevelopmentActivity to another, during some TemporalPartition of the development process. 
+
+Flows that occur more than once during the development process can be defined as subclasses. The existing subclasses are not exhaustive.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5892,7 +5933,20 @@ An item of information, such as a Datapoint, may also form part of the Input. Fo
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Iteration</IRI>
-        <Literal xml:lang="en">An Iteration groups DevelopmentActivities that are carried out together in cycles that may be repeated. The DevelopmentActivities in an Iteration are not assumed to be carried out in sequence. A stop condition may be defined.</Literal>
+        <Literal xml:lang="en">An Iteration groups DevelopmentActivities that are carried out together in cycles that may be repeated. 
+
+The DevelopmentActivities in an Iteration are not assumed to be carried out in sequence or in any particular order.
+
+A stop condition may be defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Loop</IRI>
+        <Literal xml:lang="en">A Loop is a flow that may be repeated. 
+
+Unlike an Iteration, a Loop has a sequence of Steps.
+
+A stop condition may be defined.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
