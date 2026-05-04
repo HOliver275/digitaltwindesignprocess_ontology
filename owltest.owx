@@ -349,9 +349,6 @@
         <DataProperty IRI="#prevValue"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#toBeRepeated"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#updatedOn"/>
     </Declaration>
     <Declaration>
@@ -998,10 +995,6 @@
                 <ObjectProperty IRI="#startsWith"/>
                 <Class IRI="#Step"/>
             </ObjectExactCardinality>
-            <DataSomeValuesFrom>
-                <DataProperty IRI="#toBeRepeated"/>
-                <Datatype abbreviatedIRI="xsd:boolean"/>
-            </DataSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -5437,11 +5430,6 @@
         <NamedIndividual IRI="#DesignActivity2"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#toBeRepeated"/>
-        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
-        <Literal xml:lang="en">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#hasValue"/>
         <NamedIndividual IRI="#Datapoint1"/>
         <Literal xml:lang="en">I&apos;m a datapoint!</Literal>
@@ -5462,11 +5450,6 @@
         <Literal xml:lang="en">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#toBeRepeated"/>
-        <NamedIndividual IRI="#DetailDesign_LoopA"/>
-        <Literal xml:lang="en">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
         <NamedIndividual IRI="#SystemLevelDesign_FlowFStep1"/>
         <Literal xml:lang="en">true</Literal>
@@ -5479,11 +5462,6 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
         <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
-        <Literal xml:lang="en">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#toBeRepeated"/>
-        <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
         <Literal xml:lang="en">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
