@@ -307,6 +307,9 @@
         <ObjectProperty IRI="#isFollowedBy"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isLedToBy"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isParameterOf"/>
     </Declaration>
     <Declaration>
@@ -5554,6 +5557,10 @@
         <ObjectProperty IRI="#isDigitalTwinOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#isLedToBy"/>
+        <ObjectProperty IRI="#leadsTo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#isStartOf"/>
         <ObjectProperty IRI="#startsWith"/>
     </InverseObjectProperties>
@@ -5609,7 +5616,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasArtefact"/>
-        <Class IRI="#DevelopmentActivity"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#inputInto"/>
@@ -5634,7 +5644,21 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLedToBy"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isStartOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#leadsTo"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
@@ -5752,7 +5776,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isArtefactOf"/>
-        <Class IRI="#DevelopmentActivity"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isEndOf"/>
@@ -5760,6 +5787,13 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isFollowedBy"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLedToBy"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
@@ -5776,6 +5810,13 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isStartOf"/>
         <Class IRI="#TimeStructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#leadsTo"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#openedByGateway"/>
@@ -6362,6 +6403,16 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasArtefact</IRI>
+        <Literal xml:lang="en">Artefact associated with a DevelopmentActivity or TemporalConstruct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isArtefactOf</IRI>
+        <Literal xml:lang="en">Artefact of some DevelopmentActivity or TemporalConstruct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isEndOf</IRI>
         <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the end of a TimeStructure.</Literal>
     </AnnotationAssertion>
@@ -6372,8 +6423,18 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLedToBy</IRI>
+        <Literal xml:lang="en">One DevelopmentActivity or TemporalConstruct leads to another, sometimes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isStartOf</IRI>
         <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the end of a TimeStructure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#leadsTo</IRI>
+        <Literal xml:lang="en">One DevelopmentActivity or TemporalConstruct leads to another, sometimes.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
