@@ -328,9 +328,6 @@
         <DataProperty IRI="#createdOn"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasStopCondition"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasURI"/>
     </Declaration>
     <Declaration>
@@ -5691,10 +5688,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#createdOn"/>
         <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasStopCondition"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasURI"/>
