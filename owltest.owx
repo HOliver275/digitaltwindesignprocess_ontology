@@ -1839,6 +1839,26 @@
         <Class IRI="#SystemLevelDesign"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Continuity"/>
+        <Class IRI="#Flow"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Continuity"/>
+        <Class IRI="#Iteration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Continuity"/>
+        <Class IRI="#Span"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Continuity"/>
+        <Class IRI="#Step"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Continuity"/>
+        <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Datapoint"/>
         <Class IRI="#Dataset"/>
     </DisjointClasses>
@@ -5703,6 +5723,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SystemLevelDesign_FlowE</IRI>
         <Literal xml:lang="en">Parts progressively incorporated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TemporalConstruct</IRI>
+        <Literal xml:lang="en">A TemporalConstruct is a way of representing time in the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
