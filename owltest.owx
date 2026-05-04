@@ -5536,9 +5536,6 @@
         <ObjectProperty IRI="#isDigitalTwinOf"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#hasNext"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
         <ObjectProperty IRI="#opensStage"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
@@ -5684,12 +5681,20 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Artefact</IRI>
-        <Literal xml:lang="en">A deliverable of some stage or activity of the development process.</Literal>
+        <Literal xml:lang="en">An identifiable work involved in some stage or activity of the development process that:
+- is disseminated or delivered as one of the intermediate or finalized results of the process; or
+- input into some part of the development process as an object to be developed or tested; and
+-is not simply some intermediate work that is revised, discarded or abandoned throughout the process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Component</IRI>
         <Literal xml:lang="en">A part of some whole. Could be a code module of the software which itself is a component of the DigitalTwin; or could be a part of the PhysicalAsset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ConceptDevelopment</IRI>
+        <Literal xml:lang="en">The concept development stage of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5748,6 +5753,11 @@ A Dataset may include one or more Documents.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DetailDesign</IRI>
+        <Literal xml:lang="en">The detail design stage of the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DevelopmentActivity</IRI>
         <Literal xml:lang="en">A type of activity undertaken during the design process. 
 
@@ -5767,6 +5777,11 @@ A Document can be part of a Dataset.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EngineeringDesign</IRI>
+        <Literal xml:lang="en">A DesignActivity, or composition of DesignActivities, that is primarily focussed on engineering design.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Flow</IRI>
         <Literal xml:lang="en">A Flow is an ordered list of one or more Steps from one DevelopmentActivity to another, during some TemporalPartition of the development process. 
 
@@ -5782,12 +5797,16 @@ The CAE/virtual testing may be conducted in parallel with the physical testing.<
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Flow_CAE_VirtualTesting_Procurement</IRI>
-        <Literal xml:lang="en">During this Flow, specifications may be sent to suppliers.</Literal>
+        <Literal xml:lang="en">A flow that steps from CAE/virtual testing to procurement.
+
+During this Flow, specifications may be sent to suppliers.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Flow_DesignActivity_CAE_VirtualTesting</IRI>
-        <Literal xml:lang="en">Often takes the form of a Loop.</Literal>
+        <Literal xml:lang="en">A flow that steps from design activity to CAE/virtual testing and back again.
+
+Often takes the form of a Loop.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5797,7 +5816,9 @@ The CAE/virtual testing may be conducted in parallel with the physical testing.<
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Flow_DesignActivity_Procurement</IRI>
-        <Literal xml:lang="en">This release process occurs progressively with a view to ensuring that suppliers of test prototypes are working with design information which is up-to-date but do not need to wait until the respective design activity is finalised.</Literal>
+        <Literal xml:lang="en">A flow that steps from design activity to procurement.
+
+This release process occurs progressively with a view to ensuring that suppliers of test prototypes are working with design information which is up-to-date but do not need to wait until the respective design activity is finalised.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5807,7 +5828,9 @@ The CAE/virtual testing may be conducted in parallel with the physical testing.<
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Flow_PhysicalTesting_VirtualTesting_DesignActivity</IRI>
-        <Literal xml:lang="en">Each procured prototype can involve a mix of old and new parts depending on the project progress. Performance testing starts slightly before mechanical testing and runs almost in parallel. Any design issues identified through these physical tests are dealt with in the next stage of the process (Flow_PhysicalTesting_VirtualTesting_DesignActivity).</Literal>
+        <Literal xml:lang="en">A Flow that steps from physical (mechanical and performance) and virtual testing to design activity.
+
+Each procured prototype can involve a mix of old and new parts depending on the project progress. Performance testing starts slightly before mechanical testing and runs almost in parallel. Any design issues identified through these physical tests are dealt with in the next stage of the process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5816,8 +5839,18 @@ The CAE/virtual testing may be conducted in parallel with the physical testing.<
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Flow_Procurement_PhysicalTesting</IRI>
+        <Literal xml:lang="en">A Flow that steps from procurement to physical (performance and mechanical) testing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Focus</IRI>
         <Literal xml:lang="en">What you focus on during an activity, or time period, or in relation to something.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gateway</IRI>
+        <Literal xml:lang="en">In a stage-gate process, a Gateway closes one ProductDevelopmentStage and opens another, given that certain conditions are met.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5835,18 +5868,34 @@ An item of information, such as a Datapoint, may also form part of the Input. Fo
 
 Iterations that occur more than once during the development process may be defined as subclasses. The existing subclasses are not exhaustive.
 
-The DevelopmentActivities in an Iteration are not assumed to be carried out in sequence or in any particular order.
-
-A stop condition may be defined.</Literal>
+The DevelopmentActivities in an Iteration are not assumed to be carried out in sequence or in any particular order.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Iteration_CAE_VirtualTesting_EngineeringDesign</IRI>
+        <Literal xml:lang="en">An Iteration that includes CAE/virtual testing and engineering design.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting</IRI>
+        <Literal xml:lang="en">An Iteration that includes CAE/virtual testing, engineering design, and performance testing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting_MechanicalTesting</IRI>
+        <Literal xml:lang="en">An Iteration that includes CAE/virtual testing, engineering design, mechanical testing, and performance testing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Iteration_CAE_VirtualTesting_PerformanceTesting_MechanicalTesting</IRI>
+        <Literal>An Iteration that involves CAE/virtual testing, mechanical testing, and performance testing.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Loop</IRI>
-        <Literal xml:lang="en">A Loop is a flow that may be repeated. 
+        <Literal xml:lang="en">A Loop is a Flow that may be repeated. 
 
-Unlike an Iteration, a Loop has a sequence of Steps.
-
-A stop condition may be defined.</Literal>
+Unlike an Iteration which is not necessarily ordered, a Loop has an ordered sequence of Steps.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5859,6 +5908,11 @@ A stop condition may be defined.</Literal>
         <Literal xml:lang="en">A Model is a representation of something that exists in reality. An architectural model can be a physical or digital representation of a building. An information model is a digital representation of some knowledge domain (this ontology is an information model).
 
 A Model can be an Artefect of the development process, a Component of some system, a Parameter that forms part of the Input into or Output from some DevelopmentActivity or TemporalConstruct, or it can be an entity in its own right that is involved in the development process in some other way.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Modelling</IRI>
+        <Literal xml:lang="en">A ModellingAndSimulation activity, or a composition of ModellingAndSimulation activities, that is primarily focussed on modelling.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5886,6 +5940,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PhysicalTesting</IRI>
+        <Literal xml:lang="en">Testing of objects in the physical world.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Procurement</IRI>
         <Literal xml:lang="en">A DevelopmentActivity, or composition of DevelopmentActivities, that primarily involves procurement.</Literal>
     </AnnotationAssertion>
@@ -5896,13 +5955,28 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProductDevelopmentStage</IRI>
+        <Literal xml:lang="en">In this ontology, we assume that a ProductDevelopmentStage is part of a stage-gate process, but the ontology should be extensible to accommodate other development process models.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProgressiveRelease</IRI>
+        <Literal xml:lang="en">A ReleaseActivity that is carried out progressively over some TemporalConstruct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ReleaseActivity</IRI>
         <Literal xml:lang="en">A DevelopmentActivity, or composition of DevelopmentActivities, that relates mainly to the release of some deliverable.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Simulation</IRI>
+        <Literal xml:lang="en">A ModellingAndSimulation activity, or a composition of ModellingAndSimulation activities, that is primarily focussed on simulation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Span</IRI>
-        <Literal xml:lang="en">A Span that links two DevelopmentActivities across two or more TemporalPartitions.
+        <Literal xml:lang="en">A Span links two DevelopmentActivities across two or more TemporalPartitions.
 
 Spans can be sequentially linked, using the followsFrom and leadsTo properties, to form a Continuity across TemporalPartitions of the development process.
 
@@ -5941,6 +6015,61 @@ A Span differs from a Step in that a Span *must* begin and end in two different 
 Steps can be sequentially linked, using the hasPrevious and hasNext properties, to form a Flow.
 
 A Step differs from a Span in that the connected DevelopmentActivities may be within the same TemporalPartition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Step_CAE_VirtualTestingToDesignActivity</IRI>
+        <Literal xml:lang="en">A Step from CAE/virtual testing to design activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Step_CAE_VirtualTestingToPerformanceTesting</IRI>
+        <Literal xml:lang="en">A Step from CAE/virtual testing to performance testing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Step_CAE_VirtualTestingToProcurement</IRI>
+        <Literal xml:lang="en">A Step from CAE/virtual testing to procurement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Step_DesignActivityToCAE_VirtualTesting</IRI>
+        <Literal>A Step from design activity to CAE/virtual testing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Step_DesignActivityToProcurement</IRI>
+        <Literal>A Step from design activity to procurement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Step_MechanicalTestingToCAE_VirtualTesting</IRI>
+        <Literal xml:lang="en">A Step from mechanical testing to CAE/virtual testing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Step_PerformanceTestingToDesignActivity</IRI>
+        <Literal xml:lang="en">A Step from performance testing to design activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Step_PerformanceTestingToMechanicalTesting</IRI>
+        <Literal xml:lang="en">A Step from performance testing to mechanical testing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Step_ProcurementToMechanicalTesting</IRI>
+        <Literal xml:lang="en">A Step from procurement to mechanical testing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Step_ProcurementToPerformanceTesting</IRI>
+        <Literal xml:lang="en">A Step from procurement to performance testing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SystemLevelDesign</IRI>
+        <Literal xml:lang="en">The system-level design stage of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6046,6 +6175,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Twin</IRI>
         <Literal xml:lang="en">A Twin is that which is being developed at every stage, and during every activity, of the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#VirtualTesting</IRI>
+        <Literal xml:lang="en">Testing that is carried out on data objects, rather than on physical objects.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
