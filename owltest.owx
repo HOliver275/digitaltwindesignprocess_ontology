@@ -193,6 +193,9 @@
         <Class IRI="#TestingFocus"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#TestingInput"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#TestingOutput"/>
     </Declaration>
     <Declaration>
@@ -1782,6 +1785,10 @@
         <Class IRI="#Focus"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#TestingInput"/>
+        <Class IRI="#Input"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#TestingOutput"/>
         <Class IRI="#Output"/>
     </SubClassOf>
@@ -1876,6 +1883,10 @@
     <DisjointClasses>
         <Class IRI="#DesignActivity"/>
         <Class IRI="#Procurement"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DesignInput"/>
+        <Class IRI="#TestingInput"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DesignOutput"/>
@@ -5840,6 +5851,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TestingFocus9</IRI>
         <Literal xml:lang="en">New parts are progressively installed in prototypes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TestingInput</IRI>
+        <Literal xml:lang="en">Input into some TestingActivity, or primarily testing-related input into some part of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
