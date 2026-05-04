@@ -253,6 +253,9 @@
         <ObjectProperty IRI="#hasComponent"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDeliverable"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
     </Declaration>
     <Declaration>
@@ -283,6 +286,9 @@
         <ObjectProperty IRI="#hasPrevious"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasProduct"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasSpan"/>
     </Declaration>
     <Declaration>
@@ -296,6 +302,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isComponentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDeliverableOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isDevelopmentActivityOf"/>
@@ -316,10 +325,16 @@
         <ObjectProperty IRI="#isLedToBy"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isModelOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isParameterOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isPhysicalAssetOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isProductOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isStartOf"/>
@@ -463,7 +478,10 @@
         <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Datapoint1"/>
+        <NamedIndividual IRI="#Dataset1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Deliverable1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DesignActivity1"/>
@@ -565,6 +583,9 @@
         <NamedIndividual IRI="#DigitalTwin1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Document1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#EngineeringDesignActivity"/>
     </Declaration>
     <Declaration>
@@ -617,6 +638,15 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Model1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ModelOutput1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ModellingActivity1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Output1"/>
@@ -2284,8 +2314,12 @@
         <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Datapoint"/>
-        <NamedIndividual IRI="#Datapoint1"/>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#Dataset1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Deliverable"/>
+        <NamedIndividual IRI="#Deliverable1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DesignActivity"/>
@@ -2428,6 +2462,10 @@
         <NamedIndividual IRI="#DigitalTwin1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Document"/>
+        <NamedIndividual IRI="#Document1"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#EngineeringDesign"/>
         <NamedIndividual IRI="#EngineeringDesignActivity"/>
     </ClassAssertion>
@@ -2510,6 +2548,18 @@
     <ClassAssertion>
         <Class IRI="#Span"/>
         <NamedIndividual IRI="#MechanicalTestingSpan3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Model"/>
+        <NamedIndividual IRI="#Model1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Output"/>
+        <NamedIndividual IRI="#ModelOutput1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Modelling"/>
+        <NamedIndividual IRI="#ModellingActivity1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Output"/>
@@ -3357,6 +3407,26 @@
         <NamedIndividual IRI="#DesignActivity1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isParameterOf"/>
+        <NamedIndividual IRI="#Dataset1"/>
+        <NamedIndividual IRI="#Deliverable1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasModel"/>
+        <NamedIndividual IRI="#Deliverable1"/>
+        <NamedIndividual IRI="#Model1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Deliverable1"/>
+        <NamedIndividual IRI="#Document1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDeliverableOf"/>
+        <NamedIndividual IRI="#Deliverable1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <NamedIndividual IRI="#DesignActivity1"/>
         <NamedIndividual IRI="#ConceptDevelopmentStage"/>
@@ -4237,6 +4307,11 @@
         <NamedIndividual IRI="#DetailDesignStage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Input1"/>
+        <NamedIndividual IRI="#Artefact1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasComponent"/>
         <NamedIndividual IRI="#Input1"/>
         <NamedIndividual IRI="#Component1"/>
@@ -4592,6 +4667,21 @@
         <NamedIndividual IRI="#MechanicalTestingActivity3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasModel"/>
+        <NamedIndividual IRI="#ModelOutput1"/>
+        <NamedIndividual IRI="#Model1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#ModelOutput1"/>
+        <NamedIndividual IRI="#ModellingActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <NamedIndividual IRI="#ModellingActivity1"/>
+        <NamedIndividual IRI="#ConceptDevelopmentStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Output1"/>
         <NamedIndividual IRI="#DigitalTwin1"/>
@@ -4600,6 +4690,11 @@
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Output1"/>
         <NamedIndividual IRI="#PhysicalAsset1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasModel"/>
+        <NamedIndividual IRI="#Output1"/>
+        <NamedIndividual IRI="#Model1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -4890,6 +4985,11 @@
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Product1"/>
         <NamedIndividual IRI="#PhysicalAsset1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isProductOf"/>
+        <NamedIndividual IRI="#Product1"/>
+        <NamedIndividual IRI="#Stage5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOutput"/>
@@ -5547,39 +5647,49 @@
         <NamedIndividual IRI="#DesignActivity2"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Datapoint1"/>
-        <Literal xml:lang="en">I&apos;m a datapoint!</Literal>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#Dataset1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/CSVFile1.csv</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#Dataset1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/XMLFile1.xml</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
         <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
-        <Literal xml:lang="en">true</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
         <NamedIndividual IRI="#DetailDesign_FlowFStep2"/>
-        <Literal xml:lang="en">true</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
         <NamedIndividual IRI="#DetailDesign_FlowFStep3"/>
-        <Literal xml:lang="en">true</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#Document1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/Document1/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
         <NamedIndividual IRI="#SystemLevelDesign_FlowFStep1"/>
-        <Literal xml:lang="en">true</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
         <NamedIndividual IRI="#SystemLevelDesign_FlowFStep2"/>
-        <Literal xml:lang="en">true</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
         <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
-        <Literal xml:lang="en">true</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#createdOn"/>
@@ -5645,6 +5755,10 @@
         <ObjectProperty IRI="#isComponentOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDeliverable"/>
+        <ObjectProperty IRI="#isDeliverableOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <ObjectProperty IRI="#isDevelopmentActivityOf"/>
     </InverseObjectProperties>
@@ -5661,6 +5775,10 @@
         <ObjectProperty IRI="#inputInto"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasModel"/>
+        <ObjectProperty IRI="#isModelOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasOutput"/>
         <ObjectProperty IRI="#outputFrom"/>
     </InverseObjectProperties>
@@ -5671,6 +5789,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasPhysicalAsset"/>
         <ObjectProperty IRI="#isPhysicalAssetOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasProduct"/>
+        <ObjectProperty IRI="#isProductOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isLedToBy"/>
@@ -5749,6 +5871,13 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeliverable"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDigitalTwin"/>
         <Class IRI="#PhysicalAsset"/>
     </ObjectPropertyDomain>
@@ -5787,6 +5916,13 @@
         <Class IRI="#DigitalTwin"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProduct"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#inputInto"/>
         <Class IRI="#Input"/>
     </ObjectPropertyDomain>
@@ -5797,6 +5933,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isComponentOf"/>
         <Class IRI="#Component"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDeliverableOf"/>
+        <Class IRI="#Deliverable"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isDevelopmentActivityOf"/>
@@ -5832,12 +5972,20 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isModelOf"/>
+        <Class IRI="#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isParameterOf"/>
         <Class IRI="#Parameter"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isPhysicalAssetOf"/>
         <Class IRI="#PhysicalAsset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isProductOf"/>
+        <Class IRI="#Product"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isStartOf"/>
@@ -5928,6 +6076,10 @@
         <Class IRI="#Component"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDeliverable"/>
+        <Class IRI="#Deliverable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <Class IRI="#DevelopmentActivity"/>
     </ObjectPropertyRange>
@@ -5958,6 +6110,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPhysicalAsset"/>
         <Class IRI="#PhysicalAsset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasProduct"/>
+        <Class IRI="#Product"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSpan"/>
@@ -5993,6 +6149,13 @@
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDeliverableOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isDigitalTwinOf"/>
         <Class IRI="#PhysicalAsset"/>
     </ObjectPropertyRange>
@@ -6024,6 +6187,10 @@
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isModelOf"/>
+        <Class IRI="#DigitalTwin"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isParameterOf"/>
         <ObjectUnionOf>
             <Class IRI="#Input"/>
@@ -6033,6 +6200,13 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isPhysicalAssetOf"/>
         <Class IRI="#DigitalTwin"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isProductOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalPartition"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isStartOf"/>
@@ -6088,8 +6262,43 @@
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#stepTo"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasURI"/>
+        <ObjectUnionOf>
+            <Class IRI="#Dataset"/>
+            <Class IRI="#Document"/>
+            <Class IRI="#Model"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasUnit"/>
+        <Class IRI="#Datapoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasValue"/>
+        <Class IRI="#Datapoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isOptional"/>
+        <Class IRI="#Step"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#maxTargetValue"/>
+        <Class IRI="#Datapoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#minTargetValue"/>
+        <Class IRI="#Datapoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#prevValue"/>
         <Class IRI="#Datapoint"/>
     </DataPropertyDomain>
     <DataPropertyRange>
@@ -6103,6 +6312,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasUnit"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isOptional"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#updatedOn"/>
@@ -6643,6 +6856,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#createdOn</IRI>
+        <Literal xml:lang="en">Date/time stamp recording when an entity was created.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#duringTemporalPartition</IRI>
         <Literal xml:lang="en">A DevelopmentActivity, or a TemporalConstruct that is not itself a TemporalPartition, takes place during a TemporalPartition in the development process.</Literal>
     </AnnotationAssertion>
@@ -6668,6 +6886,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDeliverable</IRI>
+        <Literal xml:lang="en">The Deliverable of some DevelopmentActivity or TemporalConstruct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasDevelopmentActivity</IRI>
         <Literal xml:lang="en">The DevelopmentActivity associated with some part of the development process.</Literal>
     </AnnotationAssertion>
@@ -6688,6 +6911,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasModel</IRI>
+        <Literal xml:lang="en">Model associated with an entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasOutput</IRI>
         <Literal xml:lang="en">Output from some DevelopmentActivity or TemporalConstruct.</Literal>
     </AnnotationAssertion>
@@ -6703,6 +6931,26 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasProduct</IRI>
+        <Literal xml:lang="en">The product of some DevelopmentActivity or TemporalConstruct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasURI</IRI>
+        <Literal xml:lang="en">URI associated with some entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasUnit</IRI>
+        <Literal xml:lang="en">The unit in which some measurement is expressed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasValue</IRI>
+        <Literal xml:lang="en">Value of some Datapoint. Can be any datatype.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#inputInto</IRI>
         <Literal xml:lang="en">Input into some DevelopmentActivity or TemporalConstruct.</Literal>
     </AnnotationAssertion>
@@ -6715,6 +6963,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isComponentOf</IRI>
         <Literal xml:lang="en">Component associated with a DevelopmentActivity or TemporalConstruct or Input or Output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDeliverableOf</IRI>
+        <Literal xml:lang="en">The Deliverable of some DevelopmentActivity or TemporalConstruct.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6748,6 +7001,16 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isModelOf</IRI>
+        <Literal xml:lang="en">Entity associated with a Model.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isOptional</IRI>
+        <Literal xml:lang="en">Flags whether a Step is optional.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isParameterOf</IRI>
         <Literal xml:lang="en">An input or output Parameter.</Literal>
     </AnnotationAssertion>
@@ -6758,6 +7021,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isProductOf</IRI>
+        <Literal xml:lang="en">The product of some DevelopmentActivity or TemporalConstruct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isStartOf</IRI>
         <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the start of a TimeStructure.</Literal>
     </AnnotationAssertion>
@@ -6765,6 +7033,16 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#leadsTo</IRI>
         <Literal xml:lang="en">One DevelopmentActivity or TemporalConstruct leads to another, sometimes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#maxTargetValue</IRI>
+        <Literal xml:lang="en">Maximum target value of a Datapoint. Can be any data type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#minTargetValue</IRI>
+        <Literal>Minimum target value of a Datapoint. Can be any data type.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6783,6 +7061,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#prevValue</IRI>
+        <Literal xml:lang="en">Previous value of a Datapoint. Can be any data type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#spansFrom</IRI>
         <Literal xml:lang="en">The beginning DevelopmentActivity or TemporalPartition of a Span.</Literal>
     </AnnotationAssertion>
@@ -6795,6 +7078,21 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#startsWith</IRI>
         <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the start of a TimeStructure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stepFrom</IRI>
+        <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at start of a Step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stepTo</IRI>
+        <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the end of a Step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#updatedOn</IRI>
+        <Literal xml:lang="en">Date/time stamp recording when an entity was updated.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
