@@ -5593,7 +5593,7 @@ A Dataset may include one or more Documents.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DesignOutput</IRI>
-        <Literal xml:lang="en">Output relating to some DesignActivity or part of the development process.</Literal>
+        <Literal xml:lang="en">Output from some DesignActivity, or primarily design-related output from some part of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5832,7 +5832,7 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TestingOutput</IRI>
-        <Literal xml:lang="en">Output from some TestingActivity or testing-related part of the development process.</Literal>
+        <Literal xml:lang="en">Output from some TestingActivity, or primarily testing-related output from some part of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
