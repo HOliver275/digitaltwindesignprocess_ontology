@@ -1839,6 +1839,14 @@
         <Class IRI="#SystemLevelDesign"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Datapoint"/>
+        <Class IRI="#Dataset"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Datapoint"/>
+        <Class IRI="#Document"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#DesignActivity"/>
         <Class IRI="#Procurement"/>
     </DisjointClasses>
