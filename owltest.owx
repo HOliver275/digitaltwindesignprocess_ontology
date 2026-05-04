@@ -310,6 +310,9 @@
         <ObjectProperty IRI="#isPhysicalAssetOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isStartOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#leadsTo"/>
     </Declaration>
     <Declaration>
@@ -5544,6 +5547,10 @@
         <ObjectProperty IRI="#isDigitalTwinOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#isStartOf"/>
+        <ObjectProperty IRI="#startsWith"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#openedByGateway"/>
         <ObjectProperty IRI="#opensStage"/>
     </InverseObjectProperties>
@@ -5606,6 +5613,13 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isStartOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#openedByGateway"/>
         <Class IRI="#ProductDevelopmentStage"/>
     </ObjectPropertyDomain>
@@ -5624,6 +5638,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#spansTo"/>
         <Class IRI="#Span"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#startsWith"/>
+        <Class IRI="#TimeStructure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#stepFrom"/>
@@ -5721,12 +5739,23 @@
         <Class IRI="#Output"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isStartOf"/>
+        <Class IRI="#TimeStructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#openedByGateway"/>
         <Class IRI="#Gateway"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#opensStage"/>
         <Class IRI="#ProductDevelopmentStage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#startsWith"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#hasUnit"/>
@@ -6298,6 +6327,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isStartOf</IRI>
+        <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the end of a TimeStructure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#openedByGateway</IRI>
         <Literal xml:lang="en">In a stage-gate development process, a ProductDevelopmentStage is opened by a Gateway, provided certain conditions are met.</Literal>
     </AnnotationAssertion>
@@ -6305,6 +6339,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#opensStage</IRI>
         <Literal xml:lang="en">In a stage-gate development process, a Gateway opens a ProductDevelopmentStage, provided certain conditions are met.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#startsWith</IRI>
+        <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the end of a TimeStructure.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
