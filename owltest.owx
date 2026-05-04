@@ -2143,6 +2143,10 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Flow"/>
+        <Class IRI="#Iteration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Flow"/>
         <Class IRI="#Span"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -5806,7 +5810,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Continuity</IRI>
-        <Literal xml:lang="en">A Continuity is a Span, or a composition of Spans, that link two or more DevelopmentActivities across two or more TemporalPartitions.</Literal>
+        <Literal xml:lang="en">A Continuity consists of a sequence of one or more Spans, that link two or more DevelopmentActivities, across two or more TemporalPartitions.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5934,6 +5938,8 @@ An item of information, such as a Datapoint, may also form part of the Input. Fo
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Iteration</IRI>
         <Literal xml:lang="en">An Iteration groups DevelopmentActivities that are carried out together in cycles that may be repeated. 
+
+Iterations that occur more than once during the development process may be defined as subclasses. The existing subclasses are not exhaustive.
 
 The DevelopmentActivities in an Iteration are not assumed to be carried out in sequence or in any particular order.
 
