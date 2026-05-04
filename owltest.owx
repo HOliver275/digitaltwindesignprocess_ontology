@@ -5543,6 +5543,13 @@ To continuously track the changing value of the same Datapoint, you can do so pr
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Dataset</IRI>
+        <Literal xml:lang="en">One or more links to a dataset that is a Parameter to the development process. 
+
+A Dataset may include one or more Documents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Deliverable</IRI>
         <Literal xml:lang="en">A deliverable Artefact of some stage or activity of the development process, that isn&apos;t necessarily a Product or a Twin. A delivery could be a report, a prototype, a model, and so on.</Literal>
     </AnnotationAssertion>
@@ -5560,6 +5567,13 @@ To continuously track the changing value of the same Datapoint, you can do so pr
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DigitalTwin</IRI>
         <Literal xml:lang="en">The digital part of the Twin that is being developed throughout the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Document</IRI>
+        <Literal xml:lang="en">A single link to a document that is a Parameter to the development process.
+
+A Document can be part of a Dataset.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
