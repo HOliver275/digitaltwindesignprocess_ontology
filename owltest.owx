@@ -1983,10 +1983,6 @@
         <Class IRI="#ReleaseActivity"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#ReleaseActivity"/>
-        <Class IRI="#TestingActivity"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Span"/>
         <Class IRI="#TemporalPartition"/>
     </DisjointClasses>
@@ -5713,6 +5709,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Product</IRI>
         <Literal xml:lang="en">The thing that is produced - and may or may not be sold, depending on the context - as the culmination of the development process. The Product must have a DigitalTwin and a PhysicalTwin.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ReleaseActivity</IRI>
+        <Literal xml:lang="en">A DevelopmentActivity, or composition of DevelopmentActivities, that relates mainly to the release of some deliverable.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
