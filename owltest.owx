@@ -2041,10 +2041,6 @@
         <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#DevelopmentActivity"/>
-        <Class IRI="#TemporalPartition"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#DigitalTwin"/>
         <Class IRI="#PhysicalAsset"/>
     </DisjointClasses>
@@ -2059,6 +2055,10 @@
     <DisjointClasses>
         <Class IRI="#Flow"/>
         <Class IRI="#Step"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Flow"/>
+        <Class IRI="#TemporalPartition"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Focus"/>
@@ -5906,7 +5906,7 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
         <IRI>#Span</IRI>
         <Literal xml:lang="en">A Span that links two DevelopmentActivities across two or more TemporalPartitions.
 
-Spans can be sequentially linked to form a Continuity across TemporalPartitions of the development process.
+Spans can be sequentially linked, using the followsFrom and leadsTo properties, to form a Continuity across TemporalPartitions of the development process.
 
 A Span differs from a Step in that a Span *must* begin and end in two different TemporalPartitions.</Literal>
     </AnnotationAssertion>
