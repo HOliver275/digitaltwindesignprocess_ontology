@@ -5765,6 +5765,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
         <Literal xml:lang="en">A DevelopmentActivity, or a composition of DevelopmentActivities, that relates primarily to testing.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TestingFocus</IRI>
+        <Literal xml:lang="en">What the testing is focussed on at some point in the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TestingFocus1</IRI>
         <Literal xml:lang="en">Is technology viable?</Literal>
