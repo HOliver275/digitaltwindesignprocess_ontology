@@ -298,6 +298,9 @@
         <ObjectProperty IRI="#isComponentOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isDevelopmentActivityOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isDigitalTwinOf"/>
     </Declaration>
     <Declaration>
@@ -5541,6 +5544,10 @@
         <ObjectProperty IRI="#isComponentOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <ObjectProperty IRI="#isDevelopmentActivityOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasInput"/>
         <ObjectProperty IRI="#inputInto"/>
     </InverseObjectProperties>
@@ -5624,12 +5631,29 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComponent"/>
+        <ObjectUnionOf>
+            <Class IRI="#Artefact"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Model"/>
+            <Class IRI="#Output"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#inputInto"/>
         <Class IRI="#Input"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isArtefactOf"/>
         <Class IRI="#Artefact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <Class IRI="#Component"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDevelopmentActivityOf"/>
+        <Class IRI="#DevelopmentActivity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isEndOf"/>
@@ -5783,6 +5807,15 @@
             <Class IRI="#Input"/>
             <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#Artefact"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Model"/>
+            <Class IRI="#Output"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -6413,7 +6446,12 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasComponent</IRI>
-        <Literal xml:lang="en">Component associated with a DevelopmentActivity or TemporalConstruct.</Literal>
+        <Literal xml:lang="en">Component associated with a DevelopmentActivity or TemporalConstruct or Input or Output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDevelopmentActivity</IRI>
+        <Literal xml:lang="en">The DevelopmentActivity associated with some part of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6423,7 +6461,12 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isComponentOf</IRI>
-        <Literal xml:lang="en">Component associated with a DevelopmentActivity or TemporalConstruct</Literal>
+        <Literal xml:lang="en">Component associated with a DevelopmentActivity or TemporalConstruct or Input or Output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDevelopmentActivityOf</IRI>
+        <Literal xml:lang="en">DevelopmentActivity associated with some part of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
