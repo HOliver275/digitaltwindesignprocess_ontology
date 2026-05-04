@@ -307,6 +307,9 @@
         <ObjectProperty IRI="#leadsTo"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#openedByGateway"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#opensStage"/>
     </Declaration>
     <Declaration>
@@ -5542,6 +5545,10 @@
         <ObjectProperty IRI="#isDigitalTwinOf"/>
         <ObjectProperty IRI="#isDigitalTwinOf"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#openedByGateway"/>
+        <ObjectProperty IRI="#opensStage"/>
+    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#stepFrom"/>
     </FunctionalObjectProperty>
@@ -5581,6 +5588,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isArtefactOf"/>
         <Class IRI="#Artefact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#openedByGateway"/>
+        <Class IRI="#ProductDevelopmentStage"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#opensStage"/>
@@ -5681,6 +5692,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isParameterOf"/>
         <Class IRI="#Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#openedByGateway"/>
+        <Class IRI="#Gateway"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#opensStage"/>
@@ -6211,6 +6226,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#closedByGateway</IRI>
+        <Literal xml:lang="en">In a stage-gate development process, a ProductDevelopmentStage is closed by a Gateway, provided certain conditions are met.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#closesStage</IRI>
         <Literal xml:lang="en">A Gateway closes a ProductDevelopmentStage in a stage-gate development process.</Literal>
     </AnnotationAssertion>
@@ -6218,6 +6238,16 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#comesAfter</IRI>
         <Literal xml:lang="en">Anything that must be preceded by some other thing or things at some point in the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#openedByGateway</IRI>
+        <Literal xml:lang="en">In a stage-gate development process, a ProductDevelopmentStage is opened by a Gateway, provided certain conditions are met.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#opensStage</IRI>
+        <Literal xml:lang="en">In a stage-gate development process, a Gateway opens a ProductDevelopmentStage, provided certain conditions are met.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
