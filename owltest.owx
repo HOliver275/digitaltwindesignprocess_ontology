@@ -5560,6 +5560,10 @@
         <ObjectProperty IRI="#isParameterOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasPhysicalAsset"/>
+        <ObjectProperty IRI="#isPhysicalAssetOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#isDigitalTwinOf"/>
         <ObjectProperty IRI="#isDigitalTwinOf"/>
     </InverseObjectProperties>
@@ -5640,6 +5644,14 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDigitalTwin"/>
+        <Class IRI="#PhysicalAsset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPhysicalAsset"/>
+        <Class IRI="#DigitalTwin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#inputInto"/>
         <Class IRI="#Input"/>
     </ObjectPropertyDomain>
@@ -5654,6 +5666,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isDevelopmentActivityOf"/>
         <Class IRI="#DevelopmentActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDigitalTwinOf"/>
+        <Class IRI="#DigitalTwin"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isEndOf"/>
@@ -5675,6 +5691,10 @@
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isPhysicalAssetOf"/>
+        <Class IRI="#PhysicalAsset"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isStartOf"/>
@@ -5769,6 +5789,10 @@
         <Class IRI="#DevelopmentActivity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDigitalTwin"/>
+        <Class IRI="#DigitalTwin"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasFocus"/>
         <Class IRI="#Focus"/>
     </ObjectPropertyRange>
@@ -5791,6 +5815,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasParameter"/>
         <Class IRI="#Parameter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPhysicalAsset"/>
+        <Class IRI="#PhysicalAsset"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSpan"/>
@@ -5819,6 +5847,10 @@
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDigitalTwinOf"/>
+        <Class IRI="#PhysicalAsset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isEndOf"/>
         <Class IRI="#TimeStructure"/>
     </ObjectPropertyRange>
@@ -5843,6 +5875,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isParameterOf"/>
         <Class IRI="#Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isPhysicalAssetOf"/>
+        <Class IRI="#DigitalTwin"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isStartOf"/>
@@ -6455,6 +6491,16 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDigitalTwin</IRI>
+        <Literal xml:lang="en">A PhysicalAsset has a DigitalTwin. To associate the DigitalTwin with some other entity, use hasArtefact.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPhysicalAsset</IRI>
+        <Literal xml:lang="en">A DigitalTwin is twinned with a PhysicalAsset. To associate the PhysicalAsset with some other entity, use hasArtefact.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isArtefactOf</IRI>
         <Literal xml:lang="en">Artefact of some DevelopmentActivity or TemporalConstruct.</Literal>
     </AnnotationAssertion>
@@ -6470,6 +6516,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDigitalTwinOf</IRI>
+        <Literal xml:lang="en">A DigitalTwin is twinned with a PhysicalAsset. To associate the DigitalTwin with some other entity, use isArtefactOf.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isEndOf</IRI>
         <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the end of a TimeStructure.</Literal>
     </AnnotationAssertion>
@@ -6482,6 +6533,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isLedToBy</IRI>
         <Literal xml:lang="en">One DevelopmentActivity or TemporalConstruct leads to another, sometimes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isPhysicalAssetOf</IRI>
+        <Literal xml:lang="en">A PhysicalAsset has a DigitalTwin. To associate the PhysicalAsset with some other entity, use isArtefactOf.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
