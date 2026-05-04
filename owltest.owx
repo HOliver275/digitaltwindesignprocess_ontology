@@ -100,6 +100,9 @@
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting_MechanicalTesting"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Loop"/>
     </Declaration>
     <Declaration>
@@ -1303,6 +1306,13 @@
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign"/>
         <ObjectIntersectionOf>
             <Class IRI="#Iteration"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <ObjectUnionOf>
+                    <Class IRI="#CAE_VirtualTesting"/>
+                    <Class IRI="#EngineeringDesign"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
             <ObjectMinCardinality cardinality="1">
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#CAE_VirtualTesting"/>
@@ -1317,6 +1327,14 @@
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting"/>
         <ObjectIntersectionOf>
             <Class IRI="#Iteration"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <ObjectUnionOf>
+                    <Class IRI="#CAE_VirtualTesting"/>
+                    <Class IRI="#EngineeringDesign"/>
+                    <Class IRI="#PerformanceTesting"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
             <ObjectMinCardinality cardinality="1">
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#CAE_VirtualTesting"/>
@@ -1324,6 +1342,37 @@
             <ObjectMinCardinality cardinality="1">
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#EngineeringDesign"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#PerformanceTesting"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting_MechanicalTesting"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Iteration"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <ObjectUnionOf>
+                    <Class IRI="#CAE_VirtualTesting"/>
+                    <Class IRI="#EngineeringDesign"/>
+                    <Class IRI="#MechanicalTesting"/>
+                    <Class IRI="#PerformanceTesting"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#EngineeringDesign"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#MechanicalTesting"/>
             </ObjectMinCardinality>
             <ObjectMinCardinality cardinality="1">
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -1712,6 +1761,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting"/>
+        <Class IRI="#Iteration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting_MechanicalTesting"/>
         <Class IRI="#Iteration"/>
     </SubClassOf>
     <SubClassOf>
@@ -2348,6 +2401,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#IterationGroup3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting_MechanicalTesting"/>
         <NamedIndividual IRI="#IterationGroup3"/>
     </ClassAssertion>
     <ClassAssertion>
