@@ -217,6 +217,9 @@
         <Class IRI="#VirtualTesting"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#closedByGateway"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#closesStage"/>
     </Declaration>
     <Declaration>
@@ -5512,6 +5515,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#closedByGateway"/>
+        <ObjectProperty IRI="#closesStage"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasArtefact"/>
         <ObjectProperty IRI="#isArtefactOf"/>
     </InverseObjectProperties>
@@ -5547,6 +5554,10 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#comesBefore"/>
     </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#closedByGateway"/>
+        <Class IRI="#ProductDevelopmentStage"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#closesStage"/>
         <Class IRI="#Gateway"/>
@@ -5591,6 +5602,10 @@
         <ObjectProperty IRI="#stepTo"/>
         <Class IRI="#Step"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#closedByGateway"/>
+        <Class IRI="#Gateway"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#closesStage"/>
         <Class IRI="#ProductDevelopmentStage"/>
@@ -6185,6 +6200,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#VirtualTesting</IRI>
         <Literal xml:lang="en">Testing that is carried out on data objects, rather than on physical objects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#closesStage</IRI>
+        <Literal xml:lang="en">A Gateway closes a ProductDevelopmentStage in a stage-gate development process.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
