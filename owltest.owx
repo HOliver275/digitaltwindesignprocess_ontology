@@ -5936,6 +5936,15 @@ A Span differs from a Step in that a Span *must* begin and end in two different 
         <Literal xml:lang="en">Production release</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Step</IRI>
+        <Literal xml:lang="en">A Step connects one DevelopmentActivity to another.
+
+Steps can be sequentially linked, using the hasPrevious and hasNext properties, to form a Flow.
+
+A Step differs from a Span in that the connected DevelopmentActivities may be within the same TemporalPartition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SystemLevelDesign_FlowD</IRI>
         <Literal xml:lang="en">Design progressively released</Literal>
