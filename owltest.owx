@@ -1920,10 +1920,6 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Iteration"/>
-        <Class IRI="#Parameter"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Iteration"/>
         <Class IRI="#Span"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -1940,15 +1936,7 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Parameter"/>
-        <Class IRI="#Span"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Parameter"/>
-        <Class IRI="#Step"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Parameter"/>
-        <Class IRI="#TemporalPartition"/>
+        <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#PhysicalTesting"/>
@@ -5534,6 +5522,19 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Datapoint</IRI>
+        <Literal xml:lang="en">A Datapoint is a single value of one particular type.
+
+Units must be defined using the hasUnit data property.
+
+A range of acceptable values can be defined using minTargetValue and maxTargetValue.
+
+The previous value can be stored using prevValue.
+
+To continuously track the changing value of the same Datapoint, you can do so programmatically using a database or flat file outside of the ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Deliverable</IRI>
         <Literal xml:lang="en">A deliverable Artefact of some stage or activity of the development process, that isn&apos;t necessarily a Product or a Twin. A delivery could be a report, a prototype, a model, and so on.</Literal>
     </AnnotationAssertion>
@@ -5626,6 +5627,11 @@ A Model can be an Artefect of the development process, a Component of some syste
 For example, a Twin is an Artefact that is developed during some DevelopmentActivity. It is then part of the Output from that DevelopmentActivity, and will most likely form part of the Input to another DevelopmentActivity. 
 
 An item of information, such as a Datapoint, may also form part of an Output. For example, we may need to track the weight in kg of a Component through the development process. This would be done using the same Datapoint included into the Input into a DevelopmentActivity, which then becomes part of the Output from that same activity.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Parameter</IRI>
+        <Literal xml:lang="en">A Parameter is an item of information that forms part of the Input to, or Output from, some DevelopmentActivity or TemporalConstruct in the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
