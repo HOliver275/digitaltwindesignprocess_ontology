@@ -1943,6 +1943,10 @@
         <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Output"/>
+        <Class IRI="#TemporalConstruct"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Parameter"/>
         <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
