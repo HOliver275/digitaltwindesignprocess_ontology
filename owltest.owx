@@ -1306,45 +1306,6 @@
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#DevelopmentActivity"/>
             </ObjectSomeValuesFrom>
-            <DataSomeValuesFrom>
-                <DataProperty IRI="#hasStopCondition"/>
-                <DataUnionOf>
-                    <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
-                    <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
-                    <Datatype abbreviatedIRI="rdf:langString"/>
-                    <Datatype abbreviatedIRI="rdfs:Literal"/>
-                    <Datatype abbreviatedIRI="xsd:NCName"/>
-                    <Datatype abbreviatedIRI="xsd:NMTOKEN"/>
-                    <Datatype abbreviatedIRI="xsd:Name"/>
-                    <Datatype abbreviatedIRI="xsd:anyURI"/>
-                    <Datatype abbreviatedIRI="xsd:base64Binary"/>
-                    <Datatype abbreviatedIRI="xsd:boolean"/>
-                    <Datatype abbreviatedIRI="xsd:byte"/>
-                    <Datatype abbreviatedIRI="xsd:dateTime"/>
-                    <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
-                    <Datatype abbreviatedIRI="xsd:decimal"/>
-                    <Datatype abbreviatedIRI="xsd:double"/>
-                    <Datatype abbreviatedIRI="xsd:float"/>
-                    <Datatype abbreviatedIRI="xsd:hexBinary"/>
-                    <Datatype abbreviatedIRI="xsd:int"/>
-                    <Datatype abbreviatedIRI="xsd:integer"/>
-                    <Datatype abbreviatedIRI="xsd:language"/>
-                    <Datatype abbreviatedIRI="xsd:long"/>
-                    <Datatype abbreviatedIRI="xsd:negativeInteger"/>
-                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
-                    <Datatype abbreviatedIRI="xsd:nonPositiveInteger"/>
-                    <Datatype abbreviatedIRI="xsd:normalizedString"/>
-                    <Datatype abbreviatedIRI="xsd:positiveInteger"/>
-                    <Datatype abbreviatedIRI="xsd:short"/>
-                    <Datatype abbreviatedIRI="xsd:token"/>
-                    <Datatype abbreviatedIRI="xsd:unsignedByte"/>
-                    <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-                    <Datatype abbreviatedIRI="xsd:unsignedLong"/>
-                    <Datatype abbreviatedIRI="xsd:unsignedShort"/>
-                    <Datatype abbreviatedIRI="owl:rational"/>
-                    <Datatype abbreviatedIRI="owl:real"/>
-                </DataUnionOf>
-            </DataSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1457,51 +1418,7 @@
             <Class IRI="#Loop"/>
             <ObjectMinCardinality cardinality="2">
                 <ObjectProperty IRI="#hasStep"/>
-                <Class IRI="#Step"/>
             </ObjectMinCardinality>
-            <DataSomeValuesFrom>
-                <DataProperty IRI="#hasStopCondition"/>
-                <DataUnionOf>
-                    <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
-                    <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
-                    <Datatype abbreviatedIRI="rdf:langString"/>
-                    <Datatype abbreviatedIRI="rdfs:Literal"/>
-                    <Datatype abbreviatedIRI="xsd:NCName"/>
-                    <Datatype abbreviatedIRI="xsd:NMTOKEN"/>
-                    <Datatype abbreviatedIRI="xsd:Name"/>
-                    <Datatype abbreviatedIRI="xsd:anyURI"/>
-                    <Datatype abbreviatedIRI="xsd:base64Binary"/>
-                    <Datatype abbreviatedIRI="xsd:boolean"/>
-                    <Datatype abbreviatedIRI="xsd:byte"/>
-                    <Datatype abbreviatedIRI="xsd:dateTime"/>
-                    <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
-                    <Datatype abbreviatedIRI="xsd:decimal"/>
-                    <Datatype abbreviatedIRI="xsd:double"/>
-                    <Datatype abbreviatedIRI="xsd:float"/>
-                    <Datatype abbreviatedIRI="xsd:hexBinary"/>
-                    <Datatype abbreviatedIRI="xsd:int"/>
-                    <Datatype abbreviatedIRI="xsd:integer"/>
-                    <Datatype abbreviatedIRI="xsd:language"/>
-                    <Datatype abbreviatedIRI="xsd:long"/>
-                    <Datatype abbreviatedIRI="xsd:negativeInteger"/>
-                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
-                    <Datatype abbreviatedIRI="xsd:nonPositiveInteger"/>
-                    <Datatype abbreviatedIRI="xsd:normalizedString"/>
-                    <Datatype abbreviatedIRI="xsd:positiveInteger"/>
-                    <Datatype abbreviatedIRI="xsd:short"/>
-                    <Datatype abbreviatedIRI="xsd:token"/>
-                    <Datatype abbreviatedIRI="xsd:unsignedByte"/>
-                    <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-                    <Datatype abbreviatedIRI="xsd:unsignedLong"/>
-                    <Datatype abbreviatedIRI="xsd:unsignedShort"/>
-                    <Datatype abbreviatedIRI="owl:rational"/>
-                    <Datatype abbreviatedIRI="owl:real"/>
-                </DataUnionOf>
-            </DataSomeValuesFrom>
-            <DataHasValue>
-                <DataProperty IRI="#toBeRepeated"/>
-                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-            </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -5774,6 +5691,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#createdOn"/>
         <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStopCondition"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasURI"/>
