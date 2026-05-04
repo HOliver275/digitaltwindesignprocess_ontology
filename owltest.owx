@@ -5618,6 +5618,8 @@
         <ObjectProperty IRI="#hasArtefact"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -5778,6 +5780,8 @@
         <ObjectProperty IRI="#isArtefactOf"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
@@ -6408,8 +6412,18 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasComponent</IRI>
+        <Literal xml:lang="en">Component associated with a DevelopmentActivity or TemporalConstruct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isArtefactOf</IRI>
         <Literal xml:lang="en">Artefact of some DevelopmentActivity or TemporalConstruct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isComponentOf</IRI>
+        <Literal xml:lang="en">Component associated with a DevelopmentActivity or TemporalConstruct</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
