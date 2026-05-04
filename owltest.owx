@@ -211,6 +211,9 @@
         <Class IRI="#TestingOutput"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#TimeStructure"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Twin"/>
     </Declaration>
     <Declaration>
@@ -1704,7 +1707,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Continuity"/>
-        <Class IRI="#TemporalConstruct"/>
+        <Class IRI="#TimeStructure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Datapoint"/>
@@ -1748,7 +1751,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Flow"/>
-        <Class IRI="#TemporalConstruct"/>
+        <Class IRI="#TimeStructure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Flow_CAE_VirtualTesting_PhysicalTesting"/>
@@ -1780,7 +1783,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Iteration"/>
-        <Class IRI="#TemporalConstruct"/>
+        <Class IRI="#TimeStructure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign"/>
@@ -1852,11 +1855,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Span"/>
-        <Class IRI="#TemporalConstruct"/>
+        <Class IRI="#TimeStructure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Step"/>
-        <Class IRI="#TemporalConstruct"/>
+        <Class IRI="#TimeStructure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Step_CAE_VirtualTestingToDesignActivity"/>
@@ -1921,6 +1924,10 @@
     <SubClassOf>
         <Class IRI="#TestingOutput"/>
         <Class IRI="#Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TimeStructure"/>
+        <Class IRI="#TemporalConstruct"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Twin"/>
@@ -2149,6 +2156,10 @@
     <DisjointClasses>
         <Class IRI="#Step"/>
         <Class IRI="#TemporalPartition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#TemporalPartition"/>
+        <Class IRI="#TimeStructure"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#Artefact"/>
@@ -6238,6 +6249,26 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#comesAfter</IRI>
         <Literal xml:lang="en">Anything that must be preceded by some other thing or things at some point in the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#comesBefore</IRI>
+        <Literal xml:lang="en">Anything that must precede some other thing or things at some point in the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#continuityFrom</IRI>
+        <Literal xml:lang="en">The TemporalPartition where a Continuity begins.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#continuityTo</IRI>
+        <Literal xml:lang="en">The TemporalPartition where a Continuity ends.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#duringTemporalPartition</IRI>
+        <Literal xml:lang="en">A DevelopmentActivity, or a TemporalConstruct that is not itself a TemporalPartition, takes place during a TemporalPartition in the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
