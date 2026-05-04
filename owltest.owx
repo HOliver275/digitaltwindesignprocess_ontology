@@ -103,6 +103,9 @@
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting_MechanicalTesting"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Iteration_CAE_VirtualTesting_PerformanceTesting_MechanicalTesting"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Loop"/>
     </Declaration>
     <Declaration>
@@ -323,6 +326,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#createdOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStopCondition"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasURI"/>
@@ -1300,6 +1306,45 @@
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#DevelopmentActivity"/>
             </ObjectSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasStopCondition"/>
+                <DataUnionOf>
+                    <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:langString"/>
+                    <Datatype abbreviatedIRI="rdfs:Literal"/>
+                    <Datatype abbreviatedIRI="xsd:NCName"/>
+                    <Datatype abbreviatedIRI="xsd:NMTOKEN"/>
+                    <Datatype abbreviatedIRI="xsd:Name"/>
+                    <Datatype abbreviatedIRI="xsd:anyURI"/>
+                    <Datatype abbreviatedIRI="xsd:base64Binary"/>
+                    <Datatype abbreviatedIRI="xsd:boolean"/>
+                    <Datatype abbreviatedIRI="xsd:byte"/>
+                    <Datatype abbreviatedIRI="xsd:dateTime"/>
+                    <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <Datatype abbreviatedIRI="xsd:hexBinary"/>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <Datatype abbreviatedIRI="xsd:language"/>
+                    <Datatype abbreviatedIRI="xsd:long"/>
+                    <Datatype abbreviatedIRI="xsd:negativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonPositiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:normalizedString"/>
+                    <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:short"/>
+                    <Datatype abbreviatedIRI="xsd:token"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+                    <Datatype abbreviatedIRI="owl:rational"/>
+                    <Datatype abbreviatedIRI="owl:real"/>
+                </DataUnionOf>
+            </DataSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1369,6 +1414,32 @@
             <ObjectMinCardinality cardinality="1">
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#EngineeringDesign"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#MechanicalTesting"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#PerformanceTesting"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Iteration_CAE_VirtualTesting_PerformanceTesting_MechanicalTesting"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Iteration"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <ObjectUnionOf>
+                    <Class IRI="#CAE_VirtualTesting"/>
+                    <Class IRI="#MechanicalTesting"/>
+                    <Class IRI="#PerformanceTesting"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#CAE_VirtualTesting"/>
             </ObjectMinCardinality>
             <ObjectMinCardinality cardinality="1">
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -1765,6 +1836,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting_MechanicalTesting"/>
+        <Class IRI="#Iteration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Iteration_CAE_VirtualTesting_PerformanceTesting_MechanicalTesting"/>
         <Class IRI="#Iteration"/>
     </SubClassOf>
     <SubClassOf>
@@ -2409,6 +2484,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#IterationGroup4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Iteration_CAE_VirtualTesting_PerformanceTesting_MechanicalTesting"/>
         <NamedIndividual IRI="#IterationGroup4"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -5809,6 +5888,11 @@ The CAE/virtual testing may be conducted in parallel with the physical testing.<
 For example, a Twin is an Artefact. Supposing we have a Twin as the Output from one DevelopmentActivity. In order to continue developing the Twin during the next DevelopmentActivity, it will have to be passed in as part of the Input to that DevelopmentActivity.
 
 An item of information, such as a Datapoint, may also form part of the Input. For example, we may need to track the weight in kg of a Component through the development process. This would be done using the same Datapoint included into the Input into a DevelopmentActivity, which then becomes part of the Output from that same activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Iteration</IRI>
+        <Literal xml:lang="en">An Iteration groups DevelopmentActivities that are carried out together in cycles that may be repeated. The DevelopmentActivities in an Iteration are not assumed to be carried out in sequence. A stop condition may be defined.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
