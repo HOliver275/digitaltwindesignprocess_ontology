@@ -5536,9 +5536,6 @@
         <ObjectProperty IRI="#isDigitalTwinOf"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#opensStage"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
         <ObjectProperty IRI="#stepFrom"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
@@ -5550,6 +5547,10 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#comesBefore"/>
     </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#closesStage"/>
+        <Class IRI="#Gateway"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#continuityFrom"/>
         <Class IRI="#Continuity"/>
@@ -5590,6 +5591,10 @@
         <ObjectProperty IRI="#stepTo"/>
         <Class IRI="#Step"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#closesStage"/>
+        <Class IRI="#ProductDevelopmentStage"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#continuityFrom"/>
         <Class IRI="#TemporalPartition"/>
