@@ -619,6 +619,9 @@
         <NamedIndividual IRI="#MechanicalTestingSpan3"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Output1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#PerformanceTestingActivity"/>
     </Declaration>
     <Declaration>
@@ -2509,6 +2512,10 @@
         <NamedIndividual IRI="#MechanicalTestingSpan3"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Output"/>
+        <NamedIndividual IRI="#Output1"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#PerformanceTesting"/>
         <NamedIndividual IRI="#PerformanceTestingActivity"/>
     </ClassAssertion>
@@ -4180,6 +4187,11 @@
         <NamedIndividual IRI="#Input1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#DigitalTwin1"/>
+        <NamedIndividual IRI="#Output1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isDigitalTwinOf"/>
         <NamedIndividual IRI="#DigitalTwin1"/>
         <NamedIndividual IRI="#PhysicalAsset1"/>
@@ -4228,6 +4240,11 @@
         <ObjectProperty IRI="#hasComponent"/>
         <NamedIndividual IRI="#Input1"/>
         <NamedIndividual IRI="#Component1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input1"/>
+        <NamedIndividual IRI="#WeightParameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
@@ -4573,6 +4590,26 @@
         <ObjectProperty IRI="#spansFrom"/>
         <NamedIndividual IRI="#MechanicalTestingSpan3"/>
         <NamedIndividual IRI="#MechanicalTestingActivity3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Output1"/>
+        <NamedIndividual IRI="#DigitalTwin1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Output1"/>
+        <NamedIndividual IRI="#PhysicalAsset1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Output1"/>
+        <NamedIndividual IRI="#WeightParameter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#Output1"/>
+        <NamedIndividual IRI="#Stage1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
@@ -5732,6 +5769,20 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOutput"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParameter"/>
+        <ObjectUnionOf>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPhysicalAsset"/>
         <Class IRI="#DigitalTwin"/>
     </ObjectPropertyDomain>
@@ -5779,6 +5830,10 @@
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isParameterOf"/>
+        <Class IRI="#Parameter"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isPhysicalAssetOf"/>
@@ -5898,10 +5953,6 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasParameter"/>
-        <Class IRI="#Output"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasParameter"/>
         <Class IRI="#Parameter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -5974,11 +6025,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isParameterOf"/>
-        <Class IRI="#Input"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isParameterOf"/>
-        <Class IRI="#Output"/>
+        <ObjectUnionOf>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isPhysicalAssetOf"/>
@@ -6004,7 +6054,35 @@
         <Class IRI="#ProductDevelopmentStage"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#outputFrom"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#spansFrom"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalPartition"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#spansTo"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalPartition"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#startsWith"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#stepFrom"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
@@ -6605,8 +6683,28 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasInput</IRI>
+        <Literal xml:lang="en">Input into some DevelopmentActivity or TemporalConstruct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasOutput</IRI>
+        <Literal xml:lang="en">Output from some DevelopmentActivity or TemporalConstruct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasParameter</IRI>
+        <Literal xml:lang="en">An input or output Parameter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasPhysicalAsset</IRI>
         <Literal xml:lang="en">A DigitalTwin is twinned with a PhysicalAsset. To associate the PhysicalAsset with some other entity, use hasArtefact.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#inputInto</IRI>
+        <Literal xml:lang="en">Input into some DevelopmentActivity or TemporalConstruct.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6650,13 +6748,18 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isParameterOf</IRI>
+        <Literal xml:lang="en">An input or output Parameter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isPhysicalAssetOf</IRI>
         <Literal xml:lang="en">A PhysicalAsset has a DigitalTwin. To associate the PhysicalAsset with some other entity, use isArtefactOf.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isStartOf</IRI>
-        <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the end of a TimeStructure.</Literal>
+        <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the start of a TimeStructure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6675,8 +6778,23 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#outputFrom</IRI>
+        <Literal>Output from some DevelopmentActivity or TemporalConstruct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#spansFrom</IRI>
+        <Literal xml:lang="en">The beginning DevelopmentActivity or TemporalPartition of a Span.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#spansTo</IRI>
+        <Literal xml:lang="en">The ending DevelopmentActivity or TemporalPartition of a Span.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#startsWith</IRI>
-        <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the end of a TimeStructure.</Literal>
+        <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the start of a TimeStructure.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
