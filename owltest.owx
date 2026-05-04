@@ -97,6 +97,9 @@
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Loop"/>
     </Declaration>
     <Declaration>
@@ -1290,6 +1293,16 @@
                 <ObjectProperty IRI="#duringTemporalPartition"/>
                 <Class IRI="#TemporalPartition"/>
             </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#DevelopmentActivity"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Iteration"/>
             <ObjectMinCardinality cardinality="1">
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#CAE_VirtualTesting"/>
@@ -1297,6 +1310,24 @@
             <ObjectMinCardinality cardinality="1">
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#EngineeringDesign"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Iteration"/>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#CAE_VirtualTesting"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#EngineeringDesign"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#PerformanceTesting"/>
             </ObjectMinCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -1677,6 +1708,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign"/>
+        <Class IRI="#Iteration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting"/>
         <Class IRI="#Iteration"/>
     </SubClassOf>
     <SubClassOf>
@@ -2305,6 +2340,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#IterationGroup2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign_PerformanceTesting"/>
         <NamedIndividual IRI="#IterationGroup2"/>
     </ClassAssertion>
     <ClassAssertion>
