@@ -301,6 +301,9 @@
         <ObjectProperty IRI="#isDigitalTwinOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isEndOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isParameterOf"/>
     </Declaration>
     <Declaration>
@@ -2002,10 +2005,6 @@
         <Class IRI="#Step"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Continuity"/>
-        <Class IRI="#TemporalPartition"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Datapoint"/>
         <Class IRI="#Dataset"/>
     </DisjointClasses>
@@ -2070,10 +2069,6 @@
         <Class IRI="#Step"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Flow"/>
-        <Class IRI="#TemporalPartition"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Focus"/>
         <Class IRI="#Input"/>
     </DisjointClasses>
@@ -2114,10 +2109,6 @@
         <Class IRI="#Step"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Iteration"/>
-        <Class IRI="#TemporalPartition"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Model"/>
         <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
@@ -2148,14 +2139,6 @@
     <DisjointClasses>
         <Class IRI="#Span"/>
         <Class IRI="#Step"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Span"/>
-        <Class IRI="#TemporalPartition"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Step"/>
-        <Class IRI="#TemporalPartition"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#TemporalPartition"/>
@@ -5533,6 +5516,10 @@
         <ObjectProperty IRI="#closesStage"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#endsWith"/>
+        <ObjectProperty IRI="#isEndOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasArtefact"/>
         <ObjectProperty IRI="#isArtefactOf"/>
     </InverseObjectProperties>
@@ -5589,6 +5576,17 @@
         <Class IRI="#Continuity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TimeStructure"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#endsWith"/>
+        <Class IRI="#TimeStructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasArtefact"/>
         <Class IRI="#DevelopmentActivity"/>
     </ObjectPropertyDomain>
@@ -5599,6 +5597,13 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isArtefactOf"/>
         <Class IRI="#Artefact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEndOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#openedByGateway"/>
@@ -5649,6 +5654,13 @@
         <Class IRI="#TemporalPartition"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#endsWith"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasArtefact"/>
         <Class IRI="#Artefact"/>
     </ObjectPropertyRange>
@@ -5695,6 +5707,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isArtefactOf"/>
         <Class IRI="#DevelopmentActivity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEndOf"/>
+        <Class IRI="#TimeStructure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isParameterOf"/>
@@ -6269,6 +6285,16 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#duringTemporalPartition</IRI>
         <Literal xml:lang="en">A DevelopmentActivity, or a TemporalConstruct that is not itself a TemporalPartition, takes place during a TemporalPartition in the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#endsWith</IRI>
+        <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the end of a TimeStructure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isEndOf</IRI>
+        <Literal xml:lang="en">The DevelopmentActivity or TemporalConstruct at the end of a TimeStructure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
