@@ -2081,6 +2081,10 @@
         <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Gateway"/>
+        <Class IRI="#ProductDevelopmentStage"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Input"/>
         <Class IRI="#Output"/>
     </DisjointClasses>
@@ -5532,13 +5536,7 @@
         <ObjectProperty IRI="#isDigitalTwinOf"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#closesStage"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasNext"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#hasPrevious"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#opensStage"/>
@@ -5958,6 +5956,11 @@ A Step differs from a Span in that the connected DevelopmentActivities may be wi
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TemporalConstruct</IRI>
         <Literal xml:lang="en">A TemporalConstruct is a way of representing time in the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TemporalPartition</IRI>
+        <Literal xml:lang="en">A TemporalPartition represents some distinct time period in the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
