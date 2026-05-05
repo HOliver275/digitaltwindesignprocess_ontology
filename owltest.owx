@@ -6329,9 +6329,9 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Artefact</IRI>
         <Literal xml:lang="en">An identifiable work involved in some stage or activity of the development process that:
-- is disseminated or delivered as one of the intermediate or finalized results of the process; or
-- input into some part of the development process as an object to be developed or tested; and
--is not simply some intermediate work that is revised, discarded or abandoned throughout the process.</Literal>
+- is disseminated or delivered as one of the intermediate or finalized results of the process; and/or
+-is input into some part of the development process as an object to be analyzed, developed or tested; and
+-is not merely an intermediate work that is revised, discarded or abandoned throughout the process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
