@@ -1862,6 +1862,10 @@
         <Class IRI="#PhysicalTesting"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Model"/>
+        <Class IRI="#Artefact"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Modelling"/>
         <Class IRI="#ModellingAndSimulation"/>
     </SubClassOf>
