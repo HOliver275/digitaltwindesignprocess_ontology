@@ -1345,10 +1345,6 @@
                         <Class IRI="#Component"/>
                     </ObjectMinCardinality>
                     <ObjectMinCardinality cardinality="1">
-                        <ObjectProperty IRI="#hasModel"/>
-                        <Class IRI="#Model"/>
-                    </ObjectMinCardinality>
-                    <ObjectMinCardinality cardinality="1">
                         <ObjectProperty IRI="#hasParameter"/>
                         <Class IRI="#Parameter"/>
                     </ObjectMinCardinality>
@@ -1503,10 +1499,6 @@
                     <ObjectMinCardinality cardinality="1">
                         <ObjectProperty IRI="#hasComponent"/>
                         <Class IRI="#Component"/>
-                    </ObjectMinCardinality>
-                    <ObjectMinCardinality cardinality="1">
-                        <ObjectProperty IRI="#hasModel"/>
-                        <Class IRI="#Model"/>
                     </ObjectMinCardinality>
                     <ObjectMinCardinality cardinality="1">
                         <ObjectProperty IRI="#hasParameter"/>
@@ -2091,10 +2083,6 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DevelopmentActivity"/>
-        <Class IRI="#Model"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#DevelopmentActivity"/>
         <Class IRI="#Output"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -2127,10 +2115,6 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Focus"/>
-        <Class IRI="#Model"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Focus"/>
         <Class IRI="#Output"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -2160,10 +2144,6 @@
     <DisjointClasses>
         <Class IRI="#Iteration"/>
         <Class IRI="#Step"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Model"/>
-        <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#ModellingAndSimulation"/>
@@ -5870,7 +5850,6 @@
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
             <Class IRI="#Input"/>
-            <Class IRI="#Model"/>
             <Class IRI="#Output"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -5890,7 +5869,6 @@
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
             <Class IRI="#DevelopmentActivity"/>
-            <Class IRI="#Model"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -6148,7 +6126,6 @@
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
             <Class IRI="#Input"/>
-            <Class IRI="#Model"/>
             <Class IRI="#Output"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
@@ -6172,7 +6149,6 @@
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
             <Class IRI="#DevelopmentActivity"/>
-            <Class IRI="#Model"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
@@ -6552,9 +6528,7 @@ Unlike an Iteration which is not necessarily ordered, a Loop has an ordered sequ
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Model</IRI>
-        <Literal xml:lang="en">A Model is a representation of something that exists in reality. An architectural model can be a physical or digital representation of a building. An information model is a digital representation of some knowledge domain (this ontology is an information model).
-
-A Model can be an Artefect of the development process, a Component of some system, a Parameter that forms part of the Input into or Output from some DevelopmentActivity or TemporalConstruct, or it can be an entity in its own right that is involved in the development process in some other way.</Literal>
+        <Literal xml:lang="en">A Model is a representation of something that exists in reality. An architectural model can be a physical or digital representation of a building. An information model is a digital representation of some knowledge domain (this ontology is an information model).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
