@@ -154,6 +154,9 @@
         <Class IRI="#Simulation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#SimulationActivity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Span"/>
     </Declaration>
     <Declaration>
@@ -1899,6 +1902,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Simulation"/>
+        <Class IRI="#Artefact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SimulationActivity"/>
         <Class IRI="#ModellingAndSimulation"/>
     </SubClassOf>
     <SubClassOf>
@@ -4976,6 +4983,11 @@
         <NamedIndividual IRI="#Stage5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ProgressiveReleaseDesign1"/>
+        <NamedIndividual IRI="#CAEActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOutput"/>
         <NamedIndividual IRI="#ProgressiveReleaseDesign1"/>
         <NamedIndividual IRI="#DesignOutput1"/>
@@ -6311,6 +6323,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CAE_VirtualTesting</IRI>
+        <Literal xml:lang="en">Computer-Aided Engineering (CAE) virtual testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Component</IRI>
         <Literal xml:lang="en">A part of some whole. Could be a code module of the software which itself is a component of the DigitalTwin; or could be a part of the PhysicalAsset.</Literal>
     </AnnotationAssertion>
@@ -6592,6 +6609,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Simulation</IRI>
+        <Literal xml:lang="en">A simulation of some real-world object or process; or, the output from a SimulationActivity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SimulationActivity</IRI>
         <Literal xml:lang="en">A ModellingAndSimulation activity, or a composition of ModellingAndSimulation activities, that is primarily focussed on simulation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
