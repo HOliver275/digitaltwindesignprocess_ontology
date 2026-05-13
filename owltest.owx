@@ -1087,13 +1087,13 @@
         <ObjectIntersectionOf>
             <Class IRI="#Flow"/>
             <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#duringTemporalPartition"/>
-                <Class IRI="#TemporalPartition"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#DevelopmentActivity"/>
             </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#duringTemporalPartition"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectExactCardinality>
             <ObjectExactCardinality cardinality="1">
                 <ObjectProperty IRI="#endsWith"/>
                 <Class IRI="#Step"/>
@@ -1614,13 +1614,13 @@
         <ObjectIntersectionOf>
             <Class IRI="#Span"/>
             <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#duringTemporalPartition"/>
-                <Class IRI="#TemporalPartition"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#DevelopmentActivity"/>
             </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#duringTemporalPartition"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectMinCardinality>
             <ObjectMaxCardinality cardinality="1">
                 <ObjectProperty IRI="#spansFrom"/>
                 <Class IRI="#TemporalPartition"/>
@@ -6543,7 +6543,7 @@ A Document can be part of a Dataset.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Flow</IRI>
-        <Literal xml:lang="en">A Flow is an ordered list of one or more Steps from one DevelopmentActivity to another, during some TemporalPartition of the development process. 
+        <Literal xml:lang="en">A Flow is an ordered list of one or more Steps from one DevelopmentActivity to another, during one TemporalPartition of the development process. 
 
 Flows that occur more than once during the development process can be defined as subclasses. The existing subclasses are not exhaustive.</Literal>
     </AnnotationAssertion>
@@ -6739,11 +6739,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Span</IRI>
-        <Literal xml:lang="en">A Span links two DevelopmentActivities across two or more TemporalPartitions.
+        <Literal xml:lang="en">A Span links two DevelopmentActivities across one or more TemporalPartitions.
 
 Spans can be sequentially linked, using the followsFrom and leadsTo properties, to form a Continuity across TemporalPartitions of the development process.
 
-A Span differs from a Step in that a Span *must* begin and end in two different TemporalPartitions.</Literal>
+A Span differs from a Step in that a Span is part of a Continuity, which begins and ends in two different TemporalPartitions. Therefore the TemporalPartitions of a Span must be specified as part of the Span&apos;s definition.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6777,7 +6777,7 @@ A Span differs from a Step in that a Span *must* begin and end in two different 
 
 Steps can be sequentially linked, using the hasPrevious and hasNext properties, to form a Flow.
 
-A Step differs from a Span in that the connected DevelopmentActivities may be within the same TemporalPartition.</Literal>
+A Step forms part of a Flow, which takes place within exactly one TemporalPartition. A Step differs from a Span in that the DevelopmentActivities connected by a Step always begin in the same TemporalPartition. The TemporalPartition is the same as the one specified in the Flow, so does not have to be specified at each Step of the Flow.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
