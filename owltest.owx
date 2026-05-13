@@ -370,6 +370,9 @@
         <ObjectProperty IRI="#stepTo"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#twinnedDigitallyWith"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#createdOn"/>
     </Declaration>
     <Declaration>
@@ -5808,6 +5811,9 @@
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#stepTo"/>
     </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#twinnedDigitallyWith"/>
+    </FunctionalObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#comesAfter"/>
     </TransitiveObjectProperty>
@@ -6026,6 +6032,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#stepTo"/>
         <Class IRI="#Step"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#twinnedDigitallyWith"/>
+        <Class IRI="#PhysicalAsset"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#closedByGateway"/>
@@ -6260,6 +6270,10 @@
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#twinnedDigitallyWith"/>
+        <Class IRI="#DigitalTwin"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#hasURI"/>
