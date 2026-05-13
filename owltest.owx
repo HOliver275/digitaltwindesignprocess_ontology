@@ -373,6 +373,9 @@
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#twinnedPhysicallyWith"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#createdOn"/>
     </Declaration>
     <Declaration>
@@ -820,16 +823,25 @@
         <NamedIndividual IRI="#TestingFocus9"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Twin1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#WeightParameter"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Artefact"/>
         <ObjectIntersectionOf>
             <Class IRI="#Artefact"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasComponent"/>
-                <Class IRI="#Component"/>
-            </ObjectSomeValuesFrom>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasArtefact"/>
+                    <Class IRI="#Artefact"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasComponent"/>
+                    <Class IRI="#Component"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1044,6 +1056,20 @@
                 <DataProperty IRI="#hasURI"/>
                 <Datatype abbreviatedIRI="xsd:anyURI"/>
             </DataMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DigitalTwin"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#DigitalTwin"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#isDigitalTwinOf"/>
+                <Class IRI="#Twin"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#twinnedPhysicallyWith"/>
+                <Class IRI="#PhysicalAsset"/>
+            </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1540,8 +1566,22 @@
         <ObjectIntersectionOf>
             <Class IRI="#PhysicalAsset"/>
             <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#isPhysicalAssetOf"/>
+                <Class IRI="#Twin"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
                 <ObjectProperty IRI="#twinnedDigitallyWith"/>
                 <Class IRI="#DigitalTwin"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Product"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Product"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasArtefact"/>
+                <Class IRI="#Twin"/>
             </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -1754,6 +1794,20 @@
             <ObjectExactCardinality cardinality="1">
                 <ObjectProperty IRI="#stepTo"/>
                 <Class IRI="#PerformanceTesting"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Twin"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Twin"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDigitalTwin"/>
+                <Class IRI="#DigitalTwin"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasPhysicalAsset"/>
+                <Class IRI="#PhysicalAsset"/>
             </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -2798,6 +2852,10 @@
         <NamedIndividual IRI="#TestingFocus9"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Twin"/>
+        <NamedIndividual IRI="#Twin1"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Datapoint"/>
         <NamedIndividual IRI="#WeightParameter"/>
     </ClassAssertion>
@@ -4251,11 +4309,6 @@
         <NamedIndividual IRI="#DesignActivity3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPhysicalAsset"/>
-        <NamedIndividual IRI="#DigitalTwin1"/>
-        <NamedIndividual IRI="#PhysicalAsset1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#DigitalTwin1"/>
         <NamedIndividual IRI="#Input1"/>
@@ -4267,6 +4320,11 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isDigitalTwinOf"/>
+        <NamedIndividual IRI="#DigitalTwin1"/>
+        <NamedIndividual IRI="#Twin1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#twinnedPhysicallyWith"/>
         <NamedIndividual IRI="#DigitalTwin1"/>
         <NamedIndividual IRI="#PhysicalAsset1"/>
     </ObjectPropertyAssertion>
@@ -4966,6 +5024,11 @@
         <NamedIndividual IRI="#Input1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPhysicalAssetOf"/>
+        <NamedIndividual IRI="#PhysicalAsset1"/>
+        <NamedIndividual IRI="#Twin1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
         <NamedIndividual IRI="#PhysicalAsset1"/>
         <NamedIndividual IRI="#DigitalTwin1"/>
@@ -4988,12 +5051,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Product1"/>
-        <NamedIndividual IRI="#DigitalTwin1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#Product1"/>
-        <NamedIndividual IRI="#PhysicalAsset1"/>
+        <NamedIndividual IRI="#Twin1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isProductOf"/>
@@ -5660,6 +5718,16 @@
         <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
         <NamedIndividual IRI="#DesignActivity2"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDigitalTwin"/>
+        <NamedIndividual IRI="#Twin1"/>
+        <NamedIndividual IRI="#DigitalTwin1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPhysicalAsset"/>
+        <NamedIndividual IRI="#Twin1"/>
+        <NamedIndividual IRI="#PhysicalAsset1"/>
+    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#Dataset1"/>
@@ -5821,6 +5889,18 @@
         <ObjectProperty IRI="#opensStage"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasDigitalTwin"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasPhysicalAsset"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isDigitalTwinOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isPhysicalAssetOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#stepFrom"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
@@ -5828,6 +5908,9 @@
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#twinnedPhysicallyWith"/>
     </FunctionalObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#comesAfter"/>
@@ -5895,7 +5978,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDigitalTwin"/>
-        <Class IRI="#PhysicalAsset"/>
+        <Class IRI="#Twin"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasFocus"/>
@@ -5928,7 +6011,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPhysicalAsset"/>
-        <Class IRI="#DigitalTwin"/>
+        <Class IRI="#Twin"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasProduct"/>
@@ -6051,6 +6134,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
         <Class IRI="#PhysicalAsset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#twinnedPhysicallyWith"/>
+        <Class IRI="#DigitalTwin"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#closedByGateway"/>
@@ -6175,7 +6262,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isDigitalTwinOf"/>
-        <Class IRI="#PhysicalAsset"/>
+        <Class IRI="#Twin"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isEndOf"/>
@@ -6216,7 +6303,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isPhysicalAssetOf"/>
-        <Class IRI="#DigitalTwin"/>
+        <Class IRI="#Twin"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isProductOf"/>
@@ -6289,6 +6376,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
         <Class IRI="#DigitalTwin"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#twinnedPhysicallyWith"/>
+        <Class IRI="#PhysicalAsset"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#hasURI"/>
