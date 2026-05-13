@@ -1536,6 +1536,16 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#PhysicalAsset"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PhysicalAsset"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#twinnedDigitallyWith"/>
+                <Class IRI="#DigitalTwin"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#ProductDevelopmentStage"/>
         <ObjectIntersectionOf>
             <Class IRI="#ProductDevelopmentStage"/>
@@ -4954,6 +4964,11 @@
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#PhysicalAsset1"/>
         <NamedIndividual IRI="#Input1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#twinnedDigitallyWith"/>
+        <NamedIndividual IRI="#PhysicalAsset1"/>
+        <NamedIndividual IRI="#DigitalTwin1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
