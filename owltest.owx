@@ -391,6 +391,9 @@
         <DataProperty IRI="#isOptional"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#isRepeated"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#maxTargetValue"/>
     </Declaration>
     <Declaration>
@@ -1403,6 +1406,10 @@
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#DevelopmentActivity"/>
             </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="#isRepeated"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1516,6 +1523,10 @@
             <ObjectMinCardinality cardinality="2">
                 <ObjectProperty IRI="#hasStep"/>
             </ObjectMinCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#isRepeated"/>
+                <Datatype abbreviatedIRI="xsd:boolean"/>
+            </DataExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -2173,10 +2184,6 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Flow"/>
-        <Class IRI="#Iteration"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Flow"/>
         <Class IRI="#Span"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -5729,6 +5736,11 @@
         <NamedIndividual IRI="#PhysicalAsset1"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#isRepeated"/>
+        <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#Dataset1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/CSVFile1.csv</Literal>
@@ -5754,6 +5766,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#isRepeated"/>
+        <NamedIndividual IRI="#DetailDesign_LoopA"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#Document1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/Document1/</Literal>
@@ -5771,6 +5788,11 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
         <NamedIndividual IRI="#SystemLevelDesign_FlowFStep3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRepeated"/>
+        <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -6402,6 +6424,10 @@
         <Class IRI="#Step"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#isRepeated"/>
+        <Class IRI="#Iteration"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#maxTargetValue"/>
         <Class IRI="#Datapoint"/>
     </DataPropertyDomain>
@@ -6427,6 +6453,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#isOptional"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isRepeated"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
