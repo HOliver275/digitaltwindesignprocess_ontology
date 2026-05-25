@@ -4336,6 +4336,11 @@
         <NamedIndividual IRI="#PhysicalAsset1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#closesStage"/>
+        <NamedIndividual IRI="#Gateway1"/>
+        <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#comesAfter"/>
         <NamedIndividual IRI="#Gateway1"/>
         <NamedIndividual IRI="#Stage1"/>
@@ -4374,6 +4379,11 @@
         <ObjectProperty IRI="#closesStage"/>
         <NamedIndividual IRI="#Gateway4"/>
         <NamedIndividual IRI="#DetailDesignStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#opensStage"/>
+        <NamedIndividual IRI="#Gateway4"/>
+        <NamedIndividual IRI="#Stage5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -6469,7 +6479,7 @@
         <Literal xml:lang="en">An identifiable work involved in some stage or activity of the development process that:
 - is disseminated or delivered as one of the intermediate or finalized results of the process; and/or
 -is input into some part of the development process as an object to be analyzed, developed or tested; and
--is not merely an intermediate work that is revised, discarded or abandoned throughout the process.</Literal>
+-is not merely a transitory work or information scrap that is revised, discarded or abandoned throughout the process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6524,7 +6534,7 @@ A Dataset may include one or more Documents.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Deliverable</IRI>
-        <Literal xml:lang="en">A deliverable Artefact of some stage or activity of the development process, that isn&apos;t necessarily a Product or a Twin. A delivery could be a report, a prototype, a model, and so on.</Literal>
+        <Literal xml:lang="en">A deliverable Artefact of some stage or activity of the development process, that isn&apos;t necessarily a Product or a Twin. A deliverable could be a report, a prototype, a model, and so on.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
