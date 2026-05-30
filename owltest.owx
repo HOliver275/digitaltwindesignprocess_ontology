@@ -16,6 +16,9 @@
         <Class IRI="#Artefact"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#CADModel"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#CAE_VirtualTesting"/>
     </Declaration>
     <Declaration>
@@ -424,6 +427,9 @@
         <NamedIndividual IRI="#Artefact1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CADModel_Fig6_1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CAEActivity1"/>
     </Declaration>
     <Declaration>
@@ -506,6 +512,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Dataset1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dataset_Fig6_1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Deliverable1"/>
@@ -631,6 +640,9 @@
         <NamedIndividual IRI="#Input1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#IterationGroup1"/>
     </Declaration>
     <Declaration>
@@ -676,6 +688,9 @@
         <NamedIndividual IRI="#ModellingActivity1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Output1"/>
     </Declaration>
     <Declaration>
@@ -719,6 +734,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ProgressiveReleaseDesign1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Simulation_Fig6_1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Stage1"/>
@@ -844,7 +862,16 @@
         <NamedIndividual IRI="#Twin1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#WeightParameter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2DModel_Fig6_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#3DModel_Fig6_1"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Artefact"/>
@@ -858,6 +885,14 @@
                 <ObjectSomeValuesFrom>
                     <ObjectProperty IRI="#hasComponent"/>
                     <Class IRI="#Component"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#isArtefactOf"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Artefact"/>
+                        <Class IRI="#Component"/>
+                        <Class IRI="#Input"/>
+                    </ObjectUnionOf>
                 </ObjectSomeValuesFrom>
             </ObjectUnionOf>
         </ObjectIntersectionOf>
@@ -1574,20 +1609,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Parameter"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Parameter"/>
-            <DataExactCardinality cardinality="1">
-                <DataProperty IRI="#createdOn"/>
-                <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
-            </DataExactCardinality>
-            <DataMaxCardinality cardinality="1">
-                <DataProperty IRI="#updatedOn"/>
-                <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
-            </DataMaxCardinality>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#PhysicalAsset"/>
         <ObjectIntersectionOf>
             <Class IRI="#PhysicalAsset"/>
@@ -1643,6 +1664,16 @@
                 <ObjectProperty IRI="#hasOutput"/>
                 <Class IRI="#Output"/>
             </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Simulation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Simulation"/>
+            <DataMinCardinality cardinality="1">
+                <DataProperty IRI="#hasURI"/>
+                <Datatype abbreviatedIRI="xsd:anyURI"/>
+            </DataMinCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1857,6 +1888,42 @@
             </DataMinCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#2DModel"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#2DModel"/>
+            <ObjectUnionOf>
+                <DataMinCardinality cardinality="1">
+                    <DataProperty IRI="#hasDescription"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataMinCardinality>
+                <DataMinCardinality cardinality="1">
+                    <DataProperty IRI="#hasURI"/>
+                    <Datatype abbreviatedIRI="xsd:anyURI"/>
+                </DataMinCardinality>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#3DModel"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#3DModel"/>
+            <ObjectUnionOf>
+                <DataMinCardinality cardinality="1">
+                    <DataProperty IRI="#hasDescription"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataMinCardinality>
+                <DataMinCardinality cardinality="1">
+                    <DataProperty IRI="#hasURI"/>
+                    <Datatype abbreviatedIRI="xsd:anyURI"/>
+                </DataMinCardinality>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#CADModel"/>
+        <Class IRI="#VirtualModel"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#CAE_VirtualTesting"/>
         <Class IRI="#VirtualTesting"/>
@@ -2318,6 +2385,10 @@
         <NamedIndividual IRI="#Artefact1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#CADModel"/>
+        <NamedIndividual IRI="#CADModel_Fig6_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#CAE_VirtualTesting"/>
         <NamedIndividual IRI="#CAEActivity1"/>
     </ClassAssertion>
@@ -2436,6 +2507,10 @@
     <ClassAssertion>
         <Class IRI="#Dataset"/>
         <NamedIndividual IRI="#Dataset1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#Dataset_Fig6_1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Deliverable"/>
@@ -2610,6 +2685,10 @@
         <NamedIndividual IRI="#Input1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign"/>
         <NamedIndividual IRI="#IterationGroup1"/>
     </ClassAssertion>
@@ -2682,6 +2761,10 @@
         <NamedIndividual IRI="#ModellingActivity1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Modelling"/>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Output"/>
         <NamedIndividual IRI="#Output1"/>
     </ClassAssertion>
@@ -2740,6 +2823,10 @@
     <ClassAssertion>
         <Class IRI="#ProgressiveRelease"/>
         <NamedIndividual IRI="#ProgressiveReleaseDesign1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Simulation"/>
+        <NamedIndividual IRI="#Simulation_Fig6_1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ProductDevelopmentStage"/>
@@ -2918,8 +3005,20 @@
         <NamedIndividual IRI="#Twin1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#VirtualTesting"/>
+        <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Datapoint"/>
         <NamedIndividual IRI="#WeightParameter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#2DModel"/>
+        <NamedIndividual IRI="#2DModel_Fig6_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#3DModel"/>
+        <NamedIndividual IRI="#3DModel_Fig6_1"/>
     </ClassAssertion>
     <SameIndividual>
         <NamedIndividual IRI="#ConceptDevelopmentStage"/>
@@ -3534,6 +3633,11 @@
         <ObjectProperty IRI="#isParameterOf"/>
         <NamedIndividual IRI="#Dataset1"/>
         <NamedIndividual IRI="#Deliverable1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isParameterOf"/>
+        <NamedIndividual IRI="#Dataset_Fig6_1"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasModel"/>
@@ -4461,6 +4565,16 @@
         <NamedIndividual IRI="#Stage1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#CADModel_Fig6_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <NamedIndividual IRI="#IterationGroup1"/>
         <NamedIndividual IRI="#Stage1"/>
@@ -5141,6 +5255,11 @@
         <NamedIndividual IRI="#DesignOutput1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#Simulation_Fig6_1"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFocus"/>
         <NamedIndividual IRI="#Stage1"/>
         <NamedIndividual IRI="#TestingFocus1"/>
@@ -5800,6 +5919,21 @@
         <NamedIndividual IRI="#Twin1"/>
         <NamedIndividual IRI="#PhysicalAsset1"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#2DModel_Fig6_1"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#3DModel_Fig6_1"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#CADModel_Fig6_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/cadmodel/fig6_1/</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isRepeated"/>
         <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
@@ -5814,6 +5948,11 @@
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#Dataset1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/XMLFile1.xml</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#Dataset_Fig6_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/dataset/fig6/1/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
@@ -5839,6 +5978,11 @@
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#Document1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/Document1/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#Simulation_Fig6_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/simulation/fig6/1/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
@@ -5894,6 +6038,16 @@
         <DataProperty IRI="#updatedOn"/>
         <NamedIndividual IRI="#WeightParameter"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-05-01T18:58:00Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDescription"/>
+        <NamedIndividual IRI="#2DModel_Fig6_1"/>
+        <Literal>Drawing filed in Room 101, Yoyodyne House, under &quot;Fig. 6&quot;.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#3DModel_Fig6_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/3dmodel/fig6/1/</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#comesBefore"/>
@@ -6042,6 +6196,7 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasArtefact"/>
         <ObjectUnionOf>
+            <Class IRI="#Component"/>
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#Input"/>
             <Class IRI="#Output"/>
@@ -6052,6 +6207,7 @@
         <ObjectProperty IRI="#hasComponent"/>
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
+            <Class IRI="#Component"/>
             <Class IRI="#Input"/>
             <Class IRI="#Output"/>
         </ObjectUnionOf>
@@ -7317,6 +7473,16 @@ A Step forms part of a Flow, which takes place within exactly one TemporalPartit
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#updatedOn</IRI>
         <Literal xml:lang="en">Date/time stamp recording when an entity was updated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#2DModel</IRI>
+        <Literal>A 2D model can be physical or virtual. At minimum, it must have either a description providing the minimum useful information (such as where the physical 2D model can be found), or the URI where the virtual model can be found.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#3DModel</IRI>
+        <Literal>A 2D model can be physical or virtual. At minimum, it must have either a description providing the minimum useful information (such as where the physical 2D model can be found), or the URI where the virtual model can be found.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
