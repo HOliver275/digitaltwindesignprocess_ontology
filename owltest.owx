@@ -220,6 +220,9 @@
         <Class IRI="#Twin"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#VirtualModel"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#VirtualTesting"/>
     </Declaration>
     <Declaration>
@@ -1822,6 +1825,16 @@
             </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VirtualModel"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Model"/>
+            <DataMinCardinality cardinality="1">
+                <DataProperty IRI="#hasURI"/>
+                <Datatype abbreviatedIRI="xsd:anyURI"/>
+            </DataMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#CAE_VirtualTesting"/>
         <Class IRI="#VirtualTesting"/>
@@ -2065,6 +2078,10 @@
     <SubClassOf>
         <Class IRI="#Twin"/>
         <Class IRI="#Artefact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VirtualModel"/>
+        <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#VirtualTesting"/>
