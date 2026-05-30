@@ -232,6 +232,9 @@
         <Class IRI="#2DModel"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#3DModel"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#closedByGateway"/>
     </Declaration>
     <Declaration>
@@ -2112,6 +2115,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#2DModel"/>
+        <Class IRI="#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#3DModel"/>
         <Class IRI="#Model"/>
     </SubClassOf>
     <DisjointClasses>
