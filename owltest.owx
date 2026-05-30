@@ -229,6 +229,9 @@
         <Class IRI="#VirtualTesting"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#2DModel"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#closedByGateway"/>
     </Declaration>
     <Declaration>
@@ -2106,6 +2109,10 @@
     <SubClassOf>
         <Class IRI="#VirtualTesting"/>
         <Class IRI="#TestingActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#2DModel"/>
+        <Class IRI="#Model"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Artefact"/>
