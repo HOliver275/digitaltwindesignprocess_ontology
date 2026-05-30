@@ -133,6 +133,9 @@
         <Class IRI="#PhysicalAsset"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#PhysicalModel"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#PhysicalTesting"/>
     </Declaration>
     <Declaration>
@@ -380,6 +383,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#createdOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDescription"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasURI"/>
@@ -1590,6 +1596,16 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#PhysicalModel"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PhysicalModel"/>
+            <DataMinCardinality cardinality="1">
+                <DataProperty IRI="#hasDescription"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Product"/>
         <ObjectIntersectionOf>
             <Class IRI="#Product"/>
@@ -1828,7 +1844,7 @@
     <EquivalentClasses>
         <Class IRI="#VirtualModel"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Model"/>
+            <Class IRI="#VirtualModel"/>
             <DataMinCardinality cardinality="1">
                 <DataProperty IRI="#hasURI"/>
                 <Datatype abbreviatedIRI="xsd:anyURI"/>
@@ -1966,6 +1982,10 @@
     <SubClassOf>
         <Class IRI="#PhysicalAsset"/>
         <Class IRI="#Twin"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalModel"/>
+        <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PhysicalTesting"/>
@@ -2254,6 +2274,10 @@
     <DisjointClasses>
         <Class IRI="#Parameter"/>
         <Class IRI="#TemporalConstruct"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PhysicalModel"/>
+        <Class IRI="#VirtualModel"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#PhysicalTesting"/>
@@ -6471,6 +6495,10 @@
         <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasURI"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
     </DataPropertyRange>
@@ -6752,6 +6780,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#PhysicalAsset</IRI>
         <Literal xml:lang="en">The physical part of the product being developed throughout the development process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PhysicalModel</IRI>
+        <Literal xml:lang="en">A physical model will not fit in an ontology, so must be accompanied by at least one text description.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
