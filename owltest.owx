@@ -619,6 +619,9 @@
         <NamedIndividual IRI="#DigitalTwin1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Document1"/>
     </Declaration>
     <Declaration>
@@ -637,10 +640,16 @@
         <NamedIndividual IRI="#Gateway4"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#HistoricData"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Input1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Input_Fig6_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Input_Fig6_2"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#IterationGroup1"/>
@@ -694,6 +703,9 @@
         <NamedIndividual IRI="#Output1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Output_Fig6_4"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#PerformanceTestingActivity"/>
     </Declaration>
     <Declaration>
@@ -721,6 +733,9 @@
         <NamedIndividual IRI="#PhysicalAsset1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#PreviousProductTestData"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ProcurementActivity1"/>
     </Declaration>
     <Declaration>
@@ -734,6 +749,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ProgressiveReleaseDesign1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PrototypeInformation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Simulation_Fig6_1"/>
@@ -862,7 +880,13 @@
         <NamedIndividual IRI="#Twin1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#UsageData"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WarrantyData"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#WeightParameter"/>
@@ -892,6 +916,7 @@
                         <Class IRI="#Artefact"/>
                         <Class IRI="#Component"/>
                         <Class IRI="#Input"/>
+                        <Class IRI="#Output"/>
                     </ObjectUnionOf>
                 </ObjectSomeValuesFrom>
             </ObjectUnionOf>
@@ -1659,7 +1684,7 @@
     <EquivalentClasses>
         <Class IRI="#ReleaseActivity"/>
         <ObjectIntersectionOf>
-            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#ReleaseActivity"/>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hasOutput"/>
                 <Class IRI="#Output"/>
@@ -2657,6 +2682,10 @@
         <NamedIndividual IRI="#DigitalTwin1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#VirtualModel"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Document"/>
         <NamedIndividual IRI="#Document1"/>
     </ClassAssertion>
@@ -2681,12 +2710,20 @@
         <NamedIndividual IRI="#Gateway4"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#HistoricData"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Input"/>
         <NamedIndividual IRI="#Input1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#Input_Fig6_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#Input_Fig6_2"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign"/>
@@ -2769,6 +2806,10 @@
         <NamedIndividual IRI="#Output1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#TestingOutput"/>
+        <NamedIndividual IRI="#Output_Fig6_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#PerformanceTesting"/>
         <NamedIndividual IRI="#PerformanceTestingActivity"/>
     </ClassAssertion>
@@ -2805,6 +2846,10 @@
         <NamedIndividual IRI="#PhysicalAsset1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#PreviousProductTestData"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Procurement"/>
         <NamedIndividual IRI="#ProcurementActivity1"/>
     </ClassAssertion>
@@ -2823,6 +2868,10 @@
     <ClassAssertion>
         <Class IRI="#ProgressiveRelease"/>
         <NamedIndividual IRI="#ProgressiveReleaseDesign1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Document"/>
+        <NamedIndividual IRI="#PrototypeInformation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Simulation"/>
@@ -3005,8 +3054,16 @@
         <NamedIndividual IRI="#Twin1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#UsageData"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#VirtualTesting"/>
         <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Document"/>
+        <NamedIndividual IRI="#WarrantyData"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Datapoint"/>
@@ -4575,6 +4632,36 @@
         <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_Fig6_2"/>
+        <NamedIndividual IRI="#HistoricData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_Fig6_2"/>
+        <NamedIndividual IRI="#PreviousProductTestData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_Fig6_2"/>
+        <NamedIndividual IRI="#PrototypeInformation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_Fig6_2"/>
+        <NamedIndividual IRI="#UsageData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_Fig6_2"/>
+        <NamedIndividual IRI="#WarrantyData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input_Fig6_2"/>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <NamedIndividual IRI="#IterationGroup1"/>
         <NamedIndividual IRI="#Stage1"/>
@@ -4953,6 +5040,16 @@
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output1"/>
         <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Output_Fig6_4"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#Output_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
@@ -5981,6 +6078,21 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#HistoricData"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/historic_data/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#PreviousProductTestData"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/previous_product/test_data/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#PrototypeInformation"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/prototype/information/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#Simulation_Fig6_1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/simulation/fig6/1/</Literal>
     </DataPropertyAssertion>
@@ -6003,6 +6115,16 @@
         <DataProperty IRI="#isRepeated"/>
         <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#UsageData"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/usage_data/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#WarrantyData"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/warranty_data/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#createdOn"/>
