@@ -4561,6 +4561,11 @@
         <NamedIndividual IRI="#PhysicalAsset1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#DigitalTwin_Fig6"/>
         <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
@@ -6094,6 +6099,16 @@
         <ObjectProperty IRI="#stepTo"/>
         <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
         <NamedIndividual IRI="#DesignActivity2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
+        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
+        <NamedIndividual IRI="#Input_Fig6_3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
