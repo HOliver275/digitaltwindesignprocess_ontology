@@ -5037,6 +5037,21 @@
         <NamedIndividual IRI="#ConceptDevelopmentStage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#Input_Fig6_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#Output_Fig6_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Output1"/>
         <NamedIndividual IRI="#DigitalTwin1"/>
