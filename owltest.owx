@@ -4627,6 +4627,26 @@
         <NamedIndividual IRI="#CADModel_Fig6_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Simulation_Fig6_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#2DModel_Fig6_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#3DModel_Fig6_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Dataset_Fig6_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_Fig6_1"/>
         <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
