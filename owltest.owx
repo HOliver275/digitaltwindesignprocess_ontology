@@ -655,6 +655,9 @@
         <NamedIndividual IRI="#Input_Fig6_2"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Input_Fig6_3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#IterationGroup1"/>
     </Declaration>
     <Declaration>
@@ -2720,6 +2723,10 @@
         <NamedIndividual IRI="#Input_Fig6_2"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#Input_Fig6_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign"/>
         <NamedIndividual IRI="#IterationGroup1"/>
     </ClassAssertion>
@@ -4699,6 +4706,16 @@
         <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Input_Fig6_3"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input_Fig6_3"/>
+        <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <NamedIndividual IRI="#IterationGroup1"/>
         <NamedIndividual IRI="#Stage1"/>
@@ -5097,6 +5114,11 @@
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Output_Fig6_4"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#Output_Fig6_4"/>
+        <NamedIndividual IRI="#Input_Fig6_3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#outputFrom"/>
@@ -6369,6 +6391,8 @@
         <ObjectProperty IRI="#followsFrom"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -6481,6 +6505,8 @@
         <ObjectProperty IRI="#isFollowedBy"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -6488,6 +6514,8 @@
         <ObjectProperty IRI="#isLedToBy"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -6518,6 +6546,8 @@
         <ObjectProperty IRI="#leadsTo"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -6702,6 +6732,8 @@
         <ObjectProperty IRI="#isFollowedBy"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
@@ -6709,6 +6741,8 @@
         <ObjectProperty IRI="#isLedToBy"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
@@ -6742,6 +6776,8 @@
         <ObjectProperty IRI="#leadsTo"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
