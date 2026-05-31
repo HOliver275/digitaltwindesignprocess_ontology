@@ -403,9 +403,6 @@
         <DataProperty IRI="#hasUnit"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasValue"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#isOptional"/>
     </Declaration>
     <Declaration>
@@ -415,10 +412,13 @@
         <DataProperty IRI="#maxTargetValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#measuredValue"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#minTargetValue"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#prevValue"/>
+        <DataProperty IRI="#prevMeasuredValue"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#updatedOn"/>
@@ -670,6 +670,15 @@
         <NamedIndividual IRI="#Input_Fig6_4_ModellingActivity"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Input_Fig6_ModellingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Input_Fig6_PhysicalTestingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#IterationGroup1"/>
     </Declaration>
     <Declaration>
@@ -733,6 +742,15 @@
         <NamedIndividual IRI="#Output_Fig6_4"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Output_Fig6_PhysicalTesting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Output_Fig6_PhysicalTestingActivity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#PerformanceTestingActivity"/>
     </Declaration>
     <Declaration>
@@ -761,6 +779,15 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhysicalAsset_Fig6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhysicalTestResults_Fig6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PreviousProductTestData"/>
@@ -872,6 +899,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TestingFocus1"/>
@@ -996,7 +1026,7 @@
                 <Datatype abbreviatedIRI="xsd:string"/>
             </DataExactCardinality>
             <DataMaxCardinality cardinality="1">
-                <DataProperty IRI="#hasValue"/>
+                <DataProperty IRI="#maxTargetValue"/>
                 <DataUnionOf>
                     <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
                     <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
@@ -1035,7 +1065,7 @@
                 </DataUnionOf>
             </DataMaxCardinality>
             <DataMaxCardinality cardinality="1">
-                <DataProperty IRI="#maxTargetValue"/>
+                <DataProperty IRI="#measuredValue"/>
                 <DataUnionOf>
                     <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
                     <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
@@ -1113,7 +1143,7 @@
                 </DataUnionOf>
             </DataMaxCardinality>
             <DataMaxCardinality cardinality="1">
-                <DataProperty IRI="#prevValue"/>
+                <DataProperty IRI="#prevMeasuredValue"/>
                 <DataUnionOf>
                     <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
                     <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
@@ -2767,6 +2797,18 @@
         <NamedIndividual IRI="#Input_Fig6_4_ModellingActivity"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#Input_Fig6_ModellingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#Input_Fig6_PhysicalTestingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign"/>
         <NamedIndividual IRI="#IterationGroup1"/>
     </ClassAssertion>
@@ -2863,6 +2905,18 @@
         <NamedIndividual IRI="#Output_Fig6_4"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#TestingOutput"/>
+        <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingOutput"/>
+        <NamedIndividual IRI="#Output_Fig6_PhysicalTesting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingOutput"/>
+        <NamedIndividual IRI="#Output_Fig6_PhysicalTestingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#PerformanceTesting"/>
         <NamedIndividual IRI="#PerformanceTestingActivity"/>
     </ClassAssertion>
@@ -2901,6 +2955,18 @@
     <ClassAssertion>
         <Class IRI="#PhysicalAsset"/>
         <NamedIndividual IRI="#PhysicalAsset_Fig6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#PhysicalTestResults_Fig6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhysicalTesting"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Dataset"/>
@@ -3061,6 +3127,10 @@
     <ClassAssertion>
         <Class IRI="#Step"/>
         <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Component"/>
+        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingFocus"/>
@@ -4827,6 +4897,36 @@
         <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_Fig6_ModellingActivity"/>
+        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input_Fig6_ModellingActivity"/>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Input_Fig6_PhysicalTestingActivity"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input_Fig6_PhysicalTestingActivity"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
+        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
+        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <NamedIndividual IRI="#IterationGroup1"/>
         <NamedIndividual IRI="#Stage1"/>
@@ -5202,6 +5302,11 @@
         <NamedIndividual IRI="#Input_Fig6_4_ModellingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#Input_Fig6_ModellingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOutput"/>
         <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
         <NamedIndividual IRI="#Output_Fig6_4"/>
@@ -5290,6 +5395,51 @@
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Fig6_4"/>
         <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
+        <NamedIndividual IRI="#Input_Fig6_PhysicalTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Output_Fig6_PhysicalTesting"/>
+        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#Output_Fig6_PhysicalTesting"/>
+        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#Output_Fig6_PhysicalTesting"/>
+        <NamedIndividual IRI="#PhysicalAsset_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Output_Fig6_PhysicalTestingActivity"/>
+        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#Output_Fig6_PhysicalTestingActivity"/>
+        <NamedIndividual IRI="#Input_Fig6_ModellingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#Output_Fig6_PhysicalTestingActivity"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
@@ -5570,6 +5720,21 @@
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
         <NamedIndividual IRI="#PhysicalAsset_Fig6"/>
         <NamedIndividual IRI="#DigitalTwin_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalAsset_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComponent"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#Input_Fig6_PhysicalTestingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
@@ -6272,6 +6437,11 @@
         <NamedIndividual IRI="#DesignActivity2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
+        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
         <NamedIndividual IRI="#DigitalTwin_Fig6"/>
@@ -6358,6 +6528,16 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/fig6/physicaltestdata/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#PhysicalTestResults_Fig6"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/fig6/physicaltestresults/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#PreviousProductTestData"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/previous_product/test_data/</Literal>
     </DataPropertyAssertion>
@@ -6412,14 +6592,14 @@
         <Literal>kg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#WeightParameter"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#maxTargetValue"/>
         <NamedIndividual IRI="#WeightParameter"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">41</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#measuredValue"/>
+        <NamedIndividual IRI="#WeightParameter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#minTargetValue"/>
@@ -6427,7 +6607,7 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">37</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#prevValue"/>
+        <DataProperty IRI="#prevMeasuredValue"/>
         <NamedIndividual IRI="#WeightParameter"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">35</Literal>
     </DataPropertyAssertion>
@@ -6607,6 +6787,7 @@
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
             <Class IRI="#Component"/>
+            <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#Input"/>
             <Class IRI="#Output"/>
         </ObjectUnionOf>
@@ -6900,6 +7081,8 @@
         <ObjectProperty IRI="#isComponentOf"/>
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
+            <Class IRI="#Component"/>
+            <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#Input"/>
             <Class IRI="#Output"/>
         </ObjectUnionOf>
@@ -7052,10 +7235,6 @@
         <Class IRI="#Datapoint"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasValue"/>
-        <Class IRI="#Datapoint"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#isOptional"/>
         <Class IRI="#Step"/>
     </DataPropertyDomain>
@@ -7068,11 +7247,15 @@
         <Class IRI="#Datapoint"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#measuredValue"/>
+        <Class IRI="#Datapoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#minTargetValue"/>
         <Class IRI="#Datapoint"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#prevValue"/>
+        <DataProperty IRI="#prevMeasuredValue"/>
         <Class IRI="#Datapoint"/>
     </DataPropertyDomain>
     <DataPropertyRange>
@@ -7741,11 +7924,6 @@ A Step forms part of a Flow, which takes place within exactly one TemporalPartit
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasValue</IRI>
-        <Literal xml:lang="en">Value of some Datapoint. Can be any datatype.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#inputInto</IRI>
         <Literal xml:lang="en">Input into some DevelopmentActivity or TemporalConstruct.</Literal>
     </AnnotationAssertion>
@@ -7836,6 +8014,11 @@ A Step forms part of a Flow, which takes place within exactly one TemporalPartit
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#measuredValue</IRI>
+        <Literal xml:lang="en">Measured value of some Datapoint. Can be any datatype.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#minTargetValue</IRI>
         <Literal>Minimum target value of a Datapoint. Can be any data type.</Literal>
     </AnnotationAssertion>
@@ -7856,7 +8039,7 @@ A Step forms part of a Flow, which takes place within exactly one TemporalPartit
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#prevValue</IRI>
+        <IRI>#prevMeasuredValue</IRI>
         <Literal xml:lang="en">Previous value of a Datapoint. Can be any data type.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
