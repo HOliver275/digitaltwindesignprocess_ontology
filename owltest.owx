@@ -763,6 +763,9 @@
         <NamedIndividual IRI="#PrototypeInformation"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#SimulationActivity_Fig6_3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Simulation_Fig6_1"/>
     </Declaration>
     <Declaration>
@@ -2877,6 +2880,10 @@
     <ClassAssertion>
         <Class IRI="#Document"/>
         <NamedIndividual IRI="#PrototypeInformation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SimulationActivity"/>
+        <NamedIndividual IRI="#SimulationActivity_Fig6_3"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Simulation"/>
@@ -6104,6 +6111,11 @@
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
         <NamedIndividual IRI="#DigitalTwin_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
+        <NamedIndividual IRI="#SimulationActivity_Fig6_3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
