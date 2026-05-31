@@ -517,6 +517,9 @@
         <NamedIndividual IRI="#Dataset_Fig6_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Dataset_Fig6_3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Deliverable1"/>
     </Declaration>
     <Declaration>
@@ -658,6 +661,9 @@
         <NamedIndividual IRI="#Input_Fig6_3"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#IterationGroup1"/>
     </Declaration>
     <Declaration>
@@ -707,6 +713,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Output1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Output_Fig6_3_DigitalTwin"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Output_Fig6_4"/>
@@ -2534,6 +2543,10 @@
         <NamedIndividual IRI="#Dataset_Fig6_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#Dataset_Fig6_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Deliverable"/>
         <NamedIndividual IRI="#Deliverable1"/>
     </ClassAssertion>
@@ -2730,6 +2743,10 @@
         <NamedIndividual IRI="#Input_Fig6_3"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Iteration_CAE_VirtualTesting_EngineeringDesign"/>
         <NamedIndividual IRI="#IterationGroup1"/>
     </ClassAssertion>
@@ -2808,6 +2825,10 @@
     <ClassAssertion>
         <Class IRI="#Output"/>
         <NamedIndividual IRI="#Output1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingOutput"/>
+        <NamedIndividual IRI="#Output_Fig6_3_DigitalTwin"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
@@ -4728,6 +4749,16 @@
         <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
+        <NamedIndividual IRI="#Dataset_Fig6_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
+        <NamedIndividual IRI="#SimulationActivity_Fig6_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
         <NamedIndividual IRI="#IterationGroup1"/>
         <NamedIndividual IRI="#Stage1"/>
@@ -5121,6 +5152,21 @@
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output1"/>
         <NamedIndividual IRI="#Stage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Output_Fig6_3_DigitalTwin"/>
+        <NamedIndividual IRI="#Dataset_Fig6_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#Output_Fig6_3_DigitalTwin"/>
+        <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#Output_Fig6_3_DigitalTwin"/>
+        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -6158,6 +6204,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/dataset/fig6/1/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#Dataset_Fig6_3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/dataset/fig6/3/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
         <NamedIndividual IRI="#DetailDesign_FlowFStep1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
@@ -6471,6 +6522,7 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasOutput"/>
         <ObjectUnionOf>
+            <Class IRI="#Artefact"/>
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
@@ -6819,6 +6871,7 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#outputFrom"/>
         <ObjectUnionOf>
+            <Class IRI="#Artefact"/>
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
