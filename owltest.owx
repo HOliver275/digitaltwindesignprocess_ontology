@@ -661,6 +661,9 @@
         <NamedIndividual IRI="#Input_Fig6_3"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Input_Fig6_3_DigitalTwin"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
     </Declaration>
     <Declaration>
@@ -716,6 +719,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Output_Fig6_3_DigitalTwin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Output_Fig6_3_SimulationActivity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Output_Fig6_4"/>
@@ -2744,6 +2750,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#Input_Fig6_3_DigitalTwin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2829,6 +2839,10 @@
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
         <NamedIndividual IRI="#Output_Fig6_3_DigitalTwin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingOutput"/>
+        <NamedIndividual IRI="#Output_Fig6_3_SimulationActivity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
@@ -4750,6 +4764,16 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_Fig6_3_DigitalTwin"/>
+        <NamedIndividual IRI="#Dataset_Fig6_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input_Fig6_3_DigitalTwin"/>
+        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
         <NamedIndividual IRI="#Dataset_Fig6_3"/>
     </ObjectPropertyAssertion>
@@ -5167,6 +5191,21 @@
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Fig6_3_DigitalTwin"/>
         <NamedIndividual IRI="#DigitalTwin_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Output_Fig6_3_SimulationActivity"/>
+        <NamedIndividual IRI="#Dataset_Fig6_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#Output_Fig6_3_SimulationActivity"/>
+        <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#Output_Fig6_3_SimulationActivity"/>
+        <NamedIndividual IRI="#SimulationActivity_Fig6_3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -6515,6 +6554,7 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasInput"/>
         <ObjectUnionOf>
+            <Class IRI="#Artefact"/>
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
@@ -6763,6 +6803,7 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#inputInto"/>
         <ObjectUnionOf>
+            <Class IRI="#Artefact"/>
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
