@@ -394,6 +394,9 @@
         <DataProperty IRI="#createdOn"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#expectedValue"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasDescription"/>
     </Declaration>
     <Declaration>
@@ -415,10 +418,22 @@
         <DataProperty IRI="#measuredValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#measuredValuePhysical"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#measuredValueVirtual"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#minTargetValue"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#prevMeasuredValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#prevMeasuredValuePhysical"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#prevMeasuredValueVirtual"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#updatedOn"/>
@@ -901,6 +916,9 @@
         <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#TemperatureDatapointVirtual"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#TestEnvironment_Fig6"/>
     </Declaration>
     <Declaration>
@@ -1020,6 +1038,45 @@
             <DataExactCardinality cardinality="1">
                 <DataProperty IRI="#createdOn"/>
                 <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+            </DataExactCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#expectedValue"/>
+                <DataUnionOf>
+                    <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
+                    <Datatype abbreviatedIRI="rdf:langString"/>
+                    <Datatype abbreviatedIRI="rdfs:Literal"/>
+                    <Datatype abbreviatedIRI="xsd:NCName"/>
+                    <Datatype abbreviatedIRI="xsd:NMTOKEN"/>
+                    <Datatype abbreviatedIRI="xsd:Name"/>
+                    <Datatype abbreviatedIRI="xsd:anyURI"/>
+                    <Datatype abbreviatedIRI="xsd:base64Binary"/>
+                    <Datatype abbreviatedIRI="xsd:boolean"/>
+                    <Datatype abbreviatedIRI="xsd:byte"/>
+                    <Datatype abbreviatedIRI="xsd:dateTime"/>
+                    <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <Datatype abbreviatedIRI="xsd:double"/>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <Datatype abbreviatedIRI="xsd:hexBinary"/>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <Datatype abbreviatedIRI="xsd:language"/>
+                    <Datatype abbreviatedIRI="xsd:long"/>
+                    <Datatype abbreviatedIRI="xsd:negativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <Datatype abbreviatedIRI="xsd:nonPositiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:normalizedString"/>
+                    <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+                    <Datatype abbreviatedIRI="xsd:short"/>
+                    <Datatype abbreviatedIRI="xsd:token"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+                    <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+                    <Datatype abbreviatedIRI="owl:rational"/>
+                    <Datatype abbreviatedIRI="owl:real"/>
+                </DataUnionOf>
             </DataExactCardinality>
             <DataExactCardinality cardinality="1">
                 <DataProperty IRI="#hasUnit"/>
@@ -2773,7 +2830,7 @@
         <NamedIndividual IRI="#Input1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#TestingInput"/>
+        <Class IRI="#DesignInput"/>
         <NamedIndividual IRI="#Input_Fig6_1"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3127,6 +3184,10 @@
     <ClassAssertion>
         <Class IRI="#Step"/>
         <NamedIndividual IRI="#SystemLevelDesign_LoopAStepB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Datapoint"/>
+        <NamedIndividual IRI="#TemperatureDatapointVirtual"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Component"/>
@@ -6587,6 +6648,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-05-01T18:56:00Z</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#expectedValue"/>
+        <NamedIndividual IRI="#WeightParameter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">40.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasUnit"/>
         <NamedIndividual IRI="#WeightParameter"/>
         <Literal>kg</Literal>
@@ -7222,6 +7288,22 @@
         <ObjectProperty IRI="#twinnedPhysicallyWith"/>
         <Class IRI="#PhysicalAsset"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#measuredValuePhysical"/>
+        <DataProperty IRI="#measuredValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#measuredValueVirtual"/>
+        <DataProperty IRI="#measuredValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#prevMeasuredValuePhysical"/>
+        <DataProperty IRI="#prevMeasuredValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#prevMeasuredValueVirtual"/>
+        <DataProperty IRI="#prevMeasuredValue"/>
+    </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="#hasURI"/>
         <ObjectUnionOf>
@@ -7286,6 +7368,14 @@
         <DataProperty IRI="#updatedOn"/>
         <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
     </DataPropertyRange>
+    <DisjointDataProperties>
+        <DataProperty IRI="#measuredValuePhysical"/>
+        <DataProperty IRI="#measuredValueVirtual"/>
+    </DisjointDataProperties>
+    <DisjointDataProperties>
+        <DataProperty IRI="#prevMeasuredValuePhysical"/>
+        <DataProperty IRI="#prevMeasuredValueVirtual"/>
+    </DisjointDataProperties>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Artefact</IRI>
