@@ -646,6 +646,9 @@
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DigitalTwinModel_Fig6"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#DigitalTwin_Fig6"/>
     </Declaration>
     <Declaration>
@@ -712,6 +715,9 @@
         <NamedIndividual IRI="#IterationGroup4"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Iteration_DigitalTwinModel"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#MechanicalTestingActivity"/>
     </Declaration>
     <Declaration>
@@ -770,6 +776,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Output_Fig6_PhysicalTestingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Output_Iteration_DigitalTwinModel"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PerformanceTestingActivity"/>
@@ -2802,6 +2811,10 @@
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#VirtualModel"/>
+        <NamedIndividual IRI="#DigitalTwinModel_Fig6"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#DigitalTwin"/>
         <NamedIndividual IRI="#DigitalTwin_Fig6"/>
     </ClassAssertion>
@@ -2900,6 +2913,10 @@
     <ClassAssertion>
         <Class IRI="#Iteration_CAE_VirtualTesting_PerformanceTesting_MechanicalTesting"/>
         <NamedIndividual IRI="#IterationGroup4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#Iteration_DigitalTwinModel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#MechanicalTesting"/>
@@ -4788,6 +4805,16 @@
         <NamedIndividual IRI="#Input_Fig6_2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#DigitalTwinModel_Fig6"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#DigitalTwinModel_Fig6"/>
+        <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#closesStage"/>
         <NamedIndividual IRI="#Gateway1"/>
         <NamedIndividual IRI="#Stage1"/>
@@ -4950,7 +4977,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Input_Fig6_4_ModellingActivity"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
+        <NamedIndividual IRI="#DigitalTwinModel_Fig6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
@@ -5076,6 +5103,21 @@
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#IterationGroup4"/>
         <NamedIndividual IRI="#PerformanceTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#Iteration_DigitalTwinModel"/>
+        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#Iteration_DigitalTwinModel"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#Iteration_DigitalTwinModel"/>
+        <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
@@ -5430,7 +5472,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Output_Fig6_3_VirtualTesting"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
+        <NamedIndividual IRI="#DigitalTwinModel_Fig6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
@@ -5501,6 +5543,16 @@
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Fig6_PhysicalTestingActivity"/>
         <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Output_Iteration_DigitalTwinModel"/>
+        <NamedIndividual IRI="#DigitalTwinModel_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#Output_Iteration_DigitalTwinModel"/>
+        <NamedIndividual IRI="#Iteration_DigitalTwinModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
@@ -6505,7 +6557,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#VirtualTestingActivity_Fig6_3"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
+        <NamedIndividual IRI="#DigitalTwinModel_Fig6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
