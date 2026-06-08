@@ -6141,7 +6141,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
-        <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityModel"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPhysicalEntityOf"/>
