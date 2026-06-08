@@ -802,9 +802,6 @@
         <NamedIndividual IRI="#Output_Fig6_3_VirtualTesting"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Output_Fig6_4"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
     </Declaration>
     <Declaration>
@@ -3083,10 +3080,6 @@
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
         <NamedIndividual IRI="#Output_Fig6_3_VirtualTesting"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#TestingOutput"/>
-        <NamedIndividual IRI="#Output_Fig6_4"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
@@ -5651,11 +5644,6 @@
         <NamedIndividual IRI="#Input_Fig6_ModellingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasOutput"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
-        <NamedIndividual IRI="#Output_Fig6_4"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Output1"/>
         <NamedIndividual IRI="#DigitalEntity1"/>
@@ -5797,23 +5785,13 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#Output_Fig6_4"/>
+        <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
-        <NamedIndividual IRI="#Output_Fig6_4"/>
-        <NamedIndividual IRI="#Input_Fig6_3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#outputFrom"/>
-        <NamedIndividual IRI="#Output_Fig6_4"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
-        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+        <NamedIndividual IRI="#Input_Fig6_3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
@@ -8623,7 +8601,7 @@ A Step forms part of a Flow, which takes place within exactly one TemporalPartit
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#3DModel</IRI>
-        <Literal>A 2D model can be physical or virtual. At minimum, it must have either a description providing the minimum useful information (such as where the physical 2D model can be found), or the URI where the virtual model can be found.</Literal>
+        <Literal>A 3D model can be physical or virtual. At minimum, it must have either a description providing the minimum useful information (such as where the physical 3D model can be found), or the URI where the virtual model can be found.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
