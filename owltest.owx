@@ -55,6 +55,9 @@
         <Class IRI="#DevelopmentActivity"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#DevelopmentEnvironment"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#DigitalEntity"/>
     </Declaration>
     <Declaration>
@@ -65,6 +68,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#EngineeringDesign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Environment"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Flow"/>
@@ -136,10 +142,16 @@
         <Class IRI="#PerformanceTesting"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#PhysicalDevelopmentEnvironment"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#PhysicalEntity"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PhysicalModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalTestEnvironment"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PhysicalTesting"/>
@@ -214,6 +226,9 @@
         <Class IRI="#TemporalPartition"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#TestEnvironment"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#TestingActivity"/>
     </Declaration>
     <Declaration>
@@ -229,7 +244,13 @@
         <Class IRI="#TimeStructure"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#VirtualDevelopmentEnvironment"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#VirtualModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VirtualTestEnvironment"/>
     </Declaration>
     <Declaration>
         <Class IRI="#VirtualTesting"/>
@@ -281,6 +302,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasDigitalEntity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEnvironment"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasFocus"/>
@@ -335,6 +359,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isEndOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEnvironmentOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isFocusOf"/>
@@ -1622,29 +1649,35 @@
         <Class IRI="#Input"/>
         <ObjectIntersectionOf>
             <Class IRI="#Input"/>
-            <ObjectIntersectionOf>
-                <ObjectUnionOf>
-                    <ObjectMinCardinality cardinality="1">
-                        <ObjectProperty IRI="#hasArtefact"/>
-                        <Class IRI="#Artefact"/>
-                    </ObjectMinCardinality>
-                    <ObjectMinCardinality cardinality="1">
-                        <ObjectProperty IRI="#hasComponent"/>
-                        <Class IRI="#Component"/>
-                    </ObjectMinCardinality>
-                    <ObjectMinCardinality cardinality="1">
-                        <ObjectProperty IRI="#hasParameter"/>
-                        <Class IRI="#Parameter"/>
-                    </ObjectMinCardinality>
-                </ObjectUnionOf>
-                <ObjectMinCardinality cardinality="1">
-                    <ObjectProperty IRI="#inputInto"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
                     <ObjectUnionOf>
-                        <Class IRI="#DevelopmentActivity"/>
-                        <Class IRI="#TemporalConstruct"/>
+                        <ObjectMinCardinality cardinality="1">
+                            <ObjectProperty IRI="#hasArtefact"/>
+                            <Class IRI="#Artefact"/>
+                        </ObjectMinCardinality>
+                        <ObjectMinCardinality cardinality="1">
+                            <ObjectProperty IRI="#hasComponent"/>
+                            <Class IRI="#Component"/>
+                        </ObjectMinCardinality>
+                        <ObjectMinCardinality cardinality="1">
+                            <ObjectProperty IRI="#hasParameter"/>
+                            <Class IRI="#Parameter"/>
+                        </ObjectMinCardinality>
                     </ObjectUnionOf>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#inputInto"/>
+                        <ObjectUnionOf>
+                            <Class IRI="#DevelopmentActivity"/>
+                            <Class IRI="#TemporalConstruct"/>
+                        </ObjectUnionOf>
+                    </ObjectMinCardinality>
+                </ObjectIntersectionOf>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="#hasEnvironment"/>
+                    <Class IRI="#Environment"/>
                 </ObjectMinCardinality>
-            </ObjectIntersectionOf>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1786,29 +1819,35 @@
         <Class IRI="#Output"/>
         <ObjectIntersectionOf>
             <Class IRI="#Output"/>
-            <ObjectIntersectionOf>
-                <ObjectUnionOf>
-                    <ObjectMinCardinality cardinality="1">
-                        <ObjectProperty IRI="#hasArtefact"/>
-                        <Class IRI="#Artefact"/>
-                    </ObjectMinCardinality>
-                    <ObjectMinCardinality cardinality="1">
-                        <ObjectProperty IRI="#hasComponent"/>
-                        <Class IRI="#Component"/>
-                    </ObjectMinCardinality>
-                    <ObjectMinCardinality cardinality="1">
-                        <ObjectProperty IRI="#hasParameter"/>
-                        <Class IRI="#Parameter"/>
-                    </ObjectMinCardinality>
-                </ObjectUnionOf>
-                <ObjectMinCardinality cardinality="1">
-                    <ObjectProperty IRI="#outputFrom"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
                     <ObjectUnionOf>
-                        <Class IRI="#DevelopmentActivity"/>
-                        <Class IRI="#TemporalConstruct"/>
+                        <ObjectMinCardinality cardinality="1">
+                            <ObjectProperty IRI="#hasArtefact"/>
+                            <Class IRI="#Artefact"/>
+                        </ObjectMinCardinality>
+                        <ObjectMinCardinality cardinality="1">
+                            <ObjectProperty IRI="#hasComponent"/>
+                            <Class IRI="#Component"/>
+                        </ObjectMinCardinality>
+                        <ObjectMinCardinality cardinality="1">
+                            <ObjectProperty IRI="#hasParameter"/>
+                            <Class IRI="#Parameter"/>
+                        </ObjectMinCardinality>
                     </ObjectUnionOf>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#outputFrom"/>
+                        <ObjectUnionOf>
+                            <Class IRI="#DevelopmentActivity"/>
+                            <Class IRI="#TemporalConstruct"/>
+                        </ObjectUnionOf>
+                    </ObjectMinCardinality>
+                </ObjectIntersectionOf>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="#hasEnvironment"/>
+                    <Class IRI="#Environment"/>
                 </ObjectMinCardinality>
-            </ObjectIntersectionOf>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -2154,6 +2193,10 @@
         <Class IRI="#ProductDevelopmentStage"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#DevelopmentEnvironment"/>
+        <Class IRI="#Environment"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#DigitalEntity"/>
         <Class IRI="#DigitalTwin"/>
     </SubClassOf>
@@ -2246,12 +2289,20 @@
         <Class IRI="#PhysicalTesting"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#PhysicalDevelopmentEnvironment"/>
+        <Class IRI="#DevelopmentEnvironment"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#PhysicalEntity"/>
         <Class IRI="#DigitalTwin"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PhysicalModel"/>
         <Class IRI="#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalTestEnvironment"/>
+        <Class IRI="#TestEnvironment"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PhysicalTesting"/>
@@ -2346,6 +2397,10 @@
         <Class IRI="#TemporalConstruct"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#TestEnvironment"/>
+        <Class IRI="#Environment"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#TestingActivity"/>
         <Class IRI="#DevelopmentActivity"/>
     </SubClassOf>
@@ -2366,8 +2421,16 @@
         <Class IRI="#TemporalConstruct"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#VirtualDevelopmentEnvironment"/>
+        <Class IRI="#DevelopmentEnvironment"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#VirtualModel"/>
         <Class IRI="#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VirtualTestEnvironment"/>
+        <Class IRI="#TestEnvironment"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#VirtualTesting"/>
@@ -2412,6 +2475,10 @@
     <DisjointClasses>
         <Class IRI="#Component"/>
         <Class IRI="#DevelopmentActivity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Component"/>
+        <Class IRI="#Environment"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Component"/>
@@ -2471,6 +2538,10 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#Environment"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DevelopmentActivity"/>
         <Class IRI="#Focus"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -2492,6 +2563,14 @@
     <DisjointClasses>
         <Class IRI="#DigitalEntity"/>
         <Class IRI="#PhysicalEntity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Environment"/>
+        <Class IRI="#Focus"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Environment"/>
+        <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Flow"/>
@@ -3326,7 +3405,7 @@
         <NamedIndividual IRI="#TemperatureDatapointVirtual"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Component"/>
+        <Class IRI="#PhysicalTestEnvironment"/>
         <NamedIndividual IRI="#TestEnvironment_Fig6"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -6159,7 +6238,7 @@
         <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasComponent"/>
+        <ObjectProperty IRI="#hasEnvironment"/>
         <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
         <NamedIndividual IRI="#TestEnvironment_Fig6"/>
     </ObjectPropertyAssertion>
@@ -7152,6 +7231,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasDigitalEntity"/>
         <ObjectProperty IRI="#isDigitalEntityOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasEnvironment"/>
+        <ObjectProperty IRI="#isEnvironmentOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasFocus"/>

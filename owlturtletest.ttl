@@ -154,6 +154,11 @@
                   rdfs:comment "A PhysicalEntity has a DigitalEntity. To associate the DigitalEntity with some other entity, use hasArtefact."@en .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasEnvironment
+:hasEnvironment rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isEnvironmentOf .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasFocus
 :hasFocus rdf:type owl:ObjectProperty ;
           owl:inverseOf :isFocusOf ;
@@ -324,6 +329,10 @@
                      ] ;
          rdfs:range :TimeStructure ;
          rdfs:comment "The DevelopmentActivity or TemporalConstruct at the end of a TimeStructure."@en .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isEnvironmentOf
+:isEnvironmentOf rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isFocusOf
@@ -698,6 +707,7 @@
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Component
 :Component rdf:type owl:Class ;
            owl:disjointWith :DevelopmentActivity ,
+                            :Environment ,
                             :Focus ,
                             :TemporalConstruct ;
            rdfs:comment "A part of some whole. Could be a code module of the software which itself is a component of the DigitalTwin; or could be a part of the PhysicalAsset."@en .
@@ -1047,7 +1057,8 @@ A Dataset may include one or more Documents."""@en .
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DevelopmentActivity
 :DevelopmentActivity rdf:type owl:Class ;
-                     owl:disjointWith :Focus ,
+                     owl:disjointWith :Environment ,
+                                      :Focus ,
                                       :Input ,
                                       :Output ,
                                       :Parameter ,
@@ -1055,6 +1066,11 @@ A Dataset may include one or more Documents."""@en .
                      rdfs:comment """A type of activity undertaken during the design process. 
 
 A DevelopmentActivity can be composed of multiple smaller DevelopmentActivities. Thus it is possible to instantiate a DesignActivity that consists of multiple smaller DesignActivities, but also some TestingActivities, Procurement, and so on."""@en .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DevelopmentEnvironment
+:DevelopmentEnvironment rdf:type owl:Class ;
+                        rdfs:subClassOf :Environment .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalEntity
@@ -1105,6 +1121,12 @@ A Document can be part of a Dataset."""@en .
 :EngineeringDesign rdf:type owl:Class ;
                    rdfs:subClassOf :DesignActivity ;
                    rdfs:comment "A DesignActivity, or composition of DesignActivities, that is primarily focussed on engineering design."@en .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Environment
+:Environment rdf:type owl:Class ;
+             owl:disjointWith :Focus ,
+                              :TemporalConstruct .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Flow
@@ -1483,35 +1505,43 @@ Each procured prototype can involve a mix of old and new parts depending on the 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input
 :Input rdf:type owl:Class ;
        owl:equivalentClass [ owl:intersectionOf ( :Input
-                                                  [ owl:intersectionOf ( [ rdf:type owl:Class ;
-                                                                           owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty :hasArtefact ;
-                                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                           owl:onClass :Artefact
+                                                  [ rdf:type owl:Class ;
+                                                    owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                                           owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty :hasArtefact ;
+                                                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                           owl:onClass :Artefact
+                                                                                                         ]
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty :hasComponent ;
+                                                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                           owl:onClass :Component
+                                                                                                         ]
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty :hasParameter ;
+                                                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                           owl:onClass :Parameter
+                                                                                                         ]
+                                                                                                       )
                                                                                          ]
                                                                                          [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty :hasComponent ;
+                                                                                           owl:onProperty :inputInto ;
                                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                           owl:onClass :Component
+                                                                                           owl:onClass [ rdf:type owl:Class ;
+                                                                                                         owl:unionOf ( :DevelopmentActivity
+                                                                                                                       :TemporalConstruct
+                                                                                                                     )
+                                                                                                       ]
                                                                                          ]
-                                                                                         [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty :hasParameter ;
-                                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                           owl:onClass :Parameter
-                                                                                         ]
-                                                                                       )
-                                                                         ]
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty :inputInto ;
-                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                           owl:onClass [ rdf:type owl:Class ;
-                                                                                         owl:unionOf ( :DevelopmentActivity
-                                                                                                       :TemporalConstruct
-                                                                                                     )
-                                                                                       ]
-                                                                         ]
-                                                                       ) ;
-                                                    rdf:type owl:Class
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ]
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty :hasEnvironment ;
+                                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                    owl:onClass :Environment
+                                                                  ]
+                                                                )
                                                   ]
                                                 ) ;
                              rdf:type owl:Class
@@ -1737,35 +1767,43 @@ Unlike an Iteration which is not necessarily ordered, a Loop has an ordered sequ
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output
 :Output rdf:type owl:Class ;
         owl:equivalentClass [ owl:intersectionOf ( :Output
-                                                   [ owl:intersectionOf ( [ rdf:type owl:Class ;
-                                                                            owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty :hasArtefact ;
-                                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                            owl:onClass :Artefact
+                                                   [ rdf:type owl:Class ;
+                                                     owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                                            owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty :hasArtefact ;
+                                                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                            owl:onClass :Artefact
+                                                                                                          ]
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty :hasComponent ;
+                                                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                            owl:onClass :Component
+                                                                                                          ]
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty :hasParameter ;
+                                                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                            owl:onClass :Parameter
+                                                                                                          ]
+                                                                                                        )
                                                                                           ]
                                                                                           [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty :hasComponent ;
+                                                                                            owl:onProperty :outputFrom ;
                                                                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                            owl:onClass :Component
+                                                                                            owl:onClass [ rdf:type owl:Class ;
+                                                                                                          owl:unionOf ( :DevelopmentActivity
+                                                                                                                        :TemporalConstruct
+                                                                                                                      )
+                                                                                                        ]
                                                                                           ]
-                                                                                          [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty :hasParameter ;
-                                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                            owl:onClass :Parameter
-                                                                                          ]
-                                                                                        )
-                                                                          ]
-                                                                          [ rdf:type owl:Restriction ;
-                                                                            owl:onProperty :outputFrom ;
-                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                            owl:onClass [ rdf:type owl:Class ;
-                                                                                          owl:unionOf ( :DevelopmentActivity
-                                                                                                        :TemporalConstruct
-                                                                                                      )
-                                                                                        ]
-                                                                          ]
-                                                                        ) ;
-                                                     rdf:type owl:Class
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ]
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty :hasEnvironment ;
+                                                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                     owl:onClass :Environment
+                                                                   ]
+                                                                 )
                                                    ]
                                                  ) ;
                               rdf:type owl:Class
@@ -1787,6 +1825,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PerformanceTesting
 :PerformanceTesting rdf:type owl:Class ;
                     rdfs:subClassOf :PhysicalTesting .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalDevelopmentEnvironment
+:PhysicalDevelopmentEnvironment rdf:type owl:Class ;
+                                rdfs:subClassOf :DevelopmentEnvironment .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalEntity
@@ -1823,6 +1866,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
                rdfs:subClassOf :Model ;
                owl:disjointWith :VirtualModel ;
                rdfs:comment "A physical model will not fit in an ontology, so must be accompanied by at least one text description."@en .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalTestEnvironment
+:PhysicalTestEnvironment rdf:type owl:Class ;
+                         rdfs:subClassOf :TestEnvironment .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalTesting
@@ -2212,6 +2260,11 @@ A Step forms part of a Flow, which takes place within exactly one TemporalPartit
                    rdfs:comment "A TemporalPartition represents some distinct time period in the development process."@en .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#TestEnvironment
+:TestEnvironment rdf:type owl:Class ;
+                 rdfs:subClassOf :Environment .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#TestingActivity
 :TestingActivity rdf:type owl:Class ;
                  rdfs:subClassOf :DevelopmentActivity ;
@@ -2241,6 +2294,11 @@ A Step forms part of a Flow, which takes place within exactly one TemporalPartit
                rdfs:subClassOf :TemporalConstruct .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#VirtualDevelopmentEnvironment
+:VirtualDevelopmentEnvironment rdf:type owl:Class ;
+                               rdfs:subClassOf :DevelopmentEnvironment .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#VirtualModel
 :VirtualModel rdf:type owl:Class ;
               owl:equivalentClass [ owl:intersectionOf ( :VirtualModel
@@ -2253,6 +2311,11 @@ A Step forms part of a Flow, which takes place within exactly one TemporalPartit
                                     rdf:type owl:Class
                                   ] ;
               rdfs:subClassOf :Model .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#VirtualTestEnvironment
+:VirtualTestEnvironment rdf:type owl:Class ;
+                        rdfs:subClassOf :TestEnvironment .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#VirtualTesting
@@ -3577,7 +3640,7 @@ A Step forms part of a Flow, which takes place within exactly one TemporalPartit
 :PhysicalTestingActivity_Fig6 rdf:type owl:NamedIndividual ,
                                        :PhysicalTesting ;
                               :hasArtefact :PhysicalEntity_Fig6 ;
-                              :hasComponent :TestEnvironment_Fig6 ;
+                              :hasEnvironment :TestEnvironment_Fig6 ;
                               :hasInput :Input_Fig6_PhysicalTestingActivity .
 
 
@@ -3947,7 +4010,7 @@ A Step forms part of a Flow, which takes place within exactly one TemporalPartit
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#TestEnvironment_Fig6
 :TestEnvironment_Fig6 rdf:type owl:NamedIndividual ,
-                               :Component ;
+                               :PhysicalTestEnvironment ;
                       :hasInput :Input_Fig6_TestEnvironment .
 
 
