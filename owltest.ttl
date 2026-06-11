@@ -3500,7 +3500,7 @@ A Step forms part of a Flow, which takes place within exactly one TemporalPartit
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_Iteration_DigitalEntity
 :Output_Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
                                          :Output ;
-                                :hasArtefact :DigitalEntity_Fig6 ;
+                                :hasArtefact :DigitalTwin_Fig6 ;
                                 :outputFrom :Iteration_DigitalEntity .
 
 
