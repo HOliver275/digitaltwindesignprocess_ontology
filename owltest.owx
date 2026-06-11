@@ -832,9 +832,6 @@
         <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Output_Fig6_PhysicalTesting"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Output_Fig6_PhysicalTestingActivity"/>
     </Declaration>
     <Declaration>
@@ -3178,10 +3175,6 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
-        <NamedIndividual IRI="#Output_Fig6_PhysicalTesting"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#TestingOutput"/>
         <NamedIndividual IRI="#Output_Fig6_PhysicalTestingActivity"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -5265,9 +5258,9 @@
         <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasParameter"/>
+        <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
-        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
@@ -5893,21 +5886,6 @@
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
         <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasParameter"/>
-        <NamedIndividual IRI="#Output_Fig6_PhysicalTesting"/>
-        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#leadsTo"/>
-        <NamedIndividual IRI="#Output_Fig6_PhysicalTesting"/>
-        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#outputFrom"/>
-        <NamedIndividual IRI="#Output_Fig6_PhysicalTesting"/>
-        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -6985,6 +6963,11 @@
         <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntity"/>
         <NamedIndividual IRI="#DigitalEntity_Fig6"/>
@@ -7461,6 +7444,10 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEnvironmentOf"/>
+        <Class IRI="#Environment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isFocusOf"/>
         <Class IRI="#Focus"/>
     </ObjectPropertyDomain>
@@ -7607,6 +7594,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDigitalEntity"/>
         <Class IRI="#DigitalEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEnvironment"/>
+        <Class IRI="#Environment"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasFocus"/>
