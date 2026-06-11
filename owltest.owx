@@ -2450,6 +2450,10 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Artefact"/>
+        <Class IRI="#Environment"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artefact"/>
         <Class IRI="#Flow"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -2561,6 +2565,10 @@
         <Class IRI="#TemporalConstruct"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#DevelopmentEnvironment"/>
+        <Class IRI="#TestEnvironment"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#DigitalEntity"/>
         <Class IRI="#PhysicalEntity"/>
     </DisjointClasses>
@@ -2627,6 +2635,10 @@
     <DisjointClasses>
         <Class IRI="#Parameter"/>
         <Class IRI="#TemporalConstruct"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PhysicalDevelopmentEnvironment"/>
+        <Class IRI="#VirtualDevelopmentEnvironment"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#PhysicalModel"/>

@@ -685,6 +685,7 @@
                                 rdf:type owl:Class
                               ] ;
           owl:disjointWith :DevelopmentActivity ,
+                           :Environment ,
                            :Flow ,
                            :Focus ,
                            :Iteration ,
@@ -1074,7 +1075,8 @@ A DevelopmentActivity can be composed of multiple smaller DevelopmentActivities.
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DevelopmentEnvironment
 :DevelopmentEnvironment rdf:type owl:Class ;
-                        rdfs:subClassOf :Environment .
+                        rdfs:subClassOf :Environment ;
+                        owl:disjointWith :TestEnvironment .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalEntity
@@ -1833,7 +1835,8 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalDevelopmentEnvironment
 :PhysicalDevelopmentEnvironment rdf:type owl:Class ;
-                                rdfs:subClassOf :DevelopmentEnvironment .
+                                rdfs:subClassOf :DevelopmentEnvironment ;
+                                owl:disjointWith :VirtualDevelopmentEnvironment .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalEntity
