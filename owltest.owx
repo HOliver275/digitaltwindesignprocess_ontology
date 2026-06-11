@@ -7386,6 +7386,7 @@
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Environment"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -7394,6 +7395,7 @@
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Environment"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -7635,6 +7637,7 @@
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Environment"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
@@ -7746,6 +7749,7 @@
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Environment"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>

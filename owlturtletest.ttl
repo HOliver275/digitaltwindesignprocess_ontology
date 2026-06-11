@@ -178,6 +178,7 @@
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( :Artefact
                                       :DevelopmentActivity
+                                      :Environment
                                       :TemporalConstruct
                                     )
                       ] ;
@@ -202,6 +203,7 @@
            rdfs:domain [ rdf:type owl:Class ;
                          owl:unionOf ( :Artefact
                                        :DevelopmentActivity
+                                       :Environment
                                        :TemporalConstruct
                                      )
                        ] ;
@@ -262,6 +264,7 @@
            rdfs:range [ rdf:type owl:Class ;
                         owl:unionOf ( :Artefact
                                       :DevelopmentActivity
+                                      :Environment
                                       :TemporalConstruct
                                     )
                       ] ;
@@ -475,6 +478,7 @@
             rdfs:range [ rdf:type owl:Class ;
                          owl:unionOf ( :Artefact
                                        :DevelopmentActivity
+                                       :Environment
                                        :TemporalConstruct
                                      )
                        ] ;
