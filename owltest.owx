@@ -12,6 +12,7 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="figure8secondattempt" IRI="http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#"/>
     <Declaration>
         <Class IRI="#Artefact"/>
     </Declaration>
@@ -5028,6 +5029,11 @@
         <NamedIndividual IRI="#Input_Fig6_2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#closesStage"/>
         <NamedIndividual IRI="#Gateway1"/>
         <NamedIndividual IRI="#Stage1"/>
@@ -6206,6 +6212,11 @@
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
         <NamedIndividual IRI="#PhysicalEntity1"/>
         <NamedIndividual IRI="#DigitalEntity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
