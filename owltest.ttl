@@ -3184,13 +3184,6 @@ figure8secondattempt:Input_Fig6_3_VirtualTestingActivity rdf:type owl:NamedIndiv
                                                                                         figure8secondattempt:VirtualTestingActivity_DigitalEntityShadow .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Fig6_ModellingActivity
-figure8secondattempt:Input_Fig6_ModellingActivity rdf:type owl:NamedIndividual ,
-                                                           figure8secondattempt:TestingInput ;
-                                                  figure8secondattempt:hasParameter figure8secondattempt:PhysicalTestData_Fig6 ;
-                                                  figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_Fig6_4 .
-
-
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Fig6_PhysicalTestingActivity
 figure8secondattempt:Input_Fig6_PhysicalTestingActivity rdf:type owl:NamedIndividual ,
                                                                  figure8secondattempt:TestingInput ;
@@ -3217,6 +3210,13 @@ figure8secondattempt:Input_Iteration_DigitalEntityShadow rdf:type owl:NamedIndiv
                                                                   figure8secondattempt:TestingInput ;
                                                          figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityModel_Fig6 ;
                                                          figure8secondattempt:inputInto figure8secondattempt:Iteration_DigitalEntityShadow .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_PhysicalTestResults_ModellingActivity
+figure8secondattempt:Input_PhysicalTestResults_ModellingActivity rdf:type owl:NamedIndividual ,
+                                                                          figure8secondattempt:TestingInput ;
+                                                                 figure8secondattempt:hasParameter figure8secondattempt:PhysicalTestData_Fig6 ;
+                                                                 figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_Fig6_4 .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_VirtualTestResults_ModellingActivity
@@ -3410,7 +3410,7 @@ figure8secondattempt:ModellingActivity_Fig6_4 rdf:type owl:NamedIndividual ,
                                               figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
                                               figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_1 ,
                                                                             figure8secondattempt:Input_Fig6_2 ,
-                                                                            figure8secondattempt:Input_Fig6_ModellingActivity ,
+                                                                            figure8secondattempt:Input_PhysicalTestResults_ModellingActivity ,
                                                                             figure8secondattempt:Input_VirtualTestResults_ModellingActivity .
 
 
@@ -3481,14 +3481,6 @@ figure8secondattempt:Output_Fig6_4_ModellingActivity rdf:type owl:NamedIndividua
                                                      figure8secondattempt:outputFrom figure8secondattempt:ModellingActivity_Fig6_4 .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_Fig6_PhysicalTestingActivity
-figure8secondattempt:Output_Fig6_PhysicalTestingActivity rdf:type owl:NamedIndividual ,
-                                                                  figure8secondattempt:TestingOutput ;
-                                                         figure8secondattempt:hasParameter figure8secondattempt:PhysicalTestData_Fig6 ;
-                                                         figure8secondattempt:leadsTo figure8secondattempt:Input_Fig6_ModellingActivity ;
-                                                         figure8secondattempt:outputFrom figure8secondattempt:PhysicalTestingActivity_Fig6 .
-
-
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_Iteration_DigitalEntity
 figure8secondattempt:Output_Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
                                                              figure8secondattempt:Output ;
@@ -3509,6 +3501,14 @@ figure8secondattempt:Output_Iteration_DigitalEntityShadow rdf:type owl:NamedIndi
                                                           figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow_Fig6 ;
                                                           figure8secondattempt:leadsTo figure8secondattempt:Input_Iteration_DigitalEntity ;
                                                           figure8secondattempt:outputFrom figure8secondattempt:Iteration_DigitalEntityShadow .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_PhysicalTestResults
+figure8secondattempt:Output_PhysicalTestResults rdf:type owl:NamedIndividual ,
+                                                         figure8secondattempt:TestingOutput ;
+                                                figure8secondattempt:hasParameter figure8secondattempt:PhysicalTestData_Fig6 ;
+                                                figure8secondattempt:leadsTo figure8secondattempt:Input_PhysicalTestResults_ModellingActivity ;
+                                                figure8secondattempt:outputFrom figure8secondattempt:PhysicalTestingActivity_Fig6 .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_VirtualTestResults
