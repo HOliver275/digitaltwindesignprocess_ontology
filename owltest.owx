@@ -557,6 +557,9 @@
         <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Dataset1"/>
     </Declaration>
     <Declaration>
@@ -2785,6 +2788,10 @@
     <ClassAssertion>
         <Class IRI="#Step"/>
         <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Datapoint"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Dataset"/>
@@ -5029,6 +5036,11 @@
         <NamedIndividual IRI="#Input_Fig6_2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#DigitalTwin_Fig6"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
@@ -7042,6 +7054,26 @@
         <DataProperty IRI="#isRepeated"/>
         <NamedIndividual IRI="#ConceptDevelopment_LoopA"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#createdOn"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-01T18:50:00Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#expectedValue"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
+        <Literal>C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#updatedOn"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-01T18:58:00Z</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>

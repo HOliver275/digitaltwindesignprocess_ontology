@@ -2648,6 +2648,15 @@ figure8secondattempt:ConceptDevelopment_LoopAStepB rdf:type owl:NamedIndividual 
                                                    figure8secondattempt:stepTo figure8secondattempt:DesignActivity1 .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#CriticalValue_Expected
+figure8secondattempt:CriticalValue_Expected rdf:type owl:NamedIndividual ,
+                                                     figure8secondattempt:Datapoint ;
+                                            figure8secondattempt:createdOn "2026-05-01T18:50:00Z"^^xsd:dateTime ;
+                                            figure8secondattempt:expectedValue 20.2 ;
+                                            figure8secondattempt:hasUnit "C" ;
+                                            figure8secondattempt:updatedOn "2026-05-01T18:58:00Z"^^xsd:dateTime .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Dataset1
 figure8secondattempt:Dataset1 rdf:type owl:NamedIndividual ,
                                        figure8secondattempt:Dataset ;
@@ -3054,7 +3063,8 @@ figure8secondattempt:DigitalTwin1 rdf:type owl:NamedIndividual ,
 figure8secondattempt:DigitalTwinInformationModel rdf:type owl:NamedIndividual ,
                                                           figure8secondattempt:VirtualModel ;
                                                  figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_1 ,
-                                                                               figure8secondattempt:Input_Fig6_2 .
+                                                                               figure8secondattempt:Input_Fig6_2 ;
+                                                 figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwin_Fig6
