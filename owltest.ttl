@@ -2657,12 +2657,23 @@ figure8secondattempt:CriticalValue_Expected rdf:type owl:NamedIndividual ,
                                             figure8secondattempt:updatedOn "2026-05-01T18:58:00Z"^^xsd:dateTime .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#CriticalValue_PhysicalTestResult
+figure8secondattempt:CriticalValue_PhysicalTestResult rdf:type owl:NamedIndividual ,
+                                                               figure8secondattempt:Datapoint ;
+                                                      figure8secondattempt:createdOn "2026-05-01T20:58:00Z"^^xsd:dateTimeStamp ;
+                                                      figure8secondattempt:expectedValue 20.2 ;
+                                                      figure8secondattempt:hasUnit "C" ;
+                                                      figure8secondattempt:measuredValue 20.3 ;
+                                                      figure8secondattempt:updatedOn "2026-05-01T20:59:00Z"^^xsd:dateTimeStamp .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#CriticalValue_VirtualTestResult
 figure8secondattempt:CriticalValue_VirtualTestResult rdf:type owl:NamedIndividual ,
                                                               figure8secondattempt:Datapoint ;
                                                      figure8secondattempt:createdOn "2026-05-01T18:58:00Z"^^xsd:dateTimeStamp ;
                                                      figure8secondattempt:expectedValue "20.2"^^xsd:double ;
                                                      figure8secondattempt:hasUnit "C" ;
+                                                     figure8secondattempt:measuredValue 20.6 ;
                                                      figure8secondattempt:updatedOn "2026-05-01T18:17:00Z"^^xsd:dateTimeStamp .
 
 
@@ -3074,6 +3085,7 @@ figure8secondattempt:DigitalTwinInformationModel rdf:type owl:NamedIndividual ,
                                                  figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_1 ,
                                                                                figure8secondattempt:Input_Fig6_2 ;
                                                  figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ,
+                                                                                   figure8secondattempt:CriticalValue_PhysicalTestResult ,
                                                                                    figure8secondattempt:CriticalValue_VirtualTestResult .
 
 
@@ -3235,7 +3247,8 @@ figure8secondattempt:Input_Iteration_DigitalEntityShadow rdf:type owl:NamedIndiv
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_PhysicalTestResults_ModellingActivity
 figure8secondattempt:Input_PhysicalTestResults_ModellingActivity rdf:type owl:NamedIndividual ,
                                                                           figure8secondattempt:TestingInput ;
-                                                                 figure8secondattempt:hasParameter figure8secondattempt:PhysicalTestData_Fig6 ;
+                                                                 figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_PhysicalTestResult ,
+                                                                                                   figure8secondattempt:PhysicalTestData_Fig6 ;
                                                                  figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_Fig6_4 .
 
 
@@ -3527,7 +3540,8 @@ figure8secondattempt:Output_Iteration_DigitalEntityShadow rdf:type owl:NamedIndi
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_PhysicalTestResults
 figure8secondattempt:Output_PhysicalTestResults rdf:type owl:NamedIndividual ,
                                                          figure8secondattempt:TestingOutput ;
-                                                figure8secondattempt:hasParameter figure8secondattempt:PhysicalTestData_Fig6 ;
+                                                figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_PhysicalTestResult ,
+                                                                                  figure8secondattempt:PhysicalTestData_Fig6 ;
                                                 figure8secondattempt:leadsTo figure8secondattempt:Input_PhysicalTestResults_ModellingActivity ;
                                                 figure8secondattempt:outputFrom figure8secondattempt:PhysicalTestingActivity_Fig6 .
 
@@ -3654,6 +3668,13 @@ figure8secondattempt:PhysicalEntity_Fig6 rdf:type owl:NamedIndividual ,
 figure8secondattempt:PhysicalTestData_Fig6 rdf:type owl:NamedIndividual ,
                                                     figure8secondattempt:Dataset ;
                                            figure8secondattempt:hasURI "http://example.com/fig6/physicaltestdata/"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalTestResult
+figure8secondattempt:PhysicalTestResult rdf:type owl:NamedIndividual ,
+                                                 figure8secondattempt:Datapoint ;
+                                        figure8secondattempt:hasUnit "C" ;
+                                        figure8secondattempt:measuredValue 20.3 .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalTestResults_Fig6

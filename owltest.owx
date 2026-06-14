@@ -560,6 +560,9 @@
         <NamedIndividual IRI="#CriticalValue_Expected"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
     </Declaration>
     <Declaration>
@@ -882,6 +885,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhysicalTestResult"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhysicalTestResults_Fig6"/>
@@ -2798,6 +2804,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Datapoint"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Datapoint"/>
         <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3243,6 +3253,10 @@
     <ClassAssertion>
         <Class IRI="#Dataset"/>
         <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Datapoint"/>
+        <NamedIndividual IRI="#PhysicalTestResult"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Dataset"/>
@@ -5050,6 +5064,11 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
         <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -5296,6 +5315,11 @@
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_Iteration_DigitalEntityShadow"/>
         <NamedIndividual IRI="#Iteration_DigitalEntityShadow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_PhysicalTestResults_ModellingActivity"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5936,6 +5960,11 @@
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Iteration_DigitalEntityShadow"/>
         <NamedIndividual IRI="#Iteration_DigitalEntityShadow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Output_PhysicalTestResults"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -7099,6 +7128,31 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#createdOn"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-05-01T20:58:00Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#expectedValue"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+        <Literal>C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#measuredValue"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#updatedOn"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-05-01T20:59:00Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#createdOn"/>
         <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-05-01T18:58:00Z</Literal>
     </DataPropertyAssertion>
@@ -7111,6 +7165,11 @@
         <DataProperty IRI="#hasUnit"/>
         <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
         <Literal>C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#measuredValue"/>
+        <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20.6</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#updatedOn"/>
@@ -7171,6 +7230,16 @@
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/fig6/physicaltestdata/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#PhysicalTestResult"/>
+        <Literal>C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#measuredValue"/>
+        <NamedIndividual IRI="#PhysicalTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20.3</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
