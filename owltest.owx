@@ -905,6 +905,9 @@
         <NamedIndividual IRI="#PreviousProductUsageData"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#PreviousProductWarrantyData"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ProcurementActivity1"/>
     </Declaration>
     <Declaration>
@@ -1065,9 +1068,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityShadow"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#WarrantyData"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#WeightParameter"/>
@@ -3279,6 +3279,10 @@
         <NamedIndividual IRI="#PreviousProductUsageData"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Document"/>
+        <NamedIndividual IRI="#PreviousProductWarrantyData"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Procurement"/>
         <NamedIndividual IRI="#ProcurementActivity1"/>
     </ClassAssertion>
@@ -3505,10 +3509,6 @@
     <ClassAssertion>
         <Class IRI="#VirtualTesting"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityShadow"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Document"/>
-        <NamedIndividual IRI="#WarrantyData"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Datapoint"/>
@@ -5324,7 +5324,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Input_PreviousProductData"/>
-        <NamedIndividual IRI="#WarrantyData"/>
+        <NamedIndividual IRI="#PreviousProductWarrantyData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
@@ -7263,6 +7263,11 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#PreviousProductWarrantyData"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/warranty_data/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#Simulation_NewDesign"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/simulation/fig6/1/</Literal>
     </DataPropertyAssertion>
@@ -7285,11 +7290,6 @@
         <DataProperty IRI="#isRepeated"/>
         <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasURI"/>
-        <NamedIndividual IRI="#WarrantyData"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/warranty_data/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#createdOn"/>

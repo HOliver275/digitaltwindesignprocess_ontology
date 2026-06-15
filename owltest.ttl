@@ -3247,7 +3247,7 @@ figure8secondattempt:Input_PreviousProductData rdf:type owl:NamedIndividual ,
                                                                                  figure8secondattempt:PreviousProductPrototypeInformation ,
                                                                                  figure8secondattempt:PreviousProductTestData ,
                                                                                  figure8secondattempt:PreviousProductUsageData ,
-                                                                                 figure8secondattempt:WarrantyData ;
+                                                                                 figure8secondattempt:PreviousProductWarrantyData ;
                                                figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_3PartProcess ;
                                                rdfs:comment "Previous product stuff."@en .
 
@@ -3709,6 +3709,12 @@ figure8secondattempt:PreviousProductUsageData rdf:type owl:NamedIndividual ,
                                               figure8secondattempt:hasURI "http://example.com/usage_data/"^^xsd:anyURI .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PreviousProductWarrantyData
+figure8secondattempt:PreviousProductWarrantyData rdf:type owl:NamedIndividual ,
+                                                          figure8secondattempt:Document ;
+                                                 figure8secondattempt:hasURI "http://example.com/warranty_data/"^^xsd:anyURI .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ProcurementActivity1
 figure8secondattempt:ProcurementActivity1 rdf:type owl:NamedIndividual ,
                                                    figure8secondattempt:Procurement ;
@@ -4162,12 +4168,6 @@ figure8secondattempt:VirtualTestingActivity_DigitalEntityShadow rdf:type owl:Nam
                                                                 figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow_Fig6 ;
                                                                 figure8secondattempt:hasDevelopmentActivity figure8secondattempt:SimulationActivity_Fig6_DigitalEntityShadow ;
                                                                 figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_3_VirtualTestingActivity .
-
-
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#WarrantyData
-figure8secondattempt:WarrantyData rdf:type owl:NamedIndividual ,
-                                           figure8secondattempt:Document ;
-                                  figure8secondattempt:hasURI "http://example.com/warranty_data/"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#WeightParameter
