@@ -3502,7 +3502,6 @@ figure8secondattempt:Output_Fig6_3_SimulationActivity_DigitalEntityShadow rdf:ty
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_Fig6_4_ModellingActivity
 figure8secondattempt:Output_Fig6_4_ModellingActivity rdf:type owl:NamedIndividual ,
                                                               figure8secondattempt:TestingOutput ;
-                                                     figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
                                                      figure8secondattempt:leadsTo figure8secondattempt:Input_Fig6_3_VirtualTestingActivity ,
                                                                                   figure8secondattempt:Input_Fig6_PhysicalTestingActivity ;
                                                      figure8secondattempt:outputFrom figure8secondattempt:ModellingActivity_3PartProcess .

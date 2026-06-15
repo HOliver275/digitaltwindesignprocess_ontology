@@ -5897,11 +5897,6 @@
         <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
-        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
         <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
         <NamedIndividual IRI="#Input_Fig6_3_VirtualTestingActivity"/>
