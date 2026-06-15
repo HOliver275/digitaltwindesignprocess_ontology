@@ -3244,9 +3244,9 @@ figure8secondattempt:Input_PhysicalTestResults_ModellingActivity rdf:type owl:Na
 figure8secondattempt:Input_PreviousProductData rdf:type owl:NamedIndividual ,
                                                         figure8secondattempt:TestingInput ;
                                                figure8secondattempt:hasParameter figure8secondattempt:HistoricData ,
+                                                                                 figure8secondattempt:PreviousProductPrototypeInformation ,
                                                                                  figure8secondattempt:PreviousProductTestData ,
                                                                                  figure8secondattempt:PreviousProductUsageData ,
-                                                                                 figure8secondattempt:PrototypeInformation ,
                                                                                  figure8secondattempt:WarrantyData ;
                                                figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_3PartProcess ;
                                                rdfs:comment "Previous product stuff."@en .
@@ -3691,6 +3691,12 @@ figure8secondattempt:PhysicalTestingActivity_Fig6 rdf:type owl:NamedIndividual ,
                                                   figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_PhysicalTestingActivity .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PreviousProductPrototypeInformation
+figure8secondattempt:PreviousProductPrototypeInformation rdf:type owl:NamedIndividual ,
+                                                                  figure8secondattempt:Document ;
+                                                         figure8secondattempt:hasURI "http://example.com/prototype/information/"^^xsd:anyURI .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PreviousProductTestData
 figure8secondattempt:PreviousProductTestData rdf:type owl:NamedIndividual ,
                                                       figure8secondattempt:Dataset ;
@@ -3733,12 +3739,6 @@ figure8secondattempt:ProgressiveReleaseDesign1 rdf:type owl:NamedIndividual ,
                                                         figure8secondattempt:ProgressiveRelease ;
                                                figure8secondattempt:hasDevelopmentActivity figure8secondattempt:CAEActivity1 ;
                                                figure8secondattempt:hasOutput figure8secondattempt:DesignOutput1 .
-
-
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PrototypeInformation
-figure8secondattempt:PrototypeInformation rdf:type owl:NamedIndividual ,
-                                                   figure8secondattempt:Document ;
-                                          figure8secondattempt:hasURI "http://example.com/prototype/information/"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#SimulationActivity_Fig6_DigitalEntity
