@@ -3245,8 +3245,8 @@ figure8secondattempt:Input_PreviousProductData rdf:type owl:NamedIndividual ,
                                                         figure8secondattempt:TestingInput ;
                                                figure8secondattempt:hasParameter figure8secondattempt:HistoricData ,
                                                                                  figure8secondattempt:PreviousProductTestData ,
+                                                                                 figure8secondattempt:PreviousProductUsageData ,
                                                                                  figure8secondattempt:PrototypeInformation ,
-                                                                                 figure8secondattempt:UsageData ,
                                                                                  figure8secondattempt:WarrantyData ;
                                                figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_3PartProcess ;
                                                rdfs:comment "Previous product stuff."@en .
@@ -3697,6 +3697,12 @@ figure8secondattempt:PreviousProductTestData rdf:type owl:NamedIndividual ,
                                              figure8secondattempt:hasURI "http://example.com/previous_product/test_data/"^^xsd:anyURI .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PreviousProductUsageData
+figure8secondattempt:PreviousProductUsageData rdf:type owl:NamedIndividual ,
+                                                       figure8secondattempt:Dataset ;
+                                              figure8secondattempt:hasURI "http://example.com/usage_data/"^^xsd:anyURI .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ProcurementActivity1
 figure8secondattempt:ProcurementActivity1 rdf:type owl:NamedIndividual ,
                                                    figure8secondattempt:Procurement ;
@@ -4132,12 +4138,6 @@ figure8secondattempt:TestingFocus8 rdf:type owl:NamedIndividual ,
 figure8secondattempt:TestingFocus9 rdf:type owl:NamedIndividual ,
                                             figure8secondattempt:TestingFocus ;
                                    rdfs:label "New parts are progressively installed in prototypes"@en .
-
-
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#UsageData
-figure8secondattempt:UsageData rdf:type owl:NamedIndividual ,
-                                        figure8secondattempt:Dataset ;
-                               figure8secondattempt:hasURI "http://example.com/usage_data/"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#VirtualTestingActivity_DigitalEntity

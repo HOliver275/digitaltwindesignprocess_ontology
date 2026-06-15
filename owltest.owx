@@ -899,6 +899,9 @@
         <NamedIndividual IRI="#PreviousProductTestData"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#PreviousProductUsageData"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ProcurementActivity1"/>
     </Declaration>
     <Declaration>
@@ -1053,9 +1056,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TestingFocus9"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#UsageData"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntity"/>
@@ -3271,6 +3271,10 @@
         <NamedIndividual IRI="#PreviousProductTestData"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#PreviousProductUsageData"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Procurement"/>
         <NamedIndividual IRI="#ProcurementActivity1"/>
     </ClassAssertion>
@@ -3489,10 +3493,6 @@
     <ClassAssertion>
         <Class IRI="#TestingFocus"/>
         <NamedIndividual IRI="#TestingFocus9"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Dataset"/>
-        <NamedIndividual IRI="#UsageData"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#VirtualTesting"/>
@@ -5314,12 +5314,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Input_PreviousProductData"/>
-        <NamedIndividual IRI="#PrototypeInformation"/>
+        <NamedIndividual IRI="#PreviousProductUsageData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Input_PreviousProductData"/>
-        <NamedIndividual IRI="#UsageData"/>
+        <NamedIndividual IRI="#PrototypeInformation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -7253,6 +7253,11 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#PreviousProductUsageData"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/usage_data/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#PrototypeInformation"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/prototype/information/</Literal>
     </DataPropertyAssertion>
@@ -7280,11 +7285,6 @@
         <DataProperty IRI="#isRepeated"/>
         <NamedIndividual IRI="#SystemLevelDesign_LoopA"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasURI"/>
-        <NamedIndividual IRI="#UsageData"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/usage_data/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
