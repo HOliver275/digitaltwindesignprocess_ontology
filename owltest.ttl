@@ -3138,12 +3138,6 @@ figure8secondattempt:Gateway4 rdf:type owl:NamedIndividual ,
                               figure8secondattempt:opensStage figure8secondattempt:Stage5 .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#HistoricData
-figure8secondattempt:HistoricData rdf:type owl:NamedIndividual ,
-                                           figure8secondattempt:Dataset ;
-                                  figure8secondattempt:hasURI "http://example.com/historic_data/"^^xsd:anyURI .
-
-
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input1
 figure8secondattempt:Input1 rdf:type owl:NamedIndividual ,
                                      figure8secondattempt:Input ;
@@ -3243,7 +3237,7 @@ figure8secondattempt:Input_PhysicalTestResults_ModellingActivity rdf:type owl:Na
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_PreviousProductData
 figure8secondattempt:Input_PreviousProductData rdf:type owl:NamedIndividual ,
                                                         figure8secondattempt:TestingInput ;
-                                               figure8secondattempt:hasParameter figure8secondattempt:HistoricData ,
+                                               figure8secondattempt:hasParameter figure8secondattempt:PreviousProductHistoricData ,
                                                                                  figure8secondattempt:PreviousProductPrototypeInformation ,
                                                                                  figure8secondattempt:PreviousProductTestData ,
                                                                                  figure8secondattempt:PreviousProductUsageData ,
@@ -3689,6 +3683,12 @@ figure8secondattempt:PhysicalTestingActivity_Fig6 rdf:type owl:NamedIndividual ,
                                                   figure8secondattempt:hasArtefact figure8secondattempt:PhysicalEntity_Fig6 ;
                                                   figure8secondattempt:hasEnvironment figure8secondattempt:TestEnvironment_Fig6 ;
                                                   figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_PhysicalTestingActivity .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PreviousProductHistoricData
+figure8secondattempt:PreviousProductHistoricData rdf:type owl:NamedIndividual ,
+                                                          figure8secondattempt:Dataset ;
+                                                 figure8secondattempt:hasURI "http://example.com/historic_data/"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PreviousProductPrototypeInformation

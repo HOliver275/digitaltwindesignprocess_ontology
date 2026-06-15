@@ -713,9 +713,6 @@
         <NamedIndividual IRI="#Gateway4"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#HistoricData"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Input1"/>
     </Declaration>
     <Declaration>
@@ -894,6 +891,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PreviousProductHistoricData"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PreviousProductPrototypeInformation"/>
@@ -3015,10 +3015,6 @@
         <NamedIndividual IRI="#Gateway4"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Dataset"/>
-        <NamedIndividual IRI="#HistoricData"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Input"/>
         <NamedIndividual IRI="#Input1"/>
     </ClassAssertion>
@@ -3265,6 +3261,10 @@
     <ClassAssertion>
         <Class IRI="#PhysicalTesting"/>
         <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#PreviousProductHistoricData"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Document"/>
@@ -5304,7 +5304,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Input_PreviousProductData"/>
-        <NamedIndividual IRI="#HistoricData"/>
+        <NamedIndividual IRI="#PreviousProductHistoricData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -7223,11 +7223,6 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
-        <NamedIndividual IRI="#HistoricData"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/historic_data/</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/fig6/physicaltestdata/</Literal>
     </DataPropertyAssertion>
@@ -7245,6 +7240,11 @@
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#PhysicalTestResults_Fig6"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/fig6/physicaltestresults/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#PreviousProductHistoricData"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/historic_data/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
