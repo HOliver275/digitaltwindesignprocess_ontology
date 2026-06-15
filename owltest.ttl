@@ -2685,17 +2685,17 @@ figure8secondattempt:Dataset1 rdf:type owl:NamedIndividual ,
                                                           "http://example.com/XMLFile1.xml"^^xsd:anyURI .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Dataset_Fig6_1
-figure8secondattempt:Dataset_Fig6_1 rdf:type owl:NamedIndividual ,
-                                             figure8secondattempt:Dataset ;
-                                    figure8secondattempt:isParameterOf figure8secondattempt:Input1_NewDesign ;
-                                    figure8secondattempt:hasURI "http://example.com/dataset/fig6/1/"^^xsd:anyURI .
-
-
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Dataset_Fig6_3
 figure8secondattempt:Dataset_Fig6_3 rdf:type owl:NamedIndividual ,
                                              figure8secondattempt:Dataset ;
                                     figure8secondattempt:hasURI "http://example.com/dataset/fig6/3/"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Dataset_NewDesign
+figure8secondattempt:Dataset_NewDesign rdf:type owl:NamedIndividual ,
+                                                figure8secondattempt:Dataset ;
+                                       figure8secondattempt:isParameterOf figure8secondattempt:Input1_NewDesign ;
+                                       figure8secondattempt:hasURI "http://example.com/dataset/fig6/1/"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Deliverable1
@@ -3160,7 +3160,7 @@ figure8secondattempt:Input1_NewDesign rdf:type owl:NamedIndividual ,
                                                                        figure8secondattempt:Simulation_Fig6_1 ,
                                                                        <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#2DModel_Fig6_1> ,
                                                                        <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#3DModel_Fig6_1> ;
-                                      figure8secondattempt:hasParameter figure8secondattempt:Dataset_Fig6_1 ;
+                                      figure8secondattempt:hasParameter figure8secondattempt:Dataset_NewDesign ;
                                       figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_Fig6_4 ;
                                       rdfs:comment "New design input."@en .
 

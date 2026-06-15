@@ -569,10 +569,10 @@
         <NamedIndividual IRI="#Dataset1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Dataset_Fig6_1"/>
+        <NamedIndividual IRI="#Dataset_Fig6_3"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Dataset_Fig6_3"/>
+        <NamedIndividual IRI="#Dataset_NewDesign"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Deliverable1"/>
@@ -2816,11 +2816,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Dataset"/>
-        <NamedIndividual IRI="#Dataset_Fig6_1"/>
+        <NamedIndividual IRI="#Dataset_Fig6_3"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Dataset"/>
-        <NamedIndividual IRI="#Dataset_Fig6_3"/>
+        <NamedIndividual IRI="#Dataset_NewDesign"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Deliverable"/>
@@ -4138,7 +4138,7 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isParameterOf"/>
-        <NamedIndividual IRI="#Dataset_Fig6_1"/>
+        <NamedIndividual IRI="#Dataset_NewDesign"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -5169,7 +5169,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
-        <NamedIndividual IRI="#Dataset_Fig6_1"/>
+        <NamedIndividual IRI="#Dataset_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
@@ -7188,13 +7188,13 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
-        <NamedIndividual IRI="#Dataset_Fig6_1"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/dataset/fig6/1/</Literal>
+        <NamedIndividual IRI="#Dataset_Fig6_3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/dataset/fig6/3/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
-        <NamedIndividual IRI="#Dataset_Fig6_3"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/dataset/fig6/3/</Literal>
+        <NamedIndividual IRI="#Dataset_NewDesign"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/dataset/fig6/1/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isOptional"/>
