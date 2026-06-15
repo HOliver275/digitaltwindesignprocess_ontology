@@ -5272,9 +5272,9 @@
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasArtefact"/>
+        <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Input_Fig6_PhysicalTestingActivity"/>
-        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
