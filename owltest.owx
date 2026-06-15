@@ -1076,7 +1076,7 @@
         <NamedIndividual IRI="#2DModel_NewDesign"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#3DModel_Fig6_1"/>
+        <NamedIndividual IRI="#3DModel_NewDesign"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Artefact"/>
@@ -3520,7 +3520,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#3DModel"/>
-        <NamedIndividual IRI="#3DModel_Fig6_1"/>
+        <NamedIndividual IRI="#3DModel_NewDesign"/>
     </ClassAssertion>
     <SameIndividual>
         <NamedIndividual IRI="#ConceptDevelopmentStage"/>
@@ -5164,7 +5164,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
-        <NamedIndividual IRI="#3DModel_Fig6_1"/>
+        <NamedIndividual IRI="#3DModel_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -7093,7 +7093,7 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
-        <NamedIndividual IRI="#3DModel_Fig6_1"/>
+        <NamedIndividual IRI="#3DModel_NewDesign"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
@@ -7338,7 +7338,7 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
-        <NamedIndividual IRI="#3DModel_Fig6_1"/>
+        <NamedIndividual IRI="#3DModel_NewDesign"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/3dmodel/fig6/1/</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
