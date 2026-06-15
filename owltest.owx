@@ -719,6 +719,9 @@
         <NamedIndividual IRI="#Input1_NewDesign"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Input2_PreviousProductData"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Input_Fig6_3_DigitalEntity"/>
     </Declaration>
     <Declaration>
@@ -747,9 +750,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Input_PhysicalTestResults_ModellingActivity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Input_PreviousProductData"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Input_VirtualTestResults_ModellingActivity"/>
@@ -3024,6 +3024,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#Input2_PreviousProductData"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#Input_Fig6_3_DigitalEntity"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3061,10 +3065,6 @@
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#Input_PhysicalTestResults_ModellingActivity"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#TestingInput"/>
-        <NamedIndividual IRI="#Input_PreviousProductData"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
@@ -5054,7 +5054,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
-        <NamedIndividual IRI="#Input_PreviousProductData"/>
+        <NamedIndividual IRI="#Input2_PreviousProductData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5174,6 +5174,36 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input2_PreviousProductData"/>
+        <NamedIndividual IRI="#PreviousProductHistoricData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input2_PreviousProductData"/>
+        <NamedIndividual IRI="#PreviousProductPrototypeInformation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input2_PreviousProductData"/>
+        <NamedIndividual IRI="#PreviousProductTestData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input2_PreviousProductData"/>
+        <NamedIndividual IRI="#PreviousProductUsageData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input2_PreviousProductData"/>
+        <NamedIndividual IRI="#PreviousProductWarrantyData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input2_PreviousProductData"/>
         <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -5299,36 +5329,6 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_PhysicalTestResults_ModellingActivity"/>
-        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasParameter"/>
-        <NamedIndividual IRI="#Input_PreviousProductData"/>
-        <NamedIndividual IRI="#PreviousProductHistoricData"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasParameter"/>
-        <NamedIndividual IRI="#Input_PreviousProductData"/>
-        <NamedIndividual IRI="#PreviousProductPrototypeInformation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasParameter"/>
-        <NamedIndividual IRI="#Input_PreviousProductData"/>
-        <NamedIndividual IRI="#PreviousProductTestData"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasParameter"/>
-        <NamedIndividual IRI="#Input_PreviousProductData"/>
-        <NamedIndividual IRI="#PreviousProductUsageData"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasParameter"/>
-        <NamedIndividual IRI="#Input_PreviousProductData"/>
-        <NamedIndividual IRI="#PreviousProductWarrantyData"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#inputInto"/>
-        <NamedIndividual IRI="#Input_PreviousProductData"/>
         <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -5774,12 +5774,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
-        <NamedIndividual IRI="#Input_PhysicalTestResults_ModellingActivity"/>
+        <NamedIndividual IRI="#Input2_PreviousProductData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
-        <NamedIndividual IRI="#Input_PreviousProductData"/>
+        <NamedIndividual IRI="#Input_PhysicalTestResults_ModellingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
@@ -8241,7 +8241,7 @@ An item of information, such as a Datapoint, may also form part of the Input. Fo
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Input_PreviousProductData</IRI>
+        <IRI>#Input2_PreviousProductData</IRI>
         <Literal xml:lang="en">Previous product stuff.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>

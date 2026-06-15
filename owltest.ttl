@@ -3083,7 +3083,7 @@ figure8secondattempt:DigitalTwin1 rdf:type owl:NamedIndividual ,
 figure8secondattempt:DigitalTwinInformationModel rdf:type owl:NamedIndividual ,
                                                           figure8secondattempt:VirtualModel ;
                                                  figure8secondattempt:hasInput figure8secondattempt:Input1_NewDesign ,
-                                                                               figure8secondattempt:Input_PreviousProductData ;
+                                                                               figure8secondattempt:Input2_PreviousProductData ;
                                                  figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ,
                                                                                    figure8secondattempt:CriticalValue_PhysicalTestResult ,
                                                                                    figure8secondattempt:CriticalValue_VirtualTestResult .
@@ -3159,6 +3159,18 @@ figure8secondattempt:Input1_NewDesign rdf:type owl:NamedIndividual ,
                                       rdfs:comment "New design input."@en .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input2_PreviousProductData
+figure8secondattempt:Input2_PreviousProductData rdf:type owl:NamedIndividual ,
+                                                         figure8secondattempt:TestingInput ;
+                                                figure8secondattempt:hasParameter figure8secondattempt:PreviousProductHistoricData ,
+                                                                                  figure8secondattempt:PreviousProductPrototypeInformation ,
+                                                                                  figure8secondattempt:PreviousProductTestData ,
+                                                                                  figure8secondattempt:PreviousProductUsageData ,
+                                                                                  figure8secondattempt:PreviousProductWarrantyData ;
+                                                figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_3PartProcess ;
+                                                rdfs:comment "Previous product stuff."@en .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Fig6_3_DigitalEntity
 figure8secondattempt:Input_Fig6_3_DigitalEntity rdf:type owl:NamedIndividual ,
                                                          figure8secondattempt:TestingInput ;
@@ -3232,18 +3244,6 @@ figure8secondattempt:Input_PhysicalTestResults_ModellingActivity rdf:type owl:Na
                                                                  figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_PhysicalTestResult ,
                                                                                                    figure8secondattempt:PhysicalTestData_Fig6 ;
                                                                  figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_3PartProcess .
-
-
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_PreviousProductData
-figure8secondattempt:Input_PreviousProductData rdf:type owl:NamedIndividual ,
-                                                        figure8secondattempt:TestingInput ;
-                                               figure8secondattempt:hasParameter figure8secondattempt:PreviousProductHistoricData ,
-                                                                                 figure8secondattempt:PreviousProductPrototypeInformation ,
-                                                                                 figure8secondattempt:PreviousProductTestData ,
-                                                                                 figure8secondattempt:PreviousProductUsageData ,
-                                                                                 figure8secondattempt:PreviousProductWarrantyData ;
-                                               figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_3PartProcess ;
-                                               rdfs:comment "Previous product stuff."@en .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_VirtualTestResults_ModellingActivity
@@ -3437,8 +3437,8 @@ figure8secondattempt:ModellingActivity_3PartProcess rdf:type owl:NamedIndividual
                                                              figure8secondattempt:Modelling ;
                                                     figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
                                                     figure8secondattempt:hasInput figure8secondattempt:Input1_NewDesign ,
+                                                                                  figure8secondattempt:Input2_PreviousProductData ,
                                                                                   figure8secondattempt:Input_PhysicalTestResults_ModellingActivity ,
-                                                                                  figure8secondattempt:Input_PreviousProductData ,
                                                                                   figure8secondattempt:Input_VirtualTestResults_ModellingActivity .
 
 
