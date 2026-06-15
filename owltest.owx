@@ -926,7 +926,7 @@
         <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Simulation_Fig6_1"/>
+        <NamedIndividual IRI="#Simulation_NewDesign"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Stage1"/>
@@ -3308,7 +3308,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Simulation"/>
-        <NamedIndividual IRI="#Simulation_Fig6_1"/>
+        <NamedIndividual IRI="#Simulation_NewDesign"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ProductDevelopmentStage"/>
@@ -5154,7 +5154,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
-        <NamedIndividual IRI="#Simulation_Fig6_1"/>
+        <NamedIndividual IRI="#Simulation_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -6378,7 +6378,7 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
-        <NamedIndividual IRI="#Simulation_Fig6_1"/>
+        <NamedIndividual IRI="#Simulation_NewDesign"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -7258,7 +7258,7 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
-        <NamedIndividual IRI="#Simulation_Fig6_1"/>
+        <NamedIndividual IRI="#Simulation_NewDesign"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/simulation/fig6/1/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>

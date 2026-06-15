@@ -3157,7 +3157,7 @@ figure8secondattempt:Input1 rdf:type owl:NamedIndividual ,
 figure8secondattempt:Input1_NewDesign rdf:type owl:NamedIndividual ,
                                                figure8secondattempt:DesignInput ;
                                       figure8secondattempt:hasArtefact figure8secondattempt:CADModel_Fig6_1 ,
-                                                                       figure8secondattempt:Simulation_Fig6_1 ,
+                                                                       figure8secondattempt:Simulation_NewDesign ,
                                                                        <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#2DModel_NewDesign> ,
                                                                        <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#3DModel_Fig6_1> ;
                                       figure8secondattempt:hasParameter figure8secondattempt:Dataset_NewDesign ;
@@ -3756,11 +3756,11 @@ figure8secondattempt:SimulationActivity_Fig6_DigitalEntityShadow rdf:type owl:Na
                                                                  figure8secondattempt:hasOutput figure8secondattempt:Output_Fig6_3_SimulationActivity_DigitalEntityShadow .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Simulation_Fig6_1
-figure8secondattempt:Simulation_Fig6_1 rdf:type owl:NamedIndividual ,
-                                                figure8secondattempt:Simulation ;
-                                       figure8secondattempt:isArtefactOf figure8secondattempt:Input1_NewDesign ;
-                                       figure8secondattempt:hasURI "http://example.com/simulation/fig6/1/"^^xsd:anyURI .
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Simulation_NewDesign
+figure8secondattempt:Simulation_NewDesign rdf:type owl:NamedIndividual ,
+                                                   figure8secondattempt:Simulation ;
+                                          figure8secondattempt:isArtefactOf figure8secondattempt:Input1_NewDesign ;
+                                          figure8secondattempt:hasURI "http://example.com/simulation/fig6/1/"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Stage1
