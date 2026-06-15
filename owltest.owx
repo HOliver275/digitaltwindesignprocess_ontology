@@ -473,7 +473,7 @@
         <NamedIndividual IRI="#Artefact1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#CADModel_Fig6_1"/>
+        <NamedIndividual IRI="#CADModel_NewDesign"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CAEActivity1"/>
@@ -2680,7 +2680,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CADModel"/>
-        <NamedIndividual IRI="#CADModel_Fig6_1"/>
+        <NamedIndividual IRI="#CADModel_NewDesign"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAE_VirtualTesting"/>
@@ -5149,7 +5149,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
-        <NamedIndividual IRI="#CADModel_Fig6_1"/>
+        <NamedIndividual IRI="#CADModel_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -7098,7 +7098,7 @@
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
-        <NamedIndividual IRI="#CADModel_Fig6_1"/>
+        <NamedIndividual IRI="#CADModel_NewDesign"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/cadmodel/fig6_1/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>

@@ -2389,10 +2389,10 @@ figure8secondattempt:Artefact1 rdf:type owl:NamedIndividual ,
                                         figure8secondattempt:Artefact .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#CADModel_Fig6_1
-figure8secondattempt:CADModel_Fig6_1 rdf:type owl:NamedIndividual ,
-                                              figure8secondattempt:CADModel ;
-                                     figure8secondattempt:hasURI "http://example.com/cadmodel/fig6_1/"^^xsd:anyURI .
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#CADModel_NewDesign
+figure8secondattempt:CADModel_NewDesign rdf:type owl:NamedIndividual ,
+                                                 figure8secondattempt:CADModel ;
+                                        figure8secondattempt:hasURI "http://example.com/cadmodel/fig6_1/"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#CAEActivity1
@@ -3156,7 +3156,7 @@ figure8secondattempt:Input1 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input1_NewDesign
 figure8secondattempt:Input1_NewDesign rdf:type owl:NamedIndividual ,
                                                figure8secondattempt:DesignInput ;
-                                      figure8secondattempt:hasArtefact figure8secondattempt:CADModel_Fig6_1 ,
+                                      figure8secondattempt:hasArtefact figure8secondattempt:CADModel_NewDesign ,
                                                                        figure8secondattempt:Simulation_NewDesign ,
                                                                        <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#2DModel_NewDesign> ,
                                                                        <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#3DModel_Fig6_1> ;
