@@ -3249,7 +3249,6 @@ figure8secondattempt:Input_PhysicalTestResults_ModellingActivity rdf:type owl:Na
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_VirtualTestResults_ModellingActivity
 figure8secondattempt:Input_VirtualTestResults_ModellingActivity rdf:type owl:NamedIndividual ,
                                                                          figure8secondattempt:TestingInput ;
-                                                                figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
                                                                 figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_VirtualTestResult ;
                                                                 figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_3PartProcess .
 

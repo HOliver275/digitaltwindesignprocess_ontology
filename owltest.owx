@@ -5332,11 +5332,6 @@
         <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#Input_VirtualTestResults_ModellingActivity"/>
-        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Input_VirtualTestResults_ModellingActivity"/>
         <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
