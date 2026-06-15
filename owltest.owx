@@ -812,7 +812,7 @@
         <NamedIndividual IRI="#ModellingActivity1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Output1"/>
@@ -3160,7 +3160,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Modelling"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Output"/>
@@ -5174,7 +5174,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5204,7 +5204,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_Fig6_2"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5329,7 +5329,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_PhysicalTestResults_ModellingActivity"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -5344,7 +5344,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_VirtualTestResults_ModellingActivity"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#duringTemporalPartition"/>
@@ -5439,7 +5439,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#Iteration_DigitalEntity"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -5459,7 +5459,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#Iteration_DigitalEntityModel"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -5479,7 +5479,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#Iteration_DigitalEntityShadow"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -5763,27 +5763,27 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
         <NamedIndividual IRI="#Input_Fig6_2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
         <NamedIndividual IRI="#Input_PhysicalTestResults_ModellingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
         <NamedIndividual IRI="#Input_VirtualTestResults_ModellingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -5919,7 +5919,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
-        <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
+        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
