@@ -3540,7 +3540,6 @@ figure8secondattempt:Output_PhysicalTestResults rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_VirtualTestResults
 figure8secondattempt:Output_VirtualTestResults rdf:type owl:NamedIndividual ,
                                                         figure8secondattempt:TestingOutput ;
-                                               figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
                                                figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_VirtualTestResult ;
                                                figure8secondattempt:leadsTo figure8secondattempt:Input_VirtualTestResults_ModellingActivity ;
                                                figure8secondattempt:outputFrom figure8secondattempt:VirtualTestingActivity_DigitalEntity ,
