@@ -1073,7 +1073,7 @@
         <NamedIndividual IRI="#WeightParameter"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#2DModel_Fig6_1"/>
+        <NamedIndividual IRI="#2DModel_NewDesign"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#3DModel_Fig6_1"/>
@@ -3516,7 +3516,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#2DModel"/>
-        <NamedIndividual IRI="#2DModel_Fig6_1"/>
+        <NamedIndividual IRI="#2DModel_NewDesign"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#3DModel"/>
@@ -5159,7 +5159,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
-        <NamedIndividual IRI="#2DModel_Fig6_1"/>
+        <NamedIndividual IRI="#2DModel_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -7088,7 +7088,7 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
-        <NamedIndividual IRI="#2DModel_Fig6_1"/>
+        <NamedIndividual IRI="#2DModel_NewDesign"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -7333,7 +7333,7 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#2DModel_Fig6_1"/>
+        <NamedIndividual IRI="#2DModel_NewDesign"/>
         <Literal>Drawing filed in Room 101, Yoyodyne House, under &quot;Fig. 6&quot;.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
