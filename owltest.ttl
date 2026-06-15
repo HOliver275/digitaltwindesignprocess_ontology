@@ -2688,7 +2688,7 @@ figure8secondattempt:Dataset1 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Dataset_Fig6_1
 figure8secondattempt:Dataset_Fig6_1 rdf:type owl:NamedIndividual ,
                                              figure8secondattempt:Dataset ;
-                                    figure8secondattempt:isParameterOf figure8secondattempt:Input_Fig6_1 ;
+                                    figure8secondattempt:isParameterOf figure8secondattempt:Input1_NewDesign ;
                                     figure8secondattempt:hasURI "http://example.com/dataset/fig6/1/"^^xsd:anyURI .
 
 
@@ -3082,7 +3082,7 @@ figure8secondattempt:DigitalTwin1 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwinInformationModel
 figure8secondattempt:DigitalTwinInformationModel rdf:type owl:NamedIndividual ,
                                                           figure8secondattempt:VirtualModel ;
-                                                 figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_1 ,
+                                                 figure8secondattempt:hasInput figure8secondattempt:Input1_NewDesign ,
                                                                                figure8secondattempt:Input_Fig6_2 ;
                                                  figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ,
                                                                                    figure8secondattempt:CriticalValue_PhysicalTestResult ,
@@ -3153,16 +3153,16 @@ figure8secondattempt:Input1 rdf:type owl:NamedIndividual ,
                             figure8secondattempt:inputInto figure8secondattempt:Stage1 .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Fig6_1
-figure8secondattempt:Input_Fig6_1 rdf:type owl:NamedIndividual ,
-                                           figure8secondattempt:DesignInput ;
-                                  figure8secondattempt:hasArtefact figure8secondattempt:CADModel_Fig6_1 ,
-                                                                   figure8secondattempt:Simulation_Fig6_1 ,
-                                                                   <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#2DModel_Fig6_1> ,
-                                                                   <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#3DModel_Fig6_1> ;
-                                  figure8secondattempt:hasParameter figure8secondattempt:Dataset_Fig6_1 ;
-                                  figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_Fig6_4 ;
-                                  rdfs:comment "New design input."@en .
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input1_NewDesign
+figure8secondattempt:Input1_NewDesign rdf:type owl:NamedIndividual ,
+                                               figure8secondattempt:DesignInput ;
+                                      figure8secondattempt:hasArtefact figure8secondattempt:CADModel_Fig6_1 ,
+                                                                       figure8secondattempt:Simulation_Fig6_1 ,
+                                                                       <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#2DModel_Fig6_1> ,
+                                                                       <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#3DModel_Fig6_1> ;
+                                      figure8secondattempt:hasParameter figure8secondattempt:Dataset_Fig6_1 ;
+                                      figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_Fig6_4 ;
+                                      rdfs:comment "New design input."@en .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Fig6_2
@@ -3442,7 +3442,7 @@ figure8secondattempt:ModellingActivity1 rdf:type owl:NamedIndividual ,
 figure8secondattempt:ModellingActivity_Fig6_4 rdf:type owl:NamedIndividual ,
                                                        figure8secondattempt:Modelling ;
                                               figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
-                                              figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_1 ,
+                                              figure8secondattempt:hasInput figure8secondattempt:Input1_NewDesign ,
                                                                             figure8secondattempt:Input_Fig6_2 ,
                                                                             figure8secondattempt:Input_PhysicalTestResults_ModellingActivity ,
                                                                             figure8secondattempt:Input_VirtualTestResults_ModellingActivity .
@@ -3759,7 +3759,7 @@ figure8secondattempt:SimulationActivity_Fig6_DigitalEntityShadow rdf:type owl:Na
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Simulation_Fig6_1
 figure8secondattempt:Simulation_Fig6_1 rdf:type owl:NamedIndividual ,
                                                 figure8secondattempt:Simulation ;
-                                       figure8secondattempt:isArtefactOf figure8secondattempt:Input_Fig6_1 ;
+                                       figure8secondattempt:isArtefactOf figure8secondattempt:Input1_NewDesign ;
                                        figure8secondattempt:hasURI "http://example.com/simulation/fig6/1/"^^xsd:anyURI .
 
 
@@ -4186,14 +4186,14 @@ figure8secondattempt:WeightParameter rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#2DModel_Fig6_1
 <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#2DModel_Fig6_1> rdf:type owl:NamedIndividual ,
                                                                                                         <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#2DModel> ;
-                                                                                               figure8secondattempt:isArtefactOf figure8secondattempt:Input_Fig6_1 ;
+                                                                                               figure8secondattempt:isArtefactOf figure8secondattempt:Input1_NewDesign ;
                                                                                                figure8secondattempt:hasDescription "Drawing filed in Room 101, Yoyodyne House, under \"Fig. 6\"." .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#3DModel_Fig6_1
 <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#3DModel_Fig6_1> rdf:type owl:NamedIndividual ,
                                                                                                         <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#3DModel> ;
-                                                                                               figure8secondattempt:isArtefactOf figure8secondattempt:Input_Fig6_1 ;
+                                                                                               figure8secondattempt:isArtefactOf figure8secondattempt:Input1_NewDesign ;
                                                                                                figure8secondattempt:hasURI "http://example.com/3dmodel/fig6/1/"^^xsd:anyURI .
 
 

@@ -719,7 +719,7 @@
         <NamedIndividual IRI="#Input1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Input_Fig6_2"/>
@@ -3024,7 +3024,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DesignInput"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
@@ -4139,7 +4139,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isParameterOf"/>
         <NamedIndividual IRI="#Dataset_Fig6_1"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasModel"/>
@@ -5049,7 +5049,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
@@ -5148,32 +5148,32 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
         <NamedIndividual IRI="#CADModel_Fig6_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
         <NamedIndividual IRI="#Simulation_Fig6_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
         <NamedIndividual IRI="#2DModel_Fig6_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
         <NamedIndividual IRI="#3DModel_Fig6_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
         <NamedIndividual IRI="#Dataset_Fig6_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
         <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -5769,7 +5769,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#ModellingActivity_Fig6_4"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
@@ -6379,7 +6379,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#Simulation_Fig6_1"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFocus"/>
@@ -7089,12 +7089,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#2DModel_Fig6_1"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#3DModel_Fig6_1"/>
-        <NamedIndividual IRI="#Input_Fig6_1"/>
+        <NamedIndividual IRI="#Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
@@ -8236,7 +8236,7 @@ An item of information, such as a Datapoint, may also form part of the Input. Fo
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Input_Fig6_1</IRI>
+        <IRI>#Input1_NewDesign</IRI>
         <Literal xml:lang="en">New design input.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
