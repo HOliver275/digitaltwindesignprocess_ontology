@@ -680,7 +680,7 @@
         <NamedIndividual IRI="#DigitalEntity1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#DigitalEntityModel_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityModel"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DigitalEntityShadow"/>
@@ -2340,7 +2340,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Shadow"/>
-        <Class IRI="#Model"/>
+        <Class IRI="#VirtualModel"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Simulation"/>
@@ -2972,7 +2972,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#VirtualModel"/>
-        <NamedIndividual IRI="#DigitalEntityModel_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityModel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Shadow"/>
@@ -5023,7 +5023,7 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
-        <NamedIndividual IRI="#DigitalEntityModel_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityModel"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -5209,7 +5209,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_Fig6_3_DigitalEntityModel"/>
-        <NamedIndividual IRI="#DigitalEntityModel_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5289,7 +5289,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Input_Iteration_DigitalEntityShadow"/>
-        <NamedIndividual IRI="#DigitalEntityModel_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
@@ -5814,7 +5814,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Fig6_3_DigitalEntityModel"/>
-        <NamedIndividual IRI="#DigitalEntityModel_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5904,7 +5904,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Output_Iteration_DigitalEntityModel"/>
-        <NamedIndividual IRI="#DigitalEntityModel_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
@@ -7024,7 +7024,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityModel"/>
-        <NamedIndividual IRI="#DigitalEntityModel_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -8099,12 +8099,17 @@ A DevelopmentActivity can be composed of multiple smaller DevelopmentActivities.
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DigitalEntity</IRI>
-        <Literal xml:lang="en">The digital part of the Twin that is being developed throughout the development process; which after some iterations of physical and virtual testing has met the conditions to become a fully developed digital entity.</Literal>
+        <Literal xml:lang="en">The digital part of the Twin that is being developed throughout the development process; which after some iterations of physical and virtual testing has evolved from a VirtualModel to a Shadow to become a fully developed digital entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DigitalEntityModel</IRI>
+        <Literal>The earliest version of the digital entity, which will evolve into a Shadow and then into a fully instantiated DigitalEntity of its DigitalTwin.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DigitalEntityShadow</IRI>
-        <Literal>The digital part of the Twin that is being developed throughout the development process; which after some iterations of physical and virtual testing has evolved from a model to a shadow.</Literal>
+        <Literal>A version of a developing digital entity which is more evolved than a VirtualModel, but less evolved than the fully developed DigitalEntity of a DigitalTwin.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
