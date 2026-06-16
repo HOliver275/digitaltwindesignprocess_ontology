@@ -308,10 +308,16 @@
         <ObjectProperty IRI="#hasEnvironment"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasExpectedValue"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasFocus"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasInput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMirror"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasModel"/>
@@ -363,6 +369,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isEnvironmentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isExpectedValueOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isFocusOf"/>
@@ -897,9 +906,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhysicalTestResult"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#PhysicalTestResults_Fig6"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhysicalTestingActivity"/>
@@ -3280,10 +3286,6 @@
         <NamedIndividual IRI="#PhysicalTestResult"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Dataset"/>
-        <NamedIndividual IRI="#PhysicalTestResults_Fig6"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#PhysicalTesting"/>
         <NamedIndividual IRI="#PhysicalTestingActivity"/>
     </ClassAssertion>
@@ -4151,6 +4153,21 @@
         <ObjectProperty IRI="#stepTo"/>
         <NamedIndividual IRI="#ConceptDevelopment_LoopAStepB"/>
         <NamedIndividual IRI="#DesignActivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasExpectedValue"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMirror"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+        <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasExpectedValue"/>
+        <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isParameterOf"/>
@@ -7339,11 +7356,6 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
-        <NamedIndividual IRI="#PhysicalTestResults_Fig6"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/fig6/physicaltestresults/</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#PrototypeInformation_PreviousProduct"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/prototype/information/</Literal>
     </DataPropertyAssertion>
@@ -7545,6 +7557,9 @@
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#twinnedPhysicallyWith"/>
     </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasMirror"/>
+    </SymmetricObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#comesAfter"/>
     </TransitiveObjectProperty>
@@ -7621,6 +7636,10 @@
         <Class IRI="#DigitalTwinExample"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasExpectedValue"/>
+        <Class IRI="#Datapoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasFocus"/>
         <ObjectUnionOf>
             <Class IRI="#Artefact"/>
@@ -7636,6 +7655,10 @@
             <Class IRI="#Environment"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMirror"/>
+        <Class IRI="#Parameter"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasOutput"/>
@@ -7703,6 +7726,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isEnvironmentOf"/>
         <Class IRI="#Environment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isExpectedValueOf"/>
+        <Class IRI="#Datapoint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isFocusOf"/>
@@ -7857,12 +7884,20 @@
         <Class IRI="#Environment"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasExpectedValue"/>
+        <Class IRI="#Datapoint"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasFocus"/>
         <Class IRI="#Focus"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasInput"/>
         <Class IRI="#Input"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMirror"/>
+        <Class IRI="#Parameter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasModel"/>
@@ -7936,6 +7971,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isEndOf"/>
         <Class IRI="#TimeStructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isExpectedValueOf"/>
+        <Class IRI="#Datapoint"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isFocusOf"/>

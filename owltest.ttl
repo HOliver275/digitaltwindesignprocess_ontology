@@ -163,6 +163,12 @@ figure8secondattempt:hasEnvironment rdf:type owl:ObjectProperty ;
                                     rdfs:range figure8secondattempt:Environment .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasExpectedValue
+figure8secondattempt:hasExpectedValue rdf:type owl:ObjectProperty ;
+                                      rdfs:domain figure8secondattempt:Datapoint ;
+                                      rdfs:range figure8secondattempt:Datapoint .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasFocus
 figure8secondattempt:hasFocus rdf:type owl:ObjectProperty ;
                               owl:inverseOf figure8secondattempt:isFocusOf ;
@@ -188,6 +194,13 @@ figure8secondattempt:hasInput rdf:type owl:ObjectProperty ;
                                           ] ;
                               rdfs:range figure8secondattempt:Input ;
                               rdfs:comment "Input into some DevelopmentActivity or TemporalConstruct."@en .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasMirror
+figure8secondattempt:hasMirror rdf:type owl:ObjectProperty ,
+                                        owl:SymmetricProperty ;
+                               rdfs:domain figure8secondattempt:Parameter ;
+                               rdfs:range figure8secondattempt:Parameter .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasModel
@@ -348,6 +361,12 @@ figure8secondattempt:isEndOf rdf:type owl:ObjectProperty ;
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isEnvironmentOf
 figure8secondattempt:isEnvironmentOf rdf:type owl:ObjectProperty ;
                                      rdfs:domain figure8secondattempt:Environment .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isExpectedValueOf
+figure8secondattempt:isExpectedValueOf rdf:type owl:ObjectProperty ;
+                                       rdfs:domain figure8secondattempt:Datapoint ;
+                                       rdfs:range figure8secondattempt:Datapoint .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isFocusOf
@@ -2672,6 +2691,8 @@ figure8secondattempt:CriticalValue_Expected rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#CriticalValue_PhysicalTestResult
 figure8secondattempt:CriticalValue_PhysicalTestResult rdf:type owl:NamedIndividual ,
                                                                figure8secondattempt:Datapoint ;
+                                                      figure8secondattempt:hasExpectedValue figure8secondattempt:CriticalValue_Expected ;
+                                                      figure8secondattempt:hasMirror figure8secondattempt:CriticalValue_VirtualTestResult ;
                                                       figure8secondattempt:createdOn "2026-05-01T20:58:00Z"^^xsd:dateTimeStamp ;
                                                       figure8secondattempt:expectedValue 20.2 ;
                                                       figure8secondattempt:hasUnit "C" ;
@@ -2682,6 +2703,7 @@ figure8secondattempt:CriticalValue_PhysicalTestResult rdf:type owl:NamedIndividu
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#CriticalValue_VirtualTestResult
 figure8secondattempt:CriticalValue_VirtualTestResult rdf:type owl:NamedIndividual ,
                                                               figure8secondattempt:Datapoint ;
+                                                     figure8secondattempt:hasExpectedValue figure8secondattempt:CriticalValue_Expected ;
                                                      figure8secondattempt:createdOn "2026-05-01T18:58:00Z"^^xsd:dateTimeStamp ;
                                                      figure8secondattempt:expectedValue "20.2"^^xsd:double ;
                                                      figure8secondattempt:hasUnit "C" ;
@@ -3717,12 +3739,6 @@ figure8secondattempt:PhysicalTestResult rdf:type owl:NamedIndividual ,
                                                  figure8secondattempt:Datapoint ;
                                         figure8secondattempt:hasUnit "C" ;
                                         figure8secondattempt:measuredValue 20.3 .
-
-
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalTestResults_Fig6
-figure8secondattempt:PhysicalTestResults_Fig6 rdf:type owl:NamedIndividual ,
-                                                       figure8secondattempt:Dataset ;
-                                              figure8secondattempt:hasURI "http://example.com/fig6/physicaltestresults/"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalTestingActivity
