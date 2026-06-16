@@ -7466,6 +7466,7 @@
         <ObjectUnionOf>
             <Class IRI="#Component"/>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Environment"/>
             <Class IRI="#Input"/>
             <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
@@ -7474,11 +7475,12 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasComponent"/>
         <ObjectUnionOf>
-            <Class IRI="#Artefact"/>
             <Class IRI="#Component"/>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Environment"/>
             <Class IRI="#Input"/>
             <Class IRI="#Output"/>
+            <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -7521,8 +7523,13 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasParameter"/>
         <ObjectUnionOf>
+            <Class IRI="#Component"/>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Environment"/>
             <Class IRI="#Input"/>
             <Class IRI="#Output"/>
+            <Class IRI="#Parameter"/>
+            <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -7772,6 +7779,7 @@
         <ObjectProperty IRI="#isArtefactOf"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Environment"/>
             <Class IRI="#Input"/>
             <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
@@ -7780,11 +7788,12 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isComponentOf"/>
         <ObjectUnionOf>
-            <Class IRI="#Artefact"/>
             <Class IRI="#Component"/>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Environment"/>
             <Class IRI="#Input"/>
             <Class IRI="#Output"/>
+            <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -7835,8 +7844,13 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isParameterOf"/>
         <ObjectUnionOf>
+            <Class IRI="#Component"/>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Environment"/>
             <Class IRI="#Input"/>
             <Class IRI="#Output"/>
+            <Class IRI="#Parameter"/>
+            <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>

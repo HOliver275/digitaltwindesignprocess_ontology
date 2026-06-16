@@ -103,6 +103,7 @@ figure8secondattempt:hasArtefact rdf:type owl:ObjectProperty ;
                                  rdfs:domain [ rdf:type owl:Class ;
                                                owl:unionOf ( figure8secondattempt:Component
                                                              figure8secondattempt:DevelopmentActivity
+                                                             figure8secondattempt:Environment
                                                              figure8secondattempt:Input
                                                              figure8secondattempt:Output
                                                              figure8secondattempt:TemporalConstruct
@@ -116,11 +117,12 @@ figure8secondattempt:hasArtefact rdf:type owl:ObjectProperty ;
 figure8secondattempt:hasComponent rdf:type owl:ObjectProperty ;
                                   owl:inverseOf figure8secondattempt:isComponentOf ;
                                   rdfs:domain [ rdf:type owl:Class ;
-                                                owl:unionOf ( figure8secondattempt:Artefact
-                                                              figure8secondattempt:Component
+                                                owl:unionOf ( figure8secondattempt:Component
                                                               figure8secondattempt:DevelopmentActivity
+                                                              figure8secondattempt:Environment
                                                               figure8secondattempt:Input
                                                               figure8secondattempt:Output
+                                                              figure8secondattempt:TemporalConstruct
                                                             )
                                               ] ;
                                   rdfs:range figure8secondattempt:Component ;
@@ -217,8 +219,13 @@ figure8secondattempt:hasOutput rdf:type owl:ObjectProperty ;
 figure8secondattempt:hasParameter rdf:type owl:ObjectProperty ;
                                   owl:inverseOf figure8secondattempt:isParameterOf ;
                                   rdfs:domain [ rdf:type owl:Class ;
-                                                owl:unionOf ( figure8secondattempt:Input
+                                                owl:unionOf ( figure8secondattempt:Component
+                                                              figure8secondattempt:DevelopmentActivity
+                                                              figure8secondattempt:Environment
+                                                              figure8secondattempt:Input
                                                               figure8secondattempt:Output
+                                                              figure8secondattempt:Parameter
+                                                              figure8secondattempt:TemporalConstruct
                                                             )
                                               ] ;
                                   rdfs:range figure8secondattempt:Parameter ;
@@ -278,6 +285,7 @@ figure8secondattempt:isArtefactOf rdf:type owl:ObjectProperty ;
                                   rdfs:domain figure8secondattempt:Artefact ;
                                   rdfs:range [ rdf:type owl:Class ;
                                                owl:unionOf ( figure8secondattempt:DevelopmentActivity
+                                                             figure8secondattempt:Environment
                                                              figure8secondattempt:Input
                                                              figure8secondattempt:Output
                                                              figure8secondattempt:TemporalConstruct
@@ -290,11 +298,12 @@ figure8secondattempt:isArtefactOf rdf:type owl:ObjectProperty ;
 figure8secondattempt:isComponentOf rdf:type owl:ObjectProperty ;
                                    rdfs:domain figure8secondattempt:Component ;
                                    rdfs:range [ rdf:type owl:Class ;
-                                                owl:unionOf ( figure8secondattempt:Artefact
-                                                              figure8secondattempt:Component
+                                                owl:unionOf ( figure8secondattempt:Component
                                                               figure8secondattempt:DevelopmentActivity
+                                                              figure8secondattempt:Environment
                                                               figure8secondattempt:Input
                                                               figure8secondattempt:Output
+                                                              figure8secondattempt:TemporalConstruct
                                                             )
                                               ] ;
                                    rdfs:comment "Component associated with a DevelopmentActivity or TemporalConstruct or Input or Output"@en .
@@ -403,8 +412,13 @@ figure8secondattempt:isModelOf rdf:type owl:ObjectProperty ;
 figure8secondattempt:isParameterOf rdf:type owl:ObjectProperty ;
                                    rdfs:domain figure8secondattempt:Parameter ;
                                    rdfs:range [ rdf:type owl:Class ;
-                                                owl:unionOf ( figure8secondattempt:Input
+                                                owl:unionOf ( figure8secondattempt:Component
+                                                              figure8secondattempt:DevelopmentActivity
+                                                              figure8secondattempt:Environment
+                                                              figure8secondattempt:Input
                                                               figure8secondattempt:Output
+                                                              figure8secondattempt:Parameter
+                                                              figure8secondattempt:TemporalConstruct
                                                             )
                                               ] ;
                                    rdfs:comment "An input or output Parameter."@en .
