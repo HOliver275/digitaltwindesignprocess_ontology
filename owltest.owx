@@ -5877,6 +5877,11 @@
         <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
         <NamedIndividual IRI="#Output_Fig6_4_ModellingActivity"/>
         <NamedIndividual IRI="#Input_Fig6_3_VirtualTestingActivity"/>
