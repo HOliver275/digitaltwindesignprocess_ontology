@@ -3204,13 +3204,6 @@ figure8secondattempt:Input_Fig6_3_SimulationActivity rdf:type owl:NamedIndividua
                                                                                     figure8secondattempt:SimulationActivity_Fig6_DigitalEntityShadow .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Fig6_PhysicalTestingActivity
-figure8secondattempt:Input_Fig6_PhysicalTestingActivity rdf:type owl:NamedIndividual ,
-                                                                 figure8secondattempt:TestingInput ;
-                                                        figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ;
-                                                        figure8secondattempt:inputInto figure8secondattempt:PhysicalTestingActivity_Fig6 .
-
-
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Fig6_TestEnvironment
 figure8secondattempt:Input_Fig6_TestEnvironment rdf:type owl:NamedIndividual ,
                                                          figure8secondattempt:TestingInput ;
@@ -3238,6 +3231,13 @@ figure8secondattempt:Input_PhysicalTestResults_ModellingActivity rdf:type owl:Na
                                                                  figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_PhysicalTestResult ,
                                                                                                    figure8secondattempt:PhysicalTestData_Fig6 ;
                                                                  figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_3PartProcess .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_PhysicalTestingActivity
+figure8secondattempt:Input_PhysicalTestingActivity rdf:type owl:NamedIndividual ,
+                                                            figure8secondattempt:TestingInput ;
+                                                   figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ;
+                                                   figure8secondattempt:inputInto figure8secondattempt:PhysicalTestingActivity_Fig6 .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_VirtualTestResults_ModellingActivity
@@ -3528,7 +3528,7 @@ figure8secondattempt:Output_Iteration_DigitalEntityShadow rdf:type owl:NamedIndi
 figure8secondattempt:Output_ModellingActivity rdf:type owl:NamedIndividual ,
                                                        figure8secondattempt:TestingOutput ;
                                               figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ;
-                                              figure8secondattempt:leadsTo figure8secondattempt:Input_Fig6_PhysicalTestingActivity ,
+                                              figure8secondattempt:leadsTo figure8secondattempt:Input_PhysicalTestingActivity ,
                                                                            figure8secondattempt:Input_VirtualTestingActivity ;
                                               figure8secondattempt:outputFrom figure8secondattempt:ModellingActivity_3PartProcess .
 
@@ -3682,7 +3682,7 @@ figure8secondattempt:PhysicalTestingActivity_Fig6 rdf:type owl:NamedIndividual ,
                                                            figure8secondattempt:PhysicalTesting ;
                                                   figure8secondattempt:hasArtefact figure8secondattempt:PhysicalEntity ;
                                                   figure8secondattempt:hasEnvironment figure8secondattempt:TestEnvironment_Fig6 ;
-                                                  figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_PhysicalTestingActivity .
+                                                  figure8secondattempt:hasInput figure8secondattempt:Input_PhysicalTestingActivity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ProcurementActivity1
