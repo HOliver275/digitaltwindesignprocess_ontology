@@ -6242,11 +6242,6 @@
         <NamedIndividual IRI="#DigitalEntity1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
-        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
         <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>

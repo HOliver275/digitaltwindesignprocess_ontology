@@ -3647,7 +3647,6 @@ figure8secondattempt:PhysicalEntity1 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalEntity_Fig6
 figure8secondattempt:PhysicalEntity_Fig6 rdf:type owl:NamedIndividual ,
                                                   figure8secondattempt:PhysicalEntity ;
-                                         figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
                                          figure8secondattempt:isArtefactOf figure8secondattempt:PhysicalTestingActivity_Fig6 ;
                                          figure8secondattempt:isPhysicalEntityOf figure8secondattempt:DigitalTwin_Fig6 ;
                                          figure8secondattempt:twinnedDigitallyWith figure8secondattempt:DigitalEntity .
