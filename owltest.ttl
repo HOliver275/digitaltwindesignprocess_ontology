@@ -152,8 +152,8 @@ figure8secondattempt:hasDevelopmentActivity rdf:type owl:ObjectProperty ;
 figure8secondattempt:hasDigitalEntity rdf:type owl:ObjectProperty ;
                                       owl:inverseOf figure8secondattempt:isDigitalEntityOf ;
                                       rdf:type owl:FunctionalProperty ;
-                                      rdfs:domain figure8secondattempt:DigitalTwin ;
-                                      rdfs:range figure8secondattempt:DigitalEntity ;
+                                      rdfs:domain figure8secondattempt:DigitalTwinExample ;
+                                      rdfs:range figure8secondattempt:DigitalEntityExample ;
                                       rdfs:comment "A PhysicalEntity has a DigitalEntity. To associate the DigitalEntity with some other entity, use hasArtefact."@en .
 
 
@@ -236,8 +236,8 @@ figure8secondattempt:hasParameter rdf:type owl:ObjectProperty ;
 figure8secondattempt:hasPhysicalEntity rdf:type owl:ObjectProperty ;
                                        owl:inverseOf figure8secondattempt:isPhysicalEntityOf ;
                                        rdf:type owl:FunctionalProperty ;
-                                       rdfs:domain figure8secondattempt:DigitalTwin ;
-                                       rdfs:range figure8secondattempt:PhysicalEntity ;
+                                       rdfs:domain figure8secondattempt:DigitalTwinExample ;
+                                       rdfs:range figure8secondattempt:PhysicalEntityExample ;
                                        rdfs:comment "A DigitalEntity is twinned with a PhysicalEntity. To associate the PhysicalEntity with some other entity, use hasArtefact."@en .
 
 
@@ -329,8 +329,8 @@ figure8secondattempt:isDevelopmentActivityOf rdf:type owl:ObjectProperty ;
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isDigitalEntityOf
 figure8secondattempt:isDigitalEntityOf rdf:type owl:ObjectProperty ,
                                                 owl:FunctionalProperty ;
-                                       rdfs:domain figure8secondattempt:DigitalEntity ;
-                                       rdfs:range figure8secondattempt:DigitalTwin ;
+                                       rdfs:domain figure8secondattempt:DigitalEntityExample ;
+                                       rdfs:range figure8secondattempt:DigitalTwinExample ;
                                        rdfs:comment "A DigitalTwin is twinned with a PhysicalAsset. To associate the DigitalTwin with some other entity, use isArtefactOf."@en .
 
 
@@ -404,7 +404,7 @@ figure8secondattempt:isLedToBy rdf:type owl:ObjectProperty ;
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isModelOf
 figure8secondattempt:isModelOf rdf:type owl:ObjectProperty ;
                                rdfs:domain figure8secondattempt:Model ;
-                               rdfs:range figure8secondattempt:DigitalEntity ;
+                               rdfs:range figure8secondattempt:DigitalEntityExample ;
                                rdfs:comment "Entity associated with a Model."@en .
 
 
@@ -427,8 +427,8 @@ figure8secondattempt:isParameterOf rdf:type owl:ObjectProperty ;
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isPhysicalEntityOf
 figure8secondattempt:isPhysicalEntityOf rdf:type owl:ObjectProperty ,
                                                  owl:FunctionalProperty ;
-                                        rdfs:domain figure8secondattempt:PhysicalEntity ;
-                                        rdfs:range figure8secondattempt:DigitalTwin ;
+                                        rdfs:domain figure8secondattempt:PhysicalEntityExample ;
+                                        rdfs:range figure8secondattempt:DigitalTwinExample ;
                                         rdfs:comment "A PhysicalEntity is twinned with a DigitalEntity. To associate the PhysicalEntity with some other entity, use isArtefactOf."@en .
 
 
@@ -562,15 +562,15 @@ figure8secondattempt:stepTo rdf:type owl:ObjectProperty ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#twinnedDigitallyWith
 figure8secondattempt:twinnedDigitallyWith rdf:type owl:ObjectProperty ,
                                                    owl:FunctionalProperty ;
-                                          rdfs:domain figure8secondattempt:PhysicalEntity ;
-                                          rdfs:range figure8secondattempt:DigitalEntity .
+                                          rdfs:domain figure8secondattempt:PhysicalEntityExample ;
+                                          rdfs:range figure8secondattempt:DigitalEntityExample .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#twinnedPhysicallyWith
 figure8secondattempt:twinnedPhysicallyWith rdf:type owl:ObjectProperty ,
                                                     owl:FunctionalProperty ;
-                                           rdfs:domain figure8secondattempt:DigitalEntity ;
-                                           rdfs:range figure8secondattempt:PhysicalEntity .
+                                           rdfs:domain figure8secondattempt:DigitalEntityExample ;
+                                           rdfs:range figure8secondattempt:PhysicalEntityExample .
 
 
 #################################################################
@@ -1096,29 +1096,29 @@ figure8secondattempt:DevelopmentEnvironment rdf:type owl:Class ;
                                             owl:disjointWith figure8secondattempt:TestEnvironment .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalEntity
-figure8secondattempt:DigitalEntity rdf:type owl:Class ;
-                                   owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:DigitalEntity
-                                                                              [ rdf:type owl:Restriction ;
-                                                                                owl:onProperty figure8secondattempt:isDigitalEntityOf ;
-                                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                owl:onClass figure8secondattempt:DigitalTwin
-                                                                              ]
-                                                                              [ rdf:type owl:Restriction ;
-                                                                                owl:onProperty figure8secondattempt:twinnedPhysicallyWith ;
-                                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                owl:onClass figure8secondattempt:PhysicalEntity
-                                                                              ]
-                                                                            ) ;
-                                                         rdf:type owl:Class
-                                                       ] ;
-                                   rdfs:subClassOf figure8secondattempt:DigitalTwin ;
-                                   owl:disjointWith figure8secondattempt:PhysicalEntity .
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalEntityExample
+figure8secondattempt:DigitalEntityExample rdf:type owl:Class ;
+                                          owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:DigitalEntityExample
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty figure8secondattempt:isDigitalEntityOf ;
+                                                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                       owl:onClass figure8secondattempt:DigitalTwinExample
+                                                                                     ]
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty figure8secondattempt:twinnedPhysicallyWith ;
+                                                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                       owl:onClass figure8secondattempt:PhysicalEntityExample
+                                                                                     ]
+                                                                                   ) ;
+                                                                rdf:type owl:Class
+                                                              ] ;
+                                          rdfs:subClassOf figure8secondattempt:DigitalTwinExample ;
+                                          owl:disjointWith figure8secondattempt:PhysicalEntityExample .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwin
-figure8secondattempt:DigitalTwin rdf:type owl:Class ;
-                                 rdfs:subClassOf figure8secondattempt:Artefact .
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwinExample
+figure8secondattempt:DigitalTwinExample rdf:type owl:Class ;
+                                        rdfs:subClassOf figure8secondattempt:Artefact .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Document
@@ -1854,23 +1854,23 @@ figure8secondattempt:PhysicalDevelopmentEnvironment rdf:type owl:Class ;
                                                     owl:disjointWith figure8secondattempt:VirtualDevelopmentEnvironment .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalEntity
-figure8secondattempt:PhysicalEntity rdf:type owl:Class ;
-                                    owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:PhysicalEntity
-                                                                               [ rdf:type owl:Restriction ;
-                                                                                 owl:onProperty figure8secondattempt:isPhysicalEntityOf ;
-                                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                 owl:onClass figure8secondattempt:DigitalTwin
-                                                                               ]
-                                                                               [ rdf:type owl:Restriction ;
-                                                                                 owl:onProperty figure8secondattempt:twinnedDigitallyWith ;
-                                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                 owl:onClass figure8secondattempt:DigitalEntity
-                                                                               ]
-                                                                             ) ;
-                                                          rdf:type owl:Class
-                                                        ] ;
-                                    rdfs:subClassOf figure8secondattempt:DigitalTwin .
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalEntityExample
+figure8secondattempt:PhysicalEntityExample rdf:type owl:Class ;
+                                           owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:PhysicalEntityExample
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty figure8secondattempt:isPhysicalEntityOf ;
+                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                        owl:onClass figure8secondattempt:DigitalTwinExample
+                                                                                      ]
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty figure8secondattempt:twinnedDigitallyWith ;
+                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                        owl:onClass figure8secondattempt:DigitalEntityExample
+                                                                                      ]
+                                                                                    ) ;
+                                                                 rdf:type owl:Class
+                                                               ] ;
+                                           rdfs:subClassOf figure8secondattempt:DigitalTwinExample .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalModel
@@ -1915,7 +1915,7 @@ figure8secondattempt:Product rdf:type owl:Class ;
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty figure8secondattempt:hasArtefact ;
                                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                          owl:onClass figure8secondattempt:DigitalTwin
+                                                                          owl:onClass figure8secondattempt:DigitalTwinExample
                                                                         ]
                                                                       ) ;
                                                    rdf:type owl:Class
@@ -3052,23 +3052,23 @@ figure8secondattempt:DetailDesign_LoopAStepB rdf:type owl:NamedIndividual ;
                                              figure8secondattempt:stepTo figure8secondattempt:DesignActivity3 .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalEntity
-figure8secondattempt:DigitalEntity rdf:type owl:NamedIndividual ,
-                                            figure8secondattempt:DigitalEntity ;
-                                   figure8secondattempt:hasInput figure8secondattempt:Input_DigitalEntityModel ;
-                                   figure8secondattempt:hasOutput figure8secondattempt:Output_DigitalEntity ;
-                                   figure8secondattempt:isArtefactOf figure8secondattempt:VirtualTestingActivity_DigitalEntityModel ;
-                                   figure8secondattempt:isDigitalEntityOf figure8secondattempt:DigitalTwin ;
-                                   figure8secondattempt:twinnedPhysicallyWith figure8secondattempt:PhysicalEntity .
-
-
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalEntity1
 figure8secondattempt:DigitalEntity1 rdf:type owl:NamedIndividual ,
-                                             figure8secondattempt:DigitalEntity ;
+                                             figure8secondattempt:DigitalEntityExample ;
                                     figure8secondattempt:isArtefactOf figure8secondattempt:Input1 ,
                                                                       figure8secondattempt:Output1 ;
                                     figure8secondattempt:isDigitalEntityOf figure8secondattempt:DigitalTwin1 ;
                                     figure8secondattempt:twinnedPhysicallyWith figure8secondattempt:PhysicalEntity1 .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalEntityExample
+figure8secondattempt:DigitalEntityExample rdf:type owl:NamedIndividual ,
+                                                   figure8secondattempt:DigitalEntityExample ;
+                                          figure8secondattempt:hasInput figure8secondattempt:Input_DigitalEntityModel ;
+                                          figure8secondattempt:hasOutput figure8secondattempt:Output_DigitalEntity ;
+                                          figure8secondattempt:isArtefactOf figure8secondattempt:VirtualTestingActivity_DigitalEntityModel ;
+                                          figure8secondattempt:isDigitalEntityOf figure8secondattempt:DigitalTwinExample ;
+                                          figure8secondattempt:twinnedPhysicallyWith figure8secondattempt:PhysicalEntityExample .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalEntityModel
@@ -3085,15 +3085,15 @@ figure8secondattempt:DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                          rdfs:comment "A version of a developing digital entity which is more evolved than a VirtualModel, but less evolved than the fully developed DigitalEntity of a DigitalTwin." .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwin
-figure8secondattempt:DigitalTwin rdf:type owl:NamedIndividual ,
-                                          figure8secondattempt:DigitalTwin ;
-                                 figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel .
-
-
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwin1
 figure8secondattempt:DigitalTwin1 rdf:type owl:NamedIndividual ,
-                                           figure8secondattempt:DigitalTwin .
+                                           figure8secondattempt:DigitalTwinExample .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwinExample
+figure8secondattempt:DigitalTwinExample rdf:type owl:NamedIndividual ,
+                                                 figure8secondattempt:DigitalTwinExample ;
+                                        figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwinInformationModel
@@ -3192,7 +3192,7 @@ figure8secondattempt:Input2_PreviousProductData rdf:type owl:NamedIndividual ,
 figure8secondattempt:Input_DigitalEntity rdf:type owl:NamedIndividual ,
                                                   figure8secondattempt:TestingInput ;
                                          figure8secondattempt:hasParameter figure8secondattempt:Dataset_VirtualTestingActivity ;
-                                         figure8secondattempt:inputInto figure8secondattempt:DigitalEntity .
+                                         figure8secondattempt:inputInto figure8secondattempt:DigitalEntityExample .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_DigitalEntityModel
@@ -3213,6 +3213,9 @@ figure8secondattempt:Input_DigitalEntityShadow rdf:type owl:NamedIndividual ,
 figure8secondattempt:Input_Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
                                                             figure8secondattempt:Input ;
                                                    figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow ;
+                                                   figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ,
+                                                                                     figure8secondattempt:CriticalValue_PhysicalTestResult ,
+                                                                                     figure8secondattempt:CriticalValue_VirtualTestResult ;
                                                    figure8secondattempt:inputInto figure8secondattempt:Iteration_DigitalEntity .
 
 
@@ -3220,6 +3223,9 @@ figure8secondattempt:Input_Iteration_DigitalEntity rdf:type owl:NamedIndividual 
 figure8secondattempt:Input_Iteration_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                                                   figure8secondattempt:TestingInput ;
                                                          figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityModel ;
+                                                         figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ,
+                                                                                           figure8secondattempt:CriticalValue_PhysicalTestResult ,
+                                                                                           figure8secondattempt:CriticalValue_VirtualTestResult ;
                                                          figure8secondattempt:inputInto figure8secondattempt:Iteration_DigitalEntityShadow .
 
 
@@ -3256,7 +3262,7 @@ figure8secondattempt:Input_SimulationActivity rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_TestEnvironment
 figure8secondattempt:Input_TestEnvironment rdf:type owl:NamedIndividual ,
                                                     figure8secondattempt:TestingInput ;
-                                           figure8secondattempt:hasArtefact figure8secondattempt:PhysicalEntity ;
+                                           figure8secondattempt:hasArtefact figure8secondattempt:PhysicalEntityExample ;
                                            figure8secondattempt:inputInto figure8secondattempt:TestEnvironment_PhysicalTestingActivity .
 
 
@@ -3486,7 +3492,7 @@ figure8secondattempt:Output_DigitalEntity rdf:type owl:NamedIndividual ,
                                                    figure8secondattempt:TestingOutput ;
                                           figure8secondattempt:hasParameter figure8secondattempt:Dataset_VirtualTestingActivity ;
                                           figure8secondattempt:leadsTo figure8secondattempt:Input_SimulationActivity ;
-                                          figure8secondattempt:outputFrom figure8secondattempt:DigitalEntity .
+                                          figure8secondattempt:outputFrom figure8secondattempt:DigitalEntityExample .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_DigitalEntityModel
@@ -3508,13 +3514,16 @@ figure8secondattempt:Output_DigitalEntityShadow rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_Iteration_DigitalEntity
 figure8secondattempt:Output_Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
                                                              figure8secondattempt:Output ;
-                                                    figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwin ;
+                                                    figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinExample ;
                                                     figure8secondattempt:outputFrom figure8secondattempt:Iteration_DigitalEntity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_Iteration_DigitalEntityModel
 figure8secondattempt:Output_Iteration_DigitalEntityModel rdf:type owl:NamedIndividual ;
                                                          figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityModel ;
+                                                         figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ,
+                                                                                           figure8secondattempt:CriticalValue_PhysicalTestResult ,
+                                                                                           figure8secondattempt:CriticalValue_VirtualTestResult ;
                                                          figure8secondattempt:leadsTo figure8secondattempt:Input_Iteration_DigitalEntityShadow ;
                                                          figure8secondattempt:outputFrom figure8secondattempt:Iteration_DigitalEntityModel .
 
@@ -3523,6 +3532,9 @@ figure8secondattempt:Output_Iteration_DigitalEntityModel rdf:type owl:NamedIndiv
 figure8secondattempt:Output_Iteration_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                                                    figure8secondattempt:Output ;
                                                           figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow ;
+                                                          figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ,
+                                                                                            figure8secondattempt:CriticalValue_PhysicalTestResult ,
+                                                                                            figure8secondattempt:CriticalValue_VirtualTestResult ;
                                                           figure8secondattempt:leadsTo figure8secondattempt:Input_Iteration_DigitalEntity ;
                                                           figure8secondattempt:outputFrom figure8secondattempt:Iteration_DigitalEntityShadow .
 
@@ -3678,20 +3690,20 @@ figure8secondattempt:PerformanceTestingSpan3 rdf:type owl:NamedIndividual ,
                                              figure8secondattempt:spansFrom figure8secondattempt:PerformanceTestingActivity3 .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalEntity
-figure8secondattempt:PhysicalEntity rdf:type owl:NamedIndividual ,
-                                             figure8secondattempt:PhysicalEntity ;
-                                    figure8secondattempt:isArtefactOf figure8secondattempt:PhysicalTestingActivity ;
-                                    figure8secondattempt:isPhysicalEntityOf figure8secondattempt:DigitalTwin ;
-                                    figure8secondattempt:twinnedDigitallyWith figure8secondattempt:DigitalEntity .
-
-
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalEntity1
 figure8secondattempt:PhysicalEntity1 rdf:type owl:NamedIndividual ,
-                                              figure8secondattempt:PhysicalEntity ;
+                                              figure8secondattempt:PhysicalEntityExample ;
                                      figure8secondattempt:isArtefactOf figure8secondattempt:Input1 ;
                                      figure8secondattempt:isPhysicalEntityOf figure8secondattempt:DigitalTwin1 ;
                                      figure8secondattempt:twinnedDigitallyWith figure8secondattempt:DigitalEntity1 .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalEntityExample
+figure8secondattempt:PhysicalEntityExample rdf:type owl:NamedIndividual ,
+                                                    figure8secondattempt:PhysicalEntityExample ;
+                                           figure8secondattempt:isArtefactOf figure8secondattempt:PhysicalTestingActivity ;
+                                           figure8secondattempt:isPhysicalEntityOf figure8secondattempt:DigitalTwinExample ;
+                                           figure8secondattempt:twinnedDigitallyWith figure8secondattempt:DigitalEntityExample .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalTestData
@@ -3716,7 +3728,7 @@ figure8secondattempt:PhysicalTestResults_Fig6 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#PhysicalTestingActivity
 figure8secondattempt:PhysicalTestingActivity rdf:type owl:NamedIndividual ,
                                                       figure8secondattempt:PhysicalTesting ;
-                                             figure8secondattempt:hasArtefact figure8secondattempt:PhysicalEntity ;
+                                             figure8secondattempt:hasArtefact figure8secondattempt:PhysicalEntityExample ;
                                              figure8secondattempt:hasEnvironment figure8secondattempt:TestEnvironment_PhysicalTestingActivity ;
                                              figure8secondattempt:hasInput figure8secondattempt:Input_PhysicalTestingActivity_PostTest ,
                                                                            figure8secondattempt:Input_PhysicalTestingActivity_PreTest .
@@ -4174,7 +4186,7 @@ figure8secondattempt:UsageData_PreviousProduct rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#VirtualTestingActivity_DigitalEntity
 figure8secondattempt:VirtualTestingActivity_DigitalEntity rdf:type owl:NamedIndividual ,
                                                                    figure8secondattempt:VirtualTesting ;
-                                                          figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntity ;
+                                                          figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityExample ;
                                                           figure8secondattempt:hasDevelopmentActivity figure8secondattempt:SimulationActivity_DigitalEntity ;
                                                           figure8secondattempt:hasInput figure8secondattempt:Input_VirtualTestingActivity_PostTest .
 
@@ -4233,13 +4245,13 @@ figure8secondattempt:WeightParameter rdf:type owl:NamedIndividual ,
 #    Annotations
 #################################################################
 
-figure8secondattempt:DigitalEntity rdfs:comment "The digital part of the Twin that is being developed throughout the development process; which after some iterations of physical and virtual testing has evolved from a VirtualModel to a Shadow to become a fully developed digital entity."@en .
+figure8secondattempt:DigitalEntityExample rdfs:comment "The digital part of the Twin that is being developed throughout the development process; which after some iterations of physical and virtual testing has evolved from a VirtualModel to a Shadow to become a fully developed digital entity."@en .
 
 
-figure8secondattempt:DigitalTwin rdfs:comment "A DigitalTwin is that which is being developed at every stage, and during every activity, of the development process."@en .
+figure8secondattempt:DigitalTwinExample rdfs:comment "A DigitalTwin is that which is being developed at every stage, and during every activity, of the development process."@en .
 
 
-figure8secondattempt:PhysicalEntity rdfs:comment "The physical part of the product being developed throughout the development process."@en .
+figure8secondattempt:PhysicalEntityExample rdfs:comment "The physical part of the product being developed throughout the development process."@en .
 
 
 #################################################################
