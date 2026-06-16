@@ -674,6 +674,9 @@
         <NamedIndividual IRI="#DetailDesign_LoopAStepB"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DigitalEntity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#DigitalEntity1"/>
     </Declaration>
     <Declaration>
@@ -681,9 +684,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DigitalEntityShadow_Fig6"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DigitalTwin1"/>
@@ -2964,6 +2964,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DigitalEntity"/>
+        <NamedIndividual IRI="#DigitalEntity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DigitalEntity"/>
         <NamedIndividual IRI="#DigitalEntity1"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2973,10 +2977,6 @@
     <ClassAssertion>
         <Class IRI="#Shadow"/>
         <NamedIndividual IRI="#DigitalEntityShadow_Fig6"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#DigitalEntity"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DigitalTwin"/>
@@ -4977,6 +4977,31 @@
         <NamedIndividual IRI="#DesignActivity3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#DigitalEntity"/>
+        <NamedIndividual IRI="#Input_Fig6_3_DigitalEntityModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#DigitalEntity"/>
+        <NamedIndividual IRI="#Output_Fig6_3_DigitalEntity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#DigitalEntity"/>
+        <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDigitalEntityOf"/>
+        <NamedIndividual IRI="#DigitalEntity"/>
+        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#twinnedPhysicallyWith"/>
+        <NamedIndividual IRI="#DigitalEntity"/>
+        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#DigitalEntity1"/>
         <NamedIndividual IRI="#Input1"/>
@@ -5015,31 +5040,6 @@
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#DigitalEntityShadow_Fig6"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityShadow"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
-        <NamedIndividual IRI="#Input_Fig6_3_DigitalEntityModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasOutput"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
-        <NamedIndividual IRI="#Output_Fig6_3_DigitalEntity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isArtefactOf"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
-        <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isDigitalEntityOf"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
-        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#twinnedPhysicallyWith"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
-        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
@@ -5209,7 +5209,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_Fig6_3_DigitalEntity"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5809,7 +5809,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Fig6_3_DigitalEntity"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -6269,7 +6269,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
         <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -7019,7 +7019,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntity"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -8109,7 +8109,7 @@ A DevelopmentActivity can be composed of multiple smaller DevelopmentActivities.
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DigitalEntity</IRI>
-        <Literal xml:lang="en">The digital part of the Twin that is being developed throughout the development process.</Literal>
+        <Literal xml:lang="en">The digital part of the Twin that is being developed throughout the development process; which after some iterations of physical and virtual testing has met the conditions to become a fully developed digital entity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
