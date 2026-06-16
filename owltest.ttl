@@ -3068,7 +3068,6 @@ figure8secondattempt:DigitalEntityModel_Fig6 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalEntityShadow_Fig6
 figure8secondattempt:DigitalEntityShadow_Fig6 rdf:type owl:NamedIndividual ,
                                                        figure8secondattempt:Shadow ;
-                                              figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
                                               figure8secondattempt:isArtefactOf figure8secondattempt:VirtualTestingActivity_DigitalEntityShadow .
 
 
