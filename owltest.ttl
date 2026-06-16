@@ -3204,15 +3204,6 @@ figure8secondattempt:Input_Fig6_3_SimulationActivity rdf:type owl:NamedIndividua
                                                                                     figure8secondattempt:SimulationActivity_Fig6_DigitalEntityShadow .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Fig6_3_VirtualTestingActivity
-figure8secondattempt:Input_Fig6_3_VirtualTestingActivity rdf:type owl:NamedIndividual ,
-                                                                  figure8secondattempt:TestingInput ;
-                                                         figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ;
-                                                         figure8secondattempt:inputInto figure8secondattempt:VirtualTestingActivity_DigitalEntity ,
-                                                                                        figure8secondattempt:VirtualTestingActivity_DigitalEntityModel ,
-                                                                                        figure8secondattempt:VirtualTestingActivity_DigitalEntityShadow .
-
-
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Fig6_PhysicalTestingActivity
 figure8secondattempt:Input_Fig6_PhysicalTestingActivity rdf:type owl:NamedIndividual ,
                                                                  figure8secondattempt:TestingInput ;
@@ -3254,6 +3245,15 @@ figure8secondattempt:Input_VirtualTestResults_ModellingActivity rdf:type owl:Nam
                                                                          figure8secondattempt:TestingInput ;
                                                                 figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_VirtualTestResult ;
                                                                 figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_3PartProcess .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_VirtualTestingActivity
+figure8secondattempt:Input_VirtualTestingActivity rdf:type owl:NamedIndividual ,
+                                                           figure8secondattempt:TestingInput ;
+                                                  figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ;
+                                                  figure8secondattempt:inputInto figure8secondattempt:VirtualTestingActivity_DigitalEntity ,
+                                                                                 figure8secondattempt:VirtualTestingActivity_DigitalEntityModel ,
+                                                                                 figure8secondattempt:VirtualTestingActivity_DigitalEntityShadow .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#IterationGroup1
@@ -3528,8 +3528,8 @@ figure8secondattempt:Output_Iteration_DigitalEntityShadow rdf:type owl:NamedIndi
 figure8secondattempt:Output_ModellingActivity rdf:type owl:NamedIndividual ,
                                                        figure8secondattempt:TestingOutput ;
                                               figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ;
-                                              figure8secondattempt:leadsTo figure8secondattempt:Input_Fig6_3_VirtualTestingActivity ,
-                                                                           figure8secondattempt:Input_Fig6_PhysicalTestingActivity ;
+                                              figure8secondattempt:leadsTo figure8secondattempt:Input_Fig6_PhysicalTestingActivity ,
+                                                                           figure8secondattempt:Input_VirtualTestingActivity ;
                                               figure8secondattempt:outputFrom figure8secondattempt:ModellingActivity_3PartProcess .
 
 
@@ -4139,7 +4139,7 @@ figure8secondattempt:VirtualTestingActivity_DigitalEntity rdf:type owl:NamedIndi
                                                                    figure8secondattempt:VirtualTesting ;
                                                           figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntity ;
                                                           figure8secondattempt:hasDevelopmentActivity figure8secondattempt:SimulationActivity_Fig6_DigitalEntity ;
-                                                          figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_3_VirtualTestingActivity .
+                                                          figure8secondattempt:hasInput figure8secondattempt:Input_VirtualTestingActivity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#VirtualTestingActivity_DigitalEntityModel
@@ -4147,7 +4147,7 @@ figure8secondattempt:VirtualTestingActivity_DigitalEntityModel rdf:type owl:Name
                                                                         figure8secondattempt:VirtualTesting ;
                                                                figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityModel ;
                                                                figure8secondattempt:hasDevelopmentActivity figure8secondattempt:SimulationActivity_Fig6_DigitalEntityModel ;
-                                                               figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_3_VirtualTestingActivity .
+                                                               figure8secondattempt:hasInput figure8secondattempt:Input_VirtualTestingActivity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#VirtualTestingActivity_DigitalEntityShadow
@@ -4155,7 +4155,7 @@ figure8secondattempt:VirtualTestingActivity_DigitalEntityShadow rdf:type owl:Nam
                                                                          figure8secondattempt:VirtualTesting ;
                                                                 figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow ;
                                                                 figure8secondattempt:hasDevelopmentActivity figure8secondattempt:SimulationActivity_Fig6_DigitalEntityShadow ;
-                                                                figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_3_VirtualTestingActivity .
+                                                                figure8secondattempt:hasInput figure8secondattempt:Input_VirtualTestingActivity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#WarrantyData_PreviousProduct
