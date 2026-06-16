@@ -5017,11 +5017,6 @@
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#DigitalEntity_Fig6"/>
-        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#DigitalEntity_Fig6"/>
         <NamedIndividual IRI="#Input_Fig6_3_DigitalEntityModel"/>
