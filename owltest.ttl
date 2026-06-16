@@ -1954,7 +1954,8 @@ figure8secondattempt:ReleaseActivity rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Shadow
 figure8secondattempt:Shadow rdf:type owl:Class ;
-                            rdfs:subClassOf figure8secondattempt:Model .
+                            rdfs:subClassOf figure8secondattempt:Model ;
+                            rdfs:comment "A Shadow is more evolved (closer to meeting the required conditions after physical and virtual testing) than a model." .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Simulation
@@ -3065,10 +3066,11 @@ figure8secondattempt:DigitalEntityModel_Fig6 rdf:type owl:NamedIndividual ,
                                              figure8secondattempt:isArtefactOf figure8secondattempt:VirtualTestingActivity_DigitalEntityModel .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalEntityShadow_Fig6
-figure8secondattempt:DigitalEntityShadow_Fig6 rdf:type owl:NamedIndividual ,
-                                                       figure8secondattempt:Shadow ;
-                                              figure8secondattempt:isArtefactOf figure8secondattempt:VirtualTestingActivity_DigitalEntityShadow .
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalEntityShadow
+figure8secondattempt:DigitalEntityShadow rdf:type owl:NamedIndividual ,
+                                                  figure8secondattempt:Shadow ;
+                                         figure8secondattempt:isArtefactOf figure8secondattempt:VirtualTestingActivity_DigitalEntityShadow ;
+                                         rdfs:comment "The digital part of the Twin that is being developed throughout the development process; which after some iterations of physical and virtual testing has evolved from a model to a shadow." .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwin1
@@ -3186,7 +3188,7 @@ figure8secondattempt:Input_Fig6_3_DigitalEntityModel rdf:type owl:NamedIndividua
 figure8secondattempt:Input_Fig6_3_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                                                figure8secondattempt:TestingInput ;
                                                       figure8secondattempt:hasParameter figure8secondattempt:Dataset_Fig6_3 ;
-                                                      figure8secondattempt:inputInto figure8secondattempt:DigitalEntityShadow_Fig6 .
+                                                      figure8secondattempt:inputInto figure8secondattempt:DigitalEntityShadow .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Fig6_3_SimulationActivity
@@ -3223,7 +3225,7 @@ figure8secondattempt:Input_Fig6_TestEnvironment rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Iteration_DigitalEntity
 figure8secondattempt:Input_Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
                                                             figure8secondattempt:Input ;
-                                                   figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow_Fig6 ;
+                                                   figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow ;
                                                    figure8secondattempt:inputInto figure8secondattempt:Iteration_DigitalEntity .
 
 
@@ -3468,7 +3470,7 @@ figure8secondattempt:Output_Fig6_3_DigitalEntityShadow rdf:type owl:NamedIndivid
                                                                 figure8secondattempt:TestingOutput ;
                                                        figure8secondattempt:hasParameter figure8secondattempt:Dataset_Fig6_3 ;
                                                        figure8secondattempt:leadsTo figure8secondattempt:Input_Fig6_3_SimulationActivity ;
-                                                       figure8secondattempt:outputFrom figure8secondattempt:DigitalEntityShadow_Fig6 .
+                                                       figure8secondattempt:outputFrom figure8secondattempt:DigitalEntityShadow .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_Fig6_3_SimulationActivity_DigitalEntity
@@ -3520,7 +3522,7 @@ figure8secondattempt:Output_Iteration_DigitalEntityModel rdf:type owl:NamedIndiv
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_Iteration_DigitalEntityShadow
 figure8secondattempt:Output_Iteration_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                                                    figure8secondattempt:Output ;
-                                                          figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow_Fig6 ;
+                                                          figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow ;
                                                           figure8secondattempt:leadsTo figure8secondattempt:Input_Iteration_DigitalEntity ;
                                                           figure8secondattempt:outputFrom figure8secondattempt:Iteration_DigitalEntityShadow .
 
@@ -4158,7 +4160,7 @@ figure8secondattempt:VirtualTestingActivity_DigitalEntityModel rdf:type owl:Name
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#VirtualTestingActivity_DigitalEntityShadow
 figure8secondattempt:VirtualTestingActivity_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                                                          figure8secondattempt:VirtualTesting ;
-                                                                figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow_Fig6 ;
+                                                                figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow ;
                                                                 figure8secondattempt:hasDevelopmentActivity figure8secondattempt:SimulationActivity_Fig6_DigitalEntityShadow ;
                                                                 figure8secondattempt:hasInput figure8secondattempt:Input_Fig6_3_VirtualTestingActivity .
 

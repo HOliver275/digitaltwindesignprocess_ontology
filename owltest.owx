@@ -683,7 +683,7 @@
         <NamedIndividual IRI="#DigitalEntityModel_Fig6"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#DigitalEntityShadow_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DigitalTwin1"/>
@@ -2976,7 +2976,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Shadow"/>
-        <NamedIndividual IRI="#DigitalEntityShadow_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DigitalTwin"/>
@@ -5033,7 +5033,7 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
-        <NamedIndividual IRI="#DigitalEntityShadow_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityShadow"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -5224,7 +5224,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_Fig6_3_DigitalEntityShadow"/>
-        <NamedIndividual IRI="#DigitalEntityShadow_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5284,7 +5284,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Input_Iteration_DigitalEntity"/>
-        <NamedIndividual IRI="#DigitalEntityShadow_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
@@ -5834,7 +5834,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Fig6_3_DigitalEntityShadow"/>
-        <NamedIndividual IRI="#DigitalEntityShadow_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5924,7 +5924,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Output_Iteration_DigitalEntityShadow"/>
-        <NamedIndividual IRI="#DigitalEntityShadow_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
@@ -7044,7 +7044,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityShadow"/>
-        <NamedIndividual IRI="#DigitalEntityShadow_Fig6"/>
+        <NamedIndividual IRI="#DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -8108,6 +8108,11 @@ A DevelopmentActivity can be composed of multiple smaller DevelopmentActivities.
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DigitalEntityShadow</IRI>
+        <Literal>The digital part of the Twin that is being developed throughout the development process; which after some iterations of physical and virtual testing has evolved from a model to a shadow.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DigitalTwin</IRI>
         <Literal xml:lang="en">A DigitalTwin is that which is being developed at every stage, and during every activity, of the development process.</Literal>
     </AnnotationAssertion>
@@ -8323,6 +8328,11 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ReleaseActivity</IRI>
         <Literal xml:lang="en">A DevelopmentActivity, or composition of DevelopmentActivities, that relates mainly to the release of some deliverable.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shadow</IRI>
+        <Literal>A Shadow is more evolved (closer to meeting the required conditions after physical and virtual testing) than a model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
