@@ -734,9 +734,6 @@
         <NamedIndividual IRI="#Input_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Input_Iteration_DigitalEntity"/>
     </Declaration>
     <Declaration>
@@ -753,6 +750,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Input_SimulationActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Input_TestEnvironment"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Input_VirtualTestResults_ModellingActivity"/>
@@ -893,7 +893,7 @@
         <NamedIndividual IRI="#PhysicalEntity1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestData"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhysicalTestResult"/>
@@ -902,7 +902,7 @@
         <NamedIndividual IRI="#PhysicalTestResults_Fig6"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ProcurementActivity1"/>
@@ -1025,7 +1025,7 @@
         <NamedIndividual IRI="#TestData_PreviousProduct"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
+        <NamedIndividual IRI="#TestEnvironment_PhysicalTestingActivity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TestingFocus1"/>
@@ -3052,10 +3052,6 @@
         <NamedIndividual IRI="#Input_DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#TestingInput"/>
-        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Input"/>
         <NamedIndividual IRI="#Input_Iteration_DigitalEntity"/>
     </ClassAssertion>
@@ -3078,6 +3074,10 @@
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#Input_SimulationActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#Input_TestEnvironment"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
@@ -3273,7 +3273,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Dataset"/>
-        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestData"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Datapoint"/>
@@ -3285,7 +3285,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#PhysicalTesting"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Procurement"/>
@@ -3461,7 +3461,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#PhysicalTestEnvironment"/>
-        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
+        <NamedIndividual IRI="#TestEnvironment_PhysicalTestingActivity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingFocus"/>
@@ -5244,16 +5244,6 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
-        <NamedIndividual IRI="#PhysicalEntity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#inputInto"/>
-        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
-        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Input_Iteration_DigitalEntity"/>
         <NamedIndividual IRI="#DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
@@ -5290,7 +5280,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_PhysicalTestingActivity_PostTest"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5300,7 +5290,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_PhysicalTestingActivity_PreTest"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5321,6 +5311,16 @@
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_SimulationActivity"/>
         <NamedIndividual IRI="#SimulationActivity_DigitalEntityShadow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#Input_TestEnvironment"/>
+        <NamedIndividual IRI="#PhysicalEntity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input_TestEnvironment"/>
+        <NamedIndividual IRI="#TestEnvironment_PhysicalTestingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5460,7 +5460,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#Iteration_DigitalEntity"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -5480,7 +5480,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#Iteration_DigitalEntityModel"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -5500,7 +5500,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#Iteration_DigitalEntityShadow"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -5970,7 +5970,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_PhysicalTestResults"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -6295,7 +6295,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#PhysicalEntity"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPhysicalEntityOf"/>
@@ -6324,17 +6324,22 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
         <NamedIndividual IRI="#PhysicalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasEnvironment"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
-        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
+        <NamedIndividual IRI="#TestEnvironment_PhysicalTestingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
+        <NamedIndividual IRI="#Input_PhysicalTestingActivity_PostTest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
         <NamedIndividual IRI="#Input_PhysicalTestingActivity_PreTest"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -7059,13 +7064,13 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
-        <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
+        <NamedIndividual IRI="#TestEnvironment_PhysicalTestingActivity"/>
+        <NamedIndividual IRI="#Input_TestEnvironment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
-        <NamedIndividual IRI="#TestEnvironment_Fig6"/>
-        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+        <NamedIndividual IRI="#TestEnvironment_PhysicalTestingActivity"/>
+        <NamedIndividual IRI="#PhysicalTestData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -7259,7 +7264,7 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
-        <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
+        <NamedIndividual IRI="#PhysicalTestData"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/fig6/physicaltestdata/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
