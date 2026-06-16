@@ -3501,15 +3501,6 @@ figure8secondattempt:Output_Fig6_3_SimulationActivity_DigitalEntityShadow rdf:ty
                                                                           figure8secondattempt:outputFrom figure8secondattempt:SimulationActivity_Fig6_DigitalEntityShadow .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_Fig6_4_ModellingActivity
-figure8secondattempt:Output_Fig6_4_ModellingActivity rdf:type owl:NamedIndividual ,
-                                                              figure8secondattempt:TestingOutput ;
-                                                     figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ;
-                                                     figure8secondattempt:leadsTo figure8secondattempt:Input_Fig6_3_VirtualTestingActivity ,
-                                                                                  figure8secondattempt:Input_Fig6_PhysicalTestingActivity ;
-                                                     figure8secondattempt:outputFrom figure8secondattempt:ModellingActivity_3PartProcess .
-
-
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_Iteration_DigitalEntity
 figure8secondattempt:Output_Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
                                                              figure8secondattempt:Output ;
@@ -3530,6 +3521,15 @@ figure8secondattempt:Output_Iteration_DigitalEntityShadow rdf:type owl:NamedIndi
                                                           figure8secondattempt:hasArtefact figure8secondattempt:DigitalEntityShadow ;
                                                           figure8secondattempt:leadsTo figure8secondattempt:Input_Iteration_DigitalEntity ;
                                                           figure8secondattempt:outputFrom figure8secondattempt:Iteration_DigitalEntityShadow .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_ModellingActivity
+figure8secondattempt:Output_ModellingActivity rdf:type owl:NamedIndividual ,
+                                                       figure8secondattempt:TestingOutput ;
+                                              figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ;
+                                              figure8secondattempt:leadsTo figure8secondattempt:Input_Fig6_3_VirtualTestingActivity ,
+                                                                           figure8secondattempt:Input_Fig6_PhysicalTestingActivity ;
+                                              figure8secondattempt:outputFrom figure8secondattempt:ModellingActivity_3PartProcess .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_PhysicalTestResults
