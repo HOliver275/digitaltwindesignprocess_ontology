@@ -923,13 +923,13 @@
         <NamedIndividual IRI="#PrototypeInformation_PreviousProduct"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntity"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntity"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityModel"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityModel"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Simulation_NewDesign"/>
@@ -3313,15 +3313,15 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#SimulationActivity"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntity"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#SimulationActivity"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityModel"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityModel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#SimulationActivity"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Simulation"/>
@@ -5250,17 +5250,17 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntity"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityModel"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -5885,7 +5885,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Fig6_3_SimulationActivity_DigitalEntity"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntity"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5900,7 +5900,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Fig6_3_SimulationActivity_DigitalEntityModel"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityModel"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5915,7 +5915,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_Fig6_3_SimulationActivity_DigitalEntityShadow"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -6374,32 +6374,32 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntity"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntity"/>
         <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOutput"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntity"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntity"/>
         <NamedIndividual IRI="#Output_Fig6_3_SimulationActivity_DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityModel"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityModel"/>
         <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOutput"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityModel"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityModel"/>
         <NamedIndividual IRI="#Output_Fig6_3_SimulationActivity_DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityShadow"/>
         <NamedIndividual IRI="#Input_Fig6_3_SimulationActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOutput"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityShadow"/>
         <NamedIndividual IRI="#Output_Fig6_3_SimulationActivity_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -7075,7 +7075,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntity"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntity"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
@@ -7090,7 +7090,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityModel"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityModel"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
@@ -7110,7 +7110,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityShadow"/>
-        <NamedIndividual IRI="#SimulationActivity_Fig6_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#SimulationActivity_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
