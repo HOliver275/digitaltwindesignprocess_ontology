@@ -3207,6 +3207,7 @@ figure8secondattempt:Input_Fig6_3_SimulationActivity rdf:type owl:NamedIndividua
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Fig6_3_VirtualTestingActivity
 figure8secondattempt:Input_Fig6_3_VirtualTestingActivity rdf:type owl:NamedIndividual ,
                                                                   figure8secondattempt:TestingInput ;
+                                                         figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ;
                                                          figure8secondattempt:inputInto figure8secondattempt:VirtualTestingActivity_DigitalEntity ,
                                                                                         figure8secondattempt:VirtualTestingActivity_DigitalEntityModel ,
                                                                                         figure8secondattempt:VirtualTestingActivity_DigitalEntityShadow .
