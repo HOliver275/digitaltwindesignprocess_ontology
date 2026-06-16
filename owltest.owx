@@ -686,13 +686,13 @@
         <NamedIndividual IRI="#DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DigitalTwin"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#DigitalTwin1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Document1"/>
@@ -875,10 +875,10 @@
         <NamedIndividual IRI="#PerformanceTestingSpan3"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhysicalEntity1"/>
+        <NamedIndividual IRI="#PhysicalEntity"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalEntity1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhysicalTestData_Fig6"/>
@@ -2980,15 +2980,15 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DigitalTwin"/>
+        <NamedIndividual IRI="#DigitalTwin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DigitalTwin"/>
         <NamedIndividual IRI="#DigitalTwin1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#VirtualModel"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#DigitalTwin"/>
-        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Document"/>
@@ -3240,11 +3240,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#PhysicalEntity"/>
-        <NamedIndividual IRI="#PhysicalEntity1"/>
+        <NamedIndividual IRI="#PhysicalEntity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#PhysicalEntity"/>
-        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalEntity1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Dataset"/>
@@ -4994,12 +4994,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isDigitalEntityOf"/>
         <NamedIndividual IRI="#DigitalEntity"/>
-        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
+        <NamedIndividual IRI="#DigitalTwin"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#twinnedPhysicallyWith"/>
         <NamedIndividual IRI="#DigitalEntity"/>
-        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
@@ -5032,6 +5032,11 @@
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#DigitalTwin"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>
@@ -5055,11 +5060,6 @@
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
         <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasArtefact"/>
-        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
-        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#closesStage"/>
@@ -5269,7 +5269,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Input_Fig6_TestEnvironment"/>
-        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
@@ -5894,7 +5894,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Output_Iteration_DigitalEntity"/>
-        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
+        <NamedIndividual IRI="#DigitalTwin"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#outputFrom"/>
@@ -6228,6 +6228,21 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#PhysicalEntity"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPhysicalEntityOf"/>
+        <NamedIndividual IRI="#PhysicalEntity"/>
+        <NamedIndividual IRI="#DigitalTwin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#twinnedDigitallyWith"/>
+        <NamedIndividual IRI="#PhysicalEntity"/>
+        <NamedIndividual IRI="#DigitalEntity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#PhysicalEntity1"/>
         <NamedIndividual IRI="#Input1"/>
     </ObjectPropertyAssertion>
@@ -6242,24 +6257,9 @@
         <NamedIndividual IRI="#DigitalEntity1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isArtefactOf"/>
-        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
-        <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isPhysicalEntityOf"/>
-        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
-        <NamedIndividual IRI="#DigitalTwin_Fig6"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#twinnedDigitallyWith"/>
-        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
-        <NamedIndividual IRI="#DigitalEntity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#PhysicalTestingActivity_Fig6"/>
-        <NamedIndividual IRI="#PhysicalEntity_Fig6"/>
+        <NamedIndividual IRI="#PhysicalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasEnvironment"/>
