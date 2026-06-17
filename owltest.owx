@@ -59,10 +59,10 @@
         <Class IRI="#DevelopmentEnvironment"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DigitalEntityExample"/>
+        <Class IRI="#DigitalEntity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DigitalTwinExample"/>
+        <Class IRI="#DigitalTwin"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Document"/>
@@ -146,7 +146,7 @@
         <Class IRI="#PhysicalDevelopmentEnvironment"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PhysicalEntityExample"/>
+        <Class IRI="#PhysicalEntity"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PhysicalModel"/>
@@ -1367,16 +1367,16 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#DigitalEntityExample"/>
+        <Class IRI="#DigitalEntity"/>
         <ObjectIntersectionOf>
-            <Class IRI="#DigitalEntityExample"/>
+            <Class IRI="#DigitalEntity"/>
             <ObjectExactCardinality cardinality="1">
                 <ObjectProperty IRI="#isDigitalEntityOf"/>
-                <Class IRI="#DigitalTwinExample"/>
+                <Class IRI="#DigitalTwin"/>
             </ObjectExactCardinality>
             <ObjectExactCardinality cardinality="1">
                 <ObjectProperty IRI="#twinnedPhysicallyWith"/>
-                <Class IRI="#PhysicalEntityExample"/>
+                <Class IRI="#PhysicalEntity"/>
             </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -1876,16 +1876,16 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#PhysicalEntityExample"/>
+        <Class IRI="#PhysicalEntity"/>
         <ObjectIntersectionOf>
-            <Class IRI="#PhysicalEntityExample"/>
+            <Class IRI="#PhysicalEntity"/>
             <ObjectExactCardinality cardinality="1">
                 <ObjectProperty IRI="#isPhysicalEntityOf"/>
-                <Class IRI="#DigitalTwinExample"/>
+                <Class IRI="#DigitalTwin"/>
             </ObjectExactCardinality>
             <ObjectExactCardinality cardinality="1">
                 <ObjectProperty IRI="#twinnedDigitallyWith"/>
-                <Class IRI="#DigitalEntityExample"/>
+                <Class IRI="#DigitalEntity"/>
             </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -1905,7 +1905,7 @@
             <Class IRI="#Product"/>
             <ObjectExactCardinality cardinality="1">
                 <ObjectProperty IRI="#hasArtefact"/>
-                <Class IRI="#DigitalTwinExample"/>
+                <Class IRI="#DigitalTwin"/>
             </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -2222,11 +2222,11 @@
         <Class IRI="#Environment"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DigitalEntityExample"/>
-        <Class IRI="#DigitalTwinExample"/>
+        <Class IRI="#DigitalEntity"/>
+        <Class IRI="#DigitalTwin"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DigitalTwinExample"/>
+        <Class IRI="#DigitalTwin"/>
         <Class IRI="#Artefact"/>
     </SubClassOf>
     <SubClassOf>
@@ -2318,8 +2318,8 @@
         <Class IRI="#DevelopmentEnvironment"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PhysicalEntityExample"/>
-        <Class IRI="#DigitalTwinExample"/>
+        <Class IRI="#PhysicalEntity"/>
+        <Class IRI="#DigitalTwin"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PhysicalModel"/>
@@ -2594,8 +2594,8 @@
         <Class IRI="#TestEnvironment"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#DigitalEntityExample"/>
-        <Class IRI="#PhysicalEntityExample"/>
+        <Class IRI="#DigitalEntity"/>
+        <Class IRI="#PhysicalEntity"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Environment"/>
@@ -2978,11 +2978,11 @@
         <NamedIndividual IRI="#DetailDesign_LoopAStepA"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#DigitalEntityExample"/>
+        <Class IRI="#DigitalEntity"/>
         <NamedIndividual IRI="#DigitalEntity1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#DigitalEntityExample"/>
+        <Class IRI="#DigitalEntity"/>
         <NamedIndividual IRI="#DigitalEntityExample"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2994,11 +2994,11 @@
         <NamedIndividual IRI="#DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#DigitalTwinExample"/>
+        <Class IRI="#DigitalTwin"/>
         <NamedIndividual IRI="#DigitalTwin1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#DigitalTwinExample"/>
+        <Class IRI="#DigitalTwin"/>
         <NamedIndividual IRI="#DigitalTwinExample"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3270,11 +3270,11 @@
         <NamedIndividual IRI="#PerformanceTestingSpan3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#PhysicalEntityExample"/>
+        <Class IRI="#PhysicalEntity"/>
         <NamedIndividual IRI="#PhysicalEntity1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#PhysicalEntityExample"/>
+        <Class IRI="#PhysicalEntity"/>
         <NamedIndividual IRI="#PhysicalEntityExample"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -6013,6 +6013,11 @@
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#Output_ModellingActivity_PostTest"/>
         <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comesBefore"/>
+        <NamedIndividual IRI="#Output_ModellingActivity_PreTest"/>
+        <NamedIndividual IRI="#Output_ModellingActivity_PostTest"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -7633,7 +7638,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDigitalEntity"/>
-        <Class IRI="#DigitalTwinExample"/>
+        <Class IRI="#DigitalTwin"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasExpectedValue"/>
@@ -7683,7 +7688,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPhysicalEntity"/>
-        <Class IRI="#DigitalTwinExample"/>
+        <Class IRI="#DigitalTwin"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasProduct"/>
@@ -7714,7 +7719,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isDigitalEntityOf"/>
-        <Class IRI="#DigitalEntityExample"/>
+        <Class IRI="#DigitalEntity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isEndOf"/>
@@ -7763,7 +7768,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isPhysicalEntityOf"/>
-        <Class IRI="#PhysicalEntityExample"/>
+        <Class IRI="#PhysicalEntity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isProductOf"/>
@@ -7819,11 +7824,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
-        <Class IRI="#PhysicalEntityExample"/>
+        <Class IRI="#PhysicalEntity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#twinnedPhysicallyWith"/>
-        <Class IRI="#DigitalEntityExample"/>
+        <Class IRI="#DigitalEntity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#closedByGateway"/>
@@ -7877,7 +7882,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDigitalEntity"/>
-        <Class IRI="#DigitalEntityExample"/>
+        <Class IRI="#DigitalEntity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEnvironment"/>
@@ -7913,7 +7918,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPhysicalEntity"/>
-        <Class IRI="#PhysicalEntityExample"/>
+        <Class IRI="#PhysicalEntity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasProduct"/>
@@ -7966,7 +7971,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isDigitalEntityOf"/>
-        <Class IRI="#DigitalTwinExample"/>
+        <Class IRI="#DigitalTwin"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isEndOf"/>
@@ -8004,7 +8009,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isModelOf"/>
-        <Class IRI="#DigitalEntityExample"/>
+        <Class IRI="#DigitalEntity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isParameterOf"/>
@@ -8020,7 +8025,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isPhysicalEntityOf"/>
-        <Class IRI="#DigitalTwinExample"/>
+        <Class IRI="#DigitalTwin"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isProductOf"/>
@@ -8096,11 +8101,11 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
-        <Class IRI="#DigitalEntityExample"/>
+        <Class IRI="#DigitalEntity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#twinnedPhysicallyWith"/>
-        <Class IRI="#PhysicalEntityExample"/>
+        <Class IRI="#PhysicalEntity"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#measuredValuePhysical"/>
@@ -8282,7 +8287,7 @@ A DevelopmentActivity can be composed of multiple smaller DevelopmentActivities.
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#DigitalEntityExample</IRI>
+        <IRI>#DigitalEntity</IRI>
         <Literal xml:lang="en">The digital part of the Twin that is being developed throughout the development process; which after some iterations of physical and virtual testing has evolved from a VirtualModel to a Shadow to become a fully developed digital entity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -8297,7 +8302,7 @@ A DevelopmentActivity can be composed of multiple smaller DevelopmentActivities.
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#DigitalTwinExample</IRI>
+        <IRI>#DigitalTwin</IRI>
         <Literal xml:lang="en">A DigitalTwin is that which is being developed at every stage, and during every activity, of the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -8475,7 +8480,7 @@ An item of information, such as a Datapoint, may also form part of an Output. Fo
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#PhysicalEntityExample</IRI>
+        <IRI>#PhysicalEntity</IRI>
         <Literal xml:lang="en">The physical part of the product being developed throughout the development process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
