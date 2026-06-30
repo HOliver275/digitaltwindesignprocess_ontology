@@ -41,6 +41,13 @@ figure8secondattempt:comesBefore rdf:type owl:ObjectProperty ;
                                  rdfs:comment "Anything that must precede some other thing or things at some point in the development process."@en .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#compareTo
+figure8secondattempt:compareTo rdf:type owl:ObjectProperty ,
+                                        owl:SymmetricProperty ;
+                               rdfs:domain figure8secondattempt:Parameter ;
+                               rdfs:range figure8secondattempt:Parameter .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#continuityFrom
 figure8secondattempt:continuityFrom rdf:type owl:ObjectProperty ;
                                     rdfs:domain figure8secondattempt:Continuity ;
@@ -194,13 +201,6 @@ figure8secondattempt:hasInput rdf:type owl:ObjectProperty ;
                                           ] ;
                               rdfs:range figure8secondattempt:Input ;
                               rdfs:comment "Input into some DevelopmentActivity or TemporalConstruct."@en .
-
-
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasMirror
-figure8secondattempt:hasMirror rdf:type owl:ObjectProperty ,
-                                        owl:SymmetricProperty ;
-                               rdfs:domain figure8secondattempt:Parameter ;
-                               rdfs:range figure8secondattempt:Parameter .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasModel
@@ -2694,8 +2694,8 @@ figure8secondattempt:CriticalValue_Expected rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#CriticalValue_PhysicalTestResult
 figure8secondattempt:CriticalValue_PhysicalTestResult rdf:type owl:NamedIndividual ,
                                                                figure8secondattempt:Datapoint ;
+                                                      figure8secondattempt:compareTo figure8secondattempt:CriticalValue_VirtualTestResult ;
                                                       figure8secondattempt:hasExpectedValue figure8secondattempt:CriticalValue_Expected ;
-                                                      figure8secondattempt:hasMirror figure8secondattempt:CriticalValue_VirtualTestResult ;
                                                       figure8secondattempt:createdOn "2026-05-01T20:58:00Z"^^xsd:dateTimeStamp ;
                                                       figure8secondattempt:expectedValue 20.2 ;
                                                       figure8secondattempt:hasUnit "C" ;
@@ -3261,10 +3261,17 @@ figure8secondattempt:Input_PhysicalTestResults_ModellingActivity rdf:type owl:Na
                                                                  figure8secondattempt:inputInto figure8secondattempt:ModellingActivity_3PartProcess .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_PhysicalTestingActivity_DigitalEntity
+figure8secondattempt:Input_PhysicalTestingActivity_DigitalEntity rdf:type owl:NamedIndividual ;
+                                                                 figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ,
+                                                                                                   figure8secondattempt:CriticalValue_VirtualTestResult ;
+                                                                 figure8secondattempt:inputInto figure8secondattempt:PhysicalTestingActivity .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_PhysicalTestingActivity_PostTest
 figure8secondattempt:Input_PhysicalTestingActivity_PostTest rdf:type owl:NamedIndividual ,
                                                                      figure8secondattempt:TestingInput ;
-                                                            figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_PhysicalTestResult ;
+                                                            figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ;
                                                             figure8secondattempt:inputInto figure8secondattempt:PhysicalTestingActivity .
 
 
@@ -3301,7 +3308,7 @@ figure8secondattempt:Input_VirtualTestResults_ModellingActivity rdf:type owl:Nam
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_VirtualTestingActivity_PostTest
 figure8secondattempt:Input_VirtualTestingActivity_PostTest rdf:type owl:NamedIndividual ,
                                                                     figure8secondattempt:TestingInput ;
-                                                           figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_VirtualTestResult ;
+                                                           figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_PhysicalTestResult ;
                                                            figure8secondattempt:inputInto figure8secondattempt:VirtualTestingActivity_DigitalEntity ,
                                                                                           figure8secondattempt:VirtualTestingActivity_DigitalEntityModel ,
                                                                                           figure8secondattempt:VirtualTestingActivity_DigitalEntityShadow .
@@ -3567,9 +3574,11 @@ figure8secondattempt:Output_Iteration_DigitalEntityShadow rdf:type owl:NamedIndi
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Output_ModellingActivity_PostTest
 figure8secondattempt:Output_ModellingActivity_PostTest rdf:type owl:NamedIndividual ,
                                                                 figure8secondattempt:TestingOutput ;
-                                                       figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_PhysicalTestResult ,
+                                                       figure8secondattempt:hasParameter figure8secondattempt:CriticalValue_Expected ,
+                                                                                         figure8secondattempt:CriticalValue_PhysicalTestResult ,
                                                                                          figure8secondattempt:CriticalValue_VirtualTestResult ;
-                                                       figure8secondattempt:leadsTo figure8secondattempt:Input_PhysicalTestingActivity_PostTest ,
+                                                       figure8secondattempt:leadsTo figure8secondattempt:Input_PhysicalTestingActivity_DigitalEntity ,
+                                                                                    figure8secondattempt:Input_PhysicalTestingActivity_PostTest ,
                                                                                     figure8secondattempt:Input_VirtualTestingActivity_PostTest ;
                                                        figure8secondattempt:outputFrom figure8secondattempt:ModellingActivity_3PartProcess .
 

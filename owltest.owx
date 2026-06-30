@@ -275,6 +275,9 @@
         <ObjectProperty IRI="#comesBefore"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#compareTo"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#continuityFrom"/>
     </Declaration>
     <Declaration>
@@ -315,9 +318,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasInput"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasMirror"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasModel"/>
@@ -750,6 +750,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Input_PhysicalTestResults_ModellingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Input_PhysicalTestingActivity_DigitalEntity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Input_PhysicalTestingActivity_PostTest"/>
@@ -4155,14 +4158,14 @@
         <NamedIndividual IRI="#DesignActivity1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#compareTo"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+        <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasExpectedValue"/>
         <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
         <NamedIndividual IRI="#CriticalValue_Expected"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMirror"/>
-        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
-        <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasExpectedValue"/>
@@ -5321,8 +5324,23 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_PhysicalTestingActivity_DigitalEntity"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Input_PhysicalTestingActivity_DigitalEntity"/>
+        <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input_PhysicalTestingActivity_DigitalEntity"/>
+        <NamedIndividual IRI="#PhysicalTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Input_PhysicalTestingActivity_PostTest"/>
-        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
@@ -5382,7 +5400,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Input_VirtualTestingActivity_PostTest"/>
-        <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
+        <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
@@ -5992,12 +6010,22 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Output_ModellingActivity_PostTest"/>
+        <NamedIndividual IRI="#CriticalValue_Expected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Output_ModellingActivity_PostTest"/>
         <NamedIndividual IRI="#CriticalValue_PhysicalTestResult"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#Output_ModellingActivity_PostTest"/>
         <NamedIndividual IRI="#CriticalValue_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#Output_ModellingActivity_PostTest"/>
+        <NamedIndividual IRI="#Input_PhysicalTestingActivity_DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
@@ -7563,7 +7591,7 @@
         <ObjectProperty IRI="#twinnedPhysicallyWith"/>
     </FunctionalObjectProperty>
     <SymmetricObjectProperty>
-        <ObjectProperty IRI="#hasMirror"/>
+        <ObjectProperty IRI="#compareTo"/>
     </SymmetricObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#comesAfter"/>
@@ -7578,6 +7606,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#closesStage"/>
         <Class IRI="#Gateway"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#compareTo"/>
+        <Class IRI="#Parameter"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#continuityFrom"/>
@@ -7660,10 +7692,6 @@
             <Class IRI="#Environment"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasMirror"/>
-        <Class IRI="#Parameter"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasOutput"/>
@@ -7839,6 +7867,10 @@
         <Class IRI="#ProductDevelopmentStage"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#compareTo"/>
+        <Class IRI="#Parameter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#continuityFrom"/>
         <Class IRI="#TemporalPartition"/>
     </ObjectPropertyRange>
@@ -7899,10 +7931,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasInput"/>
         <Class IRI="#Input"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasMirror"/>
-        <Class IRI="#Parameter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasModel"/>
