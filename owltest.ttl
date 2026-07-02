@@ -1138,6 +1138,20 @@ figure8secondattempt:DigitalEntity rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwin
 figure8secondattempt:DigitalTwin rdf:type owl:Class ;
+                                 owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:Artefact
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty figure8secondattempt:hasDigitalEntity ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onClass figure8secondattempt:DigitalEntity
+                                                                            ]
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty figure8secondattempt:hasPhysicalEntity ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onClass figure8secondattempt:PhysicalEntity
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ;
                                  rdfs:subClassOf figure8secondattempt:Artefact ;
                                  rdfs:comment "A DigitalTwin is that which is being developed at every stage, and during every activity, of the development process."@en .
 

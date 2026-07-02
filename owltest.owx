@@ -1384,6 +1384,20 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#DigitalTwin"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Artefact"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDigitalEntity"/>
+                <Class IRI="#DigitalEntity"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasPhysicalEntity"/>
+                <Class IRI="#PhysicalEntity"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Document"/>
         <ObjectIntersectionOf>
             <Class IRI="#Document"/>
