@@ -1101,18 +1101,18 @@
         <ObjectIntersectionOf>
             <Class IRI="#Artefact"/>
             <ObjectUnionOf>
-                <ObjectSomeValuesFrom>
+                <ObjectAllValuesFrom>
                     <ObjectProperty IRI="#hasArtefact"/>
                     <Class IRI="#Artefact"/>
-                </ObjectSomeValuesFrom>
-                <ObjectSomeValuesFrom>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
                     <ObjectProperty IRI="#hasComponent"/>
                     <Class IRI="#Component"/>
-                </ObjectSomeValuesFrom>
-                <ObjectSomeValuesFrom>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
                     <ObjectProperty IRI="#hasParameter"/>
                     <Class IRI="#Parameter"/>
-                </ObjectSomeValuesFrom>
+                </ObjectAllValuesFrom>
             </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -1727,13 +1727,13 @@
         <ObjectIntersectionOf>
             <Class IRI="#Iteration"/>
             <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#duringTemporalPartition"/>
-                <Class IRI="#TemporalPartition"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hasDevelopmentActivity"/>
                 <Class IRI="#DevelopmentActivity"/>
             </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#duringTemporalPartition"/>
+                <Class IRI="#TemporalPartition"/>
+            </ObjectAllValuesFrom>
             <DataHasValue>
                 <DataProperty IRI="#isRepeated"/>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>

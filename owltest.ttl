@@ -705,15 +705,15 @@ figure8secondattempt:Artefact rdf:type owl:Class ;
                                                                          [ rdf:type owl:Class ;
                                                                            owl:unionOf ( [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty figure8secondattempt:hasArtefact ;
-                                                                                           owl:someValuesFrom figure8secondattempt:Artefact
+                                                                                           owl:allValuesFrom figure8secondattempt:Artefact
                                                                                          ]
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty figure8secondattempt:hasComponent ;
-                                                                                           owl:someValuesFrom figure8secondattempt:Component
+                                                                                           owl:allValuesFrom figure8secondattempt:Component
                                                                                          ]
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty figure8secondattempt:hasParameter ;
-                                                                                           owl:someValuesFrom figure8secondattempt:Parameter
+                                                                                           owl:allValuesFrom figure8secondattempt:Parameter
                                                                                          ]
                                                                                        )
                                                                          ]
@@ -1615,12 +1615,12 @@ An item of information, such as a Datapoint, may also form part of the Input. Fo
 figure8secondattempt:Iteration rdf:type owl:Class ;
                                owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:Iteration
                                                                           [ rdf:type owl:Restriction ;
-                                                                            owl:onProperty figure8secondattempt:duringTemporalPartition ;
-                                                                            owl:someValuesFrom figure8secondattempt:TemporalPartition
-                                                                          ]
-                                                                          [ rdf:type owl:Restriction ;
                                                                             owl:onProperty figure8secondattempt:hasDevelopmentActivity ;
                                                                             owl:someValuesFrom figure8secondattempt:DevelopmentActivity
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty figure8secondattempt:duringTemporalPartition ;
+                                                                            owl:allValuesFrom figure8secondattempt:TemporalPartition
                                                                           ]
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty figure8secondattempt:isRepeated ;
