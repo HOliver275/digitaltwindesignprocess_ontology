@@ -3382,7 +3382,8 @@ figure8secondattempt:Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
                                              figure8secondattempt:hasDevelopmentActivity figure8secondattempt:ModellingActivity_3PartProcess ,
                                                                                          figure8secondattempt:PhysicalTestingActivity ,
                                                                                          figure8secondattempt:VirtualTestingActivity_DigitalEntity ;
-                                             figure8secondattempt:hasInput figure8secondattempt:Input_Iteration_DigitalEntity .
+                                             figure8secondattempt:hasInput figure8secondattempt:Input_Iteration_DigitalEntity ;
+                                             figure8secondattempt:hasOutput figure8secondattempt:Output_Iteration_DigitalEntity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Iteration_DigitalEntityModel
@@ -3391,6 +3392,7 @@ figure8secondattempt:Iteration_DigitalEntityModel rdf:type owl:NamedIndividual ,
                                                   figure8secondattempt:hasDevelopmentActivity figure8secondattempt:ModellingActivity_3PartProcess ,
                                                                                               figure8secondattempt:PhysicalTestingActivity ,
                                                                                               figure8secondattempt:VirtualTestingActivity_DigitalEntityModel ;
+                                                  figure8secondattempt:hasOutput figure8secondattempt:Output_Iteration_DigitalEntityModel ;
                                                   figure8secondattempt:leadsTo figure8secondattempt:Iteration_DigitalEntityShadow .
 
 

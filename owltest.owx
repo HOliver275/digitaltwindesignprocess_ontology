@@ -5552,6 +5552,11 @@
         <NamedIndividual IRI="#Input_Iteration_DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#Iteration_DigitalEntity"/>
+        <NamedIndividual IRI="#Output_Iteration_DigitalEntity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#Iteration_DigitalEntityModel"/>
         <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
@@ -5565,6 +5570,11 @@
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#Iteration_DigitalEntityModel"/>
         <NamedIndividual IRI="#VirtualTestingActivity_DigitalEntityModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#Iteration_DigitalEntityModel"/>
+        <NamedIndividual IRI="#Output_Iteration_DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
