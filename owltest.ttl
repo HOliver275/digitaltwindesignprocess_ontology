@@ -805,6 +805,13 @@ figure8secondattempt:Continuity rdf:type owl:Class ;
                                 rdfs:comment "A Continuity consists of a sequence of one or more Spans, that link two or more DevelopmentActivities, across two or more TemporalPartitions."@en .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Cycle
+figure8secondattempt:Cycle rdf:type owl:Class ;
+                           owl:equivalentClass figure8secondattempt:Loop ;
+                           rdfs:subClassOf figure8secondattempt:Flow ;
+                           rdfs:comment "A Cycle is a synonym for a Loop."@en .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Datapoint
 figure8secondattempt:Datapoint rdf:type owl:Class ;
                                owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:Datapoint

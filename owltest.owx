@@ -32,6 +32,9 @@
         <Class IRI="#Continuity"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Cycle"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Datapoint"/>
     </Declaration>
     <Declaration>
@@ -1147,6 +1150,10 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Cycle"/>
+        <Class IRI="#Loop"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Datapoint"/>
         <ObjectIntersectionOf>
             <Class IRI="#Datapoint"/>
@@ -2205,6 +2212,10 @@
     <SubClassOf>
         <Class IRI="#Continuity"/>
         <Class IRI="#TimeStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cycle"/>
+        <Class IRI="#Flow"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Datapoint"/>
@@ -8284,6 +8295,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Continuity</IRI>
         <Literal xml:lang="en">A Continuity consists of a sequence of one or more Spans, that link two or more DevelopmentActivities, across two or more TemporalPartitions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cycle</IRI>
+        <Literal xml:lang="en">A Cycle is a synonym for a Loop.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
