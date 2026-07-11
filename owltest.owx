@@ -2225,7 +2225,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Cycle"/>
-        <Class IRI="#Flow"/>
+        <Class IRI="#TimeStructure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Datapoint"/>
@@ -8305,7 +8305,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Cycle</IRI>
-        <Literal xml:lang="en">A Cycle is like a Loop, but the minimum number of Steps is 1 instead of 2.</Literal>
+        <Literal xml:lang="en">A Cycle is probably going to be repeated.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
