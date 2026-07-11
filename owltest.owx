@@ -1154,7 +1154,8 @@
         <ObjectIntersectionOf>
             <Class IRI="#Cycle"/>
             <ObjectMinCardinality cardinality="1">
-                <ObjectProperty IRI="#hasStep"/>
+                <ObjectProperty IRI="#hasDevelopmentActivity"/>
+                <Class IRI="#DevelopmentActivity"/>
             </ObjectMinCardinality>
             <DataExactCardinality cardinality="1">
                 <DataProperty IRI="#isRepeated"/>

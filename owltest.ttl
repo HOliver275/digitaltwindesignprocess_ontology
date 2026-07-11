@@ -808,8 +808,9 @@ figure8secondattempt:Continuity rdf:type owl:Class ;
 figure8secondattempt:Cycle rdf:type owl:Class ;
                            owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:Cycle
                                                                       [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty figure8secondattempt:hasStep ;
-                                                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                        owl:onProperty figure8secondattempt:hasDevelopmentActivity ;
+                                                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                        owl:onClass figure8secondattempt:DevelopmentActivity
                                                                       ]
                                                                       [ rdf:type owl:Restriction ;
                                                                         owl:onProperty figure8secondattempt:isRepeated ;
