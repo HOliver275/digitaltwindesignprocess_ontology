@@ -807,9 +807,21 @@ figure8secondattempt:Continuity rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Cycle
 figure8secondattempt:Cycle rdf:type owl:Class ;
-                           owl:equivalentClass figure8secondattempt:Loop ;
+                           owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:Cycle
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty figure8secondattempt:hasStep ;
+                                                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                      ]
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty figure8secondattempt:isRepeated ;
+                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                        owl:onDataRange xsd:boolean
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
                            rdfs:subClassOf figure8secondattempt:Flow ;
-                           rdfs:comment "A Cycle is a synonym for a Loop."@en .
+                           rdfs:comment "A Cycle is like a Loop, but the minimum number of Steps is 1 instead of 2."@en .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Datapoint

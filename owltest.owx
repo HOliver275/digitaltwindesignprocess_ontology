@@ -1151,7 +1151,16 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Cycle"/>
-        <Class IRI="#Loop"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Cycle"/>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasStep"/>
+            </ObjectMinCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#isRepeated"/>
+                <Datatype abbreviatedIRI="xsd:boolean"/>
+            </DataExactCardinality>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Datapoint"/>
@@ -8299,7 +8308,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Cycle</IRI>
-        <Literal xml:lang="en">A Cycle is a synonym for a Loop.</Literal>
+        <Literal xml:lang="en">A Cycle is like a Loop, but the minimum number of Steps is 1 instead of 2.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
