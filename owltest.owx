@@ -8212,10 +8212,6 @@
         <Class IRI="#Step"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#isRepeated"/>
-        <Class IRI="#Iteration"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#maxTargetValue"/>
         <Class IRI="#Datapoint"/>
     </DataPropertyDomain>

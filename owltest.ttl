@@ -639,7 +639,6 @@ figure8secondattempt:isOptional rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isRepeated
 figure8secondattempt:isRepeated rdf:type owl:DatatypeProperty ;
-                                rdfs:domain figure8secondattempt:Iteration ;
                                 rdfs:range xsd:boolean .
 
 
