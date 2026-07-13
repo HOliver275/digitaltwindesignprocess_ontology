@@ -749,6 +749,9 @@
         <NamedIndividual IRI="#Input_Iteration_DigitalEntity"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Input_Iteration_DigitalEntityModel"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Input_Iteration_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
@@ -3100,6 +3103,10 @@
         <NamedIndividual IRI="#Input_Iteration_DigitalEntity"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Input"/>
+        <NamedIndividual IRI="#Input_Iteration_DigitalEntityModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#Input_Iteration_DigitalEntityShadow"/>
     </ClassAssertion>
@@ -5323,6 +5330,16 @@
         <NamedIndividual IRI="#Iteration_DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasModel"/>
+        <NamedIndividual IRI="#Input_Iteration_DigitalEntityModel"/>
+        <NamedIndividual IRI="#DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#Input_Iteration_DigitalEntityModel"/>
+        <NamedIndividual IRI="#Iteration_DigitalEntityModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#Input_Iteration_DigitalEntityShadow"/>
         <NamedIndividual IRI="#DigitalEntityModel"/>
@@ -5891,16 +5908,6 @@
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
-        <NamedIndividual IRI="#Input1_NewDesign"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasInput"/>
-        <NamedIndividual IRI="#ModellingActivity_3PartProcess"/>
-        <NamedIndividual IRI="#Input2_PreviousProductData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>

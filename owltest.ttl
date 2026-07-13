@@ -3277,6 +3277,13 @@ figure8secondattempt:Input_Iteration_DigitalEntity rdf:type owl:NamedIndividual 
                                                    figure8secondattempt:inputInto figure8secondattempt:Iteration_DigitalEntity .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Iteration_DigitalEntityModel
+figure8secondattempt:Input_Iteration_DigitalEntityModel rdf:type owl:NamedIndividual ,
+                                                                 figure8secondattempt:Input ;
+                                                        figure8secondattempt:hasModel figure8secondattempt:DigitalTwinInformationModel ;
+                                                        figure8secondattempt:inputInto figure8secondattempt:Iteration_DigitalEntityModel .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input_Iteration_DigitalEntityShadow
 figure8secondattempt:Input_Iteration_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                                                   figure8secondattempt:TestingInput ;
@@ -3538,9 +3545,7 @@ figure8secondattempt:ModellingActivity1 rdf:type owl:NamedIndividual ,
 figure8secondattempt:ModellingActivity_3PartProcess rdf:type owl:NamedIndividual ,
                                                              figure8secondattempt:Modelling ;
                                                     figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
-                                                    figure8secondattempt:hasInput figure8secondattempt:Input1_NewDesign ,
-                                                                                  figure8secondattempt:Input2_PreviousProductData ,
-                                                                                  figure8secondattempt:Input_PhysicalTestResults_ModellingActivity ,
+                                                    figure8secondattempt:hasInput figure8secondattempt:Input_PhysicalTestResults_ModellingActivity ,
                                                                                   figure8secondattempt:Input_VirtualTestResults_ModellingActivity .
 
 
