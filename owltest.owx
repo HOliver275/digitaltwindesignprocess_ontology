@@ -5120,6 +5120,16 @@
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDigitalEntity"/>
+        <NamedIndividual IRI="#DigitalTwinExample"/>
+        <NamedIndividual IRI="#DigitalEntityExample"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPhysicalEntity"/>
+        <NamedIndividual IRI="#DigitalTwinExample"/>
+        <NamedIndividual IRI="#PhysicalEntityExample"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#DigitalTwinInformationModel"/>
         <NamedIndividual IRI="#Input1_NewDesign"/>

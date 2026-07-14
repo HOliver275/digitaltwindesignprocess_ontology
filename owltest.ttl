@@ -3151,7 +3151,9 @@ figure8secondattempt:DigitalTwin1 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwinExample
 figure8secondattempt:DigitalTwinExample rdf:type owl:NamedIndividual ,
                                                  figure8secondattempt:DigitalTwin ;
-                                        figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel .
+                                        figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
+                                        figure8secondattempt:hasDigitalEntity figure8secondattempt:DigitalEntityExample ;
+                                        figure8secondattempt:hasPhysicalEntity figure8secondattempt:PhysicalEntityExample .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#DigitalTwinInformationModel
