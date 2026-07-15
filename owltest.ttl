@@ -3215,6 +3215,16 @@ figure8secondattempt:HistoricData_PreviousProduct rdf:type owl:NamedIndividual ,
                                                   figure8secondattempt:hasURI "http://example.com/historic_data/"^^xsd:anyURI .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_EngineLoad
+figure8secondattempt:ICE_EngineLoad rdf:type owl:NamedIndividual ,
+                                             figure8secondattempt:Datapoint ;
+                                    figure8secondattempt:createdOn "2026-07-15T12:01:00Z"^^xsd:dateTimeStamp ;
+                                    figure8secondattempt:expectedValue 100 ;
+                                    figure8secondattempt:hasUnit "%" ;
+                                    figure8secondattempt:maxTargetValue 100 ;
+                                    figure8secondattempt:minTargetValue 0 .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input1
 figure8secondattempt:Input1 rdf:type owl:NamedIndividual ,
                                      figure8secondattempt:Input ;

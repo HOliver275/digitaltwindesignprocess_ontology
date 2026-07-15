@@ -728,6 +728,9 @@
         <NamedIndividual IRI="#HistoricData_PreviousProduct"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Input1"/>
     </Declaration>
     <Declaration>
@@ -3073,6 +3076,10 @@
     <ClassAssertion>
         <Class IRI="#Dataset"/>
         <NamedIndividual IRI="#HistoricData_PreviousProduct"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Datapoint"/>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Input"/>
@@ -7433,6 +7440,31 @@
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#HistoricData_PreviousProduct"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/historic_data/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#createdOn"/>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-07-15T12:01:00Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#expectedValue"/>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxTargetValue"/>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minTargetValue"/>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
