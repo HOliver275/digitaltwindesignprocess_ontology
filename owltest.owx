@@ -758,6 +758,12 @@
         <NamedIndividual IRI="#ICE_CoolantOutletTemperature_Expected"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Dataset_NewDesign"/>
     </Declaration>
     <Declaration>
@@ -809,10 +815,16 @@
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Physical_InitialSetup"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_FirstRun"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_Input_Iteration_FirstRun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_Input_Iteration_Part3"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_InitialSetup"/>
@@ -833,7 +845,13 @@
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Iteration_Part3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_Output_Iteration_FirstRun"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_Output_Iteration_InitialSetup"/>
@@ -3256,6 +3274,14 @@
         <NamedIndividual IRI="#ICE_CoolantOutletTemperature_Expected"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Datapoint"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Datapoint"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Dataset"/>
         <NamedIndividual IRI="#ICE_Dataset_NewDesign"/>
     </ClassAssertion>
@@ -3325,11 +3351,19 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_FirstRun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#ICE_Input_Iteration_FirstRun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#ICE_Input_Iteration_Part3"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
@@ -3356,8 +3390,16 @@
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#ICE_Iteration_Part3"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Modelling"/>
         <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingOutput"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_FirstRun"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
@@ -5720,6 +5762,21 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_Expected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_InitialSetup"/>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
     </ObjectPropertyAssertion>
@@ -5766,7 +5823,32 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasIteration"/>
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIteration"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_FirstRun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_Iteration_Part3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasCycle"/>
@@ -5817,6 +5899,41 @@
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#ICE_ModellingActivity"/>
         <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_Expected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_Input_Iteration_Part3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -8174,6 +8291,36 @@
         <Literal>C</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#createdOn"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-07-18T00:53:00Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#expectedValue"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+        <Literal>C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#createdOn"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-07-18T00:46:00Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#expectedValue"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+        <Literal>C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasDescription"/>
         <NamedIndividual IRI="#ICE_Dataset_NewDesign"/>
         <Literal>Drawing filed in cabinet at bottom of unlit staircase, behind door labelled ‘Beware of the Tiger’</Literal>
@@ -8217,6 +8364,11 @@
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/3dmodel/fig6/1/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numCycles"/>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">100</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#numCycles"/>
