@@ -788,6 +788,9 @@
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
     </Declaration>
     <Declaration>
@@ -3294,6 +3297,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#VirtualTesting"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VirtualTesting"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -5542,6 +5549,21 @@
         <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#ICE_DigitalEntityExample"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDigitalEntityOf"/>
+        <NamedIndividual IRI="#ICE_DigitalEntityExample"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinExample"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#twinnedPhysicallyWith"/>
+        <NamedIndividual IRI="#ICE_DigitalEntityExample"/>
+        <NamedIndividual IRI="#InternalCombustionEngine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasIteration"/>
         <NamedIndividual IRI="#ICE_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
@@ -5550,6 +5572,21 @@
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#ICE_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinExample"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDigitalEntity"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinExample"/>
+        <NamedIndividual IRI="#ICE_DigitalEntityExample"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPhysicalEntity"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinExample"/>
+        <NamedIndividual IRI="#InternalCombustionEngine"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
