@@ -302,6 +302,9 @@
         <ObjectProperty IRI="#hasComponent"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasCycle"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDeliverable"/>
     </Declaration>
     <Declaration>
@@ -360,6 +363,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isComponentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCycleOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isDeliverableOf"/>
@@ -474,6 +480,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#minTargetValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numCycles"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#prevMeasuredValue"/>
@@ -740,6 +749,12 @@
         <NamedIndividual IRI="#ICE_EngineLoad"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle100"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
     </Declaration>
     <Declaration>
@@ -755,7 +770,16 @@
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_Output_Iteration_InitialSetup"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityModel"/>
@@ -2601,6 +2625,10 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Continuity"/>
+        <Class IRI="#Cycle"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Continuity"/>
         <Class IRI="#Flow"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -2613,6 +2641,22 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Continuity"/>
+        <Class IRI="#Step"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cycle"/>
+        <Class IRI="#Flow"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cycle"/>
+        <Class IRI="#Iteration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cycle"/>
+        <Class IRI="#Span"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cycle"/>
         <Class IRI="#Step"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -3116,6 +3160,14 @@
         <NamedIndividual IRI="#ICE_EngineLoad"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Cycle"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cycle"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle100"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#PhysicalTesting"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
     </ClassAssertion>
@@ -3137,7 +3189,19 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Iteration"/>
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Modelling"/>
+        <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingOutput"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_InitialSetup"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#SimulationActivity"/>
@@ -5302,6 +5366,46 @@
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_InitialSetup"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIteration"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCycle"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCycle"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle100"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+        <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_InitialSetup"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -7559,6 +7663,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#numCycles"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#PhysicalTestData"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/fig6/physicaltestdata/</Literal>
@@ -7695,6 +7804,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasComponent"/>
         <ObjectProperty IRI="#isComponentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCycle"/>
+        <ObjectProperty IRI="#isCycleOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasDeliverable"/>
@@ -7852,6 +7965,10 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCycle"/>
+        <Class IRI="#Iteration"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDeliverable"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
@@ -7926,6 +8043,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isComponentOf"/>
         <Class IRI="#Component"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCycleOf"/>
+        <Class IRI="#Cycle"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isDeliverableOf"/>
@@ -8099,6 +8220,10 @@
         <Class IRI="#Component"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCycle"/>
+        <Class IRI="#Cycle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDeliverable"/>
         <Class IRI="#Deliverable"/>
     </ObjectPropertyRange>
@@ -8187,6 +8312,10 @@
             <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCycleOf"/>
+        <Class IRI="#Iteration"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isDeliverableOf"/>
@@ -8378,6 +8507,10 @@
         <Class IRI="#Datapoint"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#numCycles"/>
+        <Class IRI="#Iteration"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#prevMeasuredValue"/>
         <Class IRI="#Datapoint"/>
     </DataPropertyDomain>
@@ -8404,6 +8537,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#isRepeated"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numCycles"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#updatedOn"/>
