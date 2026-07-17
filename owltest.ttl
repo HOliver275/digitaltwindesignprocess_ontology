@@ -3215,6 +3215,11 @@ figure8secondattempt:HistoricData_PreviousProduct rdf:type owl:NamedIndividual ,
                                                   figure8secondattempt:hasURI "http://example.com/historic_data/"^^xsd:anyURI .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_DigitalEntityModel
+figure8secondattempt:ICE_DigitalEntityModel rdf:type owl:NamedIndividual ,
+                                                     figure8secondattempt:VirtualModel .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_EngineLoad
 figure8secondattempt:ICE_EngineLoad rdf:type owl:NamedIndividual ,
                                              figure8secondattempt:Datapoint ;
@@ -3223,6 +3228,24 @@ figure8secondattempt:ICE_EngineLoad rdf:type owl:NamedIndividual ,
                                     figure8secondattempt:hasUnit "%" ;
                                     figure8secondattempt:maxTargetValue 100 ;
                                     figure8secondattempt:minTargetValue 0 .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_GrossThermalTestingActivity_Physical
+figure8secondattempt:ICE_GrossThermalTestingActivity_Physical rdf:type owl:NamedIndividual ,
+                                                                       figure8secondattempt:PhysicalTesting .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel
+figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel rdf:type owl:NamedIndividual ,
+                                                                                         figure8secondattempt:VirtualTesting ;
+                                                                                figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalEntityModel .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_PhysicalTestingActivity_InitialSetup
+figure8secondattempt:ICE_Input_PhysicalTestingActivity_InitialSetup rdf:type owl:NamedIndividual ,
+                                                                             figure8secondattempt:TestingInput ;
+                                                                    figure8secondattempt:hasParameter figure8secondattempt:ICE_EngineLoad ;
+                                                                    figure8secondattempt:inputInto figure8secondattempt:ICE_GrossThermalTestingActivity_Physical .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input1
