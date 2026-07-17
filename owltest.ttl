@@ -1185,7 +1185,7 @@ figure8secondattempt:DigitalEntity rdf:type owl:Class ;
                                                                             ) ;
                                                          rdf:type owl:Class
                                                        ] ;
-                                   rdfs:subClassOf figure8secondattempt:DigitalTwin ;
+                                   rdfs:subClassOf figure8secondattempt:Artefact ;
                                    owl:disjointWith figure8secondattempt:PhysicalEntity ;
                                    rdfs:comment "The digital part of the Twin that is being developed throughout the development process; which after some iterations of physical and virtual testing has evolved from a VirtualModel to a Shadow to become a fully developed digital entity."@en .
 
@@ -1959,7 +1959,7 @@ figure8secondattempt:PhysicalEntity rdf:type owl:Class ;
                                                                              ) ;
                                                           rdf:type owl:Class
                                                         ] ;
-                                    rdfs:subClassOf figure8secondattempt:DigitalTwin ;
+                                    rdfs:subClassOf figure8secondattempt:Artefact ;
                                     rdfs:comment "The physical part of the product being developed throughout the development process."@en .
 
 
@@ -3274,11 +3274,21 @@ figure8secondattempt:ICE_Dataset_VirtualTestingActivity rdf:type owl:NamedIndivi
                                                         figure8secondattempt:hasURI "http://example.com/ice/dataset/virtual_testing_activity/"^^xsd:anyURI .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_DigitalEntityExample
+figure8secondattempt:ICE_DigitalEntityExample rdf:type owl:NamedIndividual ,
+                                                       figure8secondattempt:DigitalEntity .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_DigitalEntityModel
 figure8secondattempt:ICE_DigitalEntityModel rdf:type owl:NamedIndividual ,
                                                      figure8secondattempt:VirtualModel ;
                                             figure8secondattempt:hasIteration figure8secondattempt:ICE_Iteration_InitialSetup ;
                                             figure8secondattempt:isArtefactOf figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_DigitalTwinExample
+figure8secondattempt:ICE_DigitalTwinExample rdf:type owl:NamedIndividual ,
+                                                     figure8secondattempt:DigitalTwin .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_EngineLoad
@@ -3572,7 +3582,10 @@ figure8secondattempt:Input_VirtualTestingActivity_PreTest rdf:type owl:NamedIndi
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#InternalCombustionEngine
 figure8secondattempt:InternalCombustionEngine rdf:type owl:NamedIndividual ,
-                                                       figure8secondattempt:Artefact .
+                                                       figure8secondattempt:Artefact ;
+                                              figure8secondattempt:isArtefactOf figure8secondattempt:ICE_GrossThermalTestingActivity_Physical ;
+                                              figure8secondattempt:isPhysicalEntityOf figure8secondattempt:ICE_DigitalTwinExample ;
+                                              figure8secondattempt:twinnedDigitallyWith figure8secondattempt:ICE_DigitalEntityExample .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#IterationGroup1
