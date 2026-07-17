@@ -3353,7 +3353,11 @@ figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Physical_InitialSetup
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup
 figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup rdf:type owl:NamedIndividual ,
-                                                                                         figure8secondattempt:TestingInput .
+                                                                                         figure8secondattempt:TestingInput ;
+                                                                                figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                                                  figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                                                  figure8secondattempt:ICE_EngineLoad ;
+                                                                                figure8secondattempt:inputInto figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_Iteration_FirstRun
