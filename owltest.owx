@@ -323,6 +323,9 @@
         <ObjectProperty IRI="#hasInput"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasIteration"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasModel"/>
     </Declaration>
     <Declaration>
@@ -381,6 +384,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isFollowedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isIterationOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isLedToBy"/>
@@ -744,6 +750,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_InitialSetup"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityModel"/>
@@ -3120,6 +3132,14 @@
         <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_InitialSetup"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#SimulationActivity"/>
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityModel"/>
     </ClassAssertion>
@@ -5252,6 +5272,11 @@
         <ObjectProperty IRI="#opensStage"/>
         <NamedIndividual IRI="#Gateway4"/>
         <NamedIndividual IRI="#Stage5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIteration"/>
+        <NamedIndividual IRI="#ICE_DigitalEntityModel"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -7696,6 +7721,10 @@
         <ObjectProperty IRI="#inputInto"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasIteration"/>
+        <ObjectProperty IRI="#isIterationOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasModel"/>
         <ObjectProperty IRI="#isModelOf"/>
     </InverseObjectProperties>
@@ -7939,6 +7968,10 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isIterationOf"/>
+        <Class IRI="#Iteration"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isLedToBy"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
@@ -8092,6 +8125,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasInput"/>
         <Class IRI="#Input"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIteration"/>
+        <Class IRI="#Iteration"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasModel"/>
