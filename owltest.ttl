@@ -3250,6 +3250,26 @@ figure8secondattempt:HistoricData_PreviousProduct rdf:type owl:NamedIndividual ,
                                                   figure8secondattempt:hasURI "http://example.com/historic_data/"^^xsd:anyURI .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_2DModel_NewDesign
+figure8secondattempt:ICE_2DModel_NewDesign rdf:type owl:NamedIndividual ,
+                                                    <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#2DModel> ;
+                                           figure8secondattempt:isArtefactOf figure8secondattempt:ICE_Dataset_NewDesign .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_3DModel_NewDesign
+figure8secondattempt:ICE_3DModel_NewDesign rdf:type owl:NamedIndividual ,
+                                                    <http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#3DModel> ;
+                                           figure8secondattempt:hasParameter figure8secondattempt:ICE_Dataset_NewDesign ;
+                                           figure8secondattempt:isArtefactOf figure8secondattempt:ICE_Input1_NewDesign ;
+                                           figure8secondattempt:hasURI "http://example.com/dataset/fig6/1/"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_CADModel_NewDesign
+figure8secondattempt:ICE_CADModel_NewDesign rdf:type owl:NamedIndividual ,
+                                                     figure8secondattempt:CADModel ;
+                                            figure8secondattempt:hasURI "http://example.com/cadmodel/fig6_1/"^^xsd:anyURI .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_CoolantInputTemperature
 figure8secondattempt:ICE_CoolantInputTemperature rdf:type owl:NamedIndividual ,
                                                           figure8secondattempt:Datapoint ;
@@ -3266,6 +3286,12 @@ figure8secondattempt:ICE_CoolantOutletTemperature_Expected rdf:type owl:NamedInd
                                                            figure8secondattempt:createdOn "2026-07-17T20:06:00Z"^^xsd:dateTimeStamp ;
                                                            figure8secondattempt:expectedValue 10.0 ;
                                                            figure8secondattempt:hasUnit "C" .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Dataset_NewDesign
+figure8secondattempt:ICE_Dataset_NewDesign rdf:type owl:NamedIndividual ,
+                                                    figure8secondattempt:Dataset ;
+                                           figure8secondattempt:hasDescription "Drawing filed in cabinet at bottom of unlit staircase, behind door labelled ‘Beware of the Tiger’" .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Dataset_VirtualTestingActivity
@@ -3289,6 +3315,16 @@ figure8secondattempt:ICE_DigitalEntityModel rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_DigitalTwinExample
 figure8secondattempt:ICE_DigitalTwinExample rdf:type owl:NamedIndividual ,
                                                      figure8secondattempt:DigitalTwin .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_DigitalTwinInformationModel
+figure8secondattempt:ICE_DigitalTwinInformationModel rdf:type owl:NamedIndividual ,
+                                                              figure8secondattempt:VirtualModel ;
+                                                     figure8secondattempt:hasInput figure8secondattempt:ICE_Input1_NewDesign ,
+                                                                                   figure8secondattempt:ICE_Input2_PreviousProductData ;
+                                                     figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                       figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                       figure8secondattempt:ICE_EngineLoad .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_EngineLoad
@@ -3328,14 +3364,28 @@ figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel 
                                                                                 figure8secondattempt:hasInput figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_HistoricData_PreviousProduct
+figure8secondattempt:ICE_HistoricData_PreviousProduct rdf:type owl:NamedIndividual ,
+                                                               figure8secondattempt:Dataset ;
+                                                      figure8secondattempt:hasURI "http://example.com/historic_data/"^^xsd:anyURI .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input1_NewDesign
 figure8secondattempt:ICE_Input1_NewDesign rdf:type owl:NamedIndividual ,
-                                                   figure8secondattempt:TestingInput .
+                                                   figure8secondattempt:TestingInput ;
+                                          figure8secondattempt:hasArtefact figure8secondattempt:ICE_3DModel_NewDesign ,
+                                                                           figure8secondattempt:ICE_Simulation_NewDesign ;
+                                          figure8secondattempt:hasURI "http://example.com/3dmodel/fig6/1/"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input2_PreviousProductData
 figure8secondattempt:ICE_Input2_PreviousProductData rdf:type owl:NamedIndividual ,
-                                                             figure8secondattempt:TestingInput .
+                                                             figure8secondattempt:TestingInput ;
+                                                    figure8secondattempt:hasParameter figure8secondattempt:ICE_HistoricData_PreviousProduct ,
+                                                                                      figure8secondattempt:ICE_PrototypeInformation_PreviousProduct ,
+                                                                                      figure8secondattempt:ICE_TestData_PreviousProduct ,
+                                                                                      figure8secondattempt:ICE_UsageData_PreviousProduct ,
+                                                                                      figure8secondattempt:ICE_WarrantyData_PreviousProduct .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_DigitalEntityModel
@@ -3417,7 +3467,8 @@ figure8secondattempt:ICE_Iteration_InitialSetup rdf:type owl:NamedIndividual ,
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_ModellingActivity
 figure8secondattempt:ICE_ModellingActivity rdf:type owl:NamedIndividual ,
-                                                    figure8secondattempt:Modelling .
+                                                    figure8secondattempt:Modelling ;
+                                           figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinInformationModel .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_Iteration_InitialSetup
@@ -3444,6 +3495,12 @@ figure8secondattempt:ICE_PhysicalTestData rdf:type owl:NamedIndividual ,
                                           figure8secondattempt:hasURI "http://www.example.com/ice/physicaltestdata/"^^xsd:anyURI .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_PrototypeInformation_PreviousProduct
+figure8secondattempt:ICE_PrototypeInformation_PreviousProduct rdf:type owl:NamedIndividual ,
+                                                                       figure8secondattempt:Document ;
+                                                              figure8secondattempt:hasURI "http://example.com/prototype/information/"^^xsd:anyURI .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_SimulationActivity_DigitalEntityModel
 figure8secondattempt:ICE_SimulationActivity_DigitalEntityModel rdf:type owl:NamedIndividual ,
                                                                         figure8secondattempt:SimulationActivity ;
@@ -3451,10 +3508,35 @@ figure8secondattempt:ICE_SimulationActivity_DigitalEntityModel rdf:type owl:Name
                                                                figure8secondattempt:hasOutput figure8secondattempt:ICE_Output_SimulationActivity_DigitalEntityModel .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Simulation_NewDesign
+figure8secondattempt:ICE_Simulation_NewDesign rdf:type owl:NamedIndividual ,
+                                                       figure8secondattempt:Simulation ;
+                                              figure8secondattempt:isArtefactOf figure8secondattempt:ICE_Input1_NewDesign ;
+                                              figure8secondattempt:hasURI "http://example.com/simulation/fig6/1/"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_TestData_PreviousProduct
+figure8secondattempt:ICE_TestData_PreviousProduct rdf:type owl:NamedIndividual ,
+                                                           figure8secondattempt:Dataset ;
+                                                  figure8secondattempt:hasURI "http://example.com/previous_product/test_data/"^^xsd:anyURI .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_TestEnvironment_PhysicalTestingActivity
 figure8secondattempt:ICE_TestEnvironment_PhysicalTestingActivity rdf:type owl:NamedIndividual ,
                                                                           figure8secondattempt:PhysicalTestEnvironment ;
                                                                  figure8secondattempt:hasInput figure8secondattempt:ICE_Input_TestEnvironment .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_UsageData_PreviousProduct
+figure8secondattempt:ICE_UsageData_PreviousProduct rdf:type owl:NamedIndividual ,
+                                                            figure8secondattempt:Dataset ;
+                                                   figure8secondattempt:hasURI "http://example.com/usage_data/"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_WarrantyData_PreviousProduct
+figure8secondattempt:ICE_WarrantyData_PreviousProduct rdf:type owl:NamedIndividual ,
+                                                               figure8secondattempt:Dataset ;
+                                                      figure8secondattempt:hasURI "http://example.com/warranty_data/"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input1

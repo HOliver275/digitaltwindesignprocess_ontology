@@ -743,10 +743,22 @@
         <NamedIndividual IRI="#HistoricData_PreviousProduct"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_2DModel_NewDesign"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_3DModel_NewDesign"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_CADModel_NewDesign"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_CoolantOutletTemperature_Expected"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_Dataset_NewDesign"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_Dataset_VirtualTestingActivity"/>
@@ -759,6 +771,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_DigitalTwinExample"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_EngineLoad"/>
@@ -774,6 +789,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_HistoricData_PreviousProduct"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
@@ -824,10 +842,25 @@
         <NamedIndividual IRI="#ICE_PhysicalTestData"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_PrototypeInformation_PreviousProduct"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityModel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Simulation_NewDesign"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_TestData_PreviousProduct"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_TestEnvironment_PhysicalTestingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_UsageData_PreviousProduct"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_WarrantyData_PreviousProduct"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Input1"/>
@@ -3200,12 +3233,28 @@
         <NamedIndividual IRI="#HistoricData_PreviousProduct"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#2DModel"/>
+        <NamedIndividual IRI="#ICE_2DModel_NewDesign"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#3DModel"/>
+        <NamedIndividual IRI="#ICE_3DModel_NewDesign"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CADModel"/>
+        <NamedIndividual IRI="#ICE_CADModel_NewDesign"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Datapoint"/>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Datapoint"/>
         <NamedIndividual IRI="#ICE_CoolantOutletTemperature_Expected"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#ICE_Dataset_NewDesign"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Dataset"/>
@@ -3222,6 +3271,10 @@
     <ClassAssertion>
         <Class IRI="#DigitalTwin"/>
         <NamedIndividual IRI="#ICE_DigitalTwinExample"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VirtualModel"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Datapoint"/>
@@ -3242,6 +3295,10 @@
     <ClassAssertion>
         <Class IRI="#VirtualTesting"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#ICE_HistoricData_PreviousProduct"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
@@ -3308,12 +3365,32 @@
         <NamedIndividual IRI="#ICE_PhysicalTestData"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Document"/>
+        <NamedIndividual IRI="#ICE_PrototypeInformation_PreviousProduct"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#SimulationActivity"/>
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityModel"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Simulation"/>
+        <NamedIndividual IRI="#ICE_Simulation_NewDesign"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#ICE_TestData_PreviousProduct"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#PhysicalTestEnvironment"/>
         <NamedIndividual IRI="#ICE_TestEnvironment_PhysicalTestingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#ICE_UsageData_PreviousProduct"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#ICE_WarrantyData_PreviousProduct"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Input"/>
@@ -5450,6 +5527,21 @@
         <NamedIndividual IRI="#Stage5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#ICE_2DModel_NewDesign"/>
+        <NamedIndividual IRI="#ICE_Dataset_NewDesign"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_3DModel_NewDesign"/>
+        <NamedIndividual IRI="#ICE_Dataset_NewDesign"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#ICE_3DModel_NewDesign"/>
+        <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasIteration"/>
         <NamedIndividual IRI="#ICE_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
@@ -5458,6 +5550,31 @@
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#ICE_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
+        <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
+        <NamedIndividual IRI="#ICE_Input2_PreviousProductData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
+        <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_Expected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -5493,6 +5610,41 @@
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
+        <NamedIndividual IRI="#ICE_3DModel_NewDesign"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
+        <NamedIndividual IRI="#ICE_Simulation_NewDesign"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input2_PreviousProductData"/>
+        <NamedIndividual IRI="#ICE_HistoricData_PreviousProduct"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input2_PreviousProductData"/>
+        <NamedIndividual IRI="#ICE_PrototypeInformation_PreviousProduct"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input2_PreviousProductData"/>
+        <NamedIndividual IRI="#ICE_TestData_PreviousProduct"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input2_PreviousProductData"/>
+        <NamedIndividual IRI="#ICE_UsageData_PreviousProduct"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input2_PreviousProductData"/>
+        <NamedIndividual IRI="#ICE_WarrantyData_PreviousProduct"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -5625,6 +5777,11 @@
         <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#ICE_ModellingActivity"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#ICE_Output_Iteration_InitialSetup"/>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
@@ -5673,6 +5830,11 @@
         <ObjectProperty IRI="#hasOutput"/>
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_Output_SimulationActivity_DigitalEntityModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isArtefactOf"/>
+        <NamedIndividual IRI="#ICE_Simulation_NewDesign"/>
+        <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
@@ -7925,6 +8087,16 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/historic_data/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#ICE_3DModel_NewDesign"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/dataset/fig6/1/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#ICE_CADModel_NewDesign"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/cadmodel/fig6_1/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#createdOn"/>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-07-17T20:02:00Z</Literal>
@@ -7965,6 +8137,11 @@
         <Literal>C</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasDescription"/>
+        <NamedIndividual IRI="#ICE_Dataset_NewDesign"/>
+        <Literal>Drawing filed in cabinet at bottom of unlit staircase, behind door labelled ‘Beware of the Tiger’</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#ICE_Dataset_VirtualTestingActivity"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/ice/dataset/virtual_testing_activity/</Literal>
@@ -7995,6 +8172,16 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#ICE_HistoricData_PreviousProduct"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/historic_data/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/3dmodel/fig6/1/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#numCycles"/>
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">100</Literal>
@@ -8003,6 +8190,31 @@
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#ICE_PhysicalTestData"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.example.com/ice/physicaltestdata/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#ICE_PrototypeInformation_PreviousProduct"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/prototype/information/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#ICE_Simulation_NewDesign"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/simulation/fig6/1/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#ICE_TestData_PreviousProduct"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/previous_product/test_data/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#ICE_UsageData_PreviousProduct"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/usage_data/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#ICE_WarrantyData_PreviousProduct"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/warranty_data/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
