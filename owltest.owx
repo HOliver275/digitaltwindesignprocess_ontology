@@ -785,6 +785,9 @@
         <NamedIndividual IRI="#ICE_Input_SimulationActivity"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Input_TestEnvironment"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
     </Declaration>
     <Declaration>
@@ -801,6 +804,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_Output_SimulationActivity_DigitalEntityModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_PhysicalTestData"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityModel"/>
@@ -3235,6 +3241,10 @@
         <NamedIndividual IRI="#ICE_Input_SimulationActivity"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#ICE_Input_TestEnvironment"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Iteration"/>
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
     </ClassAssertion>
@@ -3257,6 +3267,10 @@
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
         <NamedIndividual IRI="#ICE_Output_SimulationActivity_DigitalEntityModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#ICE_PhysicalTestData"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#SimulationActivity"/>
@@ -5471,6 +5485,21 @@
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#ICE_Input_TestEnvironment"/>
+        <NamedIndividual IRI="#InternalCombustionEngine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_TestEnvironment"/>
+        <NamedIndividual IRI="#ICE_PhysicalTestData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#ICE_Input_TestEnvironment"/>
+        <NamedIndividual IRI="#ICE_TestEnvironment_PhysicalTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasIteration"/>
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
@@ -5559,6 +5588,11 @@
         <ObjectProperty IRI="#hasOutput"/>
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_Output_SimulationActivity_DigitalEntityModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ICE_TestEnvironment_PhysicalTestingActivity"/>
+        <NamedIndividual IRI="#ICE_Input_TestEnvironment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -7864,6 +7898,11 @@
         <DataProperty IRI="#numCycles"/>
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasURI"/>
+        <NamedIndividual IRI="#ICE_PhysicalTestData"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.example.com/ice/physicaltestdata/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
