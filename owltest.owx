@@ -776,6 +776,12 @@
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_Input2_PreviousProductData"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Input_DigitalEntityModel"/>
     </Declaration>
     <Declaration>
@@ -3236,6 +3242,14 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#ICE_Input2_PreviousProductData"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#ICE_Input_DigitalEntityModel"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -5542,6 +5556,16 @@
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
         <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+        <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+        <NamedIndividual IRI="#ICE_Input2_PreviousProductData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOutput"/>
