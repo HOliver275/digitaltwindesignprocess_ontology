@@ -3238,7 +3238,14 @@ figure8secondattempt:ICE_GrossThermalTestingActivity_Physical rdf:type owl:Named
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel
 figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel rdf:type owl:NamedIndividual ,
                                                                                          figure8secondattempt:VirtualTesting ;
-                                                                                figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalEntityModel .
+                                                                                figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalEntityModel ;
+                                                                                figure8secondattempt:hasDevelopmentActivity figure8secondattempt:ICE_SimulationActivity_DigitalEntityModel ;
+                                                                                figure8secondattempt:hasInput figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup
+figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup rdf:type owl:NamedIndividual ,
+                                                                                         figure8secondattempt:TestingInput .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_PhysicalTestingActivity_InitialSetup
@@ -3246,6 +3253,11 @@ figure8secondattempt:ICE_Input_PhysicalTestingActivity_InitialSetup rdf:type owl
                                                                              figure8secondattempt:TestingInput ;
                                                                     figure8secondattempt:hasParameter figure8secondattempt:ICE_EngineLoad ;
                                                                     figure8secondattempt:inputInto figure8secondattempt:ICE_GrossThermalTestingActivity_Physical .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_SimulationActivity_DigitalEntityModel
+figure8secondattempt:ICE_SimulationActivity_DigitalEntityModel rdf:type owl:NamedIndividual ,
+                                                                        figure8secondattempt:SimulationActivity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Input1
