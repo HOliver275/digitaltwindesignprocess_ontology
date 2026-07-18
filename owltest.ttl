@@ -3420,6 +3420,15 @@ figure8secondattempt:ICE_Input_DigitalEntityModel rdf:type owl:NamedIndividual ,
                                                            figure8secondattempt:TestingInput .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_GrossThermalTestingActivity_Physical_FirstRun
+figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Physical_FirstRun rdf:type owl:NamedIndividual ,
+                                                                                      figure8secondattempt:TestingInput ;
+                                                                             figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                                               figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                                               figure8secondattempt:ICE_EngineLoad ;
+                                                                             figure8secondattempt:inputInto figure8secondattempt:ICE_GrossThermalTestingActivity_Physical .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_GrossThermalTestingActivity_Physical_InitialSetup
 figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Physical_InitialSetup rdf:type owl:NamedIndividual ,
                                                                                           figure8secondattempt:TestingInput ;
@@ -3447,7 +3456,8 @@ figure8secondattempt:ICE_Input_Iteration_FirstRun rdf:type owl:NamedIndividual ,
                                                            figure8secondattempt:TestingInput ;
                                                   figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
                                                                                     figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
-                                                                                    figure8secondattempt:ICE_EngineLoad .
+                                                                                    figure8secondattempt:ICE_EngineLoad ;
+                                                  figure8secondattempt:inputInto figure8secondattempt:ICE_DigitalTwinInformationModel .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_Iteration_Part3
