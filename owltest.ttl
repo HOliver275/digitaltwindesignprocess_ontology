@@ -3346,6 +3346,8 @@ figure8secondattempt:ICE_DigitalTwinInformationModel rdf:type owl:NamedIndividua
                                                                                    figure8secondattempt:ICE_Input2_PreviousProductData ;
                                                      figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
                                                                                        figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                       figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
+                                                                                       figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
                                                                                        figure8secondattempt:ICE_EngineLoad .
 
 

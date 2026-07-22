@@ -5695,6 +5695,16 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
         <NamedIndividual IRI="#ICE_EngineLoad"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
