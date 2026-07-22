@@ -5938,6 +5938,16 @@
         <NamedIndividual IRI="#ICE_TestEnvironment_PhysicalTestingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_VirtualTestResults_ModellingActivity"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#ICE_Input_VirtualTestResults_ModellingActivity"/>
+        <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasIteration"/>
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
