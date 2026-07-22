@@ -884,6 +884,9 @@
         <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_InitialSetup"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_Part3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Input_SimulationActivity"/>
     </Declaration>
     <Declaration>
@@ -3508,6 +3511,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_Part3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#ICE_Input_SimulationActivity"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -5876,6 +5883,11 @@
         <NamedIndividual IRI="#ICE_CompareTestResults_CoolantOutletTemp_FirstRun"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle400"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_CoolantOutletTemp_Part3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
         <NamedIndividual IRI="#InternalCombustionEngine"/>
@@ -5894,6 +5906,11 @@
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
         <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_InitialSetup"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_Part3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
