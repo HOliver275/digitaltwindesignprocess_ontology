@@ -23,6 +23,9 @@
         <Class IRI="#CAE_VirtualTesting"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ComparisonTest"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Component"/>
     </Declaration>
     <Declaration>
@@ -467,6 +470,9 @@
         <DataProperty IRI="#isRepeated"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#maxDiff"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#maxTargetValue"/>
     </Declaration>
     <Declaration>
@@ -752,6 +758,9 @@
         <NamedIndividual IRI="#ICE_CADModel_NewDesign"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_CompareTestResults"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
     </Declaration>
     <Declaration>
@@ -789,6 +798,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_GrossThermalTestCycle100"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle101"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle200"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
@@ -1297,6 +1312,16 @@
                     <Class IRI="#Parameter"/>
                 </ObjectAllValuesFrom>
             </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ComparisonTest"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ComparisonTest"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#hasParameter"/>
+                <Class IRI="#Parameter"/>
+            </ObjectMinCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -2396,6 +2421,10 @@
         <Class IRI="#VirtualTesting"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ComparisonTest"/>
+        <Class IRI="#TestingActivity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ConceptDevelopment"/>
         <Class IRI="#ProductDevelopmentStage"/>
     </SubClassOf>
@@ -3284,6 +3313,10 @@
         <NamedIndividual IRI="#ICE_CADModel_NewDesign"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#ComparisonTest"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Datapoint"/>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
     </ClassAssertion>
@@ -3334,6 +3367,14 @@
     <ClassAssertion>
         <Class IRI="#Cycle"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestCycle100"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cycle"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle101"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cycle"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle200"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#PhysicalTesting"/>
@@ -5633,6 +5674,16 @@
         <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isArtefactOf"/>
         <NamedIndividual IRI="#ICE_DigitalEntityExample"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
@@ -5706,6 +5757,11 @@
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
         <NamedIndividual IRI="#ICE_EngineLoad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle200"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -5966,6 +6022,16 @@
         <ObjectProperty IRI="#hasIteration"/>
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_Iteration_InitialSetup"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCycle"/>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle101"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCycle"/>
+        <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestCycle200"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDevelopmentActivity"/>
@@ -9383,6 +9449,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#isOptional"/>
         <Class IRI="#Step"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#maxDiff"/>
+        <Class IRI="#ComparisonTest"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#maxTargetValue"/>
