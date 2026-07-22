@@ -3439,7 +3439,11 @@ figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Physical_InitialSetup
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_GrossThermalTestingActivity_Virtual_FirstRun
 figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Virtual_FirstRun rdf:type owl:NamedIndividual ,
-                                                                                     figure8secondattempt:TestingInput .
+                                                                                     figure8secondattempt:TestingInput ;
+                                                                            figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                                              figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                                              figure8secondattempt:ICE_EngineLoad ;
+                                                                            figure8secondattempt:inputInto figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup
@@ -3503,6 +3507,11 @@ figure8secondattempt:ICE_Input_TestEnvironment rdf:type owl:NamedIndividual ,
                                                figure8secondattempt:hasArtefact figure8secondattempt:InternalCombustionEngine ;
                                                figure8secondattempt:hasParameter figure8secondattempt:ICE_PhysicalTestData ;
                                                figure8secondattempt:inputInto figure8secondattempt:ICE_TestEnvironment_PhysicalTestingActivity .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_VirtualTestResults_ModellingActivity
+figure8secondattempt:ICE_Input_VirtualTestResults_ModellingActivity rdf:type owl:NamedIndividual ,
+                                                                             figure8secondattempt:TestingInput .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Iteration_DigitalEntityModel
@@ -3581,6 +3590,14 @@ figure8secondattempt:ICE_Output_SimulationActivity_DigitalEntityModel rdf:type o
                                                                       figure8secondattempt:hasParameter figure8secondattempt:ICE_Dataset_VirtualTestingActivity ;
                                                                       figure8secondattempt:leadsTo figure8secondattempt:ICE_Input_DigitalEntityModel ;
                                                                       figure8secondattempt:outputFrom figure8secondattempt:ICE_SimulationActivity_DigitalEntityModel .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_VirtualTestResults_FirstRun
+figure8secondattempt:ICE_Output_VirtualTestResults_FirstRun rdf:type owl:NamedIndividual ,
+                                                                     figure8secondattempt:TestingOutput ;
+                                                            figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ;
+                                                            figure8secondattempt:leadsTo figure8secondattempt:ICE_Input_VirtualTestResults_ModellingActivity ;
+                                                            figure8secondattempt:outputFrom figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_PhysicalTestData
