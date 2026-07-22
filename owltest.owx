@@ -839,6 +839,9 @@
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_Part3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Input_Iteration_FirstRun"/>
     </Declaration>
     <Declaration>
@@ -3422,6 +3425,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_Part3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#ICE_Input_Iteration_FirstRun"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -5797,6 +5804,11 @@
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_InitialSetup"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel"/>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_Part3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
