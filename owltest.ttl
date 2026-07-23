@@ -3643,7 +3643,7 @@ figure8secondattempt:ICE_Iteration_FirstRun rdf:type owl:NamedIndividual ,
                                             figure8secondattempt:hasDevelopmentActivity figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel ,
                                                                                         figure8secondattempt:ICE_ModellingActivity ;
                                             figure8secondattempt:hasOutput figure8secondattempt:ICE_Output_Iteration_FirstRun ;
-                                            figure8secondattempt:leadsTo figure8secondattempt:ICE_Iteration_Part3 ;
+                                            figure8secondattempt:leadsTo figure8secondattempt:ICE_CompareTestResults_CoolantOutletTemp_FirstRun ;
                                             figure8secondattempt:numCycles "100"^^xsd:positiveInteger .
 
 
@@ -3671,7 +3671,7 @@ figure8secondattempt:ICE_Iteration_Part3 rdf:type owl:NamedIndividual ,
                                                                                      figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntityModel ,
                                                                                      figure8secondattempt:ICE_ModellingActivity ;
                                          figure8secondattempt:hasOutput figure8secondattempt:ICE_Output_Iteration_Part3 ;
-                                         figure8secondattempt:leadsTo figure8secondattempt:ICE_Iteration_DigitalEntityShadow ;
+                                         figure8secondattempt:leadsTo figure8secondattempt:ICE_CompareTestResults_CoolantOutletTemp_Part3 ;
                                          figure8secondattempt:isRepeated "true"^^xsd:boolean ;
                                          figure8secondattempt:minCycles "100"^^xsd:positiveInteger .
 

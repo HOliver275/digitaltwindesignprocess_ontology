@@ -6190,7 +6190,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
         <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
-        <NamedIndividual IRI="#ICE_Iteration_Part3"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_CoolantOutletTemp_FirstRun"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasCycle"/>
@@ -6270,7 +6270,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
         <NamedIndividual IRI="#ICE_Iteration_Part3"/>
-        <NamedIndividual IRI="#ICE_Iteration_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_CoolantOutletTemp_Part3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
