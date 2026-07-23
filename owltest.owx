@@ -962,6 +962,9 @@
         <NamedIndividual IRI="#ICE_Output_Iteration_Part3"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Output_PhysicalTestResults_DigitalEntityShadow"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Output_PhysicalTestResults_FirstRun"/>
     </Declaration>
     <Declaration>
@@ -3654,6 +3657,10 @@
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
         <NamedIndividual IRI="#ICE_Output_Iteration_Part3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingOutput"/>
+        <NamedIndividual IRI="#ICE_Output_PhysicalTestResults_DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
@@ -6794,6 +6801,26 @@
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#ICE_Output_Iteration_Part3"/>
         <NamedIndividual IRI="#ICE_Iteration_Part3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Output_PhysicalTestResults_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Output_PhysicalTestResults_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_CylinderHeadTemperature_PhysicalTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Output_PhysicalTestResults_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_EngineWear_PhysicalTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#ICE_Output_PhysicalTestResults_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestResults_ModellingActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>

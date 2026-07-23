@@ -3849,6 +3849,15 @@ figure8secondattempt:ICE_Output_Iteration_Part3 rdf:type owl:NamedIndividual ,
                                                 figure8secondattempt:outputFrom figure8secondattempt:ICE_Iteration_Part3 .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_PhysicalTestResults_DigitalEntityShadow
+figure8secondattempt:ICE_Output_PhysicalTestResults_DigitalEntityShadow rdf:type owl:NamedIndividual ,
+                                                                                 figure8secondattempt:TestingOutput ;
+                                                                        figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
+                                                                                                          figure8secondattempt:ICE_CylinderHeadTemperature_PhysicalTestResult ,
+                                                                                                          figure8secondattempt:ICE_EngineWear_PhysicalTestResult ;
+                                                                        figure8secondattempt:leadsTo figure8secondattempt:ICE_Input_PhysicalTestResults_ModellingActivity .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_PhysicalTestResults_FirstRun
 figure8secondattempt:ICE_Output_PhysicalTestResults_FirstRun rdf:type owl:NamedIndividual ,
                                                                       figure8secondattempt:TestingOutput .
