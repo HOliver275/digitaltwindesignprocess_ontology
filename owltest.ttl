@@ -3432,7 +3432,9 @@ figure8secondattempt:ICE_DigitalTwinInformationModel rdf:type owl:NamedIndividua
                                                                                        figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
                                                                                        figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
                                                                                        figure8secondattempt:ICE_CylinderHeadTemperature_PhysicalTestResult ,
-                                                                                       figure8secondattempt:ICE_EngineLoad .
+                                                                                       figure8secondattempt:ICE_EngineLoad ,
+                                                                                       figure8secondattempt:ICE_EngineWear_PhysicalTestResult ,
+                                                                                       figure8secondattempt:ICE_EngineWear_VirtualTestResult .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_EngineLoad
@@ -3733,7 +3735,8 @@ figure8secondattempt:ICE_Input_TestEnvironment rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_VirtualTestResults_ModellingActivity
 figure8secondattempt:ICE_Input_VirtualTestResults_ModellingActivity rdf:type owl:NamedIndividual ,
                                                                              figure8secondattempt:TestingInput ;
-                                                                    figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ;
+                                                                    figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
+                                                                                                      figure8secondattempt:ICE_EngineWear_VirtualTestResult ;
                                                                     figure8secondattempt:inputInto figure8secondattempt:ICE_ModellingActivity .
 
 
