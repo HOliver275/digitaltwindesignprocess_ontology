@@ -866,6 +866,9 @@
         <NamedIndividual IRI="#ICE_Input_DigitalEntityModel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Input_DigitalEntityShadow"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Physical_FirstRun"/>
     </Declaration>
     <Declaration>
@@ -3520,6 +3523,10 @@
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#ICE_Input_DigitalEntityModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#ICE_Input_DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
@@ -6770,6 +6777,21 @@
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#ICE_Output_SimulationActivity_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Output_SimulationActivity_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_Dataset_VirtualTestingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#ICE_Output_SimulationActivity_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_Input_DigitalEntityShadow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#ICE_Output_SimulationActivity_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>

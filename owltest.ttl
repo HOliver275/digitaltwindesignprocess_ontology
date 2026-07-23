@@ -3552,6 +3552,11 @@ figure8secondattempt:ICE_Input_DigitalEntityModel rdf:type owl:NamedIndividual ,
                                                            figure8secondattempt:TestingInput .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_DigitalEntityShadow
+figure8secondattempt:ICE_Input_DigitalEntityShadow rdf:type owl:NamedIndividual ,
+                                                            figure8secondattempt:TestingInput .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_GrossThermalTestingActivity_Physical_FirstRun
 figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Physical_FirstRun rdf:type owl:NamedIndividual ,
                                                                                       figure8secondattempt:TestingInput ;
@@ -3849,7 +3854,10 @@ figure8secondattempt:ICE_Output_SimulationActivity_DigitalEntityModel rdf:type o
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_SimulationActivity_DigitalEntityShadow
 figure8secondattempt:ICE_Output_SimulationActivity_DigitalEntityShadow rdf:type owl:NamedIndividual ,
-                                                                                figure8secondattempt:TestingOutput .
+                                                                                figure8secondattempt:TestingOutput ;
+                                                                       figure8secondattempt:hasParameter figure8secondattempt:ICE_Dataset_VirtualTestingActivity ;
+                                                                       figure8secondattempt:leadsTo figure8secondattempt:ICE_Input_DigitalEntityShadow ;
+                                                                       figure8secondattempt:outputFrom figure8secondattempt:ICE_SimulationActivity_DigitalEntityShadow .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_VirtualTestResults_FirstRun
