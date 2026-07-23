@@ -3649,7 +3649,8 @@ figure8secondattempt:ICE_Input_Iteration_Part3 rdf:type owl:NamedIndividual ,
 figure8secondattempt:ICE_Input_PhysicalTestResults_ModellingActivity rdf:type owl:NamedIndividual ,
                                                                               figure8secondattempt:TestingInput ;
                                                                      figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
-                                                                                                       figure8secondattempt:ICE_CylinderHeadTemperature_PhysicalTestResult ;
+                                                                                                       figure8secondattempt:ICE_CylinderHeadTemperature_PhysicalTestResult ,
+                                                                                                       figure8secondattempt:ICE_EngineWear_PhysicalTestResult ;
                                                                      figure8secondattempt:inputInto figure8secondattempt:ICE_ModellingActivity .
 
 

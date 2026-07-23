@@ -6323,6 +6323,11 @@
         <NamedIndividual IRI="#ICE_CylinderHeadTemperature_PhysicalTestResult"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestResults_ModellingActivity"/>
+        <NamedIndividual IRI="#ICE_EngineWear_PhysicalTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#ICE_Input_PhysicalTestResults_ModellingActivity"/>
         <NamedIndividual IRI="#ICE_ModellingActivity"/>
