@@ -3329,6 +3329,17 @@ figure8secondattempt:ICE_CompareTestResults_CoolantOutletTemp_Part3 rdf:type owl
                                                                     figure8secondattempt:passLeadsTo figure8secondattempt:ICE_Iteration_DigitalEntityShadow .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_CompareTestResults_DigitalEntityShadow
+figure8secondattempt:ICE_CompareTestResults_DigitalEntityShadow rdf:type owl:NamedIndividual ,
+                                                                         figure8secondattempt:ComparisonTest ;
+                                                                figure8secondattempt:failLeadsTo figure8secondattempt:ICE_Iteration_DigitalEntityShadow ;
+                                                                figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
+                                                                                                  figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
+                                                                                                  figure8secondattempt:ICE_EngineWear_PhysicalTestResult ,
+                                                                                                  figure8secondattempt:ICE_EngineWear_VirtualTestResult ;
+                                                                figure8secondattempt:passLeadsTo figure8secondattempt:ICE_Iteration_DigitalEntity .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_CoolantInputTemperature
 figure8secondattempt:ICE_CoolantInputTemperature rdf:type owl:NamedIndividual ,
                                                           figure8secondattempt:Datapoint ;
@@ -3431,6 +3442,20 @@ figure8secondattempt:ICE_EngineLoad rdf:type owl:NamedIndividual ,
                                     figure8secondattempt:hasUnit "%" ;
                                     figure8secondattempt:maxTargetValue 100 ;
                                     figure8secondattempt:minTargetValue 0 .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_EngineWear_PhysicalTestResult
+figure8secondattempt:ICE_EngineWear_PhysicalTestResult rdf:type owl:NamedIndividual ,
+                                                                figure8secondattempt:Datapoint ;
+                                                       figure8secondattempt:compareTo figure8secondattempt:ICE_EngineWear_VirtualTestResult ;
+                                                       figure8secondattempt:createdOn "2026-07-23T19:26:00Z"^^xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_EngineWear_VirtualTestResult
+figure8secondattempt:ICE_EngineWear_VirtualTestResult rdf:type owl:NamedIndividual ,
+                                                               figure8secondattempt:Datapoint ;
+                                                      figure8secondattempt:compareTo figure8secondattempt:ICE_EngineWear_PhysicalTestResult ;
+                                                      figure8secondattempt:createdOn "2026-07-23T19:27:00Z"^^xsd:dateTimeStamp .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_GrossThermalTestCycle1
@@ -3668,6 +3693,11 @@ figure8secondattempt:ICE_Input_VirtualTestResults_ModellingActivity rdf:type owl
                                                                     figure8secondattempt:inputInto figure8secondattempt:ICE_ModellingActivity .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Iteration_DigitalEntity
+figure8secondattempt:ICE_Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
+                                                          figure8secondattempt:Iteration .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Iteration_DigitalEntityModel
 figure8secondattempt:ICE_Iteration_DigitalEntityModel rdf:type owl:NamedIndividual ,
                                                                figure8secondattempt:Iteration ;
@@ -3679,6 +3709,11 @@ figure8secondattempt:ICE_Iteration_DigitalEntityModel rdf:type owl:NamedIndividu
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Iteration_DigitalEntityShadow
 figure8secondattempt:ICE_Iteration_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                                                 figure8secondattempt:Iteration ;
+                                                       figure8secondattempt:hasDevelopmentActivity figure8secondattempt:ICE_GrossThermalTestingActivity_Physical ,
+                                                                                                   figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntityShadow ;
+                                                       figure8secondattempt:hasOutput figure8secondattempt:ICE_Output_Iteration_DigitalEntityShadow ;
+                                                       figure8secondattempt:leadsTo figure8secondattempt:ICE_CompareTestResults_DigitalEntityShadow ;
+                                                       figure8secondattempt:isRepeated "true"^^xsd:boolean ;
                                                        figure8secondattempt:minCycles "100"^^xsd:positiveInteger .
 
 

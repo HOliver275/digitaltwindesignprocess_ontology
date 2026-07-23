@@ -776,6 +776,9 @@
         <NamedIndividual IRI="#ICE_CompareTestResults_CoolantOutletTemp_Part3"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntityShadow"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
     </Declaration>
     <Declaration>
@@ -813,6 +816,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_EngineLoad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_EngineWear_PhysicalTestResult"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_EngineWear_VirtualTestResult"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_GrossThermalTestCycle1"/>
@@ -906,6 +915,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_Input_VirtualTestResults_ModellingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
@@ -3384,6 +3396,10 @@
         <NamedIndividual IRI="#ICE_CompareTestResults_CoolantOutletTemp_Part3"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#ComparisonTest"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntityShadow"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Datapoint"/>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
     </ClassAssertion>
@@ -3434,6 +3450,14 @@
     <ClassAssertion>
         <Class IRI="#Datapoint"/>
         <NamedIndividual IRI="#ICE_EngineLoad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Datapoint"/>
+        <NamedIndividual IRI="#ICE_EngineWear_PhysicalTestResult"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Datapoint"/>
+        <NamedIndividual IRI="#ICE_EngineWear_VirtualTestResult"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Cycle"/>
@@ -3558,6 +3582,10 @@
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#ICE_Input_VirtualTestResults_ModellingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Iteration"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Iteration"/>
@@ -5845,6 +5873,36 @@
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#failLeadsTo"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntityShadow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_EngineWear_PhysicalTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_EngineWear_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#passLeadsTo"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#compareTo"/>
         <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
         <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
@@ -5933,6 +5991,16 @@
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
         <NamedIndividual IRI="#ICE_EngineLoad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#compareTo"/>
+        <NamedIndividual IRI="#ICE_EngineWear_PhysicalTestResult"/>
+        <NamedIndividual IRI="#ICE_EngineWear_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#compareTo"/>
+        <NamedIndividual IRI="#ICE_EngineWear_VirtualTestResult"/>
+        <NamedIndividual IRI="#ICE_EngineWear_PhysicalTestResult"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#leadsTo"/>
@@ -6338,6 +6406,26 @@
         <ObjectProperty IRI="#hasIteration"/>
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityModel"/>
         <NamedIndividual IRI="#ICE_Iteration_Part3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntityShadow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_DigitalEntityShadow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntityShadow"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasCycle"/>
@@ -9020,6 +9108,16 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#createdOn"/>
+        <NamedIndividual IRI="#ICE_EngineWear_PhysicalTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-07-23T19:26:00Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#createdOn"/>
+        <NamedIndividual IRI="#ICE_EngineWear_VirtualTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2026-07-23T19:27:00Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#ICE_HistoricData_PreviousProduct"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/historic_data/</Literal>
@@ -9028,6 +9126,11 @@
         <DataProperty IRI="#hasURI"/>
         <NamedIndividual IRI="#ICE_Input1_NewDesign"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://example.com/3dmodel/fig6/1/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRepeated"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntityShadow"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#minCycles"/>
