@@ -926,6 +926,9 @@
         <NamedIndividual IRI="#ICE_Input_PhysicalTestResults_ModellingActivity"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_DigitalEntity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
@@ -3645,6 +3648,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_DigitalEntity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -6182,6 +6189,11 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_DigitalEntity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
         <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_DigitalEntityShadow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -6538,6 +6550,31 @@
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#ICE_Input_PhysicalTestResults_ModellingActivity"/>
         <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_Expected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_CylinderHeadTemperature_PhysicalTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
