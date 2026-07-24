@@ -281,6 +281,8 @@ figure8secondattempt:hasProduct rdf:type owl:ObjectProperty ;
                                 owl:inverseOf figure8secondattempt:isProductOf ;
                                 rdfs:domain [ rdf:type owl:Class ;
                                               owl:unionOf ( figure8secondattempt:DevelopmentActivity
+                                                            figure8secondattempt:Input
+                                                            figure8secondattempt:Output
                                                             figure8secondattempt:TemporalConstruct
                                                           )
                                             ] ;
@@ -485,6 +487,8 @@ figure8secondattempt:isProductOf rdf:type owl:ObjectProperty ;
                                  rdfs:domain figure8secondattempt:Product ;
                                  rdfs:range [ rdf:type owl:Class ;
                                               owl:unionOf ( figure8secondattempt:DevelopmentActivity
+                                                            figure8secondattempt:Input
+                                                            figure8secondattempt:Output
                                                             figure8secondattempt:TemporalPartition
                                                           )
                                             ] ;
@@ -3512,6 +3516,12 @@ figure8secondattempt:ICE_GrossThermalTestCycle400 rdf:type owl:NamedIndividual ,
                                                   figure8secondattempt:leadsTo figure8secondattempt:ICE_CompareTestResults_CoolantOutletTemp_Part3 .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_GrossThermalTest_Product
+figure8secondattempt:ICE_GrossThermalTest_Product rdf:type owl:NamedIndividual ,
+                                                           figure8secondattempt:Product ;
+                                                  figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinExample .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_GrossThermalTestingActivity_Physical
 figure8secondattempt:ICE_GrossThermalTestingActivity_Physical rdf:type owl:NamedIndividual ,
                                                                        figure8secondattempt:PhysicalTesting ;
@@ -3844,12 +3854,18 @@ figure8secondattempt:ICE_Iteration_Part3 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_ModellingActivity
 figure8secondattempt:ICE_ModellingActivity rdf:type owl:NamedIndividual ,
                                                     figure8secondattempt:Modelling ;
-                                           figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinInformationModel .
+                                           figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinInformationModel ;
+                                           figure8secondattempt:hasDevelopmentActivity figure8secondattempt:ICE_CompareTestResults_CoolantOutletTemp_FirstRun ,
+                                                                                       figure8secondattempt:ICE_CompareTestResults_CoolantOutletTemp_Part3 ,
+                                                                                       figure8secondattempt:ICE_CompareTestResults_DigitalEntity ,
+                                                                                       figure8secondattempt:ICE_CompareTestResults_DigitalEntityShadow .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_Iteration_DigitalEntity
 figure8secondattempt:ICE_Output_Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
-                                                                 figure8secondattempt:TestingOutput .
+                                                                 figure8secondattempt:TestingOutput ;
+                                                        figure8secondattempt:hasProduct figure8secondattempt:ICE_GrossThermalTest_Product ;
+                                                        figure8secondattempt:outputFrom figure8secondattempt:ICE_Iteration_DigitalEntity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_Iteration_DigitalEntityModel

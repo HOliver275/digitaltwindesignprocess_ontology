@@ -851,6 +851,9 @@
         <NamedIndividual IRI="#ICE_GrossThermalTestCycle400"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_GrossThermalTest_Product"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
     </Declaration>
     <Declaration>
@@ -3535,6 +3538,10 @@
         <NamedIndividual IRI="#ICE_GrossThermalTestCycle400"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Product"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTest_Product"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#PhysicalTesting"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
     </ClassAssertion>
@@ -6140,6 +6147,11 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTest_Product"/>
+        <NamedIndividual IRI="#ICE_DigitalTwinExample"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
         <NamedIndividual IRI="#InternalCombustionEngine"/>
     </ObjectPropertyAssertion>
@@ -6842,6 +6854,36 @@
         <ObjectProperty IRI="#hasArtefact"/>
         <NamedIndividual IRI="#ICE_ModellingActivity"/>
         <NamedIndividual IRI="#ICE_DigitalTwinInformationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_ModellingActivity"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_CoolantOutletTemp_FirstRun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_ModellingActivity"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_CoolantOutletTemp_Part3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_ModellingActivity"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_ModellingActivity"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntityShadow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProduct"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTest_Product"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>
@@ -9964,6 +10006,8 @@
         <ObjectProperty IRI="#hasProduct"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -10325,6 +10369,8 @@
         <ObjectProperty IRI="#isProductOf"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#Input"/>
+            <Class IRI="#Output"/>
             <Class IRI="#TemporalPartition"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
