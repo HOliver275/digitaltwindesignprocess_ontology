@@ -881,6 +881,9 @@
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Physical_Part3"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
@@ -990,6 +993,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_PrototypeInformation_PreviousProduct"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityModel"/>
@@ -3558,6 +3564,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3703,6 +3713,10 @@
     <ClassAssertion>
         <Class IRI="#Document"/>
         <NamedIndividual IRI="#ICE_PrototypeInformation_PreviousProduct"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SimulationActivity"/>
+        <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#SimulationActivity"/>
@@ -6105,6 +6119,21 @@
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
         <NamedIndividual IRI="#ICE_Input_PhysicalTestingActivity_Part3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArtefact"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_DigitalEntityExample"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasArtefact"/>
