@@ -884,6 +884,9 @@
         <NamedIndividual IRI="#ICE_Input_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
@@ -3598,6 +3601,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingInput"/>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingInput"/>
         <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -6304,6 +6311,26 @@
         <ObjectProperty IRI="#hasParameter"/>
         <NamedIndividual IRI="#ICE_Input2_PreviousProductData"/>
         <NamedIndividual IRI="#ICE_WarrantyData_PreviousProduct"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_Expected"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_EngineLoad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inputInto"/>
+        <NamedIndividual IRI="#ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>

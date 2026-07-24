@@ -3598,6 +3598,15 @@ figure8secondattempt:ICE_Input_DigitalEntityShadow rdf:type owl:NamedIndividual 
                                                             figure8secondattempt:TestingInput .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntity
+figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntity rdf:type owl:NamedIndividual ,
+                                                                                           figure8secondattempt:TestingInput ;
+                                                                                  figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                                                    figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                                                    figure8secondattempt:ICE_EngineLoad ;
+                                                                                  figure8secondattempt:inputInto figure8secondattempt:ICE_GrossThermalTestingActivity_Physical .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntityShadow
 figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Physical_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                                                                                  figure8secondattempt:TestingInput ;
