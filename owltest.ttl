@@ -3582,6 +3582,11 @@ figure8secondattempt:ICE_Input2_PreviousProductData rdf:type owl:NamedIndividual
                                                                                       figure8secondattempt:ICE_WarrantyData_PreviousProduct .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_DigitalEntity
+figure8secondattempt:ICE_Input_DigitalEntity rdf:type owl:NamedIndividual ,
+                                                      figure8secondattempt:TestingInput .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_DigitalEntityModel
 figure8secondattempt:ICE_Input_DigitalEntityModel rdf:type owl:NamedIndividual ,
                                                            figure8secondattempt:TestingInput .
@@ -3757,7 +3762,8 @@ figure8secondattempt:ICE_Input_PhysicalTestingActivity_Part3 rdf:type owl:NamedI
 figure8secondattempt:ICE_Input_SimulationActivity rdf:type owl:NamedIndividual ,
                                                            figure8secondattempt:TestingInput ;
                                                   figure8secondattempt:hasParameter figure8secondattempt:ICE_Dataset_VirtualTestingActivity ;
-                                                  figure8secondattempt:inputInto figure8secondattempt:ICE_SimulationActivity_DigitalEntityModel ,
+                                                  figure8secondattempt:inputInto figure8secondattempt:ICE_SimulationActivity_DigitalEntity ,
+                                                                                 figure8secondattempt:ICE_SimulationActivity_DigitalEntityModel ,
                                                                                  figure8secondattempt:ICE_SimulationActivity_DigitalEntityShadow .
 
 
@@ -3944,6 +3950,14 @@ figure8secondattempt:ICE_Output_PhysicalTestResults_FirstRun rdf:type owl:NamedI
                                                                       figure8secondattempt:TestingOutput .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_SimulationActivity_DigitalEntity
+figure8secondattempt:ICE_Output_SimulationActivity_DigitalEntity rdf:type owl:NamedIndividual ,
+                                                                          figure8secondattempt:TestingOutput ;
+                                                                 figure8secondattempt:hasParameter figure8secondattempt:ICE_Dataset_VirtualTestingActivity ;
+                                                                 figure8secondattempt:leadsTo figure8secondattempt:ICE_Input_DigitalEntity ;
+                                                                 figure8secondattempt:outputFrom figure8secondattempt:ICE_SimulationActivity_DigitalEntity .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_SimulationActivity_DigitalEntityModel
 figure8secondattempt:ICE_Output_SimulationActivity_DigitalEntityModel rdf:type owl:NamedIndividual ,
                                                                                figure8secondattempt:TestingOutput ;
@@ -3999,7 +4013,9 @@ figure8secondattempt:ICE_PrototypeInformation_PreviousProduct rdf:type owl:Named
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_SimulationActivity_DigitalEntity
 figure8secondattempt:ICE_SimulationActivity_DigitalEntity rdf:type owl:NamedIndividual ,
-                                                                   figure8secondattempt:SimulationActivity .
+                                                                   figure8secondattempt:SimulationActivity ;
+                                                          figure8secondattempt:hasInput figure8secondattempt:ICE_Input_SimulationActivity ;
+                                                          figure8secondattempt:hasOutput figure8secondattempt:ICE_Output_SimulationActivity_DigitalEntity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_SimulationActivity_DigitalEntityModel
