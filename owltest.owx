@@ -1013,6 +1013,9 @@
         <NamedIndividual IRI="#ICE_Output_SimulationActivity_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_Output_VirtualTestResults_DigitalEntity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_Output_VirtualTestResults_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
@@ -3770,6 +3773,10 @@
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
         <NamedIndividual IRI="#ICE_Output_SimulationActivity_DigitalEntityShadow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingOutput"/>
+        <NamedIndividual IRI="#ICE_Output_VirtualTestResults_DigitalEntity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
@@ -7366,6 +7373,26 @@
         <ObjectProperty IRI="#outputFrom"/>
         <NamedIndividual IRI="#ICE_Output_SimulationActivity_DigitalEntityShadow"/>
         <NamedIndividual IRI="#ICE_SimulationActivity_DigitalEntityShadow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Output_VirtualTestResults_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#ICE_Output_VirtualTestResults_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_EngineWear_VirtualTestResult"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#ICE_Output_VirtualTestResults_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_Input_VirtualTestResults_ModellingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#outputFrom"/>
+        <NamedIndividual IRI="#ICE_Output_VirtualTestResults_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasParameter"/>

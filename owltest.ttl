@@ -4031,6 +4031,15 @@ figure8secondattempt:ICE_Output_SimulationActivity_DigitalEntityShadow rdf:type 
                                                                        figure8secondattempt:outputFrom figure8secondattempt:ICE_SimulationActivity_DigitalEntityShadow .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_VirtualTestResults_DigitalEntity
+figure8secondattempt:ICE_Output_VirtualTestResults_DigitalEntity rdf:type owl:NamedIndividual ,
+                                                                          figure8secondattempt:TestingOutput ;
+                                                                 figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
+                                                                                                   figure8secondattempt:ICE_EngineWear_VirtualTestResult ;
+                                                                 figure8secondattempt:leadsTo figure8secondattempt:ICE_Input_VirtualTestResults_ModellingActivity ;
+                                                                 figure8secondattempt:outputFrom figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntity .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_VirtualTestResults_DigitalEntityShadow
 figure8secondattempt:ICE_Output_VirtualTestResults_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                                                                 figure8secondattempt:TestingOutput ;
