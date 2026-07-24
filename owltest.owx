@@ -812,6 +812,12 @@
         <NamedIndividual IRI="#ICE_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ICE_DigitalEntity_GrossThermalTestCycle1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_DigitalEntity_GrossThermalTestCycle8500"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ICE_DigitalTwinExample"/>
     </Declaration>
     <Declaration>
@@ -944,12 +950,6 @@
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityShadow"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity_GrossThermalTestCycle1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity_GrossThermalTestCycle8500"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
     </Declaration>
     <Declaration>
@@ -960,6 +960,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICE_Output_Iteration_DigitalEntity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ICE_Output_Iteration_DigitalEntityModel"/>
@@ -3480,6 +3483,14 @@
         <NamedIndividual IRI="#ICE_DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Cycle"/>
+        <NamedIndividual IRI="#ICE_DigitalEntity_GrossThermalTestCycle1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cycle"/>
+        <NamedIndividual IRI="#ICE_DigitalEntity_GrossThermalTestCycle8500"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#DigitalTwin"/>
         <NamedIndividual IRI="#ICE_DigitalTwinExample"/>
     </ClassAssertion>
@@ -3656,10 +3667,6 @@
         <NamedIndividual IRI="#ICE_Iteration_DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Cycle"/>
-        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity_GrossThermalTestCycle1"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Iteration"/>
         <NamedIndividual IRI="#ICE_Iteration_FirstRun"/>
     </ClassAssertion>
@@ -3674,6 +3681,10 @@
     <ClassAssertion>
         <Class IRI="#Modelling"/>
         <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestingOutput"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_DigitalEntity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TestingOutput"/>
@@ -6641,6 +6652,41 @@
         <ObjectProperty IRI="#inputInto"/>
         <NamedIndividual IRI="#ICE_Input_VirtualTestResults_ModellingActivity"/>
         <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCycle"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_DigitalEntity_GrossThermalTestCycle1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCycle"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_DigitalEntity_GrossThermalTestCycle8500"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Physical"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_GrossThermalTestingActivity_Virtual_DigitalEntity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDevelopmentActivity"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_ModellingActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_Output_Iteration_DigitalEntity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#leadsTo"/>
+        <NamedIndividual IRI="#ICE_Iteration_DigitalEntity"/>
+        <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasIteration"/>

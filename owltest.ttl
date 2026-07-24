@@ -3423,6 +3423,16 @@ figure8secondattempt:ICE_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                              figure8secondattempt:isArtefactOf figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntityShadow .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_DigitalEntity_GrossThermalTestCycle1
+figure8secondattempt:ICE_DigitalEntity_GrossThermalTestCycle1 rdf:type owl:NamedIndividual ,
+                                                                       figure8secondattempt:Cycle .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_DigitalEntity_GrossThermalTestCycle8500
+figure8secondattempt:ICE_DigitalEntity_GrossThermalTestCycle8500 rdf:type owl:NamedIndividual ,
+                                                                          figure8secondattempt:Cycle .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_DigitalTwinExample
 figure8secondattempt:ICE_DigitalTwinExample rdf:type owl:NamedIndividual ,
                                                      figure8secondattempt:DigitalTwin ;
@@ -3760,6 +3770,13 @@ figure8secondattempt:ICE_Input_VirtualTestResults_ModellingActivity rdf:type owl
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Iteration_DigitalEntity
 figure8secondattempt:ICE_Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
                                                           figure8secondattempt:Iteration ;
+                                                 figure8secondattempt:hasCycle figure8secondattempt:ICE_DigitalEntity_GrossThermalTestCycle1 ,
+                                                                               figure8secondattempt:ICE_DigitalEntity_GrossThermalTestCycle8500 ;
+                                                 figure8secondattempt:hasDevelopmentActivity figure8secondattempt:ICE_GrossThermalTestingActivity_Physical ,
+                                                                                             figure8secondattempt:ICE_GrossThermalTestingActivity_Virtual_DigitalEntity ,
+                                                                                             figure8secondattempt:ICE_ModellingActivity ;
+                                                 figure8secondattempt:hasOutput figure8secondattempt:ICE_Output_Iteration_DigitalEntity ;
+                                                 figure8secondattempt:leadsTo figure8secondattempt:ICE_CompareTestResults_DigitalEntity ;
                                                  figure8secondattempt:numCycles "8500"^^xsd:positiveInteger .
 
 
@@ -3781,15 +3798,6 @@ figure8secondattempt:ICE_Iteration_DigitalEntityShadow rdf:type owl:NamedIndivid
                                                        figure8secondattempt:leadsTo figure8secondattempt:ICE_CompareTestResults_DigitalEntityShadow ;
                                                        figure8secondattempt:isRepeated "true"^^xsd:boolean ;
                                                        figure8secondattempt:minCycles "100"^^xsd:positiveInteger .
-
-
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Iteration_DigitalEntity_GrossThermalTestCycle1
-figure8secondattempt:ICE_Iteration_DigitalEntity_GrossThermalTestCycle1 rdf:type owl:NamedIndividual ,
-                                                                                 figure8secondattempt:Cycle .
-
-
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Iteration_DigitalEntity_GrossThermalTestCycle8500
-figure8secondattempt:ICE_Iteration_DigitalEntity_GrossThermalTestCycle8500 rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Iteration_FirstRun
@@ -3837,6 +3845,11 @@ figure8secondattempt:ICE_Iteration_Part3 rdf:type owl:NamedIndividual ,
 figure8secondattempt:ICE_ModellingActivity rdf:type owl:NamedIndividual ,
                                                     figure8secondattempt:Modelling ;
                                            figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinInformationModel .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_Iteration_DigitalEntity
+figure8secondattempt:ICE_Output_Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
+                                                                 figure8secondattempt:TestingOutput .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_Iteration_DigitalEntityModel
