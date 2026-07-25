@@ -3708,28 +3708,46 @@ figure8secondattempt:ICE_Input_GrossThermalTestingActivity_Virtual_Part3 rdf:typ
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_Iteration_DigitalEntity
 figure8secondattempt:ICE_Input_Iteration_DigitalEntity rdf:type owl:NamedIndividual ,
                                                                 figure8secondattempt:TestingInput ;
-                                                       figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinInformationModel ;
+                                                       figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                         figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                         figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
+                                                                                         figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
+                                                                                         figure8secondattempt:ICE_CylinderHeadTemperature_PhysicalTestResult ,
+                                                                                         figure8secondattempt:ICE_EngineLoad ,
+                                                                                         figure8secondattempt:ICE_EngineWear_PhysicalTestResult ,
+                                                                                         figure8secondattempt:ICE_EngineWear_VirtualTestResult ;
                                                        figure8secondattempt:inputInto figure8secondattempt:ICE_Iteration_DigitalEntity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_Iteration_DigitalEntityShadow
 figure8secondattempt:ICE_Input_Iteration_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                                                       figure8secondattempt:TestingInput ;
-                                                             figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinInformationModel ;
+                                                             figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                               figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                               figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
+                                                                                               figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
+                                                                                               figure8secondattempt:ICE_CylinderHeadTemperature_PhysicalTestResult ,
+                                                                                               figure8secondattempt:ICE_EngineLoad ;
                                                              figure8secondattempt:inputInto figure8secondattempt:ICE_Iteration_DigitalEntityShadow .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_Iteration_FirstRun
 figure8secondattempt:ICE_Input_Iteration_FirstRun rdf:type owl:NamedIndividual ,
                                                            figure8secondattempt:TestingInput ;
-                                                  figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
+                                                  figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                    figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                    figure8secondattempt:ICE_EngineLoad ;
                                                   figure8secondattempt:inputInto figure8secondattempt:ICE_Iteration_FirstRun .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Input_Iteration_Part3
 figure8secondattempt:ICE_Input_Iteration_Part3 rdf:type owl:NamedIndividual ,
                                                         figure8secondattempt:TestingInput ;
-                                               figure8secondattempt:hasArtefact figure8secondattempt:DigitalTwinInformationModel ;
+                                               figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                 figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                 figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
+                                                                                 figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
+                                                                                 figure8secondattempt:ICE_EngineLoad ;
                                                figure8secondattempt:inputInto figure8secondattempt:ICE_Iteration_Part3 .
 
 
@@ -3973,7 +3991,12 @@ figure8secondattempt:ICE_Output_Iteration_DigitalEntity rdf:type owl:NamedIndivi
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_Iteration_DigitalEntityModel
 figure8secondattempt:ICE_Output_Iteration_DigitalEntityModel rdf:type owl:NamedIndividual ,
                                                                       figure8secondattempt:TestingOutput ;
-                                                             figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinInformationModel ;
+                                                             figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                               figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                               figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
+                                                                                               figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
+                                                                                               figure8secondattempt:ICE_CylinderHeadTemperature_PhysicalTestResult ,
+                                                                                               figure8secondattempt:ICE_EngineLoad ;
                                                              figure8secondattempt:leadsTo figure8secondattempt:ICE_Input_Iteration_DigitalEntityShadow ;
                                                              figure8secondattempt:outputFrom figure8secondattempt:ICE_Iteration_DigitalEntityModel .
 
@@ -3981,7 +4004,14 @@ figure8secondattempt:ICE_Output_Iteration_DigitalEntityModel rdf:type owl:NamedI
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_Iteration_DigitalEntityShadow
 figure8secondattempt:ICE_Output_Iteration_DigitalEntityShadow rdf:type owl:NamedIndividual ,
                                                                        figure8secondattempt:TestingOutput ;
-                                                              figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinInformationModel ;
+                                                              figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                                figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                                figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
+                                                                                                figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
+                                                                                                figure8secondattempt:ICE_CylinderHeadTemperature_PhysicalTestResult ,
+                                                                                                figure8secondattempt:ICE_EngineLoad ,
+                                                                                                figure8secondattempt:ICE_EngineWear_PhysicalTestResult ,
+                                                                                                figure8secondattempt:ICE_EngineWear_VirtualTestResult ;
                                                               figure8secondattempt:leadsTo figure8secondattempt:ICE_Input_Iteration_DigitalEntity ;
                                                               figure8secondattempt:outputFrom figure8secondattempt:ICE_Iteration_DigitalEntityShadow .
 
@@ -3989,7 +4019,11 @@ figure8secondattempt:ICE_Output_Iteration_DigitalEntityShadow rdf:type owl:Named
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_Iteration_FirstRun
 figure8secondattempt:ICE_Output_Iteration_FirstRun rdf:type owl:NamedIndividual ,
                                                             figure8secondattempt:TestingOutput ;
-                                                   figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinInformationModel ;
+                                                   figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                     figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                     figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
+                                                                                     figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
+                                                                                     figure8secondattempt:ICE_EngineLoad ;
                                                    figure8secondattempt:leadsTo figure8secondattempt:ICE_Input_Iteration_Part3 ,
                                                                                 figure8secondattempt:ICE_Output_Iteration_DigitalEntityModel ;
                                                    figure8secondattempt:outputFrom figure8secondattempt:ICE_Iteration_FirstRun .
@@ -3998,7 +4032,9 @@ figure8secondattempt:ICE_Output_Iteration_FirstRun rdf:type owl:NamedIndividual 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_Iteration_InitialSetup
 figure8secondattempt:ICE_Output_Iteration_InitialSetup rdf:type owl:NamedIndividual ,
                                                                 figure8secondattempt:TestingOutput ;
-                                                       figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinInformationModel ;
+                                                       figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                         figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                         figure8secondattempt:ICE_EngineLoad ;
                                                        figure8secondattempt:leadsTo figure8secondattempt:ICE_Input_Iteration_FirstRun ;
                                                        figure8secondattempt:outputFrom figure8secondattempt:ICE_Iteration_InitialSetup .
 
@@ -4006,7 +4042,12 @@ figure8secondattempt:ICE_Output_Iteration_InitialSetup rdf:type owl:NamedIndivid
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_Output_Iteration_Part3
 figure8secondattempt:ICE_Output_Iteration_Part3 rdf:type owl:NamedIndividual ,
                                                          figure8secondattempt:TestingOutput ;
-                                                figure8secondattempt:hasArtefact figure8secondattempt:ICE_DigitalTwinInformationModel ;
+                                                figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantInputTemperature ,
+                                                                                  figure8secondattempt:ICE_CoolantOutletTemperature_Expected ,
+                                                                                  figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
+                                                                                  figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
+                                                                                  figure8secondattempt:ICE_CylinderHeadTemperature_PhysicalTestResult ,
+                                                                                  figure8secondattempt:ICE_EngineLoad ;
                                                 figure8secondattempt:leadsTo figure8secondattempt:ICE_Output_Iteration_DigitalEntityModel ;
                                                 figure8secondattempt:outputFrom figure8secondattempt:ICE_Iteration_Part3 .
 
