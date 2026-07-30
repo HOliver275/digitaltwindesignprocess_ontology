@@ -761,7 +761,8 @@ figure8secondattempt:updatedOn rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Analysis
 figure8secondattempt:Analysis rdf:type owl:Class ;
-                              rdfs:subClassOf figure8secondattempt:DevelopmentActivity .
+                              rdfs:subClassOf figure8secondattempt:DevelopmentActivity ;
+                              owl:disjointWith figure8secondattempt:Procurement .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Artefact

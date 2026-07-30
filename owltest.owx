@@ -2886,6 +2886,10 @@
         <Class IRI="#Model"/>
     </SubClassOf>
     <DisjointClasses>
+        <Class IRI="#Analysis"/>
+        <Class IRI="#Procurement"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Artefact"/>
         <Class IRI="#DevelopmentActivity"/>
     </DisjointClasses>
