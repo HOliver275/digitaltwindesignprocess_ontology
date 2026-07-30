@@ -2723,7 +2723,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ModellingAndSimulation"/>
-        <Class IRI="#DevelopmentActivity"/>
+        <Class IRI="#Analysis"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PerformanceTesting"/>
