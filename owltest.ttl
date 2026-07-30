@@ -688,7 +688,7 @@ figure8secondattempt:maxCycles rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#maxDiff
 figure8secondattempt:maxDiff rdf:type owl:DatatypeProperty ;
-                             rdfs:domain figure8secondattempt:ComparisonTest .
+                             rdfs:domain figure8secondattempt:Comparison .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#maxTargetValue
@@ -759,6 +759,11 @@ figure8secondattempt:updatedOn rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Analysis
+figure8secondattempt:Analysis rdf:type owl:Class ;
+                              rdfs:subClassOf figure8secondattempt:DevelopmentActivity .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Artefact
 figure8secondattempt:Artefact rdf:type owl:Class ;
                               owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:Artefact
@@ -805,18 +810,18 @@ figure8secondattempt:CAE_VirtualTesting rdf:type owl:Class ;
                                         rdfs:comment "Computer-Aided Engineering (CAE) virtual testing"@en .
 
 
-###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ComparisonTest
-figure8secondattempt:ComparisonTest rdf:type owl:Class ;
-                                    owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:ComparisonTest
-                                                                               [ rdf:type owl:Restriction ;
-                                                                                 owl:onProperty figure8secondattempt:hasParameter ;
-                                                                                 owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                                                 owl:onClass figure8secondattempt:Parameter
-                                                                               ]
-                                                                             ) ;
-                                                          rdf:type owl:Class
-                                                        ] ;
-                                    rdfs:subClassOf figure8secondattempt:TestingActivity .
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Comparison
+figure8secondattempt:Comparison rdf:type owl:Class ;
+                                owl:equivalentClass [ owl:intersectionOf ( figure8secondattempt:Comparison
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty figure8secondattempt:hasParameter ;
+                                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                             owl:onClass figure8secondattempt:Parameter
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ] ;
+                                rdfs:subClassOf figure8secondattempt:Analysis .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Component
@@ -901,7 +906,9 @@ figure8secondattempt:Cycle rdf:type owl:Class ;
                                             figure8secondattempt:Iteration ,
                                             figure8secondattempt:Span ,
                                             figure8secondattempt:Step ;
-                           rdfs:comment "A Cycle is probably going to be repeated."@en .
+                           rdfs:comment """A Cycle is one repetition of an Iteration.
+
+ A loose assumption is that each Cycle of an Iteration is an exact repetition of the previous Cycle, but this assumption is not formalized by any conditions."""@en .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Datapoint
@@ -1731,11 +1738,11 @@ figure8secondattempt:Iteration rdf:type owl:Class ;
                                rdfs:subClassOf figure8secondattempt:TimeStructure ;
                                owl:disjointWith figure8secondattempt:Span ,
                                                 figure8secondattempt:Step ;
-                               rdfs:comment """An Iteration groups DevelopmentActivities that are carried out together in cycles that may be repeated. 
+                               rdfs:comment """An Iteration groups DevelopmentActivities that are carried out together in Cycles that may be repeated. 
 
-Iterations that occur more than once during the development process may be defined as subclasses. The existing subclasses are not exhaustive.
+Iterations that share characteristics in frequently recurring patterns during the development process have been defined as subclasses. These subclasses are not exhaustive.
 
-The DevelopmentActivities in an Iteration are not assumed to be carried out in sequence or in any particular order."""@en .
+Unless otherwise stated, the DevelopmentActivities in an Iteration are assumed to be taking place in parallel."""@en .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#Iteration_CAE_VirtualTesting_EngineeringDesign
@@ -3318,7 +3325,7 @@ figure8secondattempt:ICE_CADModel_NewDesign rdf:type owl:NamedIndividual ,
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_CompareTestResults_CoolantOutletTemp_FirstRun
 figure8secondattempt:ICE_CompareTestResults_CoolantOutletTemp_FirstRun rdf:type owl:NamedIndividual ,
-                                                                                figure8secondattempt:ComparisonTest ;
+                                                                                figure8secondattempt:Comparison ;
                                                                        figure8secondattempt:failLeadsTo figure8secondattempt:ICE_Iteration_Part3 ;
                                                                        figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
                                                                                                          figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ;
@@ -3327,7 +3334,7 @@ figure8secondattempt:ICE_CompareTestResults_CoolantOutletTemp_FirstRun rdf:type 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_CompareTestResults_CoolantOutletTemp_Part3
 figure8secondattempt:ICE_CompareTestResults_CoolantOutletTemp_Part3 rdf:type owl:NamedIndividual ,
-                                                                             figure8secondattempt:ComparisonTest ;
+                                                                             figure8secondattempt:Comparison ;
                                                                     figure8secondattempt:failLeadsTo figure8secondattempt:ICE_Iteration_Part3 ;
                                                                     figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
                                                                                                       figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ;
@@ -3336,7 +3343,7 @@ figure8secondattempt:ICE_CompareTestResults_CoolantOutletTemp_Part3 rdf:type owl
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_CompareTestResults_DigitalEntity
 figure8secondattempt:ICE_CompareTestResults_DigitalEntity rdf:type owl:NamedIndividual ,
-                                                                   figure8secondattempt:ComparisonTest ;
+                                                                   figure8secondattempt:Comparison ;
                                                           figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
                                                                                             figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,
                                                                                             figure8secondattempt:ICE_EngineWear_PhysicalTestResult ,
@@ -3345,7 +3352,7 @@ figure8secondattempt:ICE_CompareTestResults_DigitalEntity rdf:type owl:NamedIndi
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_CompareTestResults_DigitalEntityShadow
 figure8secondattempt:ICE_CompareTestResults_DigitalEntityShadow rdf:type owl:NamedIndividual ,
-                                                                         figure8secondattempt:ComparisonTest ;
+                                                                         figure8secondattempt:Comparison ;
                                                                 figure8secondattempt:failLeadsTo figure8secondattempt:ICE_Iteration_DigitalEntityShadow ;
                                                                 figure8secondattempt:hasParameter figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ,
                                                                                                   figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ,

@@ -14,6 +14,9 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="figure8secondattempt" IRI="http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#"/>
     <Declaration>
+        <Class IRI="#Analysis"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Artefact"/>
     </Declaration>
     <Declaration>
@@ -23,7 +26,7 @@
         <Class IRI="#CAE_VirtualTesting"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ComparisonTest"/>
+        <Class IRI="#Comparison"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Component"/>
@@ -1477,9 +1480,9 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#ComparisonTest"/>
+        <Class IRI="#Comparison"/>
         <ObjectIntersectionOf>
-            <Class IRI="#ComparisonTest"/>
+            <Class IRI="#Comparison"/>
             <ObjectMinCardinality cardinality="2">
                 <ObjectProperty IRI="#hasParameter"/>
                 <Class IRI="#Parameter"/>
@@ -2575,6 +2578,10 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
+        <Class IRI="#Analysis"/>
+        <Class IRI="#DevelopmentActivity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CADModel"/>
         <Class IRI="#VirtualModel"/>
     </SubClassOf>
@@ -2583,8 +2590,8 @@
         <Class IRI="#VirtualTesting"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ComparisonTest"/>
-        <Class IRI="#TestingActivity"/>
+        <Class IRI="#Comparison"/>
+        <Class IRI="#Analysis"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConceptDevelopment"/>
@@ -3475,19 +3482,19 @@
         <NamedIndividual IRI="#ICE_CADModel_NewDesign"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ComparisonTest"/>
+        <Class IRI="#Comparison"/>
         <NamedIndividual IRI="#ICE_CompareTestResults_CoolantOutletTemp_FirstRun"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ComparisonTest"/>
+        <Class IRI="#Comparison"/>
         <NamedIndividual IRI="#ICE_CompareTestResults_CoolantOutletTemp_Part3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ComparisonTest"/>
+        <Class IRI="#Comparison"/>
         <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntity"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ComparisonTest"/>
+        <Class IRI="#Comparison"/>
         <NamedIndividual IRI="#ICE_CompareTestResults_DigitalEntityShadow"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -11060,7 +11067,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#maxDiff"/>
-        <Class IRI="#ComparisonTest"/>
+        <Class IRI="#Comparison"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#maxTargetValue"/>
@@ -11175,7 +11182,9 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Cycle</IRI>
-        <Literal xml:lang="en">A Cycle is probably going to be repeated.</Literal>
+        <Literal xml:lang="en">A Cycle is one repetition of an Iteration.
+
+ A loose assumption is that each Cycle of an Iteration is an exact repetition of the previous Cycle, but this assumption is not formalized by any conditions.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -11355,11 +11364,11 @@ An item of information, such as a Datapoint, may also form part of the Input. Fo
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Iteration</IRI>
-        <Literal xml:lang="en">An Iteration groups DevelopmentActivities that are carried out together in cycles that may be repeated. 
+        <Literal xml:lang="en">An Iteration groups DevelopmentActivities that are carried out together in Cycles that may be repeated. 
 
-Iterations that occur more than once during the development process may be defined as subclasses. The existing subclasses are not exhaustive.
+Iterations that share characteristics in frequently recurring patterns during the development process have been defined as subclasses. These subclasses are not exhaustive.
 
-The DevelopmentActivities in an Iteration are not assumed to be carried out in sequence or in any particular order.</Literal>
+Unless otherwise stated, the DevelopmentActivities in an Iteration are assumed to be taking place in parallel.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
