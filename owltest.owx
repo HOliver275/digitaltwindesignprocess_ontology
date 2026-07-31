@@ -10034,7 +10034,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#expectedValue"/>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">95.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasUnit"/>
@@ -10044,12 +10044,12 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#maxTargetValue"/>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20.2</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">100.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#minTargetValue"/>
         <NamedIndividual IRI="#ICE_CoolantInputTemperature"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">95.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#createdOn"/>
@@ -10059,7 +10059,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#expectedValue"/>
         <NamedIndividual IRI="#ICE_CoolantOutletTemperature_Expected"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">35.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasUnit"/>
@@ -10074,12 +10074,22 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#expectedValue"/>
         <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">35.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasUnit"/>
         <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
         <Literal>C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDiff"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#measuredValue"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_PhysicalTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">45.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#createdOn"/>
@@ -10089,12 +10099,22 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#expectedValue"/>
         <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">35.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasUnit"/>
         <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
         <Literal>C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDiff"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#measuredValue"/>
+        <NamedIndividual IRI="#ICE_CoolantOutletTemperature_VirtualTestResult"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">40.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#createdOn"/>
@@ -11068,10 +11088,6 @@
     <DataPropertyDomain>
         <DataProperty IRI="#maxCycles"/>
         <Class IRI="#Iteration"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#maxDiff"/>
-        <Class IRI="#Comparison"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#maxTargetValue"/>

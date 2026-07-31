@@ -687,8 +687,7 @@ figure8secondattempt:maxCycles rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#maxDiff
-figure8secondattempt:maxDiff rdf:type owl:DatatypeProperty ;
-                             rdfs:domain figure8secondattempt:Comparison .
+figure8secondattempt:maxDiff rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#maxTargetValue
@@ -3366,17 +3365,17 @@ figure8secondattempt:ICE_CompareTestResults_DigitalEntityShadow rdf:type owl:Nam
 figure8secondattempt:ICE_CoolantInputTemperature rdf:type owl:NamedIndividual ,
                                                           figure8secondattempt:Datapoint ;
                                                  figure8secondattempt:createdOn "2026-07-17T20:02:00Z"^^xsd:dateTimeStamp ;
-                                                 figure8secondattempt:expectedValue 10.0 ;
+                                                 figure8secondattempt:expectedValue 95.0 ;
                                                  figure8secondattempt:hasUnit "C" ;
-                                                 figure8secondattempt:maxTargetValue 20.2 ;
-                                                 figure8secondattempt:minTargetValue 0.0 .
+                                                 figure8secondattempt:maxTargetValue 100.0 ;
+                                                 figure8secondattempt:minTargetValue 95.0 .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_CoolantOutletTemperature_Expected
 figure8secondattempt:ICE_CoolantOutletTemperature_Expected rdf:type owl:NamedIndividual ,
                                                                     figure8secondattempt:Datapoint ;
                                                            figure8secondattempt:createdOn "2026-07-17T20:06:00Z"^^xsd:dateTimeStamp ;
-                                                           figure8secondattempt:expectedValue 10.0 ;
+                                                           figure8secondattempt:expectedValue 35.0 ;
                                                            figure8secondattempt:hasUnit "C" .
 
 
@@ -3385,8 +3384,10 @@ figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult rdf:type ow
                                                                               figure8secondattempt:Datapoint ;
                                                                      figure8secondattempt:compareTo figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult ;
                                                                      figure8secondattempt:createdOn "2026-07-18T00:53:00Z"^^xsd:dateTimeStamp ;
-                                                                     figure8secondattempt:expectedValue 10.0 ;
-                                                                     figure8secondattempt:hasUnit "C" .
+                                                                     figure8secondattempt:expectedValue 35.0 ;
+                                                                     figure8secondattempt:hasUnit "C" ;
+                                                                     figure8secondattempt:maxDiff 2.0 ;
+                                                                     figure8secondattempt:measuredValue 45.0 .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_CoolantOutletTemperature_VirtualTestResult
@@ -3394,8 +3395,10 @@ figure8secondattempt:ICE_CoolantOutletTemperature_VirtualTestResult rdf:type owl
                                                                              figure8secondattempt:Datapoint ;
                                                                     figure8secondattempt:compareTo figure8secondattempt:ICE_CoolantOutletTemperature_PhysicalTestResult ;
                                                                     figure8secondattempt:createdOn "2026-07-18T00:46:00Z"^^xsd:dateTimeStamp ;
-                                                                    figure8secondattempt:expectedValue 10.0 ;
-                                                                    figure8secondattempt:hasUnit "C" .
+                                                                    figure8secondattempt:expectedValue 35.0 ;
+                                                                    figure8secondattempt:hasUnit "C" ;
+                                                                    figure8secondattempt:maxDiff 2.0 ;
+                                                                    figure8secondattempt:measuredValue 40.0 .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ICE_CylinderHeadTemperature_PhysicalTestResult
