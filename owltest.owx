@@ -455,6 +455,9 @@
         <ObjectProperty IRI="#stepTo"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#temporalPartitionIncludes"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#toContinuity"/>
     </Declaration>
     <Declaration>
@@ -10387,6 +10390,10 @@
         <ObjectProperty IRI="#fromContinuity"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#duringTemporalPartition"/>
+        <ObjectProperty IRI="#temporalPartitionIncludes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#endsWith"/>
         <ObjectProperty IRI="#isEndOf"/>
     </InverseObjectProperties>
@@ -10777,6 +10784,10 @@
         <Class IRI="#Step"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#temporalPartitionIncludes"/>
+        <Class IRI="#TemporalPartition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#toContinuity"/>
         <Class IRI="#TemporalPartition"/>
     </ObjectPropertyDomain>
@@ -11073,6 +11084,13 @@
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#temporalPartitionIncludes"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TimeStructure"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>

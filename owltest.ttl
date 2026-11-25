@@ -68,6 +68,7 @@ figure8secondattempt:continuityTo rdf:type owl:ObjectProperty ;
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#duringTemporalPartition
 figure8secondattempt:duringTemporalPartition rdf:type owl:ObjectProperty ;
                                              rdfs:subPropertyOf owl:topObjectProperty ;
+                                             owl:inverseOf figure8secondattempt:temporalPartitionIncludes ;
                                              rdfs:domain [ rdf:type owl:Class ;
                                                            owl:unionOf ( figure8secondattempt:DevelopmentActivity
                                                                          figure8secondattempt:TimeStructure
@@ -623,6 +624,16 @@ figure8secondattempt:stepTo rdf:type owl:ObjectProperty ,
                                                      )
                                        ] ;
                             rdfs:comment "The DevelopmentActivity or TemporalConstruct at the end of a Step."@en .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#temporalPartitionIncludes
+figure8secondattempt:temporalPartitionIncludes rdf:type owl:ObjectProperty ;
+                                               rdfs:domain figure8secondattempt:TemporalPartition ;
+                                               rdfs:range [ rdf:type owl:Class ;
+                                                            owl:unionOf ( figure8secondattempt:DevelopmentActivity
+                                                                          figure8secondattempt:TimeStructure
+                                                                        )
+                                                          ] .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#toContinuity
