@@ -428,6 +428,9 @@
         <ObjectProperty IRI="#leadsTo"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#ledToByFailureOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#openedByGateway"/>
     </Declaration>
     <Declaration>
@@ -10398,6 +10401,10 @@
         <ObjectProperty IRI="#isEndOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#failLeadsTo"/>
+        <ObjectProperty IRI="#ledToByFailureOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#followsFrom"/>
         <ObjectProperty IRI="#isFollowedBy"/>
     </InverseObjectProperties>
@@ -11033,6 +11040,10 @@
             <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ledToByFailureOf"/>
+        <Class IRI="#TestingActivity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#openedByGateway"/>

@@ -92,6 +92,7 @@ figure8secondattempt:endsWith rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#failLeadsTo
 figure8secondattempt:failLeadsTo rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf figure8secondattempt:ledToByFailureOf ;
                                  rdfs:domain figure8secondattempt:TestingActivity .
 
 
@@ -534,6 +535,11 @@ figure8secondattempt:leadsTo rdf:type owl:ObjectProperty ;
                                                       )
                                         ] ;
                              rdfs:comment "One DevelopmentActivity or TemporalConstruct leads to another, sometimes."@en .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ledToByFailureOf
+figure8secondattempt:ledToByFailureOf rdf:type owl:ObjectProperty ;
+                                      rdfs:range figure8secondattempt:TestingActivity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#openedByGateway
