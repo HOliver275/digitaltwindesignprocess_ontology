@@ -305,6 +305,9 @@
         <ObjectProperty IRI="#followsFrom"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#fromContinuity"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasArtefact"/>
     </Declaration>
     <Declaration>
@@ -450,6 +453,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#stepTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#toContinuity"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
@@ -10373,6 +10379,14 @@
         <ObjectProperty IRI="#comesBefore"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#continuityFrom"/>
+        <ObjectProperty IRI="#toContinuity"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#continuityTo"/>
+        <ObjectProperty IRI="#fromContinuity"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#endsWith"/>
         <ObjectProperty IRI="#isEndOf"/>
     </InverseObjectProperties>
@@ -10528,6 +10542,10 @@
             <Class IRI="#Output"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fromContinuity"/>
+        <Class IRI="#TemporalPartition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -10759,6 +10777,10 @@
         <Class IRI="#Step"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#toContinuity"/>
+        <Class IRI="#TemporalPartition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
         <Class IRI="#PhysicalEntity"/>
     </ObjectPropertyDomain>
@@ -10803,6 +10825,10 @@
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fromContinuity"/>
+        <Class IRI="#Continuity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -11048,6 +11074,10 @@
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#toContinuity"/>
+        <Class IRI="#Continuity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>

@@ -51,6 +51,7 @@ figure8secondattempt:compareTo rdf:type owl:ObjectProperty ,
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#continuityFrom
 figure8secondattempt:continuityFrom rdf:type owl:ObjectProperty ;
+                                    owl:inverseOf figure8secondattempt:toContinuity ;
                                     rdfs:domain figure8secondattempt:Continuity ;
                                     rdfs:range figure8secondattempt:TemporalPartition ;
                                     rdfs:comment "The TemporalPartition where a Continuity begins."@en .
@@ -58,6 +59,7 @@ figure8secondattempt:continuityFrom rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#continuityTo
 figure8secondattempt:continuityTo rdf:type owl:ObjectProperty ;
+                                  owl:inverseOf figure8secondattempt:fromContinuity ;
                                   rdfs:domain figure8secondattempt:Continuity ;
                                   rdfs:range figure8secondattempt:TemporalPartition ;
                                   rdfs:comment "The TemporalPartition where a Continuity ends."@en .
@@ -108,6 +110,12 @@ figure8secondattempt:followsFrom rdf:type owl:ObjectProperty ;
                                                           )
                                             ] ;
                                  rdfs:comment "One DevelopmentActivity or TemporalConstruct leads to another, sometimes."@en .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#fromContinuity
+figure8secondattempt:fromContinuity rdf:type owl:ObjectProperty ;
+                                    rdfs:domain figure8secondattempt:TemporalPartition ;
+                                    rdfs:range figure8secondattempt:Continuity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasArtefact
@@ -615,6 +623,12 @@ figure8secondattempt:stepTo rdf:type owl:ObjectProperty ,
                                                      )
                                        ] ;
                             rdfs:comment "The DevelopmentActivity or TemporalConstruct at the end of a Step."@en .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#toContinuity
+figure8secondattempt:toContinuity rdf:type owl:ObjectProperty ;
+                                  rdfs:domain figure8secondattempt:TemporalPartition ;
+                                  rdfs:range figure8secondattempt:Continuity .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#twinnedDigitallyWith
