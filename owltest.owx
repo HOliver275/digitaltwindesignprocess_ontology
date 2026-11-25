@@ -422,7 +422,13 @@
         <ObjectProperty IRI="#isProductOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isSpanOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isStartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isStepOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#leadsTo"/>
@@ -10437,6 +10443,10 @@
         <ObjectProperty IRI="#isEnvironmentOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasExpectedValue"/>
+        <ObjectProperty IRI="#isExpectedValueOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasFocus"/>
         <ObjectProperty IRI="#isFocusOf"/>
     </InverseObjectProperties>
@@ -10453,6 +10463,10 @@
         <ObjectProperty IRI="#isModelOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasNext"/>
+        <ObjectProperty IRI="#hasPrevious"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasOutput"/>
         <ObjectProperty IRI="#outputFrom"/>
     </InverseObjectProperties>
@@ -10467,6 +10481,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasProduct"/>
         <ObjectProperty IRI="#isProductOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasStep"/>
+        <ObjectProperty IRI="#isStepOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isLedToBy"/>
@@ -10739,11 +10757,19 @@
         <Class IRI="#Product"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSpanOf"/>
+        <Class IRI="#Span"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isStartOf"/>
         <ObjectUnionOf>
             <Class IRI="#DevelopmentActivity"/>
             <Class IRI="#TemporalConstruct"/>
         </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isStepOf"/>
+        <Class IRI="#Step"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#leadsTo"/>

@@ -195,6 +195,7 @@ figure8secondattempt:hasEnvironment rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasExpectedValue
 figure8secondattempt:hasExpectedValue rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf figure8secondattempt:isExpectedValueOf ;
                                       rdfs:domain figure8secondattempt:Datapoint ;
                                       rdfs:range figure8secondattempt:Datapoint .
 
@@ -240,7 +241,8 @@ figure8secondattempt:hasModel rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasNext
-figure8secondattempt:hasNext rdf:type owl:ObjectProperty .
+figure8secondattempt:hasNext rdf:type owl:ObjectProperty ;
+                             owl:inverseOf figure8secondattempt:hasPrevious .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasOutput
@@ -308,6 +310,7 @@ figure8secondattempt:hasSpan rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasStep
 figure8secondattempt:hasStep rdf:type owl:ObjectProperty ;
+                             owl:inverseOf figure8secondattempt:isStepOf ;
                              rdfs:range figure8secondattempt:Step .
 
 
@@ -506,6 +509,11 @@ figure8secondattempt:isProductOf rdf:type owl:ObjectProperty ;
                                  rdfs:comment "The product of some DevelopmentActivity or TemporalConstruct."@en .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isSpanOf
+figure8secondattempt:isSpanOf rdf:type owl:ObjectProperty ;
+                              rdfs:domain figure8secondattempt:Span .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isStartOf
 figure8secondattempt:isStartOf rdf:type owl:ObjectProperty ;
                                owl:inverseOf figure8secondattempt:startsWith ;
@@ -516,6 +524,11 @@ figure8secondattempt:isStartOf rdf:type owl:ObjectProperty ;
                                            ] ;
                                rdfs:range figure8secondattempt:TimeStructure ;
                                rdfs:comment "The DevelopmentActivity or TemporalConstruct at the start of a TimeStructure."@en .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#isStepOf
+figure8secondattempt:isStepOf rdf:type owl:ObjectProperty ;
+                              rdfs:domain figure8secondattempt:Step .
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#leadsTo
