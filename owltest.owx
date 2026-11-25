@@ -308,6 +308,12 @@
         <ObjectProperty IRI="#fromContinuity"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#fromSpan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromStep"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasArtefact"/>
     </Declaration>
     <Declaration>
@@ -437,6 +443,9 @@
         <ObjectProperty IRI="#ledToByFailureOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#ledToByPass"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#openedByGateway"/>
     </Declaration>
     <Declaration>
@@ -468,6 +477,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#toContinuity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#toSpan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#toStep"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
@@ -10415,6 +10430,14 @@
         <ObjectProperty IRI="#isFollowedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#fromSpan"/>
+        <ObjectProperty IRI="#spansTo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#fromStep"/>
+        <ObjectProperty IRI="#stepTo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasArtefact"/>
         <ObjectProperty IRI="#isArtefactOf"/>
     </InverseObjectProperties>
@@ -10495,8 +10518,24 @@
         <ObjectProperty IRI="#startsWith"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#ledToByPass"/>
+        <ObjectProperty IRI="#passLeadsTo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#openedByGateway"/>
         <ObjectProperty IRI="#opensStage"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#spansFrom"/>
+        <ObjectProperty IRI="#toSpan"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#stepFrom"/>
+        <ObjectProperty IRI="#toStep"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#twinnedDigitallyWith"/>
+        <ObjectProperty IRI="#twinnedPhysicallyWith"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasDigitalEntity"/>
@@ -10578,6 +10617,20 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#fromContinuity"/>
         <Class IRI="#TemporalPartition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fromSpan"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalPartition"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fromStep"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -10825,6 +10878,20 @@
         <Class IRI="#TemporalPartition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#toSpan"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalPartition"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#toStep"/>
+        <ObjectUnionOf>
+            <Class IRI="#DevelopmentActivity"/>
+            <Class IRI="#TemporalConstruct"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>
         <Class IRI="#PhysicalEntity"/>
     </ObjectPropertyDomain>
@@ -10873,6 +10940,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#fromContinuity"/>
         <Class IRI="#Continuity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fromSpan"/>
+        <Class IRI="#Span"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fromStep"/>
+        <Class IRI="#Step"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasArtefact"/>
@@ -11072,6 +11147,10 @@
         <Class IRI="#TestingActivity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#ledToByPass"/>
+        <Class IRI="#TestingActivity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#openedByGateway"/>
         <Class IRI="#Gateway"/>
     </ObjectPropertyRange>
@@ -11133,6 +11212,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#toContinuity"/>
         <Class IRI="#Continuity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#toSpan"/>
+        <Class IRI="#Span"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#toStep"/>
+        <Class IRI="#Step"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#twinnedDigitallyWith"/>

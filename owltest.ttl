@@ -120,6 +120,28 @@ figure8secondattempt:fromContinuity rdf:type owl:ObjectProperty ;
                                     rdfs:range figure8secondattempt:Continuity .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#fromSpan
+figure8secondattempt:fromSpan rdf:type owl:ObjectProperty ;
+                              owl:inverseOf figure8secondattempt:spansTo ;
+                              rdfs:domain [ rdf:type owl:Class ;
+                                            owl:unionOf ( figure8secondattempt:DevelopmentActivity
+                                                          figure8secondattempt:TemporalPartition
+                                                        )
+                                          ] ;
+                              rdfs:range figure8secondattempt:Span .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#fromStep
+figure8secondattempt:fromStep rdf:type owl:ObjectProperty ;
+                              owl:inverseOf figure8secondattempt:stepTo ;
+                              rdfs:domain [ rdf:type owl:Class ;
+                                            owl:unionOf ( figure8secondattempt:DevelopmentActivity
+                                                          figure8secondattempt:TemporalConstruct
+                                                        )
+                                          ] ;
+                              rdfs:range figure8secondattempt:Step .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#hasArtefact
 figure8secondattempt:hasArtefact rdf:type owl:ObjectProperty ;
                                  owl:inverseOf figure8secondattempt:isArtefactOf ;
@@ -555,6 +577,12 @@ figure8secondattempt:ledToByFailureOf rdf:type owl:ObjectProperty ;
                                       rdfs:range figure8secondattempt:TestingActivity .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#ledToByPass
+figure8secondattempt:ledToByPass rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf figure8secondattempt:passLeadsTo ;
+                                 rdfs:range figure8secondattempt:TestingActivity .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#openedByGateway
 figure8secondattempt:openedByGateway rdf:type owl:ObjectProperty ;
                                      owl:inverseOf figure8secondattempt:opensStage ;
@@ -590,6 +618,7 @@ figure8secondattempt:passLeadsTo rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#spansFrom
 figure8secondattempt:spansFrom rdf:type owl:ObjectProperty ;
+                               owl:inverseOf figure8secondattempt:toSpan ;
                                rdfs:domain figure8secondattempt:Span ;
                                rdfs:range [ rdf:type owl:Class ;
                                             owl:unionOf ( figure8secondattempt:DevelopmentActivity
@@ -622,8 +651,9 @@ figure8secondattempt:startsWith rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#stepFrom
-figure8secondattempt:stepFrom rdf:type owl:ObjectProperty ,
-                                       owl:FunctionalProperty ;
+figure8secondattempt:stepFrom rdf:type owl:ObjectProperty ;
+                              owl:inverseOf figure8secondattempt:toStep ;
+                              rdf:type owl:FunctionalProperty ;
                               rdfs:domain figure8secondattempt:Step ;
                               rdfs:range [ rdf:type owl:Class ;
                                            owl:unionOf ( figure8secondattempt:DevelopmentActivity
@@ -661,9 +691,30 @@ figure8secondattempt:toContinuity rdf:type owl:ObjectProperty ;
                                   rdfs:range figure8secondattempt:Continuity .
 
 
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#toSpan
+figure8secondattempt:toSpan rdf:type owl:ObjectProperty ;
+                            rdfs:domain [ rdf:type owl:Class ;
+                                          owl:unionOf ( figure8secondattempt:DevelopmentActivity
+                                                        figure8secondattempt:TemporalPartition
+                                                      )
+                                        ] ;
+                            rdfs:range figure8secondattempt:Span .
+
+
+###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#toStep
+figure8secondattempt:toStep rdf:type owl:ObjectProperty ;
+                            rdfs:domain [ rdf:type owl:Class ;
+                                          owl:unionOf ( figure8secondattempt:DevelopmentActivity
+                                                        figure8secondattempt:TemporalConstruct
+                                                      )
+                                        ] ;
+                            rdfs:range figure8secondattempt:Step .
+
+
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#twinnedDigitallyWith
-figure8secondattempt:twinnedDigitallyWith rdf:type owl:ObjectProperty ,
-                                                   owl:FunctionalProperty ;
+figure8secondattempt:twinnedDigitallyWith rdf:type owl:ObjectProperty ;
+                                          owl:inverseOf figure8secondattempt:twinnedPhysicallyWith ;
+                                          rdf:type owl:FunctionalProperty ;
                                           rdfs:domain figure8secondattempt:PhysicalEntity ;
                                           rdfs:range figure8secondattempt:DigitalEntity .
 
