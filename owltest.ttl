@@ -29,8 +29,9 @@ figure8secondattempt:closesStage rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.semanticweb.org/helenoliver/ontologies/2026/2/figure8secondattempt#comesAfter
-figure8secondattempt:comesAfter rdf:type owl:ObjectProperty ,
-                                         owl:TransitiveProperty ;
+figure8secondattempt:comesAfter rdf:type owl:ObjectProperty ;
+                                owl:inverseOf figure8secondattempt:comesBefore ;
+                                rdf:type owl:TransitiveProperty ;
                                 rdfs:comment "Anything that must be preceded by some other thing or things at some point in the development process."@en .
 
 

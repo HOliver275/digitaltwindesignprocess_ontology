@@ -10369,6 +10369,10 @@
         <ObjectProperty IRI="#closesStage"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#comesAfter"/>
+        <ObjectProperty IRI="#comesBefore"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#endsWith"/>
         <ObjectProperty IRI="#isEndOf"/>
     </InverseObjectProperties>
